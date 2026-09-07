@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ECBA Trainer</title>
+<meta name="description" content="Simulatore d'esame ECBA (IIBA) conforme all'Exam Blueprint V1.1">
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+  <button class="icon-btn" id="btn-back" hidden aria-label="Torna alla home">&larr;</button>
+  <h1 class="topbar-title" id="topbar-title">ECBA Trainer</h1>
+  <div class="topbar-right">
+    <span class="timer" id="timer" hidden aria-live="off"></span>
+    <button class="icon-btn" id="btn-theme" aria-label="Cambia tema">◐</button>
+  </div>
+</header>
+
+<main id="view"></main>
+
+<!-- ===================== HOME ===================== -->
+<template id="tpl-home">
+  <section class="stack">
+    <div class="hero">
+      <p class="eyebrow">IIBA · Exam Blueprint V1.1</p>
+      <h2>Preparati all'esame ECBA</h2>
+      <p class="muted">50 domande · 75 minuti · nove domini pesati come nell'esame reale.</p>
+    </div>
+
+    <div class="card resume-card" id="resume-card" hidden>
+      <div>
+        <h3>Sessione in corso</h3>
+        <p class="muted small" id="resume-detail"></p>
+      </div>
+      <div class="row">
+        <button class="btn primary" id="btn-resume">Riprendi</button>
+        <button class="btn ghost" id="btn-discard">Scarta</button>
+      </div>
+    </div>
+
+    <div class="mode-grid">
+      <button class="mode-card" data-mode="exam">
+        <span class="mode-icon">⏱</span>
+        <strong>Simulazione d'esame</strong>
+        <span class="muted small">50 domande, 75 minuti, nessun feedback fino alla consegna. Come l'esame reale.</span>
+      </button>
+      <button class="mode-card" data-mode="practice">
+        <span class="mode-icon">◎</span>
+        <strong>Allenamento per dominio</strong>
+        <span class="muted small">Scegli i domini, nessun timer, spiegazione subito dopo ogni risposta.</span>
+      </button>
+      <button class="mode-card" data-mode="review">
+        <span class="mode-icon">↻</span>
+        <strong>Ripasso errori</strong>
+        <span class="muted small">Rivedi solo le domande che hai sbagliato o segnalato.</span>
+      </button>
+      <button class="mode-card" data-mode="blueprint">
+        <span class="mode-icon">▤</span>
+        <strong>Blueprint &amp; progressi</strong>
+        <span class="muted small">Domini, pesi, tecniche e competenze. Le tue statistiche per dominio.</span>
+      </button>
+    </div>
+
+    <div class="card" id="coverage-card">
+      <h3>Copertura del pool domande</h3>
+      <div id="coverage-list" class="coverage"></div>
+    </div>
+  </section>
+</template>
+
+<!-- ===================== SETUP ALLENAMENTO ===================== -->
+<template id="tpl-practice-setup">
+  <section class="stack">
+    <h2>Allenamento per dominio</h2>
+    <p class="muted">Seleziona i domini da esercitare. Le domande arrivano in ordine casuale e la spiegazione compare subito dopo la risposta.</p>
+    <div class="card">
+      <div id="domain-picker" class="picker"></div>
+    </div>
+    <div class="card row between">
+      <label class="field">
+        <span>Numero di domande</span>
+        <select id="practice-count">
+          <option value="10">10</option>
+          <option value="20" selected>20</option>
+          <option value="30">30</option>
+          <option value="0">Tutte le disponibili</option>
+        </select>
+      </label>
+      <button class="btn primary" id="btn-start-practice">Inizia</button>
+    </div>
+  </section>
+</template>
+
+<!-- ===================== QUIZ ===================== -->
+<template id="tpl-quiz">
+  <section class="quiz">
+    <div class="progressbar"><div class="progressbar-fill" id="progress-fill"></div></div>
+
+    <div class="quiz-meta">
+      <span id="q-counter" class="mono"></span>
+      <span id="q-tag" class="tag"></span>
+      <button class="flag-btn" id="btn-flag" aria-pressed="false">⚑ <span>Segnala per revisione</span></button>
+    </div>
+
+    <p class="stem" id="q-stem"></p>
+    <div class="options" id="q-options" role="radiogroup" aria-label="Opzioni di risposta"></div>
+
+    <div class="explain" id="q-explain" hidden></div>
+
+    <div class="quiz-nav">
+      <button class="btn ghost" id="btn-prev">Precedente</button>
+      <button class="btn ghost" id="btn-grid">Panoramica</button>
+      <button class="btn primary" id="btn-next">Successiva</button>
+    </div>
+  </section>
+</template>
+
+<!-- ===================== PANORAMICA DOMANDE ===================== -->
+<template id="tpl-grid">
+  <section class="stack">
+    <h2>Panoramica</h2>
+    <p class="muted" id="grid-summary"></p>
+    <div class="qgrid" id="qgrid"></div>
+    <div class="legend">
+      <span><i class="dot answered"></i> Risposta data</span>
+      <span><i class="dot flagged"></i> Segnalata</span>
+      <span><i class="dot empty"></i> Senza risposta</span>
+    </div>
+    <div class="row">
+      <button class="btn ghost" id="btn-grid-close">Torna alla domanda</button>
+      <button class="btn primary" id="btn-submit">Consegna</button>
+    </div>
+  </section>
+</template>
+
+<!-- ===================== RISULTATI ===================== -->
+<template id="tpl-results">
+  <section class="stack">
+    <div class="score-card" id="score-card">
+      <div class="score-ring" id="score-ring">
+        <span class="score-value" id="score-value"></span>
+        <span class="score-label">corrette</span>
+      </div>
+      <div>
+        <h2 id="score-verdict"></h2>
+        <p class="muted" id="score-detail"></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Risultato per dominio</h3>
+      <div id="domain-breakdown" class="breakdown"></div>
+    </div>
+
+    <div class="card">
+      <h3>Aree da rivedere</h3>
+      <p class="muted small">Activity statement con almeno un errore, ordinate per numero di errori.</p>
+      <div id="activity-breakdown" class="breakdown"></div>
+    </div>
+
+    <div class="row">
+      <button class="btn primary" id="btn-review-answers">Rivedi le risposte</button>
+      <button class="btn ghost" id="btn-home">Torna alla home</button>
+    </div>
+  </section>
+</template>
+
+<!-- ===================== BLUEPRINT ===================== -->
+<template id="tpl-blueprint">
+  <section class="stack">
+    <h2>Blueprint &amp; progressi</h2>
+    <p class="muted">Struttura ufficiale dell'esame ECBA e il tuo storico per dominio.</p>
+    <div class="card">
+      <h3>Domini e pesi</h3>
+      <div id="bp-domains" class="breakdown"></div>
+    </div>
+    <div class="card">
+      <h3>Le 20 tecniche valutate <span class="muted small">(BABOK cap. 10)</span></h3>
+      <ul class="cols" id="bp-techniques"></ul>
+    </div>
+    <div class="card">
+      <h3>Le 29 underlying competencies <span class="muted small">(BABOK cap. 9)</span></h3>
+      <div id="bp-competencies"></div>
+    </div>
+    <div class="card">
+      <h3>Storico sessioni</h3>
+      <div id="bp-history"></div>
+      <button class="btn ghost small-btn" id="btn-reset-stats">Azzera statistiche</button>
+    </div>
+  </section>
+</template>
+
+<script src="data/blueprint.js"></script>
+<script src="data/questions.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
