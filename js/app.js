@@ -517,7 +517,7 @@
     BP.domains.forEach(function (d) {
       var s = stats[d.id];
       var ratio = s && s.seen ? s.correct / s.seen : 0;
-      var value = pct(d.weight) + ' · ' + d.questions + ' dom. all\'esame' +
+      var value = pct(d.weight) + ' · ' + d.questions + ' domande su 50' +
         (s && s.seen ? ' · tuo storico ' + pct(ratio) + ' (' + s.seen + ' viste)' : ' · mai esercitato');
       box.appendChild(barRow(d.id + '. ' + d.name, value,
         s && s.seen ? ratio : 0,
