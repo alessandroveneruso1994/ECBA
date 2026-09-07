@@ -11,7 +11,7 @@ Funziona offline e si installa sulla home screen come un'app.
 | Modalità | Cosa fa |
 |---|---|
 | **Simulazione d'esame** | 50 domande in 75 minuti, distribuite secondo i pesi ufficiali dei nove domini. Nessun feedback fino alla consegna, navigazione avanti/indietro e flag "segnala per revisione", come nell'esame reale. |
-| **Allenamento per dominio** | Scegli i domini, nessun timer, spiegazione subito dopo ogni risposta. |
+| **Esercizio per dominio** | Una scheda per ciascuno dei nove domini: tocchi quella che ti interessa e ti alleni solo su quel dominio, senza timer, con la spiegazione subito dopo ogni risposta. Ogni scheda mostra la tua percentuale storica su quel dominio. |
 | **Ripasso errori** | Ripropone solo le domande sbagliate o segnalate, le più sbagliate per prime. |
 | **Blueprint & progressi** | Domini e pesi, le 20 tecniche e le 29 competenze valutate, storico e statistiche per dominio. |
 
@@ -41,18 +41,18 @@ competencies del capitolo 9.
 
 ## Stato del pool domande
 
-120 domande, tutti e nove i domini coperti, **tutte e 36 le activity statement** con
+240 domande, tutti e nove i domini coperti, **tutte e 36 le activity statement** con
 almeno una domanda:
 
 | Domini | Domande | Fonte |
 |---|---|---|
-| 1–3 (40% dell'esame) | 60 | *The Business Analysis Standard* v2.0 |
-| 4–9 (60% dell'esame) | 60 | *BABOK Guide* v3 |
+| 1–3 (40% dell'esame) | 96 | *The Business Analysis Standard* v2.0 |
+| 4–9 (60% dell'esame) | 144 | *BABOK Guide* v3 |
 
-Ogni dominio ha almeno il doppio delle domande che compaiono all'esame, così due
-simulazioni consecutive condividono circa 20 domande su 50 anziché ripetere sempre lo
-stesso set. La simulazione rispetta esattamente la distribuzione del blueprint
-(10/7/3/5/5/5/5/5/5).
+Ogni dominio ha da 4 a 8 volte le domande che compaiono all'esame: due simulazioni
+consecutive condividono circa 9 domande su 50, e servono una ventina di simulazioni per
+incontrare l'intero pool. La simulazione rispetta esattamente la distribuzione del
+blueprint (10/7/3/5/5/5/5/5/5).
 
 **Le domande non sono domande d'esame reali.** IIBA non pubblica il proprio question bank.
 Sono domande di pratica originali scritte a partire dai documenti ufficiali, con

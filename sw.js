@@ -1,9 +1,16 @@
 /**
  * Service worker: l'app deve funzionare offline, anche in metropolitana.
- * Strategia cache-first sugli asset, che sono statici e versionati dal CACHE nome.
- * Alza la versione a ogni rilascio per invalidare la cache vecchia.
+ *
+ * Strategia stale-while-revalidate per i file dell'app: la pagina si serve
+ * subito dalla cache — quindi parte offline e senza attesa — mentre in
+ * background si scarica la versione aggiornata per l'apertura successiva.
+ * Con una semplice cache-first chi ha già installato l'app resterebbe fermo
+ * alla versione scaricata la prima volta e non vedrebbe mai le domande nuove.
+ *
+ * Le icone restano cache-first: non cambiano mai e non vale la pena
+ * rifetcharle a ogni avvio.
  */
-var CACHE = 'ecba-trainer-v1';
+var CACHE = 'ecba-trainer-v2';
 
 var ASSETS = [
   './',
@@ -40,15 +47,21 @@ self.addEventListener('activate', function (event) {
   );
 });
 
+function isIcon(url) {
+  return url.indexOf('/icons/') !== -1;
+}
+
 self.addEventListener('fetch', function (event) {
   if (event.request.method !== 'GET') return;
 
   event.respondWith(
     caches.match(event.request).then(function (hit) {
-      if (hit) return hit;
-      return fetch(event.request)
+      // Le icone non cambiano: se sono in cache, bastano.
+      if (hit && isIcon(event.request.url)) return hit;
+
+      var network = fetch(event.request)
         .then(function (res) {
-          // Mette in cache solo le risposte valide dello stesso origine.
+          // Aggiorna la cache solo con risposte valide dello stesso origine.
           if (res.ok && res.type === 'basic') {
             var copy = res.clone();
             caches.open(CACHE).then(function (c) { c.put(event.request, copy); });
@@ -56,10 +69,14 @@ self.addEventListener('fetch', function (event) {
           return res;
         })
         .catch(function () {
+          if (hit) return hit;
           // Navigazione offline verso una pagina non in cache: serve l'app shell.
           if (event.request.mode === 'navigate') return caches.match('./index.html');
           throw new Error('offline');
         });
+
+      // In cache: rispondi subito e aggiorna in background per la volta dopo.
+      return hit || network;
     })
   );
 });

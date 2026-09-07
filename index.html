@@ -46,17 +46,20 @@
       </div>
     </div>
 
-    <div class="mode-grid">
-      <button class="mode-card" data-mode="exam">
+    <div class="mode-grid primary-modes">
+      <button class="mode-card feature" data-mode="exam">
         <span class="mode-icon">⏱</span>
         <strong>Simulazione d'esame</strong>
-        <span class="muted small">50 domande, 75 minuti, nessun feedback fino alla consegna. Come l'esame reale.</span>
+        <span class="muted small">50 domande, 75 minuti, distribuzione ufficiale dei nove domini. Nessun feedback fino alla consegna, come all'esame reale.</span>
       </button>
-      <button class="mode-card" data-mode="practice">
+      <button class="mode-card feature" data-mode="practice">
         <span class="mode-icon">◎</span>
-        <strong>Allenamento per dominio</strong>
-        <span class="muted small">Scegli i domini, nessun timer, spiegazione subito dopo ogni risposta.</span>
+        <strong>Esercizio per dominio</strong>
+        <span class="muted small">Allenati su un dominio alla volta, senza timer, con la spiegazione subito dopo ogni risposta.</span>
       </button>
+    </div>
+
+    <div class="mode-grid">
       <button class="mode-card" data-mode="review">
         <span class="mode-icon">↻</span>
         <strong>Ripasso errori</strong>
@@ -76,26 +79,25 @@
   </section>
 </template>
 
-<!-- ===================== SETUP ALLENAMENTO ===================== -->
+<!-- ===================== ESERCIZIO PER DOMINIO ===================== -->
 <template id="tpl-practice-setup">
   <section class="stack">
-    <h2>Allenamento per dominio</h2>
-    <p class="muted">Seleziona i domini da esercitare. Le domande arrivano in ordine casuale e la spiegazione compare subito dopo la risposta.</p>
-    <div class="card">
-      <div id="domain-picker" class="picker"></div>
-    </div>
-    <div class="card row between">
-      <label class="field">
-        <span>Numero di domande</span>
-        <select id="practice-count">
-          <option value="10">10</option>
-          <option value="20" selected>20</option>
-          <option value="30">30</option>
-          <option value="0">Tutte le disponibili</option>
-        </select>
-      </label>
-      <button class="btn primary" id="btn-start-practice">Inizia</button>
-    </div>
+    <h2>Esercizio per dominio</h2>
+    <p class="muted">Scegli un dominio e allenati solo su quello. Nessun timer: dopo ogni risposta vedi subito la spiegazione con il riferimento al testo ufficiale.</p>
+
+    <label class="field card">
+      <span>Quante domande per sessione</span>
+      <select id="practice-count">
+        <option value="10">10 domande</option>
+        <option value="20" selected>20 domande</option>
+        <option value="30">30 domande</option>
+        <option value="0">Tutte quelle disponibili</option>
+      </select>
+    </label>
+
+    <div id="domain-cards" class="domain-cards"></div>
+
+    <button class="btn ghost" id="btn-practice-all">Esercitati su tutti i domini insieme</button>
   </section>
 </template>
 
