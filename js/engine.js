@@ -56,6 +56,22 @@ window.Engine = (function () {
     return count > 0 ? shuffled.slice(0, count) : shuffled;
   }
 
+  /**
+   * Test di una sezione trasversale (tecniche o competenze).
+   * `ref` filtra su una singola voce — '10.25', '9.5.1' — oppure su un gruppo
+   * di competenze quando è un prefisso come '9.5'; se è nullo pesca da tutto
+   * il pool, che è il test misto da 10 domande.
+   */
+  function buildTopicTest(pool, ref, count) {
+    var filtered = ref
+      ? pool.filter(function (q) {
+          return q.ref === ref || q.ref.indexOf(ref + '.') === 0;
+        })
+      : pool;
+    var shuffled = shuffle(filtered);
+    return count > 0 ? shuffled.slice(0, count) : shuffled;
+  }
+
   /** Set di ripasso: solo le domande sbagliate o segnalate in passato. */
   function buildReview(pool, missedIds) {
     var wanted = pool.filter(function (q) { return missedIds[q.id]; });
@@ -133,8 +149,12 @@ window.Engine = (function () {
       var given = session.answers[id] || null;
       return {
         id: id,
+        // Le domande dei domini portano domain e activity; quelle delle sezioni
+        // tecniche e competenze portano invece ref. Solo uno dei due gruppi di
+        // campi è valorizzato, e il breakdown si adatta di conseguenza.
         domain: q.domain,
         activity: q.activity,
+        ref: q.ref,
         given: given,
         correctAnswer: q.answer,
         isCorrect: given === q.answer,
@@ -146,14 +166,22 @@ window.Engine = (function () {
 
     var domains = {};
     var activities = {};
+    var refs = {};
     answers.forEach(function (a) {
-      var d = domains[a.domain] = domains[a.domain] || { seen: 0, correct: 0 };
-      d.seen += 1;
-      if (a.isCorrect) d.correct += 1;
+      if (a.domain !== undefined) {
+        var d = domains[a.domain] = domains[a.domain] || { seen: 0, correct: 0 };
+        d.seen += 1;
+        if (a.isCorrect) d.correct += 1;
 
-      var act = activities[a.activity] = activities[a.activity] || { seen: 0, wrong: 0 };
-      act.seen += 1;
-      if (!a.isCorrect) act.wrong += 1;
+        var act = activities[a.activity] = activities[a.activity] || { seen: 0, wrong: 0 };
+        act.seen += 1;
+        if (!a.isCorrect) act.wrong += 1;
+      }
+      if (a.ref !== undefined) {
+        var r = refs[a.ref] = refs[a.ref] || { seen: 0, correct: 0 };
+        r.seen += 1;
+        if (a.isCorrect) r.correct += 1;
+      }
     });
 
     return {
@@ -165,7 +193,8 @@ window.Engine = (function () {
       durationMs: Date.now() - session.startedAt,
       answers: answers,
       domains: domains,
-      activities: activities
+      activities: activities,
+      refs: refs
     };
   }
 
@@ -173,6 +202,7 @@ window.Engine = (function () {
     shuffle: shuffle,
     buildExam: buildExam,
     buildPractice: buildPractice,
+    buildTopicTest: buildTopicTest,
     buildReview: buildReview,
     createSession: createSession,
     displayOptions: displayOptions,

@@ -173,13 +173,54 @@ window.ECBA_BLUEPRINT = {
     { ref: '10.50', name: 'Workshops' }
   ],
 
-  /** Le 29 underlying competencies del cap. 9 del BABOK Guide. */
+  /**
+   * Le 29 underlying competencies del cap. 9 del BABOK Guide, nei sei gruppi.
+   * Il `ref` è la sezione BABOK e fa da chiave per le domande di data/topics.js.
+   */
   competencies: [
-    { group: 'Analytical Thinking and Problem Solving', items: ['Creative Thinking', 'Decision Making', 'Learning', 'Problem Solving', 'Systems Thinking', 'Conceptual Thinking', 'Visual Thinking'] },
-    { group: 'Behavioural Characteristics', items: ['Ethics', 'Personal Accountability', 'Trustworthiness', 'Organization and Time Management', 'Adaptability'] },
-    { group: 'Business Knowledge', items: ['Business Acumen', 'Industry Knowledge', 'Organization Knowledge', 'Solution Knowledge', 'Methodology Knowledge'] },
-    { group: 'Communication Skills', items: ['Verbal Communication', 'Non-Verbal Communication', 'Written Communication', 'Listening'] },
-    { group: 'Interaction Skills', items: ['Facilitation', 'Leadership and Influencing', 'Teamwork', 'Negotiation and Conflict Resolution', 'Teaching'] },
-    { group: 'Tools and Technology', items: ['Office Productivity Tools and Technology', 'Business Analysis Tools and Technology', 'Communication Tools and Technology'] }
-  ]
+    { group: 'Analytical Thinking and Problem Solving', ref: '9.1', items: [
+      { ref: '9.1.1', name: 'Creative Thinking' },
+      { ref: '9.1.2', name: 'Decision Making' },
+      { ref: '9.1.3', name: 'Learning' },
+      { ref: '9.1.4', name: 'Problem Solving' },
+      { ref: '9.1.5', name: 'Systems Thinking' },
+      { ref: '9.1.6', name: 'Conceptual Thinking' },
+      { ref: '9.1.7', name: 'Visual Thinking' }
+    ] },
+    { group: 'Behavioural Characteristics', ref: '9.2', items: [
+      { ref: '9.2.1', name: 'Ethics' },
+      { ref: '9.2.2', name: 'Personal Accountability' },
+      { ref: '9.2.3', name: 'Trustworthiness' },
+      { ref: '9.2.4', name: 'Organization and Time Management' },
+      { ref: '9.2.5', name: 'Adaptability' }
+    ] },
+    { group: 'Business Knowledge', ref: '9.3', items: [
+      { ref: '9.3.1', name: 'Business Acumen' },
+      { ref: '9.3.2', name: 'Industry Knowledge' },
+      { ref: '9.3.3', name: 'Organization Knowledge' },
+      { ref: '9.3.4', name: 'Solution Knowledge' },
+      { ref: '9.3.5', name: 'Methodology Knowledge' }
+    ] },
+    { group: 'Communication Skills', ref: '9.4', items: [
+      { ref: '9.4.1', name: 'Verbal Communication' },
+      { ref: '9.4.2', name: 'Non-Verbal Communication' },
+      { ref: '9.4.3', name: 'Written Communication' },
+      { ref: '9.4.4', name: 'Listening' }
+    ] },
+    { group: 'Interaction Skills', ref: '9.5', items: [
+      { ref: '9.5.1', name: 'Facilitation' },
+      { ref: '9.5.2', name: 'Leadership and Influencing' },
+      { ref: '9.5.3', name: 'Teamwork' },
+      { ref: '9.5.4', name: 'Negotiation and Conflict Resolution' },
+      { ref: '9.5.5', name: 'Teaching' }
+    ] },
+    { group: 'Tools and Technology', ref: '9.6', items: [
+      { ref: '9.6.1', name: 'Office Productivity Tools and Technology' },
+      { ref: '9.6.2', name: 'Business Analysis Tools and Technology' },
+      { ref: '9.6.3', name: 'Communication Tools and Technology' }
+    ] }
+  ],
+
+  /** Lunghezza dei test delle sezioni tecniche e competenze. */
+  topicTestSize: 10
 };

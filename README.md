@@ -12,7 +12,9 @@ Funziona offline e si installa sulla home screen come un'app.
 |---|---|
 | **Simulazione d'esame** | 50 domande in 75 minuti, distribuite secondo i pesi ufficiali dei nove domini. Nessun feedback fino alla consegna, navigazione avanti/indietro e flag "segnala per revisione", come nell'esame reale. |
 | **Esercizio per dominio** | Una scheda per ciascuno dei nove domini: tocchi quella che ti interessa e ti alleni solo su quel dominio, senza timer, con la spiegazione subito dopo ogni risposta. Ogni scheda mostra la tua percentuale storica su quel dominio. |
-| **Ripasso errori** | Ripropone solo le domande sbagliate o segnalate, le più sbagliate per prime. |
+| **Le 20 tecniche** | Il capitolo 10 del BABOK. Test da 10 domande su tutto il capitolo, oppure drill su una singola tecnica (cinque domande ciascuna). |
+| **Le 29 competenze** | Il capitolo 9 del BABOK. Test da 10 domande, per gruppo di competenze o per singola competenza. |
+| **Ripasso errori** | Ripropone solo le domande sbagliate o segnalate, le più sbagliate per prime. Attinge da tutte le sezioni. |
 | **Blueprint & progressi** | Domini e pesi, le 20 tecniche e le 29 competenze valutate, storico e statistiche per dominio. |
 
 Al termine di ogni sessione il report mostra il risultato per dominio e per **activity
@@ -41,13 +43,23 @@ competencies del capitolo 9.
 
 ## Stato del pool domande
 
-240 domande, tutti e nove i domini coperti, **tutte e 36 le activity statement** con
-almeno una domanda:
+440 domande in tre pool distinti:
 
-| Domini | Domande | Fonte |
+| Pool | Domande | Copertura |
 |---|---|---|
-| 1–3 (40% dell'esame) | 96 | *The Business Analysis Standard* v2.0 |
-| 4–9 (60% dell'esame) | 144 | *BABOK Guide* v3 |
+| **Simulazione** — domini 1–3 | 96 | *The Business Analysis Standard* v2.0 |
+| **Simulazione** — domini 4–9 | 144 | *BABOK Guide* v3 |
+| **Tecniche** (cap. 10) | 100 | 5 domande per ciascuna delle 20 tecniche |
+| **Competenze** (cap. 9) | 100 | tutte e 29 le competenze, più 13 domande sui sei gruppi |
+
+Le 240 domande della simulazione coprono tutti e nove i domini e **tutte e 36 le activity
+statement**.
+
+Tecniche e competenze non sono domini: il blueprint le valuta trasversalmente, dentro i
+nove domini. Le loro domande stanno quindi in pool separati e **non entrano nella
+simulazione**, che altrimenti perderebbe la distribuzione ufficiale delle 50 domande. Le
+domande su tecniche e competenze già presenti nel pool della simulazione restano dove
+sono, agganciate al dominio in cui l'esame le collocherebbe.
 
 Ogni dominio ha da 4 a 8 volte le domande che compaiono all'esame: due simulazioni
 consecutive condividono circa 9 domande su 50, e servono una ventina di simulazioni per
@@ -82,7 +94,8 @@ js/engine.js               composizione dei set secondo il blueprint, timing, co
 js/storage.js              persistenza su localStorage (sessione, storico, errori)
 js/app.js                  routing, rendering, eventi
 data/blueprint.js          domini, pesi, activity statement, tecniche, competenze
-data/questions.js          pool domande
+data/questions.js          pool della simulazione, per dominio
+data/topics.js             pool delle sezioni tecniche e competenze, per riferimento BABOK
 sw.js                      service worker, cache offline
 ```
 

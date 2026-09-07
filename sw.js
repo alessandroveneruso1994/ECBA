@@ -10,7 +10,7 @@
  * Le icone restano cache-first: non cambiano mai e non vale la pena
  * rifetcharle a ogni avvio.
  */
-var CACHE = 'ecba-trainer-v2';
+var CACHE = 'ecba-trainer-v3';
 
 var ASSETS = [
   './',
@@ -21,6 +21,7 @@ var ASSETS = [
   './js/storage.js',
   './data/blueprint.js',
   './data/questions.js',
+  './data/topics.js',
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',

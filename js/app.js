@@ -5,6 +5,48 @@
   var BP = window.ECBA_BLUEPRINT;
   var POOL = window.ECBA_QUESTIONS || [];
 
+  /**
+   * Le due sezioni trasversali. Tecniche e competenze non sono domini: il
+   * blueprint le valuta dentro i nove domini, quindi le loro domande stanno
+   * fuori dal pool della simulazione, che altrimenti perderebbe la
+   * distribuzione ufficiale delle 50 domande.
+   */
+  var TOPICS = {
+    techniques: {
+      mode: 'technique',
+      pool: window.ECBA_TECHNIQUE_QUESTIONS || [],
+      title: 'Le 20 tecniche',
+      intro: 'Le tecniche del capitolo 10 del BABOK Guide valutate all\'esame. Il blueprint chiede di conoscerne purpose, description e usage considerations.',
+      listTitle: 'Allenati su una singola tecnica',
+      listHint: 'Ogni tecnica ha cinque domande. La percentuale è il tuo storico.',
+      // Voci della lista: una per tecnica.
+      entries: function () {
+        return BP.techniques.map(function (t) {
+          return { ref: t.ref, label: t.ref + ' ' + t.name };
+        });
+      }
+    },
+    competencies: {
+      mode: 'competency',
+      pool: window.ECBA_COMPETENCY_QUESTIONS || [],
+      title: 'Le 29 competenze',
+      intro: 'Le underlying competencies del capitolo 9 del BABOK Guide, nei sei gruppi. Il blueprint chiede di conoscerne purpose, definition ed effectiveness measures.',
+      listTitle: 'Allenati per gruppo o per competenza',
+      listHint: 'Tocca un gruppo per esercitarti su tutte le sue competenze, o una singola voce per il drill mirato.',
+      // Voci della lista: il gruppo, poi le competenze che contiene.
+      entries: function () {
+        var out = [];
+        BP.competencies.forEach(function (g) {
+          out.push({ ref: g.ref, label: g.ref + ' ' + g.group, isGroup: true });
+          g.items.forEach(function (c) {
+            out.push({ ref: c.ref, label: c.ref + ' ' + c.name });
+          });
+        });
+        return out;
+      }
+    }
+  };
+
   var view = document.getElementById('view');
   var topbarTitle = document.getElementById('topbar-title');
   var btnBack = document.getElementById('btn-back');
@@ -22,11 +64,28 @@
     return BP.domains.filter(function (d) { return d.id === id; })[0];
   }
 
+  /** Tutte le domande disponibili, di qualunque sezione. */
+  function allQuestions() {
+    return POOL
+      .concat(TOPICS.techniques.pool)
+      .concat(TOPICS.competencies.pool);
+  }
+
   function questionById(id) {
-    for (var i = 0; i < POOL.length; i++) {
-      if (POOL[i].id === id) return POOL[i];
+    var all = allQuestions();
+    for (var i = 0; i < all.length; i++) {
+      if (all[i].id === id) return all[i];
     }
     return null;
+  }
+
+  /** Il pool a cui appartiene la sessione corrente, per correzione e ripasso. */
+  function sessionPool() {
+    if (!session) return POOL;
+    if (session.mode === 'technique') return TOPICS.techniques.pool;
+    if (session.mode === 'competency') return TOPICS.competencies.pool;
+    // Il ripasso può mescolare domande di sezioni diverse.
+    return session.mode === 'review' ? allQuestions() : POOL;
   }
 
   function tpl(name) {
@@ -64,6 +123,27 @@
     return wrap;
   }
 
+  /** Nome leggibile di una tecnica, di una competenza o di un loro gruppo. */
+  function refLabel(ref) {
+    var tech = BP.techniques.filter(function (t) { return t.ref === ref; })[0];
+    if (tech) return tech.ref + ' ' + tech.name;
+
+    for (var i = 0; i < BP.competencies.length; i++) {
+      var g = BP.competencies[i];
+      if (g.ref === ref) return g.ref + ' ' + g.group;
+      var item = g.items.filter(function (c) { return c.ref === ref; })[0];
+      if (item) return item.ref + ' ' + item.name;
+    }
+    return ref;
+  }
+
+  function modeLabel(mode) {
+    return mode === 'exam' ? 'Simulazione d\'esame' :
+           mode === 'practice' ? 'Esercizio per dominio' :
+           mode === 'technique' ? 'Tecniche' :
+           mode === 'competency' ? 'Competenze' : 'Ripasso errori';
+  }
+
   function poolCountByDomain(id) {
     return POOL.filter(function (q) { return q.domain === id; }).length;
   }
@@ -99,8 +179,7 @@
       var card = node.getElementById('resume-card');
       card.hidden = false;
       var answered = Object.keys(saved.answers).length;
-      var label = saved.mode === 'exam' ? 'Simulazione d\'esame' :
-                  saved.mode === 'practice' ? 'Allenamento' : 'Ripasso errori';
+      var label = modeLabel(saved.mode);
       var extra = '';
       if (saved.deadline) {
         var left = Math.max(0, saved.deadline - Date.now());
@@ -125,6 +204,7 @@
         var mode = btn.getAttribute('data-mode');
         if (mode === 'exam') startExam();
         else if (mode === 'practice') showPracticeSetup();
+        else if (mode === 'techniques' || mode === 'competencies') showTopic(mode);
         else if (mode === 'review') startReview();
         else showBlueprint();
       });
@@ -220,9 +300,69 @@
     render(node, 'Esercizio per dominio', true);
   }
 
+  /** Sezione trasversale: test misto da 10 domande, oppure drill su una voce. */
+  function showTopic(key) {
+    var topic = TOPICS[key];
+    var node = tpl('topic');
+    var stats = Storage.topicStats();
+
+    node.getElementById('topic-title').textContent = topic.title;
+    node.getElementById('topic-intro').textContent = topic.intro;
+    node.getElementById('topic-list-title').textContent = topic.listTitle;
+    node.getElementById('topic-list-hint').textContent = topic.listHint;
+
+    var testBtn = node.getElementById('btn-topic-test');
+    testBtn.textContent = 'Test da ' + BP.topicTestSize + ' domande su tutto il capitolo';
+    testBtn.addEventListener('click', function () { startTopic(key, null); });
+
+    var list = node.getElementById('topic-list');
+    topic.entries().forEach(function (e) {
+      var available = topic.pool.filter(function (q) {
+        return q.ref === e.ref || q.ref.indexOf(e.ref + '.') === 0;
+      }).length;
+
+      var row = document.createElement('button');
+      row.className = 'topic-row' + (e.isGroup ? ' group' : '');
+      row.disabled = !available;
+      row.innerHTML = '<span class="tr-label"></span><span class="tr-score"></span>';
+      row.querySelector('.tr-label').textContent = e.label;
+
+      // Statistica aggregata: per un gruppo somma le competenze che contiene.
+      var seen = 0, correct = 0;
+      Object.keys(stats).forEach(function (ref) {
+        if (ref === e.ref || ref.indexOf(e.ref + '.') === 0) {
+          seen += stats[ref].seen;
+          correct += stats[ref].correct;
+        }
+      });
+      var score = row.querySelector('.tr-score');
+      if (seen) {
+        score.textContent = pct(correct / seen);
+        score.className = 'tr-score ' + (correct / seen >= 0.8 ? 'ok' : correct / seen >= 0.6 ? 'warn' : 'bad');
+        score.title = correct + ' corrette su ' + seen + ' viste';
+      } else {
+        score.textContent = available ? available + ' dom.' : '—';
+      }
+
+      row.addEventListener('click', function () { startTopic(key, e.ref); });
+      list.appendChild(row);
+    });
+
+    render(node, topic.title, true);
+  }
+
+  function startTopic(key, ref) {
+    var topic = TOPICS[key];
+    var questions = Engine.buildTopicTest(topic.pool, ref, BP.topicTestSize);
+    if (!questions.length) return alert('Nessuna domanda disponibile.');
+    session = Engine.createSession(topic.mode, questions);
+    Storage.saveSession(session);
+    showQuiz();
+  }
+
   function startReview() {
     var missed = Storage.weakQuestionIds();
-    var questions = Engine.buildReview(POOL, missed);
+    var questions = Engine.buildReview(allQuestions(), missed);
     if (!questions.length) {
       var empty = document.createElement('div');
       empty.className = 'empty-state';
@@ -274,9 +414,7 @@
 
   function showQuiz() {
     var node = tpl('quiz');
-    render(node, session.mode === 'exam' ? 'Simulazione d\'esame' :
-                 session.mode === 'practice' ? 'Allenamento' :
-                 reviewMode ? 'Revisione risposte' : 'Ripasso errori', true);
+    render(node, reviewMode ? 'Revisione risposte' : modeLabel(session.mode), true);
     if (!reviewMode) startTimer();
     else stopTimer();
 
@@ -306,10 +444,16 @@
     view.querySelector('#q-counter').textContent =
       'Domanda ' + (session.index + 1) + ' di ' + total;
 
-    var d = domain(q.domain);
     var tag = view.querySelector('#q-tag');
-    tag.textContent = d.id + '. ' + d.name + ' · ' + q.activity;
-    tag.title = d.activities[q.activity] || '';
+    if (q.domain !== undefined) {
+      var d = domain(q.domain);
+      tag.textContent = d.id + '. ' + d.name + ' · ' + q.activity;
+      tag.title = d.activities[q.activity] || '';
+    } else {
+      // Domande di tecniche o competenze: l'etichetta è il riferimento BABOK.
+      tag.textContent = refLabel(q.ref);
+      tag.title = q.source;
+    }
 
     view.querySelector('#q-stem').textContent = q.stem;
 
@@ -468,7 +612,7 @@
   function submit() {
     stopTimer();
     session.finished = true;
-    lastResult = Engine.grade(session, POOL);
+    lastResult = Engine.grade(session, sessionPool());
     Storage.recordAttempt(lastResult);
     Storage.updateMissed(lastResult.answers);
     Storage.clearSession();
@@ -486,13 +630,45 @@
       result.passed ? 'var(--ok)' : percent >= 60 ? 'var(--warn)' : 'var(--bad)');
     node.getElementById('score-value').textContent = result.correct + '/' + result.total;
 
-    node.getElementById('score-verdict').textContent = result.passed
-      ? 'Sopra la soglia di riferimento'
-      : 'Sotto la soglia di riferimento';
-    node.getElementById('score-detail').textContent =
-      percent + '% corrette · tempo impiegato ' + formatClock(result.durationMs) +
-      ' · soglia di autovalutazione ' + pct(BP.exam.referencePassMark) +
-      '. IIBA non pubblica il punteggio minimo reale: il risultato ufficiale è scalato.';
+    if (result.mode === 'exam') {
+      node.getElementById('score-verdict').textContent = result.passed
+        ? 'Sopra la soglia di riferimento'
+        : 'Sotto la soglia di riferimento';
+      node.getElementById('score-detail').textContent =
+        percent + '% corrette · tempo impiegato ' + formatClock(result.durationMs) +
+        ' · soglia di autovalutazione ' + pct(BP.exam.referencePassMark) +
+        '. IIBA non pubblica il punteggio minimo reale: il risultato ufficiale è scalato.';
+    } else {
+      // Fuori dalla simulazione la soglia dell'esame non è un metro sensato.
+      node.getElementById('score-verdict').textContent = modeLabel(result.mode) + ' completato';
+      node.getElementById('score-detail').textContent =
+        percent + '% corrette · tempo impiegato ' + formatClock(result.durationMs) +
+        '. Le domande sbagliate finiscono nel ripasso errori.';
+    }
+
+    // Le sezioni trasversali non hanno domini né activity statement:
+    // al loro posto il report mostra il dettaglio per riferimento BABOK.
+    var refKeys = Object.keys(result.refs || {});
+    var hasDomains = Object.keys(result.domains).length > 0;
+    node.getElementById('domain-card').hidden = !hasDomains;
+    node.getElementById('activity-card').hidden = !hasDomains;
+
+    if (refKeys.length) {
+      node.getElementById('ref-card').hidden = false;
+      node.getElementById('ref-card-title').textContent =
+        result.mode === 'technique' ? 'Risultato per tecnica' : 'Risultato per competenza';
+      var rb = node.getElementById('ref-breakdown');
+      refKeys.sort().forEach(function (ref) {
+        var s = result.refs[ref];
+        var ratio = s.correct / s.seen;
+        rb.appendChild(barRow(
+          refLabel(ref),
+          s.correct + '/' + s.seen + ' · ' + pct(ratio),
+          ratio,
+          ratio >= 0.8 ? 'ok' : ratio >= 0.6 ? 'warn' : 'bad'
+        ));
+      });
+    }
 
     var db = node.getElementById('domain-breakdown');
     BP.domains.forEach(function (d) {
