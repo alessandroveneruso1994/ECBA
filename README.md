@@ -41,14 +41,18 @@ competencies del capitolo 9.
 
 ## Stato del pool domande
 
-| Domini | Copertura |
-|---|---|
-| 1–3 (40% dell'esame) | 60 domande, derivate da *The Business Analysis Standard* v2.0 |
-| 4–9 (60% dell'esame) | da scrivere sul BABOK Guide |
+120 domande, tutti e nove i domini coperti, **tutte e 36 le activity statement** con
+almeno una domanda:
 
-Finché i domini 4–9 sono vuoti, la simulazione ridistribuisce le domande mancanti sui
-domini disponibili, così il totale resta 50: il risultato è utile per allenarsi ma la
-distribuzione non rispecchia ancora quella d'esame. La home mostra la copertura reale.
+| Domini | Domande | Fonte |
+|---|---|---|
+| 1–3 (40% dell'esame) | 60 | *The Business Analysis Standard* v2.0 |
+| 4–9 (60% dell'esame) | 60 | *BABOK Guide* v3 |
+
+Ogni dominio ha almeno il doppio delle domande che compaiono all'esame, così due
+simulazioni consecutive condividono circa 20 domande su 50 anziché ripetere sempre lo
+stesso set. La simulazione rispetta esattamente la distribuzione del blueprint
+(10/7/3/5/5/5/5/5/5).
 
 **Le domande non sono domande d'esame reali.** IIBA non pubblica il proprio question bank.
 Sono domande di pratica originali scritte a partire dai documenti ufficiali, con
