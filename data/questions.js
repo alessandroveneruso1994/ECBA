@@ -1627,5 +1627,1588 @@ window.ECBA_QUESTIONS = [
     answer: 'A',
     explanation: 'Root Cause Analysis (10.40) identifica e valuta le cause sottostanti di un problema. {B} è Brainstorming (10.5), il cui scopo è generare molte idee e ricavarne temi per l\'analisi successiva; {C} è Lessons Learned (10.27). Non confondere il generare idee con l\'individuare cause.'
   }
+,
+  /* ---- Dominio 1, serie B ---- */
 
+  {
+    id: 'D1-23', domain: 1, activity: '1.1', type: 'standard',
+    source: 'The Business Analysis Standard, 2.4',
+    stem: 'Which critical function of business analysis is described as "breaking down silos, fostering collaboration and alignment across diverse perspectives and interests"?',
+    options: [
+      { id: 'A', text: 'Leadership support' },
+      { id: 'B', text: 'Stakeholder collaboration' },
+      { id: 'C', text: 'Value delivery' },
+      { id: 'D', text: 'Needs prioritization' }
+    ],
+    answer: 'B',
+    explanation: 'Le organizzazioni sono ecosistemi di stakeholder interconnessi e la business analysis abbatte i silos favorendo collaborazione e allineamento. Leadership support riguarda invece l\'aiutare i leader ad articolare scopo, obiettivi e aspettative.'
+  },
+  {
+    id: 'D1-24', domain: 1, activity: '1.1', type: 'situational',
+    source: 'The Business Analysis Standard, 2.4',
+    stem: 'A team is about to build a fix for repeated customer complaints about late deliveries. The business analysis professional insists on first understanding why deliveries are late. Which critical function is being exercised, and why does it matter?',
+    options: [
+      { id: 'A', text: 'Risk management, because late deliveries expose the company to penalties.' },
+      { id: 'B', text: 'Problem understanding, because addressing the underlying causes rather than the symptoms produces targeted solutions and long-term improvement.' },
+      { id: 'C', text: 'Agility, because the team must respond quickly to customer feedback.' },
+      { id: 'D', text: 'Performance enhancement, because delivery times are a performance measure.' }
+    ],
+    answer: 'B',
+    explanation: 'Problem understanding significa andare oltre i sintomi per districare le complessità e identificare le fonti dell\'attrito, così da costruire soluzioni mirate ed efficaci che assicurino un miglioramento duraturo. Le altre funzioni sono reali ma non descrivono ciò che sta accadendo qui.'
+  },
+  {
+    id: 'D1-25', domain: 1, activity: '1.2', type: 'standard',
+    source: 'The Business Analysis Standard, 2.2',
+    stem: 'How does the BACCM define a "Need"?',
+    options: [
+      { id: 'A', text: 'A documented request submitted by a stakeholder.' },
+      { id: 'B', text: 'A problem or opportunity to be addressed.' },
+      { id: 'C', text: 'A gap between the current state and the future state.' },
+      { id: 'D', text: 'A usable representation of a requirement.' }
+    ],
+    answer: 'B',
+    explanation: 'Need = "a problem or opportunity to be addressed": la definizione include esplicitamente le opportunità, non solo i problemi. {D} inverte la relazione reale, perché è il requisito a essere una rappresentazione utilizzabile di un need.'
+  },
+  {
+    id: 'D1-26', domain: 1, activity: '1.2', type: 'situational',
+    source: 'The Business Analysis Standard, 2.2',
+    stem: 'A company introduces a new CRM. Six months later, the sales team reports that the reports they used to rely on are no longer available, and asks for them back. Which BACCM relationship does this illustrate?',
+    options: [
+      { id: 'A', text: 'A change causing a need, by altering the value delivered by existing solutions.' },
+      { id: 'B', text: 'A need causing a change, by motivating stakeholders to act.' },
+      { id: 'C', text: 'A solution causing a context, by redefining the environment.' },
+      { id: 'D', text: 'A stakeholder causing a value, by expressing a preference.' }
+    ],
+    answer: 'A',
+    explanation: 'Il cambiamento (il nuovo CRM) ha ridotto il valore erogato dalle soluzioni esistenti e ha così generato un nuovo need. È la direzione meno intuitiva della relazione Need↔Change e per questo la più testata: non solo i need causano cambiamenti, ma anche i cambiamenti causano need.'
+  },
+  {
+    id: 'D1-27', domain: 1, activity: '1.2', type: 'standard',
+    source: 'The Business Analysis Standard, 2.2',
+    stem: 'A solution can include a combination of components. Which of the following would NOT normally be considered part of a solution?',
+    options: [
+      { id: 'A', text: 'Manual procedures and process changes' },
+      { id: 'B', text: 'Business model updates and improved organizational capabilities' },
+      { id: 'C', text: 'Technology-based initiatives' },
+      { id: 'D', text: 'The project budget approved by the sponsor' }
+    ],
+    answer: 'D',
+    explanation: 'Lo Standard elenca come componenti di una soluzione le iniziative tecnologiche, le procedure manuali, i cambi di processo, gli aggiornamenti del modello di business e il miglioramento delle capability organizzative. Il budget è un vincolo del contesto, non un componente della soluzione.'
+  },
+  {
+    id: 'D1-28', domain: 1, activity: '1.2', type: 'situational',
+    source: 'The Business Analysis Standard, 2.3',
+    stem: 'A business analysis professional wants to check whether the analysis performed so far is complete before moving to design. Which use of the BACCM supports this?',
+    options: [
+      { id: 'A', text: 'Using it to assign responsibilities across the delivery team.' },
+      { id: 'B', text: 'Using it to consider the quality and completeness of the work being done.' },
+      { id: 'C', text: 'Using it to estimate the effort remaining in the initiative.' },
+      { id: 'D', text: 'Using it to select the delivery methodology.' }
+    ],
+    answer: 'B',
+    explanation: 'Tra gli usi dichiarati del BACCM c\'è considerare la qualità e la completezza del lavoro svolto: se uno dei sei concetti è rimasto inesplorato, l\'analisi ha un buco. Il modello non serve invece a stimare, assegnare responsabilità o scegliere metodologie.'
+  },
+  {
+    id: 'D1-29', domain: 1, activity: '1.3', type: 'standard',
+    source: 'The Business Analysis Standard, 2.4',
+    stem: 'Which critical function describes business analysis as "the compass" that guides enterprises in allocating resources for maximum impact?',
+    options: [
+      { id: 'A', text: 'Needs prioritization' },
+      { id: 'B', text: 'Value-centric solutions' },
+      { id: 'C', text: 'Problem understanding' },
+      { id: 'D', text: 'Risk management' }
+    ],
+    answer: 'A',
+    explanation: 'La needs prioritization è descritta come la bussola che guida le imprese in un mare di requisiti: comprendendo l\'importanza relativa dei diversi bisogni si allocano le risorse in modo efficiente per il massimo impatto.'
+  },
+  {
+    id: 'D1-30', domain: 1, activity: '1.3', type: 'situational',
+    source: 'The Business Analysis Standard, 2.4',
+    stem: 'A leadership team struggles to explain to staff why a transformation is happening. The business analysis professional helps articulate the purpose and the goals. Which critical function is this?',
+    options: [
+      { id: 'A', text: 'Stakeholder collaboration' },
+      { id: 'B', text: 'Value delivery' },
+      { id: 'C', text: 'Leadership support' },
+      { id: 'D', text: 'Agility' }
+    ],
+    answer: 'C',
+    explanation: 'Leadership support: direzione e visione chiare sono fondamentali per motivare i team, e la business analysis mette i leader in condizione di articolare lo scopo, fissare obiettivi e comunicare le aspettative, dando ai team una visione comune verso cui lavorare.'
+  },
+  {
+    id: 'D1-31', domain: 1, activity: '1.3', type: 'standard',
+    source: 'The Business Analysis Standard, 2.4',
+    stem: 'How does business analysis contribute to risk management, according to the Standard?',
+    options: [
+      { id: 'A', text: 'By eliminating the risks associated with a change before it begins.' },
+      { id: 'B', text: 'By proactively identifying and assessing risks and taking appropriate action, integrating risk management into decision-making.' },
+      { id: 'C', text: 'By transferring risk ownership to the project management office.' },
+      { id: 'D', text: 'By avoiding changes whose risk cannot be quantified.' }
+    ],
+    answer: 'B',
+    explanation: 'Il cambiamento porta intrinsecamente rischi: la business analysis li identifica, valuta e affronta in modo proattivo, integrando la gestione del rischio nei processi decisionali e promuovendo resilienza e sostenibilità nel lungo periodo. Nessuno elimina i rischi ({A}) né si evitano i cambiamenti rischiosi per principio ({D}).'
+  },
+  {
+    id: 'D1-32', domain: 1, activity: '1.4', type: 'standard',
+    source: 'The Business Analysis Standard, 2.5',
+    stem: 'At which organizational levels is business analysis described as critical?',
+    options: [
+      { id: 'A', text: 'At the operational level only, where processes are executed.' },
+      { id: 'B', text: 'At the strategic level only, where decisions position the organization for the future.' },
+      { id: 'C', text: 'At the strategic, tactical, and operational levels.' },
+      { id: 'D', text: 'At the project level only, for the duration of an initiative.' }
+    ],
+    answer: 'C',
+    explanation: 'La business analysis è critica per tutto il lavoro organizzativo, ai livelli strategico, tattico e operativo. {A} livello strategico il valore è guidato da decisioni solide; l\'esecuzione tattica e l\'eccellenza operativa creano valore lungo il percorso verso gli outcome desiderati.'
+  },
+  {
+    id: 'D1-33', domain: 1, activity: '1.4', type: 'situational',
+    source: 'The Business Analysis Standard, 2.2',
+    stem: 'A cost-saving initiative will reduce annual spending by €200,000 and, according to the team, will also improve the company\'s reputation with regulators. How should these two outcomes be characterized?',
+    options: [
+      { id: 'A', text: 'Both are tangible, because both were quantified in the business case.' },
+      { id: 'B', text: 'The saving is tangible; the reputation improvement is intangible, measured indirectly.' },
+      { id: 'C', text: 'Both are intangible, because future outcomes cannot be measured.' },
+      { id: 'D', text: 'The saving is value realized; the reputation improvement is not value at all.' }
+    ],
+    answer: 'B',
+    explanation: 'Il valore tangibile è direttamente misurabile e ha spesso una componente monetaria significativa; quello intangibile si misura indirettamente e ha spesso una forte componente motivazionale, e la reputazione aziendale è proprio l\'esempio citato dallo Standard. Entrambi sono valore a pieno titolo, quindi {D} è errata.'
+  },
+  {
+    id: 'D1-34', domain: 1, activity: '1.4', type: 'standard',
+    source: 'The Business Analysis Standard, 2.5',
+    stem: 'Which activity is listed as part of effective business analysis in creating value?',
+    options: [
+      { id: 'A', text: 'Helping teams assess trade-offs and prioritize value creation.' },
+      { id: 'B', text: 'Approving the change requests raised during delivery.' },
+      { id: 'C', text: 'Assigning developers to the highest-value components.' },
+      { id: 'D', text: 'Negotiating contracts with the selected suppliers.' }
+    ],
+    answer: 'A',
+    explanation: 'Aiutare i team a valutare i trade-off e a prioritizzare la creazione di valore è tra le attività elencate, insieme a comprendere la strategia, chiarire problemi e opportunità, comunicare gli outcome desiderati, identificare il valore potenziale e supportare lo sviluppo di soluzioni ad alto valore.'
+  },
+  {
+    id: 'D1-35', domain: 1, activity: '1.4', type: 'situational',
+    source: 'The Business Analysis Standard, 2.2',
+    stem: 'A cybersecurity investment will not increase revenue but will reduce the likelihood of a costly data breach. How is this value best described?',
+    options: [
+      { id: 'A', text: 'Value realized through potential returns and gains.' },
+      { id: 'B', text: 'Value preserved by mitigating losses, risks, and costs.' },
+      { id: 'C', text: 'No value, since there is no measurable financial gain.' },
+      { id: 'D', text: 'Relative value, since it can only be compared to other investments.' }
+    ],
+    answer: 'B',
+    explanation: 'Il valore può essere realizzato attraverso ritorni, guadagni e miglioramenti, oppure preservato mitigando perdite, rischi e costi. Un investimento in sicurezza che riduce la probabilità di una violazione costosa preserva valore: non generare ricavi non significa non generare valore.'
+  },
+  {
+    id: 'D1-36', domain: 1, activity: '1.1', type: 'standard',
+    source: 'The Business Analysis Standard, 2.4',
+    stem: 'Which statement about business analysis and the project lifecycle is correct?',
+    options: [
+      { id: 'A', text: 'Business analysis is restricted to the project lifecycle and ends at implementation.' },
+      { id: 'B', text: 'Business analysis is not restricted to a project or product lifecycle and does not stop at implementation.' },
+      { id: 'C', text: 'Business analysis begins only once a project has been formally approved.' },
+      { id: 'D', text: 'Business analysis ends when the requirements are approved.' }
+    ],
+    answer: 'B',
+    explanation: 'Sotto la funzione "performance enhancement" lo Standard afferma esplicitamente che la business analysis non è ristretta al ciclo di vita di un progetto o prodotto e non si ferma all\'implementazione: continua a monitorare e valutare gli outcome, alimentando il miglioramento continuo.'
+  },
+  {
+    id: 'D1-37', domain: 1, activity: '1.2', type: 'standard',
+    source: 'The Business Analysis Standard, 2.3',
+    stem: 'Which of the following is NOT listed as a use of the BACCM?',
+    options: [
+      { id: 'A', text: 'Identifying professional development opportunities for individuals.' },
+      { id: 'B', text: 'Establishing both a foundation and a path forward.' },
+      { id: 'C', text: 'Determining the budget required to deliver the change.' },
+      { id: 'D', text: 'Describing effective and efficient business analysis.' }
+    ],
+    answer: 'C',
+    explanation: 'Gli usi elencati sono: descrivere una business analysis efficace ed efficiente, comunicare con un linguaggio comune, identificare opportunità di sviluppo professionale, eseguire una business analysis migliore valutando le relazioni fra i sei concetti, valutarne l\'impatto, stabilire fondamento e percorso, considerare qualità e completezza del lavoro. La stima del budget non compare.'
+  },
+  {
+    id: 'D1-38', domain: 1, activity: '1.3', type: 'situational',
+    source: 'The Business Analysis Standard, 2.4',
+    stem: 'An organization operating in a fast-moving market needs to combine long-range planning with the ability to respond to shifting customer needs. How does business analysis support this?',
+    options: [
+      { id: 'A', text: 'By mandating an adaptive approach for all initiatives.' },
+      { id: 'B', text: 'By supporting predictive, adaptive, and hybrid approaches, combining forward-looking predictions with real-time adaptability.' },
+      { id: 'C', text: 'By reducing the planning horizon to a single quarter.' },
+      { id: 'D', text: 'By delegating strategy to the executive team and focusing on delivery.' }
+    ],
+    answer: 'B',
+    explanation: 'È la funzione "agility": la business analysis supporta approcci predittivi, adattivi e ibridi perché le organizzazioni diventino agili di fronte a condizioni di mercato, bisogni dei clienti e progressi tecnologici che cambiano, combinando previsione e adattabilità in tempo reale.'
+  },
+  {
+    id: 'D1-39', domain: 1, activity: '1.4', type: 'standard',
+    source: 'The Business Analysis Standard, 2.5',
+    stem: 'How does the Standard describe the way desired outcomes are typically reached?',
+    options: [
+      { id: 'A', text: 'Through a single transformation project with a defined end date.' },
+      { id: 'B', text: 'Through a combination of described future states delivered by individual components of work.' },
+      { id: 'C', text: 'Through annual budget cycles managed by the finance function.' },
+      { id: 'D', text: 'Through the accumulation of approved requirements over time.' }
+    ],
+    answer: 'B',
+    explanation: 'Il valore è spesso creato gestendo iniziative che lavorano insieme; l\'organizzazione evolve verso gli outcome desiderati, che sono spesso rappresentati da una combinazione di future state descritti attraverso singole componenti di lavoro.'
+  },
+  {
+    id: 'D1-40', domain: 1, activity: '1.1', type: 'situational',
+    source: 'The Business Analysis Standard, 4.1',
+    stem: 'Which of the following people would benefit from applying business analysis, according to the Standard?',
+    options: [
+      { id: 'A', text: 'Only those with a formal business analysis qualification.' },
+      { id: 'B', text: 'Anyone creating new or improved value propositions, enabling change, or streamlining operational activities.' },
+      { id: 'C', text: 'Only those working on technology solution implementations.' },
+      { id: 'D', text: 'Only those reporting into a business analysis Centre of Excellence.' }
+    ],
+    answer: 'B',
+    explanation: 'La business analysis è uno skill set versatile applicabile a qualunque ruolo: chiunque sviluppi strategia e obiettivi, crei value proposition, abiliti il cambiamento, analizzi need, faciliti la collaborazione, crei prodotti innovativi, progetti processi o ottimizzi le attività operative ne trae beneficio.'
+  },
+  {
+    id: 'D1-41', domain: 1, activity: '1.2', type: 'standard',
+    source: 'The Business Analysis Standard, 2.2',
+    stem: 'Stakeholders are grouped based on what?',
+    options: [
+      { id: 'A', text: 'Their seniority within the organizational hierarchy.' },
+      { id: 'B', text: 'Their relationship to the needs, changes, and solutions.' },
+      { id: 'C', text: 'The department budget they control.' },
+      { id: 'D', text: 'Whether they are internal or external to the organization.' }
+    ],
+    answer: 'B',
+    explanation: 'Gli stakeholder sono raggruppati in base alla loro relazione con need, change e solution, e sono spesso definiti da interesse, impatto e influenza sul cambiamento. La distinzione interno/esterno esiste ({D}) ma non è il criterio di raggruppamento indicato.'
+  },
+  {
+    id: 'D1-42', domain: 1, activity: '1.4', type: 'situational',
+    source: 'The Business Analysis Standard, 2.5',
+    stem: 'A sponsor asks when the organization will "see the value" of an initiative that will run for eighteen months. What is the most accurate answer based on the Standard?',
+    options: [
+      { id: 'A', text: 'Value will be visible only at the end, once all deliverables are complete.' },
+      { id: 'B', text: 'Value is discovered throughout the initiative, as benefits are delivered as efficiently and effectively as possible.' },
+      { id: 'C', text: 'Value can only be confirmed in the financial year following implementation.' },
+      { id: 'D', text: 'Value cannot be predicted, so the question cannot be answered.' }
+    ],
+    answer: 'B',
+    explanation: 'Il valore si scopre lungo tutta l\'iniziativa, man mano che i benefici vengono erogati nel modo più efficiente ed efficace possibile. Trattare il valore come un evento finale è uno degli errori concettuali che l\'esame verifica più spesso.'
+  },
+
+  /* ---- Dominio 2, serie B ---- */
+
+  {
+    id: 'D2-17', domain: 2, activity: '2.1', type: 'standard',
+    source: 'The Business Analysis Standard, 3.1',
+    stem: 'What ability do the deliberate practices of an empowering mindset collectively provide?',
+    options: [
+      { id: 'A', text: 'The ability to eliminate uncertainty from initiatives before they start.' },
+      { id: 'B', text: 'The ability to create high-quality outcomes, prioritize focus, empathize with stakeholders, and adapt to realities and feedback.' },
+      { id: 'C', text: 'The ability to work without stakeholder involvement when time is short.' },
+      { id: 'D', text: 'The ability to apply one proven approach consistently across initiatives.' }
+    ],
+    answer: 'B',
+    explanation: 'Le pratiche deliberate danno la capacità di creare outcome di alta qualità, scoprire valore, prioritizzare il focus, empatizzare e imparare costantemente dagli stakeholder impattati, collaborare per costruire alleati del cambiamento, valutare il contesto e adattarsi, e semplificare la costruzione e condivisione della conoscenza.'
+  },
+  {
+    id: 'D2-18', domain: 2, activity: '2.1', type: 'situational',
+    source: 'The Business Analysis Standard, 3.1',
+    stem: 'A business analysis professional is assigned to an initiative where nobody can say exactly what needs to be done. What does the Standard say about this situation?',
+    options: [
+      { id: 'A', text: 'The initiative should not start until the work is fully defined.' },
+      { id: 'B', text: 'Habits, attitudes, behaviours, and practices are required to confidently navigate situations where knowing exactly what needs to be done is impossible.' },
+      { id: 'C', text: 'A predictive approach should be imposed to force clarity.' },
+      { id: 'D', text: 'The sponsor should define the requirements before analysis begins.' }
+    ],
+    answer: 'B',
+    explanation: 'Lo Standard riconosce esplicitamente le situazioni in cui sapere esattamente cosa fare è impossibile, e indica che abitudini, atteggiamenti, comportamenti e pratiche consentono di navigarle con sicurezza. È il senso stesso del mindset: non attendere la certezza, ma muoversi bene senza di essa.'
+  },
+  {
+    id: 'D2-19', domain: 2, activity: '2.2', type: 'standard',
+    source: 'The Business Analysis Standard, 3.2',
+    stem: 'Which group correctly lists shared values that drive business analysis work?',
+    options: [
+      { id: 'A', text: 'Respect, courage, collaboration, ethics' },
+      { id: 'B', text: 'Efficiency, compliance, hierarchy, formality' },
+      { id: 'C', text: 'Accuracy, completeness, traceability, approval' },
+      { id: 'D', text: 'Speed, autonomy, competition, specialization' }
+    ],
+    answer: 'A',
+    explanation: 'I nove valori condivisi sono respect, courage, collaboration, ethics, curiosity, continuous learning, improvement, customer focus e value maximization. Le altre opzioni raccolgono parole plausibili in un contesto aziendale ma estranee all\'elenco ufficiale.'
+  },
+  {
+    id: 'D2-20', domain: 2, activity: '2.2', type: 'situational',
+    source: 'The Business Analysis Standard, 3.2',
+    stem: 'After each release, a business analysis professional systematically asks users what did not work and adjusts the approach accordingly. Which two shared values are most directly at work?',
+    options: [
+      { id: 'A', text: 'Courage and ethics' },
+      { id: 'B', text: 'Customer focus and continuous learning' },
+      { id: 'C', text: 'Respect and collaboration' },
+      { id: 'D', text: 'Value maximization and improvement' }
+    ],
+    answer: 'B',
+    explanation: 'Chiedere sistematicamente agli utenti e correggere la rotta esprime customer focus e continuous learning. Le altre coppie sono valori reali dell\'elenco, ma non descrivono con la stessa precisione il comportamento raccontato: nelle domande situation-based si sceglie l\'opzione più aderente, non solo una vera.'
+  },
+  {
+    id: 'D2-21', domain: 2, activity: '2.3', type: 'situational',
+    source: 'The Business Analysis Standard, 3.3',
+    stem: 'A stakeholder requests a feature that would be extremely costly given the current infrastructure and the agreed timeline. The professional analyses what can realistically be delivered within those constraints. Which principle applies?',
+    options: [
+      { id: 'A', text: 'See the whole' },
+      { id: 'B', text: 'Avoid waste' },
+      { id: 'C', text: 'Understand what is doable' },
+      { id: 'D', text: 'Think as a customer' }
+    ],
+    answer: 'C',
+    explanation: 'Understand what is doable riguarda il capire come consegnare una soluzione entro i vincoli, analizzando di continuo i need e le soluzioni che possono soddisfare un need prioritizzato, considerando anche i vincoli dell\'ambiente operativo.'
+  },
+  {
+    id: 'D2-22', domain: 2, activity: '2.3', type: 'standard',
+    source: 'The Business Analysis Standard, 3.3',
+    stem: 'What does the principle "See the whole" require?',
+    options: [
+      { id: 'A', text: 'Documenting every requirement before analysis can be considered complete.' },
+      { id: 'B', text: 'Analysing needs in the big picture context and identifying why a change is necessary.' },
+      { id: 'C', text: 'Involving every stakeholder in every decision.' },
+      { id: 'D', text: 'Reviewing the entire solution before each release.' }
+    ],
+    answer: 'B',
+    explanation: 'See the whole significa analizzare i need nel contesto complessivo e identificare perché un cambiamento è necessario: gli outcome desiderati nascono dalla comprensione del contesto, della soluzione e degli stakeholder. Non è una richiesta di esaustività documentale ({A}) né di coinvolgimento totale ({C}).'
+  },
+  {
+    id: 'D2-23', domain: 2, activity: '2.3', type: 'situational',
+    source: 'The Business Analysis Standard, 3.3',
+    stem: 'A team sets up a channel where users can comment on each increment, and uses those comments to adjust both the solution and the way the team works. Which principle is being applied?',
+    options: [
+      { id: 'A', text: 'Stimulate collaboration and continuous improvement' },
+      { id: 'B', text: 'Get real using examples' },
+      { id: 'C', text: 'Analyze to determine what is valuable' },
+      { id: 'D', text: 'Understand what is doable' }
+    ],
+    answer: 'A',
+    explanation: 'Il principio invita a creare un ambiente in cui tutti gli stakeholder contribuiscano al valore in modo continuativo e a usare il feedback continuo per adattare la soluzione e i suoi processi, aumentando il valore consegnato. Notare che l\'adattamento riguarda sia il prodotto sia il modo di lavorare.'
+  },
+  {
+    id: 'D2-24', domain: 2, activity: '2.3', type: 'standard',
+    source: 'The Business Analysis Standard, 3.3',
+    stem: 'The principle "Analyze to determine what is valuable" requires the practitioner to do what?',
+    options: [
+      { id: 'A', text: 'Calculate the return on investment before any work begins.' },
+      { id: 'B', text: 'Continuously assess and prioritize work to maximize the value being delivered.' },
+      { id: 'C', text: 'Deliver the requirements in the order in which they were elicited.' },
+      { id: 'D', text: 'Allocate value equally across all stakeholder groups.' }
+    ],
+    answer: 'B',
+    explanation: 'Il principio richiede di valutare e prioritizzare il lavoro in modo continuo per massimizzare il valore consegnato: il valore nel cambiamento si realizza comprendendo contesto, need, stakeholder e possibilità di soluzione. È un\'attività ricorrente, non un calcolo iniziale una tantum.'
+  },
+  {
+    id: 'D2-25', domain: 2, activity: '2.4', type: 'standard',
+    source: 'BABOK Guide, 9.1.5 Systems Thinking',
+    stem: 'What does systems thinking suggest about a system?',
+    options: [
+      { id: 'A', text: 'A system can be fully understood by analysing each of its components separately.' },
+      { id: 'B', text: 'A system as a whole has properties, behaviours, and characteristics that emerge from the interaction of its components and are not predictable from the components alone.' },
+      { id: 'C', text: 'A system should be decomposed until each part can be assigned to a single owner.' },
+      { id: 'D', text: 'A system\'s performance equals the sum of the performance of its parts.' }
+    ],
+    answer: 'B',
+    explanation: 'La teoria dei sistemi afferma che il tutto ha proprietà, comportamenti e caratteristiche emergenti dall\'interazione dei componenti, non prevedibili dalla comprensione dei soli componenti. È l\'esatto contrario di {A} e {D}, che descrivono un approccio puramente riduzionista.'
+  },
+  {
+    id: 'D2-26', domain: 2, activity: '2.4', type: 'standard',
+    source: 'BABOK Guide, 9.2.5 Adaptability',
+    stem: 'How does the BABOK Guide define adaptability?',
+    options: [
+      { id: 'A', text: 'The ability to change techniques, style, methods, and approach.' },
+      { id: 'B', text: 'The ability to complete tasks on time and to the expectations of colleagues.' },
+      { id: 'C', text: 'The ability to moderate discussions within a group.' },
+      { id: 'D', text: 'The ability to understand business needs using experience from other situations.' }
+    ],
+    answer: 'A',
+    explanation: 'L\'adaptability è la capacità di cambiare tecniche, stile, metodi e approccio: dimostrando disponibilità a interagire e completare i compiti in un modo preferibile per gli stakeholder si massimizza la qualità del servizio. {B} è Personal Accountability, {C} Facilitation, {D} Business Acumen.'
+  },
+  {
+    id: 'D2-27', domain: 2, activity: '2.4', type: 'situational',
+    source: 'BABOK Guide, 9.4.4 Listening',
+    stem: 'During an interview a business analysis professional not only registers the words but also checks the meaning in context and shows the speaker that their point is considered valuable. Which underlying competency is this?',
+    options: [
+      { id: 'A', text: 'Verbal Communication' },
+      { id: 'B', text: 'Listening' },
+      { id: 'C', text: 'Teaching' },
+      { id: 'D', text: 'Negotiation and Conflict Resolution' }
+    ],
+    answer: 'B',
+    explanation: 'Listening è il processo non del semplice udire le parole ma del comprenderne il significato nel contesto; l\'ascolto efficace permette sia di capire accuratamente sia di dimostrare all\'interlocutore che si ritiene importante ciò che dice. È una delle quattro Communication Skills del cap. 9.'
+  },
+  {
+    id: 'D2-28', domain: 2, activity: '2.4', type: 'standard',
+    source: 'BABOK Guide, 9.5.4 Negotiation and Conflict Resolution',
+    stem: 'What does the Negotiation and Conflict Resolution competency involve?',
+    options: [
+      { id: 'A', text: 'Deciding on behalf of the group when consensus cannot be reached.' },
+      { id: 'B', text: 'Mediating discussions so participants recognize differing views, resolve differences, and reach conclusions agreed by all participants.' },
+      { id: 'C', text: 'Escalating disagreements to the sponsor for a binding decision.' },
+      { id: 'D', text: 'Documenting each party\'s position for the record.' }
+    ],
+    answer: 'B',
+    explanation: 'La competenza consiste nel mediare le discussioni per far riconoscere le divergenze di vedute, risolverle e arrivare a conclusioni che raccolgano l\'accordo di tutti i partecipanti. Il professionista media, non decide al posto del gruppo ({A}) né si limita a verbalizzare ({D}).'
+  },
+  {
+    id: 'D2-29', domain: 2, activity: '2.4', type: 'situational',
+    source: 'BABOK Guide, 9.1.7 Visual Thinking',
+    stem: 'To make a complex approval flow understandable to non-technical stakeholders, a business analysis professional draws a diagram that they can react to. Which underlying competency is being used?',
+    options: [
+      { id: 'A', text: 'Conceptual Thinking' },
+      { id: 'B', text: 'Visual Thinking' },
+      { id: 'C', text: 'Creative Thinking' },
+      { id: 'D', text: 'Written Communication' }
+    ],
+    answer: 'B',
+    explanation: 'Il visual thinking consente di creare rappresentazioni grafiche dei concetti o dei sistemi discussi, con l\'obiettivo di farli comprendere facilmente agli stakeholder e ottenerne l\'input. Il conceptual thinking riguarda invece il collegare contesti, soluzioni, need, cambiamenti, stakeholder e valore in astratto e nel quadro generale.'
+  },
+  {
+    id: 'D2-30', domain: 2, activity: '2.4', type: 'standard',
+    source: 'BABOK Guide, 9.3.3 Organization Knowledge',
+    stem: 'What does the Organization Knowledge competency include?',
+    options: [
+      { id: 'A', text: 'Understanding current trends and market forces within an industry.' },
+      { id: 'B', text: 'Understanding how the enterprise generates profits, accomplishes its goals, its structure, the relationships between business units, and who occupies key stakeholder positions.' },
+      { id: 'C', text: 'Understanding the methodologies that determine how a change is approached and managed.' },
+      { id: 'D', text: 'Understanding the range of commercially available solutions and suppliers.' }
+    ],
+    answer: 'B',
+    explanation: 'Organization knowledge riguarda la conoscenza interna dell\'impresa. {A} è Industry Knowledge, {C} Methodology Knowledge, {D} Solution Knowledge: le cinque competenze del gruppo Business Knowledge si distinguono per l\'oggetto della conoscenza — business in generale, settore, impresa, soluzione, metodologia.'
+  },
+
+  /* ---- Dominio 3, serie B ---- */
+
+  {
+    id: 'D3-23', domain: 3, activity: '3.3', type: 'standard',
+    source: 'The Business Analysis Standard, 4.6',
+    stem: 'Which delivery form describes outsourcing business analysis functions to specialized service providers?',
+    options: [
+      { id: 'A', text: 'Centre of Excellence (CoE)' },
+      { id: 'B', text: 'Business Analysis as a Service (BAaS)' },
+      { id: 'C', text: 'Community of Practice (CoP)' },
+      { id: 'D', text: 'Dispersed across business units' }
+    ],
+    answer: 'B',
+    explanation: 'BAaS è l\'esternalizzazione delle funzioni di business analysis a fornitori specializzati. Il CoE è un\'unità specializzata interna, la CoP uno spazio collaborativo di condivisione, "dispersed" l\'integrazione della funzione nei singoli reparti. Molte organizzazioni combinano più forme.'
+  },
+  {
+    id: 'D3-24', domain: 3, activity: '3.4', type: 'situational',
+    source: 'The Business Analysis Standard, 4.4.2',
+    stem: 'A statement reads: "Call centre staff need to see a customer\'s last five interactions when answering a call." How is this best classified?',
+    options: [
+      { id: 'A', text: 'A business requirement, because it supports the goal of improving service.' },
+      { id: 'B', text: 'A stakeholder requirement, because it expresses the need of a stakeholder group that must be met to achieve the business requirements.' },
+      { id: 'C', text: 'A transition requirement, because it applies during the move to the future state.' },
+      { id: 'D', text: 'A design, because it specifies what appears on screen.' }
+    ],
+    answer: 'B',
+    explanation: 'Gli stakeholder requirement sono i bisogni degli stakeholder che devono essere soddisfatti per raggiungere i business requirement, e fanno da ponte tra questi ultimi e i solution requirement. Il requisito non dice ancora come mostrare le interazioni, quindi non è un design ({D}).'
+  },
+/* ---- Dominio 4, serie B ---- */
+
+  {
+    id: 'D4-11', domain: 4, activity: '4.1', type: 'standard',
+    source: 'BABOK Guide, 6.1 Analyze Current State',
+    stem: 'How does the BABOK Guide describe business needs?',
+    options: [
+      { id: 'A', text: 'The features that stakeholders have requested for the solution.' },
+      { id: 'B', text: 'The problems and opportunities of strategic importance faced by the enterprise.' },
+      { id: 'C', text: 'The constraints imposed on the initiative by regulators.' },
+      { id: 'D', text: 'The gaps identified between requirements and designs.' }
+    ],
+    answer: 'B',
+    explanation: 'I business need sono i problemi e le opportunità di importanza strategica affrontati dall\'impresa; un reclamo di un cliente, una perdita di ricavi o una nuova opportunità di mercato ne innescano tipicamente la valutazione. Nota ancora la coppia problema/opportunità: il need non è mai solo un problema.'
+  },
+  {
+    id: 'D4-12', domain: 4, activity: '4.1', type: 'situational',
+    source: 'BABOK Guide, 6.1 Analyze Current State',
+    stem: 'A business analysis professional is told that "the need is a new mobile app". What is the concern with this statement?',
+    options: [
+      { id: 'A', text: 'None: a mobile app is a valid business need.' },
+      { id: 'B', text: 'It states a solution rather than the problem or opportunity of strategic importance to be addressed.' },
+      { id: 'C', text: 'It should have been expressed as a transition requirement.' },
+      { id: 'D', text: 'It cannot be traced unless a sponsor has approved it.' }
+    ],
+    answer: 'B',
+    explanation: 'Un need è un problema o un\'opportunità da affrontare; una app è una soluzione, cioè un modo specifico di soddisfare un need in un contesto. Partire dalla soluzione salta l\'analisi del perché e rischia di risolvere il problema sbagliato: è uno degli errori che l\'esame mette più spesso in scena.'
+  },
+  {
+    id: 'D4-13', domain: 4, activity: '4.2', type: 'standard',
+    source: 'BABOK Guide, 5.1 Trace Requirements',
+    stem: 'What is the purpose of Trace Requirements?',
+    options: [
+      { id: 'A', text: 'To ensure requirements and designs at different levels are aligned to one another, and to manage the effects of change on related requirements.' },
+      { id: 'B', text: 'To confirm that elicitation results are accurate and consistent.' },
+      { id: 'C', text: 'To rank requirements in order of relative importance.' },
+      { id: 'D', text: 'To ensure requirements meet quality standards.' }
+    ],
+    answer: 'A',
+    explanation: 'Trace Requirements (5.1) allinea requisiti e design a livelli diversi e gestisce gli effetti di un cambiamento su un livello sui requisiti correlati. È la base tecnica su cui poggia l\'impact analysis di Assess Requirements Changes.'
+  },
+  {
+    id: 'D4-14', domain: 4, activity: '4.2', type: 'standard',
+    source: 'BABOK Guide, 5.2 Maintain Requirements',
+    stem: 'Besides retaining accuracy and consistency, what else does Maintain Requirements support?',
+    options: [
+      { id: 'A', text: 'The approval of requirements by the sponsor.' },
+      { id: 'B', text: 'The reuse of requirements in other solutions.' },
+      { id: 'C', text: 'The estimation of the delivery effort.' },
+      { id: 'D', text: 'The selection of the elicitation techniques.' }
+    ],
+    answer: 'B',
+    explanation: 'Il purpose del task 5.2 cita esplicitamente il mantenimento dell\'accuratezza e della coerenza durante e oltre il cambiamento, per l\'intero ciclo di vita del requisito, e il supporto al riutilizzo dei requisiti in altre soluzioni. Il riuso è la parte che si dimentica più facilmente.'
+  },
+  {
+    id: 'D4-15', domain: 4, activity: '4.2', type: 'situational',
+    source: 'BABOK Guide, 5.4 Assess Requirements Changes',
+    stem: 'A proposed change would deliver a benefit to one department but would require reworking three components already built. What should the assessment of this change consider?',
+    options: [
+      { id: 'A', text: 'Only the benefit to the requesting department, since they are the customer.' },
+      { id: 'B', text: 'The implications of the change, weighing benefit against cost and impact on related requirements and designs.' },
+      { id: 'C', text: 'Only whether the change fits within the remaining schedule.' },
+      { id: 'D', text: 'Only whether the sponsor has authorized additional budget.' }
+    ],
+    answer: 'B',
+    explanation: 'Assess Requirements Changes valuta le implicazioni delle modifiche proposte: significa considerarne benefici, costo e impatto sugli elementi correlati, non guardare a una sola dimensione. La tracciabilità rende visibile quali requisiti e componenti sono coinvolti.'
+  },
+  {
+    id: 'D4-16', domain: 4, activity: '4.3', type: 'standard',
+    source: 'BABOK Guide, 6.2 Define Future State',
+    stem: 'What is the purpose of Define Future State?',
+    options: [
+      { id: 'A', text: 'To describe how the enterprise currently operates.' },
+      { id: 'B', text: 'To determine the set of necessary conditions to meet the business need.' },
+      { id: 'C', text: 'To select the recommended approach to the change.' },
+      { id: 'D', text: 'To measure whether the change has succeeded.' }
+    ],
+    answer: 'B',
+    explanation: 'Define Future State (6.2) determina l\'insieme di condizioni necessarie a soddisfare il business need. Non descrive il come arrivarci — quella è la change strategy (6.4) — ma il dove si vuole arrivare.'
+  },
+  {
+    id: 'D4-17', domain: 4, activity: '4.3', type: 'situational',
+    source: 'BABOK Guide, 8.1 e 8.2',
+    stem: 'Six months after go-live, a business analysis professional collects the agreed measures and turns them into insights about how the solution is performing against the value expected. Which two tasks are being performed, in order?',
+    options: [
+      { id: 'A', text: 'Analyze Performance Measures, then Measure Solution Performance.' },
+      { id: 'B', text: 'Measure Solution Performance, then Analyze Performance Measures.' },
+      { id: 'C', text: 'Assess Solution Limitations, then Recommend Actions to Increase Solution Value.' },
+      { id: 'D', text: 'Validate Requirements, then Verify Requirements.' }
+    ],
+    answer: 'B',
+    explanation: 'Prima si definiscono e si raccolgono le misure (8.1 Measure Solution Performance), poi si trasformano in insight sulla prestazione rispetto al valore portato (8.2 Analyze Performance Measures). L\'ordine dei task di Solution Evaluation è materia d\'esame e {A} lo inverte.'
+  },
+  {
+    id: 'D4-18', domain: 4, activity: '4.3', type: 'standard',
+    source: 'BABOK Guide, 3.5 Identify Business Analysis Performance Improvements',
+    stem: 'Business analysis performance assessments are used as an input to which activity?',
+    options: [
+      { id: 'A', text: 'Planning the stakeholder engagement approach and preparing for elicitation.' },
+      { id: 'B', text: 'Approving the solution design.' },
+      { id: 'C', text: 'Calculating the return on investment of the initiative.' },
+      { id: 'D', text: 'Selecting the vendors for implementation.' }
+    ],
+    answer: 'A',
+    explanation: 'La Business Analysis Performance Assessment prodotta dal task 3.5 alimenta fra l\'altro Plan Stakeholder Engagement (3.2) e Prepare for Elicitation (4.1): quanto appreso su come sta andando il lavoro di analisi torna a migliorare il modo in cui lo si pianifica.'
+  },
+  {
+    id: 'D4-19', domain: 4, activity: '4.4', type: 'situational',
+    source: 'BABOK Guide, 8.5 Recommend Actions to Increase Solution Value',
+    stem: 'Measurements show that a solution is delivering less value than expected. What is the appropriate next step for a practitioner at the foundational level?',
+    options: [
+      { id: 'A', text: 'Decommission the solution and restart the initiative.' },
+      { id: 'B', text: 'Understand the factors creating the difference between potential and actual value, and contribute recommendations to align them.' },
+      { id: 'C', text: 'Increase the target metrics so the solution meets them.' },
+      { id: 'D', text: 'Attribute the shortfall to the implementation team and close the assessment.' }
+    ],
+    answer: 'B',
+    explanation: 'Recommend Actions to Increase Solution Value (8.5) parte proprio dalla comprensione dei fattori che creano la differenza fra valore potenziale e valore effettivo, per poi raccomandare un corso d\'azione che li allinei. Ritoccare le metriche perché il risultato torni ({C}) è l\'opposto di una valutazione onesta.'
+  },
+  {
+    id: 'D4-20', domain: 4, activity: '4.4', type: 'standard',
+    source: 'BABOK Guide, 10.35 Process Modelling',
+    stem: 'What is a process model?',
+    options: [
+      { id: 'A', text: 'A standardized graphical model used to show how work is carried out, and a foundation for process analysis.' },
+      { id: 'B', text: 'A description of the entities and relationships in a data domain.' },
+      { id: 'C', text: 'A list of the roles and reporting lines within an organization.' },
+      { id: 'D', text: 'A ranked list of the work remaining on an initiative.' }
+    ],
+    answer: 'A',
+    explanation: 'Il process model è un modello grafico standardizzato che mostra come il lavoro viene svolto e costituisce il fondamento della process analysis. Il rapporto fra le due tecniche è quello fra descrivere (10.35) e valutare (10.34).'
+  },
+  {
+    id: 'D4-21', domain: 4, activity: '4.1', type: 'situational',
+    source: 'BABOK Guide, 6.3 Assess Risks',
+    stem: 'Which of the following would be assessed as a risk during a transition to a future state?',
+    options: [
+      { id: 'A', text: 'A defect found by testers in the current release.' },
+      { id: 'B', text: 'The possibility that key staff leave during the migration, delaying adoption and reducing the value delivered.' },
+      { id: 'C', text: 'The number of requirements approved to date.' },
+      { id: 'D', text: 'The cost already spent on the initiative.' }
+    ],
+    answer: 'B',
+    explanation: 'Assess Risks guarda alle conseguenze indesiderate di forze interne ed esterne durante la transizione allo stato futuro o una volta raggiuntolo, e al loro impatto potenziale sul valore. Un difetto già trovato è un fatto, non un\'incertezza; costi già spesi e requisiti approvati sono misure di avanzamento.'
+  },
+  {
+    id: 'D4-22', domain: 4, activity: '4.4', type: 'standard',
+    source: 'BABOK Guide, 10.2 Backlog Management',
+    stem: 'What is a backlog used for?',
+    options: [
+      { id: 'A', text: 'To record, track, and prioritize remaining work items.' },
+      { id: 'B', text: 'To document the rules governing operational decisions.' },
+      { id: 'C', text: 'To record the lessons learned at the end of a phase.' },
+      { id: 'D', text: 'To define the boundaries of the solution.' }
+    ],
+    answer: 'A',
+    explanation: 'Il backlog registra, traccia e prioritizza gli elementi di lavoro rimanenti. È una delle 20 tecniche valutate all\'ECBA ed è anche una delle cinque tecniche fondazionali citate da The Business Analysis Standard.'
+  },
+  {
+    id: 'D4-23', domain: 4, activity: '4.2', type: 'standard',
+    source: 'BABOK Guide, 5.5 Approve Requirements',
+    stem: 'What is the purpose of Approve Requirements?',
+    options: [
+      { id: 'A', text: 'To rank requirements by importance so that work can be sequenced.' },
+      { id: 'B', text: 'To obtain agreement on and approval of requirements and designs so that business analysis work can continue or construction can proceed.' },
+      { id: 'C', text: 'To check requirements against quality characteristics.' },
+      { id: 'D', text: 'To evaluate the implications of proposed changes.' }
+    ],
+    answer: 'B',
+    explanation: 'Approve Requirements (5.5) ottiene accordo e approvazione affinché il lavoro di analisi prosegua o la costruzione della soluzione possa iniziare. Approvare non è verificare ({C}) né prioritizzare ({A}): riguarda il consenso, non la qualità o l\'ordine.'
+  },
+  {
+    id: 'D4-24', domain: 4, activity: '4.3', type: 'situational',
+    source: 'BABOK Guide, 3.5 Identify Business Analysis Performance Improvements',
+    stem: 'Stakeholders complain that requirements documents arrive too late to be useful. What should the business analysis professional do with this feedback?',
+    options: [
+      { id: 'A', text: 'Treat it as input to assessing business analysis work and planning improvements to the process.' },
+      { id: 'B', text: 'Treat it as a solution limitation to be assessed after implementation.' },
+      { id: 'C', text: 'Treat it as a change request to the approved requirements.' },
+      { id: 'D', text: 'Treat it as an enterprise limitation outside the practitioner\'s control.' }
+    ],
+    answer: 'A',
+    explanation: 'Il feedback riguarda il processo di business analysis, non la soluzione: rientra in Identify Business Analysis Performance Improvements (3.5), che valuta il lavoro di analisi e pianifica il miglioramento dei processi dove serve.'
+  },
+
+  /* ---- Dominio 5, serie B ---- */
+
+  {
+    id: 'D5-11', domain: 5, activity: '5.1', type: 'standard',
+    source: 'BABOK Guide, 4.1 Prepare for Elicitation',
+    stem: 'What does preparing for elicitation include?',
+    options: [
+      { id: 'A', text: 'Analysing the elicited information into requirements and designs.' },
+      { id: 'B', text: 'Defining the desired outcomes of the activity, deciding which techniques suit those outcomes, and establishing the logistics and supporting materials.' },
+      { id: 'C', text: 'Obtaining approval of the requirements from the sponsor.' },
+      { id: 'D', text: 'Checking the elicited information for accuracy and consistency.' }
+    ],
+    answer: 'B',
+    explanation: 'Prepare for Elicitation (4.1) definisce gli outcome desiderati considerando stakeholder e obiettivi, determina i work product da produrre, sceglie le tecniche più adatte, stabilisce la logistica e i materiali di supporto e comprende le circostanze che favoriscono la collaborazione. {D} è Confirm Elicitation Results (4.3).'
+  },
+  {
+    id: 'D5-12', domain: 5, activity: '5.1', type: 'situational',
+    source: 'BABOK Guide, 10.50 Workshops e 10.25 Interviews',
+    stem: 'A business analysis professional must gather requirements from twelve people across four departments who each hold part of the picture, and needs them to reach a shared view in a single session. Which technique is most appropriate?',
+    options: [
+      { id: 'A', text: 'Interviews, conducted one by one.' },
+      { id: 'B', text: 'Workshops, which bring stakeholders together to collaborate on achieving a predefined goal.' },
+      { id: 'C', text: 'Document Analysis of the departments\' procedures.' },
+      { id: 'D', text: 'Observation of each department at work.' }
+    ],
+    answer: 'B',
+    explanation: 'I workshop riuniscono gli stakeholder per collaborare al raggiungimento di un obiettivo predefinito: sono la scelta naturale quando serve una visione condivisa fra molte persone in un\'unica sessione. Le interviste individuali sono efficaci ma non producono, da sole, la condivisione fra i partecipanti.'
+  },
+  {
+    id: 'D5-13', domain: 5, activity: '5.1', type: 'standard',
+    source: 'BABOK Guide, 10.5 Brainstorming',
+    stem: 'What is the aim of brainstorming?',
+    options: [
+      { id: 'A', text: 'To evaluate options against agreed criteria and select the best one.' },
+      { id: 'B', text: 'To produce numerous new ideas and derive from them themes for further analysis.' },
+      { id: 'C', text: 'To identify the underlying causes of a problem.' },
+      { id: 'D', text: 'To document the rules that guide operational decisions.' }
+    ],
+    answer: 'B',
+    explanation: 'Il brainstorming favorisce il pensiero creativo su un problema con l\'obiettivo di produrre molte idee nuove e ricavarne temi per l\'analisi successiva. La valutazione delle opzioni ({A}) è un\'attività distinta e successiva: confonderle svuota la tecnica del suo scopo.'
+  },
+  {
+    id: 'D5-14', domain: 5, activity: '5.2', type: 'situational',
+    source: 'BABOK Guide, 7.2 Verify Requirements',
+    stem: 'A requirement reads: "The system must allow users to export data and must send a confirmation email to the supervisor." Which quality characteristic is compromised?',
+    options: [
+      { id: 'A', text: 'Atomic, because the statement is not self-contained and combines two separate requirements.' },
+      { id: 'B', text: 'Feasible, because both parts cannot be delivered in the same release.' },
+      { id: 'C', text: 'Understandable, because the terminology is technical.' },
+      { id: 'D', text: 'Prioritized, because no ranking has been assigned.' }
+    ],
+    answer: 'A',
+    explanation: 'Atomic significa autosufficiente e comprensibile indipendentemente dagli altri requisiti. Qui ci sono due requisiti distinti in una frase sola: se uno viene implementato e l\'altro no, lo stato del requisito diventa ambiguo, e anche la testabilità ne risente.'
+  },
+  {
+    id: 'D5-15', domain: 5, activity: '5.2', type: 'standard',
+    source: 'BABOK Guide, 7.2 Verify Requirements',
+    stem: 'What does the quality characteristic "testable" require?',
+    options: [
+      { id: 'A', text: 'That a test script has already been written for the requirement.' },
+      { id: 'B', text: 'That it is possible to verify that the requirement or design has been fulfilled.' },
+      { id: 'C', text: 'That the requirement has been approved by the testing team.' },
+      { id: 'D', text: 'That the requirement can be automated.' }
+    ],
+    answer: 'B',
+    explanation: 'Testable significa che è possibile verificare che il requisito o il design sia stato soddisfatto; i livelli accettabili di verifica dipendono dal livello di astrazione del requisito. Non richiede che esistano già script di test né che il requisito sia automatizzabile.'
+  },
+  {
+    id: 'D5-16', domain: 5, activity: '5.2', type: 'situational',
+    source: 'BABOK Guide, 4.3 Confirm Elicitation Results',
+    stem: 'After a workshop, the notes taken by the business analysis professional differ from what one participant remembers agreeing. What should happen?',
+    options: [
+      { id: 'A', text: 'The notes prevail, since they were taken during the session.' },
+      { id: 'B', text: 'Collaborate with the stakeholder to ensure their input was captured correctly; if the information is not correct, determine what is correct, which may require more elicitation.' },
+      { id: 'C', text: 'Both versions are recorded and the discrepancy is left to the delivery team.' },
+      { id: 'D', text: 'The disagreement is escalated to the sponsor for a decision.' }
+    ],
+    answer: 'B',
+    explanation: 'Confermare i risultati richiede la collaborazione con gli stakeholder per assicurarsi che i loro input siano stati catturati correttamente; se l\'informazione non è corretta il professionista determina cosa lo è, e questo può richiedere ulteriore elicitation. Lasciare la discrepanza aperta ({C}) è esattamente ciò che il task previene.'
+  },
+  {
+    id: 'D5-17', domain: 5, activity: '5.3', type: 'standard',
+    source: 'BABOK Guide, 7.3 Validate Requirements',
+    stem: 'According to Validate Requirements, what happens to a requirement that delivers no benefit to any stakeholder?',
+    options: [
+      { id: 'A', text: 'It is implemented last, after all other requirements.' },
+      { id: 'B', text: 'It is a strong candidate for elimination.' },
+      { id: 'C', text: 'It is reclassified as a non-functional requirement.' },
+      { id: 'D', text: 'It is retained for traceability purposes.' }
+    ],
+    answer: 'B',
+    explanation: 'Un requisito che non porta benefici a nessuno stakeholder è un forte candidato all\'eliminazione. Il BABOK aggiunge il caso complementare: un requisito può portare beneficio e non essere comunque parte desiderabile della soluzione, e allora o si rivede il future state e lo scope, o si rimuove il requisito.'
+  },
+  {
+    id: 'D5-18', domain: 5, activity: '5.3', type: 'situational',
+    source: 'BABOK Guide, 7.3 Validate Requirements',
+    stem: 'A team has assumed that customers will adopt a new self-service channel, but the product is unprecedented and there is no comparable experience to rely on. What does the BABOK Guide advise?',
+    options: [
+      { id: 'A', text: 'Proceed, since assumptions are unavoidable in innovation.' },
+      { id: 'B', text: 'Identify and define the assumption so that the associated risks can be managed.' },
+      { id: 'C', text: 'Replace the assumption with a requirement.' },
+      { id: 'D', text: 'Cancel the initiative until customer behaviour can be proven.' }
+    ],
+    answer: 'B',
+    explanation: 'Quando un\'organizzazione lancia un prodotto senza precedenti può essere necessario fare assunzioni sulla risposta di clienti e stakeholder: queste vanno identificate e definite proprio perché i rischi associati possano essere gestiti. Un\'assunzione esplicita è gestibile, una implicita no.'
+  },
+  {
+    id: 'D5-19', domain: 5, activity: '5.4', type: 'standard',
+    source: 'BABOK Guide, 5.3 Prioritize Requirements',
+    stem: 'Which prioritization factor refers to the "best before" date of a requirement, after which its value diminishes?',
+    options: [
+      { id: 'A', text: 'Stability' },
+      { id: 'B', text: 'Time sensitivity' },
+      { id: 'C', text: 'Penalty' },
+      { id: 'D', text: 'Dependencies' }
+    ],
+    answer: 'B',
+    explanation: 'La time sensitivity è la "data di scadenza" del requisito: oltre un certo momento il valore che porterebbe si riduce o svanisce. La stability riguarda invece la probabilità che il requisito cambi ancora, e quindi la convenienza di lavorarci ora.'
+  },
+  {
+    id: 'D5-20', domain: 5, activity: '5.4', type: 'situational',
+    source: 'BABOK Guide, 5.3 Prioritize Requirements',
+    stem: 'Stakeholders assign top priority to a requirement, but after learning the implementation cost from the delivery team they lower it. Which prioritization factor caused the change?',
+    options: [
+      { id: 'A', text: 'Cost, information about which typically comes from the implementation team or the vendor.' },
+      { id: 'B', text: 'Penalty, because not implementing it now has consequences.' },
+      { id: 'C', text: 'Regulatory compliance, because budgets are governed by policy.' },
+      { id: 'D', text: 'Stability, because the requirement has changed.' }
+    ],
+    answer: 'A',
+    explanation: 'Il cost è lo sforzo e le risorse necessarie a implementare il requisito, e l\'informazione arriva tipicamente dal team di implementazione o dal fornitore; il BABOK nota esplicitamente che i clienti possono cambiare la priorità di un requisito dopo averne appreso il costo. Il costo è spesso usato insieme ad altri criteri, come nella cost-benefit analysis.'
+  },
+  {
+    id: 'D5-21', domain: 5, activity: '5.4', type: 'standard',
+    source: 'BABOK Guide, 5.3 Prioritize Requirements',
+    stem: 'Who agrees the basis on which requirements are prioritized?',
+    options: [
+      { id: 'A', text: 'The business analyst alone, to remain objective.' },
+      { id: 'B', text: 'The relevant stakeholders, as defined in the Business Analysis Planning and Monitoring knowledge area.' },
+      { id: 'C', text: 'The implementation team, since they know the cost.' },
+      { id: 'D', text: 'The regulator, where the initiative is subject to compliance.' }
+    ],
+    answer: 'B',
+    explanation: 'La base della prioritizzazione è concordata con gli stakeholder rilevanti secondo quanto definito in Business Analysis Planning and Monitoring. Prioritizzare non è una decisione tecnica del professionista: è una decisione di business che va concordata prima di applicarla.'
+  },
+  {
+    id: 'D5-22', domain: 5, activity: '5.1', type: 'situational',
+    source: 'BABOK Guide, 4.2 Conduct Elicitation',
+    stem: 'How may stakeholders collaborate in elicitation, according to the BABOK Guide?',
+    options: [
+      { id: 'A', text: 'Only by attending facilitated sessions in person.' },
+      { id: 'B', text: 'By participating and interacting during the activity, and by researching, studying, and providing feedback on documents, systems, models, and interfaces.' },
+      { id: 'C', text: 'Only by approving the elicitation results afterwards.' },
+      { id: 'D', text: 'Only by nominating a representative to speak on their behalf.' }
+    ],
+    answer: 'B',
+    explanation: 'La collaborazione degli stakeholder ha due forme: partecipare e interagire durante l\'attività, e ricercare, studiare e fornire feedback su documenti, sistemi, modelli e interfacce. Anche nell\'elicitation di tipo research gli stakeholder possono partecipare.'
+  },
+  {
+    id: 'D5-23', domain: 5, activity: '5.2', type: 'standard',
+    source: 'BABOK Guide, 7.1 Specify and Model Requirements',
+    stem: 'Which three activities does Specify and Model Requirements perform on elicitation results?',
+    options: [
+      { id: 'A', text: 'Analyze, synthesize, and refine' },
+      { id: 'B', text: 'Verify, validate, and approve' },
+      { id: 'C', text: 'Trace, maintain, and prioritize' },
+      { id: 'D', text: 'Collect, store, and archive' }
+    ],
+    answer: 'A',
+    explanation: 'Il task 7.1 analizza, sintetizza e raffina i risultati dell\'elicitation trasformandoli in requisiti e design. {B} e {C} elencano altri task reali del BABOK — rispettivamente di RADD e di RLCM — ma non descrivono questo.'
+  },
+  {
+    id: 'D5-24', domain: 5, activity: '5.3', type: 'standard',
+    source: 'BABOK Guide, 4.3 Confirm Elicitation Results',
+    stem: 'How does confirming elicitation results compare with the review performed during analysis?',
+    options: [
+      { id: 'A', text: 'It is much less rigorous and formal.' },
+      { id: 'B', text: 'It is more rigorous, since errors found later cost more.' },
+      { id: 'C', text: 'It is identical, applying the same quality characteristics.' },
+      { id: 'D', text: 'It replaces the review performed during analysis.' }
+    ],
+    answer: 'A',
+    explanation: 'Il BABOK afferma esplicitamente che confermare i risultati dell\'elicitation è una revisione molto meno rigorosa e formale di quella che avviene durante l\'analisi. Serve a intercettare presto errori, omissioni, conflitti e ambiguità, non a sostituire la verifica formale dei requisiti.'
+  },
+/* ---- Dominio 6, serie B ---- */
+
+  {
+    id: 'D6-11', domain: 6, activity: '6.1', type: 'standard',
+    source: 'BABOK Guide, 8.1 Measure Solution Performance',
+    stem: 'From where do performance measures for a solution commonly come?',
+    options: [
+      { id: 'A', text: 'Exclusively from the delivery team\'s tooling.' },
+      { id: 'B', text: 'From business goals, objectives, and business processes, and they may also be influenced or imposed by third parties such as vendors or regulators.' },
+      { id: 'C', text: 'Exclusively from the requirements documentation.' },
+      { id: 'D', text: 'From the project schedule and cost baseline.' }
+    ],
+    answer: 'B',
+    explanation: 'Goal, obiettivi e processi di business sono fonti comuni di misure, e le misure possono essere influenzate o imposte da terzi come fornitori, enti governativi o organizzazioni regolatrici. Il tipo e la natura delle misure incidono poi sulla scelta del metodo di elicitation.'
+  },
+  {
+    id: 'D6-12', domain: 6, activity: '6.1', type: 'situational',
+    source: 'BABOK Guide, 8.1 Measure Solution Performance',
+    stem: 'A business analysis professional proposes a performance measure that no stakeholder considers meaningful. What does the BABOK Guide prescribe?',
+    options: [
+      { id: 'A', text: 'Adopt it anyway, since objectivity requires independence from opinion.' },
+      { id: 'B', text: 'Validate the performance measures and any influencing criteria with stakeholders, so the assessment of performance is useful.' },
+      { id: 'C', text: 'Replace it with a qualitative measure.' },
+      { id: 'D', text: 'Defer the measurement until after the next release.' }
+    ],
+    answer: 'B',
+    explanation: 'Validare le misure di prestazione con gli stakeholder serve ad assicurare che la valutazione sia utile; le misure specifiche devono inoltre allinearsi con eventuali misure di livello superiore esistenti nel contesto. Una misura che nessuno ritiene significativa non produrrà decisioni.'
+  },
+  {
+    id: 'D6-13', domain: 6, activity: '6.2', type: 'standard',
+    source: 'BABOK Guide, 7.4 Define Requirements Architecture',
+    stem: 'What is the purpose of Define Requirements Architecture?',
+    options: [
+      { id: 'A', text: 'To ensure that the requirements collectively support one another to fully achieve the objectives.' },
+      { id: 'B', text: 'To define the technical architecture of the solution components.' },
+      { id: 'C', text: 'To store requirements so that they can be retrieved later.' },
+      { id: 'D', text: 'To estimate the effort required to implement each requirement.' }
+    ],
+    answer: 'A',
+    explanation: 'Il task 7.4 riguarda l\'insieme: i requisiti presi collettivamente devono sostenersi a vicenda e raggiungere pienamente gli obiettivi. Non è l\'architettura tecnica della soluzione ({B}), che appartiene al design, né la gestione documentale ({C}).'
+  },
+  {
+    id: 'D6-14', domain: 6, activity: '6.2', type: 'situational',
+    source: 'BABOK Guide, 7.5 e 7.6',
+    stem: 'Three design options have been represented. What is the correct next step according to the BABOK Guide?',
+    options: [
+      { id: 'A', text: 'Implement the option preferred by the sponsor.' },
+      { id: 'B', text: 'Estimate the potential value of each option and establish which is most appropriate to meet the enterprise\'s requirements.' },
+      { id: 'C', text: 'Verify that each option meets the requirements quality characteristics.' },
+      { id: 'D', text: 'Measure the performance of each option in production.' }
+    ],
+    answer: 'B',
+    explanation: 'Dopo Define Design Options (7.5) viene Analyze Potential Value and Recommend Solution (7.6), che stima il valore potenziale di ciascuna opzione e stabilisce quale sia la più appropriata. La preferenza dello sponsor ({A}) non sostituisce l\'analisi del valore.'
+  },
+  {
+    id: 'D6-15', domain: 6, activity: '6.3', type: 'situational',
+    source: 'BABOK Guide, 6.4 Define Change Strategy',
+    stem: 'Why might a solution scope explicitly describe components that are out of scope?',
+    options: [
+      { id: 'A', text: 'To reserve them for a future phase of funding.' },
+      { id: 'B', text: 'To provide clarity about the boundaries of the solution.' },
+      { id: 'C', text: 'Because governance requires a complete inventory of rejected options.' },
+      { id: 'D', text: 'To allow the delivery team to implement them if time allows.' }
+    ],
+    answer: 'B',
+    explanation: 'Il BABOK indica che il solution scope può includere anche la descrizione dei componenti fuori scope proprio per fornire chiarezza. Dire cosa non si farà elimina ambiguità tanto quanto dire cosa si farà.'
+  },
+  {
+    id: 'D6-16', domain: 6, activity: '6.3', type: 'standard',
+    source: 'BABOK Guide, 6.4 Define Change Strategy',
+    stem: 'Which statement about the solution scope is correct?',
+    options: [
+      { id: 'A', text: 'It is fixed once approved and cannot change during the initiative.' },
+      { id: 'B', text: 'It might evolve throughout an initiative as more information is discovered.' },
+      { id: 'C', text: 'It is defined only after the solution has been built.' },
+      { id: 'D', text: 'It is identical to the project scope.' }
+    ],
+    answer: 'B',
+    explanation: 'Il solution scope può evolvere durante l\'iniziativa man mano che emergono nuove informazioni. Trattarlo come immutabile ({A}) contraddice il testo ed è incompatibile con gli approcci adattivi.'
+  },
+  {
+    id: 'D6-17', domain: 6, activity: '6.4', type: 'standard',
+    source: 'BABOK Guide, 2.5 Requirements and Designs',
+    stem: 'Can the same task and technique be used to produce both a requirement and a design?',
+    options: [
+      { id: 'A', text: 'No: requirements and designs are produced by mutually exclusive tasks.' },
+      { id: 'B', text: 'Yes: the same tasks and techniques can be used for both, since what differs is the purpose they serve.' },
+      { id: 'C', text: 'Yes, but only in adaptive approaches.' },
+      { id: 'D', text: 'No: designs may only be produced after all requirements are approved.' }
+    ],
+    answer: 'B',
+    explanation: 'Requisiti e design sono simili per natura e le stesse task e tecniche possono servire a crearli: a differire è lo scopo, perché il requisito rappresenta un need e il design rappresenta una soluzione. Sono inoltre interdipendenti e ciclici, quindi {D} è doppiamente errata.'
+  },
+  {
+    id: 'D6-18', domain: 6, activity: '6.4', type: 'situational',
+    source: 'BABOK Guide, 10.15 Data Modelling e 10.35 Process Modelling',
+    stem: 'A team must document both the sequence of steps in an approval workflow and the structure of the information the workflow handles. Which pair of techniques is appropriate?',
+    options: [
+      { id: 'A', text: 'Process Modelling for the steps, Data Modelling for the information structure.' },
+      { id: 'B', text: 'Data Modelling for the steps, Process Modelling for the information structure.' },
+      { id: 'C', text: 'Scope Modelling for both.' },
+      { id: 'D', text: 'Organizational Modelling for the steps, Business Rules Analysis for the information structure.' }
+    ],
+    answer: 'A',
+    explanation: 'Il process model mostra graficamente come il lavoro viene svolto; il data model descrive entità, attributi e relazioni di un dominio. {B} inverte le due tecniche: è il tipo di distrattore che si smonta ricordando l\'oggetto di ciascun modello — attività contro informazioni.'
+  },
+  {
+    id: 'D6-19', domain: 6, activity: '6.1', type: 'standard',
+    source: 'BABOK Guide, 7.3 Validate Requirements',
+    stem: 'What are baseline metrics, as used when defining measurable evaluation criteria?',
+    options: [
+      { id: 'A', text: 'Target values that reflect achievement of the business objectives.' },
+      { id: 'B', text: 'Metrics established from the current state, against which change can later be assessed.' },
+      { id: 'C', text: 'The minimum acceptable performance defined by the vendor.' },
+      { id: 'D', text: 'The measures collected during solution testing.' }
+    ],
+    answer: 'B',
+    explanation: 'Le baseline metric sono stabilite a partire dal current state; le target metric sono invece sviluppate per riflettere il raggiungimento degli obiettivi di business ({A}). Senza baseline non è possibile dire quanto il cambiamento abbia migliorato la situazione.'
+  },
+  {
+    id: 'D6-20', domain: 6, activity: '6.2', type: 'standard',
+    source: 'BABOK Guide, 10.6 Business Capability Analysis',
+    stem: 'Business capability analysis provides a scope and prioritization filter. What else does it generate?',
+    options: [
+      { id: 'A', text: 'A shared understanding of outcomes and an identification of alignment with strategy.' },
+      { id: 'B', text: 'A ranked backlog of the work remaining.' },
+      { id: 'C', text: 'A set of acceptance criteria for testing.' },
+      { id: 'D', text: 'A model of the roles and reporting structures.' }
+    ],
+    answer: 'A',
+    explanation: 'La business capability analysis fornisce un framework per scoping e pianificazione generando comprensione condivisa degli outcome, identificando l\'allineamento con la strategia e fungendo da filtro di scope e prioritizzazione. Le capability rispondono a "cosa sa fare l\'organizzazione", non a "chi riporta a chi" ({D}).'
+  },
+  {
+    id: 'D6-21', domain: 6, activity: '6.3', type: 'situational',
+    source: 'BABOK Guide, 10.41 Scope Modelling',
+    stem: 'Stakeholders keep adding expectations that the team believes fall outside what was agreed. Which technique most directly addresses this?',
+    options: [
+      { id: 'A', text: 'Scope Modelling, which defines limits or boundaries and places elements inside or outside them.' },
+      { id: 'B', text: 'Backlog Management, which records and prioritizes remaining work.' },
+      { id: 'C', text: 'Lessons Learned, which captures improvement opportunities.' },
+      { id: 'D', text: 'Brainstorming, which generates ideas about the problem.' }
+    ],
+    answer: 'A',
+    explanation: 'Gli scope model definiscono la natura di uno o più limiti o confini e collocano gli elementi dentro o fuori: sono lo strumento diretto per rendere esplicito cosa appartiene all\'iniziativa e cosa no. Il backlog ordina il lavoro accettato, ma non stabilisce i confini.'
+  },
+  {
+    id: 'D6-22', domain: 6, activity: '6.4', type: 'standard',
+    source: 'BABOK Guide, 10.9 Business Rules Analysis',
+    stem: 'A rule states: "A refund may be issued only within 30 days of purchase and only by a supervisor." Which technique governs the identification and organization of such rules?',
+    options: [
+      { id: 'A', text: 'Business Rules Analysis' },
+      { id: 'B', text: 'Data Modelling' },
+      { id: 'C', text: 'Process Analysis' },
+      { id: 'D', text: 'Risk Analysis and Management' }
+    ],
+    answer: 'A',
+    explanation: 'La business rules analysis identifica, esprime, valida, raffina e organizza le regole che modellano il comportamento quotidiano del business e guidano le decisioni operative. La regola citata è esattamente questo: un vincolo che governa una decisione operativa.'
+  },
+  {
+    id: 'D6-23', domain: 6, activity: '6.1', type: 'situational',
+    source: 'BABOK Guide, 8.3 Assess Solution Limitations',
+    stem: 'A reporting solution is fast in every component except one database query, which slows the entire report. What principle does this illustrate?',
+    options: [
+      { id: 'A', text: 'Solutions often have internal dependencies that limit the performance of the entire solution to that of the least effective component.' },
+      { id: 'B', text: 'Enterprise culture determines whether a solution delivers value.' },
+      { id: 'C', text: 'Non-functional requirements cannot be verified before implementation.' },
+      { id: 'D', text: 'Qualitative measures are more reliable than quantitative ones.' }
+    ],
+    answer: 'A',
+    explanation: 'È il principio alla base di Assess Solution Limitations: le soluzioni hanno spesso dipendenze interne che limitano la prestazione dell\'insieme a quella del componente meno efficace. Individuare quel componente è il primo passo dell\'assessment.'
+  },
+  {
+    id: 'D6-24', domain: 6, activity: '6.2', type: 'standard',
+    source: 'BABOK Guide, 6.4 Define Change Strategy',
+    stem: 'What must be in place before a gap analysis can be performed?',
+    options: [
+      { id: 'A', text: 'The solution must already be implemented.' },
+      { id: 'B', text: 'Both the current state and the future state must be defined.' },
+      { id: 'C', text: 'The requirements must have been approved.' },
+      { id: 'D', text: 'The delivery approach must have been selected.' }
+    ],
+    answer: 'B',
+    explanation: 'Per eseguire una gap analysis devono essere definiti sia il current state sia il future state; usare le stesse tecniche per descriverli semplifica il confronto. Senza uno dei due termini non esiste alcun divario da misurare.'
+  },
+
+  /* ---- Dominio 7, serie B ---- */
+
+  {
+    id: 'D7-11', domain: 7, activity: '7.1', type: 'standard',
+    source: 'BABOK Guide, 4.4 Communicate Business Analysis Information',
+    stem: 'Communication of business analysis information is described as which of the following?',
+    options: [
+      { id: 'A', text: 'One-directional and final, once the requirements are baselined.' },
+      { id: 'B', text: 'Bi-directional and iterative, involving determining recipients, content, purpose, context, and expected outcomes.' },
+      { id: 'C', text: 'A formality performed at the end of each phase.' },
+      { id: 'D', text: 'The responsibility of the project manager rather than the business analyst.' }
+    ],
+    answer: 'B',
+    explanation: 'La comunicazione è bidirezionale e iterativa, e comporta determinare destinatari, contenuto, scopo, contesto e outcome attesi. Non è spingere fuori informazione dando per scontato che sia stata ricevuta e compresa: il professionista verifica la comprensione e agisce sui disaccordi.'
+  },
+  {
+    id: 'D7-12', domain: 7, activity: '7.2', type: 'standard',
+    source: 'BABOK Guide, 2.4.4 End User e 2.4.6 Operational Support',
+    stem: 'Who are end users?',
+    options: [
+      { id: 'A', text: 'Stakeholders responsible for the day-to-day management and maintenance of a system.' },
+      { id: 'B', text: 'Stakeholders who directly interact with the solution, including all participants in a business process.' },
+      { id: 'C', text: 'Stakeholders with specialized knowledge of solution implementation.' },
+      { id: 'D', text: 'Stakeholders who define and enforce standards.' }
+    ],
+    answer: 'B',
+    explanation: 'Gli end user interagiscono direttamente con la soluzione e includono tutti i partecipanti a un processo di business o chi usa il prodotto. {A} è Operational Support, {C} l\'Implementation SME, {D} il Regulator.'
+  },
+  {
+    id: 'D7-13', domain: 7, activity: '7.2', type: 'situational',
+    source: 'BABOK Guide, 3.2 Plan Stakeholder Engagement',
+    stem: 'Where can a business analysis professional look to identify stakeholders outside the organization?',
+    options: [
+      { id: 'A', text: 'Only in the organizational chart.' },
+      { id: 'B', text: 'In existing contracts, anticipated vendors, regulatory and governing bodies, shareholders, customers, and suppliers.' },
+      { id: 'C', text: 'Only in the list provided by the sponsor.' },
+      { id: 'D', text: 'External stakeholders are out of scope for business analysis.' }
+    ],
+    answer: 'B',
+    explanation: 'L\'organigramma e i processi di business sono la fonte iniziale per gli stakeholder interni; per quelli esterni si guarda ai contratti in essere, ai fornitori attesi in base alle relazioni esistenti, agli enti regolatori, e si considerano azionisti, clienti e fornitori. Lo sponsor può indicarne alcuni, ma non è l\'unica fonte.'
+  },
+  {
+    id: 'D7-14', domain: 7, activity: '7.2', type: 'standard',
+    source: 'BABOK Guide, 3.2 Plan Stakeholder Engagement',
+    stem: 'How often is stakeholder analysis performed?',
+    options: [
+      { id: 'A', text: 'Once, at the start of the initiative.' },
+      { id: 'B', text: 'Repeatedly, as business analysis activities continue.' },
+      { id: 'C', text: 'Only when a stakeholder raises a complaint.' },
+      { id: 'D', text: 'At each formal governance gate only.' }
+    ],
+    answer: 'B',
+    explanation: 'La stakeholder analysis si esegue ripetutamente man mano che le attività di business analysis proseguono: nuovi stakeholder possono emergere in qualsiasi momento e ruolo, influenza e atteggiamento di quelli noti possono cambiare.'
+  },
+  {
+    id: 'D7-15', domain: 7, activity: '7.3', type: 'situational',
+    source: 'BABOK Guide, 4.5 Manage Stakeholder Collaboration',
+    stem: 'A change is highly visible across the organization and will affect many departments. What does this imply for stakeholder collaboration?',
+    options: [
+      { id: 'A', text: 'Less attention is needed, since visibility ensures awareness.' },
+      { id: 'B', text: 'More attention is directed to managing stakeholder collaboration, the more significant the impact or visibility of the change.' },
+      { id: 'C', text: 'Collaboration should be delegated to departmental representatives.' },
+      { id: 'D', text: 'Collaboration should be formalized into written approvals only.' }
+    ],
+    answer: 'B',
+    explanation: 'Il BABOK afferma che quanto più è significativo l\'impatto del cambiamento o la sua visibilità nell\'organizzazione, tanta più attenzione va dedicata alla gestione della collaborazione con gli stakeholder, per capitalizzare le reazioni positive e mitigare quelle negative.'
+  },
+  {
+    id: 'D7-16', domain: 7, activity: '7.3', type: 'standard',
+    source: 'BABOK Guide, 9.5.1 Facilitation',
+    stem: 'How does the BABOK Guide define facilitation?',
+    options: [
+      { id: 'A', text: 'The skill of moderating discussions within a group so that all participants can effectively articulate their views and recognize differing points of view.' },
+      { id: 'B', text: 'The ability to motivate people to work together towards shared goals.' },
+      { id: 'C', text: 'The process of leading others to gain knowledge.' },
+      { id: 'D', text: 'The ability to change techniques, style, methods, and approach.' }
+    ],
+    answer: 'A',
+    explanation: 'La facilitation è moderare le discussioni di gruppo perché tutti possano esprimere efficacemente il proprio punto di vista e riconoscere e apprezzare quelli altrui. {B} è Leadership and Influencing, {C} Teaching, {D} Adaptability: quattro competenze del cap. 9 facilmente confondibili.'
+  },
+  {
+    id: 'D7-17', domain: 7, activity: '7.4', type: 'standard',
+    source: 'BABOK Guide, 9.5.2 Leadership and Influencing',
+    stem: 'What does the Leadership and Influencing competency involve?',
+    options: [
+      { id: 'A', text: 'Assigning tasks and monitoring their completion.' },
+      { id: 'B', text: 'Motivating people to act in ways that enable them to work together to achieve shared goals, understanding individual motives, needs, and capabilities.' },
+      { id: 'C', text: 'Escalating decisions to the appropriate level of authority.' },
+      { id: 'D', text: 'Ensuring tasks are completed on time and to expectations.' }
+    ],
+    answer: 'B',
+    explanation: 'La competenza riguarda il motivare le persone ad agire in modo da lavorare insieme verso obiettivi condivisi; comprendere motivazioni, bisogni e capacità individuali di ciascuno stakeholder e come indirizzarli efficacemente è ciò che la rende possibile. {D} descrive la Personal Accountability.'
+  },
+  {
+    id: 'D7-18', domain: 7, activity: '7.4', type: 'situational',
+    source: 'BABOK Guide, 3.2 Plan Stakeholder Engagement',
+    stem: 'A stakeholder has consistently opposed a change in meetings. What is the appropriate use of this observation?',
+    options: [
+      { id: 'A', text: 'Exclude them from further sessions to avoid delays.' },
+      { id: 'B', text: 'Analyse the attitude to understand what may impact their actions and behaviours, and plan collaboration accordingly to mitigate negative reactions.' },
+      { id: 'C', text: 'Report the opposition in the project status report.' },
+      { id: 'D', text: 'Reduce the weight of their input in prioritization decisions.' }
+    ],
+    answer: 'B',
+    explanation: 'Gli atteggiamenti degli stakeholder possono impattare positivamente o negativamente il cambiamento e vanno analizzati per capire cosa ne guida azioni e comportamenti, così da pianificare collaborazione ed engagement in modo mirato. L\'obiettivo è mitigare o evitare le reazioni negative, non escludere chi dissente.'
+  },
+  {
+    id: 'D7-19', domain: 7, activity: '7.1', type: 'standard',
+    source: 'BABOK Guide, 9.4.3 Written Communication',
+    stem: 'What does effective written communication require, according to the BABOK Guide?',
+    options: [
+      { id: 'A', text: 'Using the maximum level of formality regardless of audience.' },
+      { id: 'B', text: 'An understanding of the audience, since presenting information and ideas requires selecting the correct words.' },
+      { id: 'C', text: 'Avoiding models and sketches, which introduce ambiguity.' },
+      { id: 'D', text: 'Producing a single document that serves every stakeholder group.' }
+    ],
+    answer: 'B',
+    explanation: 'La comunicazione scritta usa testo, simboli, modelli formali o informali e schizzi per trasmettere informazione, e la comprensione del pubblico è utile per usarla efficacemente, perché presentare informazioni e idee richiede di scegliere le parole corrette. I modelli sono parte della comunicazione scritta, non un\'eccezione ({C}).'
+  },
+  {
+    id: 'D7-20', domain: 7, activity: '7.3', type: 'situational',
+    source: 'BABOK Guide, 4.5 Manage Stakeholder Collaboration',
+    stem: 'A new stakeholder group is identified halfway through an initiative. What should happen?',
+    options: [
+      { id: 'A', text: 'They are added to the distribution list for status reports.' },
+      { id: 'B', text: 'Their role, influence, and relationship to the initiative are analysed, as new stakeholders may be identified at any point.' },
+      { id: 'C', text: 'They are deferred to the next initiative, since the stakeholder list is baselined.' },
+      { id: 'D', text: 'They are represented by the sponsor to avoid rework.' }
+    ],
+    answer: 'B',
+    explanation: 'Nuovi stakeholder possono essere identificati in qualsiasi momento dell\'iniziativa e, quando emergono, se ne analizzano ruolo, influenza e relazione con l\'iniziativa. Rimandarli ({C}) significa rischiare di scoprire tardi bisogni critici, con la conseguente revisione di attività già svolte.'
+  },
+  {
+    id: 'D7-21', domain: 7, activity: '7.2', type: 'standard',
+    source: 'BABOK Guide, 2.4.1 Business Analyst',
+    stem: 'What does the BABOK Guide say about the business analyst as a stakeholder?',
+    options: [
+      { id: 'A', text: 'The business analyst is a neutral observer and not a stakeholder.' },
+      { id: 'B', text: 'The business analyst is inherently a stakeholder in all business analysis activities, and may also perform activities falling under another stakeholder role.' },
+      { id: 'C', text: 'The business analyst becomes a stakeholder only when they hold approval authority.' },
+      { id: 'D', text: 'The business analyst is a stakeholder only in adaptive initiatives.' }
+    ],
+    answer: 'B',
+    explanation: 'Il business analyst è intrinsecamente uno stakeholder in tutte le attività di business analysis: il BABOK presume che sia responsabile della loro esecuzione, e in alcuni casi può anche svolgere attività che ricadono sotto un altro ruolo di stakeholder.'
+  },
+  {
+    id: 'D7-22', domain: 7, activity: '7.1', type: 'situational',
+    source: 'BABOK Guide, 4.4 Communicate Business Analysis Information',
+    stem: 'A business analysis professional presents a model and the stakeholders nod, but their later questions reveal they did not understand it. What should the professional do?',
+    options: [
+      { id: 'A', text: 'Re-send the same model with a written summary attached.' },
+      { id: 'B', text: 'Change the method of delivering the information, since stakeholders are not receiving or understanding it, and engage them to gain agreement.' },
+      { id: 'C', text: 'Record the misunderstanding as a risk and proceed.' },
+      { id: 'D', text: 'Ask the sponsor to instruct the stakeholders to review the material again.' }
+    ],
+    answer: 'B',
+    explanation: 'Il BABOK è esplicito: il metodo di consegna dell\'informazione può dover cambiare se gli stakeholder non la ricevono o non la comprendono, e più forme di comunicazione possono essere necessarie per la stessa informazione. Il professionista li coinvolge per assicurarsi che abbiano capito e agisce sui disaccordi.'
+  },
+  {
+    id: 'D7-23', domain: 7, activity: '7.4', type: 'standard',
+    source: 'BABOK Guide, 4.5 Manage Stakeholder Collaboration',
+    stem: 'Why are stakeholders described as an important source beyond their approval authority?',
+    options: [
+      { id: 'A', text: 'They are an important source of needs, constraints, and assumptions.' },
+      { id: 'B', text: 'They provide the budget for the initiative.' },
+      { id: 'C', text: 'They determine the delivery methodology.' },
+      { id: 'D', text: 'They own the traceability model.' }
+    ],
+    answer: 'A',
+    explanation: 'Gli stakeholder detengono vari gradi di influenza e autorità sull\'approvazione dei work product, ma sono anche una fonte importante di need, vincoli e assunzioni. È questa seconda natura a rendere dannose le relazioni deboli, che portano fra l\'altro alla mancata fornitura di informazioni di qualità.'
+  },
+  {
+    id: 'D7-24', domain: 7, activity: '7.3', type: 'standard',
+    source: 'BABOK Guide, 9.5.3 Teamwork',
+    stem: 'Which statement reflects the Teamwork competency?',
+    options: [
+      { id: 'A', text: 'Business analysts work independently to preserve objectivity.' },
+      { id: 'B', text: 'Business analysts often work as part of a team with other analysts, project managers, stakeholders, and SMEs, and those relationships are critical to success.' },
+      { id: 'C', text: 'Teamwork applies only to co-located teams.' },
+      { id: 'D', text: 'Teamwork is the responsibility of the project manager.' }
+    ],
+    answer: 'B',
+    explanation: 'Il teamwork riconosce che il business analyst lavora spesso in team con altri analisti, project manager, stakeholder e SME, e che le relazioni con queste figure sono parte critica del successo di qualsiasi progetto o impresa.'
+  },
+/* ---- Dominio 8, serie B ---- */
+
+  {
+    id: 'D8-11', domain: 8, activity: '8.1', type: 'standard',
+    source: 'BABOK Guide, 6.2 Define Future State',
+    stem: 'What do business goals and objectives describe?',
+    options: [
+      { id: 'A', text: 'The ends that the organization is seeking to achieve.' },
+      { id: 'B', text: 'The means by which the solution will be built.' },
+      { id: 'C', text: 'The constraints imposed by the operating environment.' },
+      { id: 'D', text: 'The risks associated with the transition.' }
+    ],
+    answer: 'A',
+    explanation: 'Goal e obiettivi descrivono i fini che l\'organizzazione cerca di raggiungere, e possono riguardare sia cambiamenti che si vogliono realizzare sia condizioni attuali che si vogliono mantenere. Il "come" appartiene alla change strategy e al design.'
+  },
+  {
+    id: 'D8-12', domain: 8, activity: '8.1', type: 'situational',
+    source: 'BABOK Guide, 6.2 Define Future State',
+    stem: 'A goal reads "increase number of high-revenue customers". The business analysis professional refines it to "increase the number of high-revenue customers in the 30–45 age bracket by 30% within 6 months". What has been done?',
+    options: [
+      { id: 'A', text: 'The goal has been converted into a more descriptive, granular, and specific objective.' },
+      { id: 'B', text: 'The goal has been converted into a business requirement.' },
+      { id: 'C', text: 'The goal has been converted into a design.' },
+      { id: 'D', text: 'The goal has been replaced by a key performance indicator.' }
+    ],
+    answer: 'A',
+    explanation: 'È l\'esempio riportato dal BABOK: man mano che i goal vengono analizzati sono convertiti in obiettivi più descrittivi, granulari e specifici. Il goal resta qualitativo e di lungo periodo; l\'obiettivo aggiunge misura e orizzonte temporale.'
+  },
+  {
+    id: 'D8-13', domain: 8, activity: '8.2', type: 'standard',
+    source: 'BABOK Guide, 8.4 Assess Enterprise Limitations',
+    stem: 'How is enterprise culture defined in the BABOK Guide?',
+    options: [
+      { id: 'A', text: 'The documented policies and procedures of the organization.' },
+      { id: 'B', text: 'The deeply rooted beliefs, values, and norms shared by the members of an enterprise, which drive the actions taken even when not directly visible.' },
+      { id: 'C', text: 'The organizational chart and reporting structure.' },
+      { id: 'D', text: 'The set of tools and technologies the enterprise has adopted.' }
+    ],
+    answer: 'B',
+    explanation: 'La cultura d\'impresa è fatta di credenze, valori e norme profondamente radicate e condivise: pur non essendo direttamente visibili, guidano le azioni dell\'impresa. Per questo l\'assessment culturale fa parte della valutazione dei limiti esterni alla soluzione.'
+  },
+  {
+    id: 'D8-14', domain: 8, activity: '8.2', type: 'situational',
+    source: 'BABOK Guide, 8.4 Assess Enterprise Limitations',
+    stem: 'One purpose of a cultural assessment is to identify what?',
+    options: [
+      { id: 'A', text: 'Whether stakeholders understand the reasons why a solution exists.' },
+      { id: 'B', text: 'Whether the solution meets its non-functional requirements.' },
+      { id: 'C', text: 'Whether the delivery team followed the chosen methodology.' },
+      { id: 'D', text: 'Whether the requirements were approved by the correct authority.' }
+    ],
+    answer: 'A',
+    explanation: 'Fra gli scopi dichiarati dell\'assessment culturale c\'è identificare se gli stakeholder comprendano o meno le ragioni per cui una soluzione esiste. Una soluzione tecnicamente conforme può fallire nel realizzare valore proprio perché quella comprensione manca.'
+  },
+  {
+    id: 'D8-15', domain: 8, activity: '8.3', type: 'standard',
+    source: 'BABOK Guide, 10.28 Metrics and Key Performance Indicators (KPIs)',
+    stem: 'What is an indicator?',
+    options: [
+      { id: 'A', text: 'The target value an organization commits to reaching.' },
+      { id: 'B', text: 'The result of analysing one or more specific measures for addressing a concern about a need, value, output, activity, or input, displayed in a table or graphical form.' },
+      { id: 'C', text: 'A numerical measure collected automatically by a system.' },
+      { id: 'D', text: 'A qualitative judgement expressed by a stakeholder.' }
+    ],
+    answer: 'B',
+    explanation: 'L\'indicatore mostra il risultato dell\'analisi di una o più misure specifiche rispetto a una preoccupazione riguardante un need, un valore, un output, un\'attività o un input. Ogni preoccupazione richiede almeno un indicatore per essere misurata adeguatamente, e alcune ne richiedono diversi.'
+  },
+  {
+    id: 'D8-16', domain: 8, activity: '8.3', type: 'situational',
+    source: 'BABOK Guide, 8.2 Analyze Performance Measures',
+    stem: 'Data has been collected for six months but nobody has drawn any conclusion from it. Which task has not been performed?',
+    options: [
+      { id: 'A', text: 'Measure Solution Performance' },
+      { id: 'B', text: 'Analyze Performance Measures' },
+      { id: 'C', text: 'Assess Enterprise Limitations' },
+      { id: 'D', text: 'Define Future State' }
+    ],
+    answer: 'B',
+    explanation: 'Raccogliere i dati è Measure Solution Performance (8.1); trasformarli in insight sulla prestazione della soluzione rispetto al valore che porta è Analyze Performance Measures (8.2). Dati senza analisi non producono alcuna decisione: è la distinzione che la domanda mette alla prova.'
+  },
+  {
+    id: 'D8-17', domain: 8, activity: '8.4', type: 'standard',
+    source: 'BABOK Guide, 10.28 Metrics and Key Performance Indicators (KPIs)',
+    stem: 'What must a business analyst consider when establishing an indicator?',
+    options: [
+      { id: 'A', text: 'Its source, method of collection, collector, and the cost, frequency, and difficulty of collection.' },
+      { id: 'B', text: 'Only whether the data is already available in a system.' },
+      { id: 'C', text: 'Only whether the sponsor finds the indicator convincing.' },
+      { id: 'D', text: 'Only the statistical significance of the sample.' }
+    ],
+    answer: 'A',
+    explanation: 'Il BABOK elenca fonte, metodo di raccolta, chi raccoglie, costo, frequenza e difficoltà della raccolta. Le fonti secondarie possono essere le più economiche, ma per soddisfare le altre caratteristiche di un buon indicatore può servire ricerca primaria come survey o interviste.'
+  },
+  {
+    id: 'D8-18', domain: 8, activity: '8.4', type: 'situational',
+    source: 'BABOK Guide, 10.28 Metrics and Key Performance Indicators (KPIs)',
+    stem: 'A proposed indicator would require a costly monthly audit to collect. Which characteristic of a good indicator is at risk?',
+    options: [
+      { id: 'A', text: 'Clear' },
+      { id: 'B', text: 'Economical' },
+      { id: 'C', text: 'Trustworthy and credible' },
+      { id: 'D', text: 'Relevant' }
+    ],
+    answer: 'B',
+    explanation: 'Economical significa disponibile a un costo ragionevole. Un indicatore può essere chiaro, rilevante e credibile e restare comunque inutilizzabile perché troppo costoso da raccogliere con la frequenza richiesta: in quel caso si valuta l\'uso di un proxy.'
+  },
+  {
+    id: 'D8-19', domain: 8, activity: '8.2', type: 'standard',
+    source: 'BABOK Guide, 8.3 Assess Solution Limitations',
+    stem: 'When a solution consistently or repeatedly produces ineffective outputs, what is performed?',
+    options: [
+      { id: 'A', text: 'Problem analysis, in order to identify the source of the problem.' },
+      { id: 'B', text: 'A new elicitation cycle with all stakeholders.' },
+      { id: 'C', text: 'An enterprise culture assessment.' },
+      { id: 'D', text: 'A re-approval of the original requirements.' }
+    ],
+    answer: 'A',
+    explanation: 'Quando si determina che la soluzione produce output inefficaci in modo costante o ripetuto si esegue problem analysis per identificare la fonte del problema. L\'assessment culturale ({C}) appartiene invece ai limiti esterni alla soluzione.'
+  },
+  {
+    id: 'D8-20', domain: 8, activity: '8.1', type: 'standard',
+    source: 'BABOK Guide, 6.2 Define Future State',
+    stem: 'Which of the following is given as an example of a business goal?',
+    options: [
+      { id: 'A', text: 'Reduce the average handling time per ticket to under 4 minutes by Q3.' },
+      { id: 'B', text: 'Create a new capability such as a new product or service, or address a competitive disadvantage.' },
+      { id: 'C', text: 'Deploy the new platform to all regions by December.' },
+      { id: 'D', text: 'Migrate the customer database without data loss.' }
+    ],
+    answer: 'B',
+    explanation: 'Fra gli esempi di business goal il BABOK cita: creare una nuova capability, affrontare uno svantaggio competitivo o crearne uno nuovo, migliorare i ricavi, aumentare la soddisfazione di clienti e dipendenti, conformarsi a nuove regolamentazioni, migliorare la sicurezza, ridurre il time to market. Le altre opzioni sono obiettivi o attività, misurabili e datate.'
+  },
+  {
+    id: 'D8-21', domain: 8, activity: '8.3', type: 'situational',
+    source: 'BABOK Guide, 4.4 Communicate Business Analysis Information',
+    stem: 'A business analysis professional must report to executives how a solution is performing against business goals. What should guide the format of the report?',
+    options: [
+      { id: 'A', text: 'The level of technical detail available, to demonstrate rigour.' },
+      { id: 'B', text: 'The audience: information should be expressed in language, tone, and style appropriate to them.' },
+      { id: 'C', text: 'The organization\'s document template, regardless of audience.' },
+      { id: 'D', text: 'The preferences of the delivery team who produced the data.' }
+    ],
+    answer: 'B',
+    explanation: 'L\'activity statement 8.3 dell\'ECBA parla di descrivere come le soluzioni raggiungono i goal di business e trasmettere l\'informazione in modo efficace: vale la regola di Communicate Business Analysis Information, cioè esprimere l\'informazione con linguaggio, tono e stile appropriati al pubblico.'
+  },
+  {
+    id: 'D8-22', domain: 8, activity: '8.4', type: 'standard',
+    source: 'BABOK Guide, 10.28 Metrics and Key Performance Indicators (KPIs)',
+    stem: 'Which statement about indicators over time is correct?',
+    options: [
+      { id: 'A', text: 'Once validated, an indicator should not be changed, to preserve comparability.' },
+      { id: 'B', text: 'Weaknesses in some indicators can be identified over time and improved.' },
+      { id: 'C', text: 'Indicators should be replaced at every reporting cycle.' },
+      { id: 'D', text: 'Indicators are set by the vendor and cannot be modified.' }
+    ],
+    answer: 'B',
+    explanation: 'Il BABOK nota che nel tempo si possono individuare le debolezze di alcuni indicatori e migliorarli; conta anche l\'interesse degli stakeholder, perché certi indicatori aiutano a performare o migliorare più di altri. Un indicatore non è intoccabile ({A}) né usa e getta ({C}).'
+  },
+  {
+    id: 'D8-23', domain: 8, activity: '8.2', type: 'situational',
+    source: 'BABOK Guide, 8.3 e 8.4',
+    stem: 'A solution underperforms because a legacy system it depends on is slow, and that legacy system is part of the solution scope. How is this classified?',
+    options: [
+      { id: 'A', text: 'A solution limitation, being a factor internal to the solution restricting value realization.' },
+      { id: 'B', text: 'An enterprise limitation, being external to the solution.' },
+      { id: 'C', text: 'A risk, to be assessed before the transition.' },
+      { id: 'D', text: 'A constraint imposed by a regulator.' }
+    ],
+    answer: 'A',
+    explanation: 'Se il sistema legacy rientra nello scope della soluzione, il fattore che ne limita il valore è interno: è un solution limitation (8.3), tipicamente una dipendenza fra componenti. Fosse stato fuori scope — cultura, struttura o policy aziendali — sarebbe stato un enterprise limitation (8.4).'
+  },
+  {
+    id: 'D8-24', domain: 8, activity: '8.1', type: 'standard',
+    source: 'BABOK Guide, 8.1 Measure Solution Performance',
+    stem: 'What are quantitative measures?',
+    options: [
+      { id: 'A', text: 'Numerical, countable, or finite measures, usually involving amounts, quantities, or rates.' },
+      { id: 'B', text: 'Subjective measures reflecting attitudes and perceptions.' },
+      { id: 'C', text: 'Measures that can only be collected after implementation.' },
+      { id: 'D', text: 'Measures derived from the requirements documentation.' }
+    ],
+    answer: 'A',
+    explanation: 'Le misure quantitative sono numeriche, contabili o finite e riguardano tipicamente importi, quantità o tassi; quelle qualitative ({B}) sono soggettive e includono atteggiamenti e percezioni. Le misure di prestazione possono essere quantitative, qualitative o entrambe, a seconda del valore che si misura.'
+  },
+
+  /* ---- Dominio 9, serie B ---- */
+
+  {
+    id: 'D9-11', domain: 9, activity: '9.1', type: 'standard',
+    source: 'BABOK Guide, 4.3 Confirm Elicitation Results',
+    stem: 'What is the risk of committing resources to business analysis activities based on unconfirmed elicitation results?',
+    options: [
+      { id: 'A', text: 'The traceability model becomes invalid.' },
+      { id: 'B', text: 'Stakeholder expectations may not be met.' },
+      { id: 'C', text: 'The requirements cannot be prioritized.' },
+      { id: 'D', text: 'The change strategy must be re-approved.' }
+    ],
+    answer: 'B',
+    explanation: 'Il BABOK avverte che impegnare risorse su risultati non confermati può significare che le aspettative degli stakeholder non vengano soddisfatte. È il motivo per cui la conferma precede l\'impiego dell\'informazione, anche se è una revisione leggera.'
+  },
+  {
+    id: 'D9-12', domain: 9, activity: '9.1', type: 'situational',
+    source: 'BABOK Guide, 7.2 Verify Requirements',
+    stem: 'A requirement is written in terminology that only the finance department understands, and other stakeholders cannot follow it. Which quality characteristic is compromised?',
+    options: [
+      { id: 'A', text: 'Understandable' },
+      { id: 'B', text: 'Atomic' },
+      { id: 'C', text: 'Feasible' },
+      { id: 'D', text: 'Consistent' }
+    ],
+    answer: 'A',
+    explanation: 'Understandable significa rappresentato usando terminologia comune, comprensibile a chi deve usare il requisito. La qualità è determinata in ultima analisi dai bisogni degli stakeholder che useranno i requisiti o i design: se non li capiscono, il requisito non serve al suo scopo.'
+  },
+  {
+    id: 'D9-13', domain: 9, activity: '9.2', type: 'standard',
+    source: 'BABOK Guide, 7.2 Verify Requirements',
+    stem: 'What does the quality characteristic "feasible" mean?',
+    options: [
+      { id: 'A', text: 'That the requirement has already been implemented elsewhere.' },
+      { id: 'B', text: 'That it is reasonable and possible within the agreed risk, schedule, and budget, or feasible enough to investigate further through experiments or prototypes.' },
+      { id: 'C', text: 'That the requirement carries no technical risk.' },
+      { id: 'D', text: 'That the delivery team has estimated it.' }
+    ],
+    answer: 'B',
+    explanation: 'Feasible non significa privo di rischio ({C}): significa ragionevole e possibile entro rischio, tempi e budget concordati, oppure abbastanza fattibile da meritare un\'indagine ulteriore tramite esperimenti o prototipi.'
+  },
+  {
+    id: 'D9-14', domain: 9, activity: '9.2', type: 'situational',
+    source: 'BABOK Guide, 5.3 Prioritize Requirements',
+    stem: 'A requirement must be implemented to satisfy a legal obligation. How does this affect prioritization?',
+    options: [
+      { id: 'A', text: 'It is treated like any other requirement, ranked by benefit.' },
+      { id: 'B', text: 'Regulatory or policy demands imposed on the organization may take precedence over other stakeholder interests.' },
+      { id: 'C', text: 'It is removed from prioritization and handled by the legal department.' },
+      { id: 'D', text: 'It is deprioritized until the deadline approaches.' }
+    ],
+    answer: 'B',
+    explanation: 'Sotto il fattore "penalty" il BABOK include la prioritizzazione dei requisiti per soddisfare obblighi normativi o di policy imposti all\'organizzazione, che possono prevalere sugli altri interessi degli stakeholder. La compliance è un criterio di prioritizzazione, non un percorso separato.'
+  },
+  {
+    id: 'D9-15', domain: 9, activity: '9.3', type: 'standard',
+    source: 'BABOK Guide, 9.6.2 Business Analysis Tools and Technology',
+    stem: 'What capabilities do tools specific to the field of business analysis provide?',
+    options: [
+      { id: 'A', text: 'Modelling, diagramming, documenting, analyzing and mapping requirements, identifying relationships between requirements, and tracking and storing requirements artifacts.' },
+      { id: 'B', text: 'Managing project schedules, budgets, and resource allocation.' },
+      { id: 'C', text: 'Automated testing and continuous integration.' },
+      { id: 'D', text: 'Payroll, procurement, and human resources administration.' }
+    ],
+    answer: 'A',
+    explanation: 'Sono le capacità elencate al punto 9.6.2. Da distinguere dagli office productivity tools (9.6.1), che servono a organizzare, analizzare e comunicare informazioni in generale, e dai communication tools (9.6.3), che supportano interazioni conversazionali e collaborative con team virtuali e co-locati.'
+  },
+  {
+    id: 'D9-16', domain: 9, activity: '9.3', type: 'situational',
+    source: 'BABOK Guide, 9.3.2 Industry Knowledge',
+    stem: 'Before proposing changes, a business analysis professional studies current trends, market forces, key processes, customer segments, and regulations in the sector. Which underlying competency is this?',
+    options: [
+      { id: 'A', text: 'Organization Knowledge' },
+      { id: 'B', text: 'Industry Knowledge' },
+      { id: 'C', text: 'Solution Knowledge' },
+      { id: 'D', text: 'Business Acumen' }
+    ],
+    answer: 'B',
+    explanation: 'Industry knowledge è la comprensione di trend, forze e driver di mercato, processi chiave, servizi, prodotti, definizioni, segmenti di clientela, fornitori, pratiche e regolamentazioni del settore, e di come l\'azienda vi si posiziona. Organization knowledge guarda invece dentro l\'impresa.'
+  },
+  {
+    id: 'D9-17', domain: 9, activity: '9.4', type: 'standard',
+    source: 'BABOK Guide, 9.3.5 Methodology Knowledge',
+    stem: 'What do methodologies determine, according to the BABOK Guide?',
+    options: [
+      { id: 'A', text: 'The timing, the approach, the role of those involved, and the accepted risk level of how a change is approached and managed.' },
+      { id: 'B', text: 'The financial return expected from the change.' },
+      { id: 'C', text: 'The stakeholders who must approve the requirements.' },
+      { id: 'D', text: 'The technical architecture of the solution.' }
+    ],
+    answer: 'A',
+    explanation: 'Le metodologie determinano il timing (grandi passi o piccoli incrementi), l\'approccio, il ruolo dei coinvolti, il livello di rischio accettato e altri aspetti di come un cambiamento viene affrontato e gestito. Le organizzazioni le adottano o le creano per adattarle a cultura, maturità, adattabilità, rischio, incertezza e governance.'
+  },
+  {
+    id: 'D9-18', domain: 9, activity: '9.4', type: 'situational',
+    source: 'BABOK Guide, 10.32 Organizational Modelling',
+    stem: 'A business analysis professional needs to document which units exist, who reports to whom, and how those structures align with organizational goals. Which technique applies?',
+    options: [
+      { id: 'A', text: 'Organizational Modelling' },
+      { id: 'B', text: 'Business Capability Analysis' },
+      { id: 'C', text: 'Stakeholder List, Map, or Personas' },
+      { id: 'D', text: 'Scope Modelling' }
+    ],
+    answer: 'A',
+    explanation: 'L\'organizational modelling descrive ruoli, responsabilità e strutture di riporto esistenti in un\'organizzazione e le allinea agli obiettivi organizzativi. La stakeholder map ({C}) analizza invece caratteristiche e influenza degli stakeholder rispetto a una specifica iniziativa.'
+  },
+  {
+    id: 'D9-19', domain: 9, activity: '9.1', type: 'standard',
+    source: 'BABOK Guide, 10.18 Document Analysis',
+    stem: 'What can Document Analysis elicit?',
+    options: [
+      { id: 'A', text: 'Business analysis information, including contextual understanding and requirements, by examining available materials describing the business environment or existing organizational assets.' },
+      { id: 'B', text: 'The attitudes and perceptions of stakeholders towards a change.' },
+      { id: 'C', text: 'Information that cannot be known without a controlled test.' },
+      { id: 'D', text: 'The relative priority stakeholders assign to each requirement.' }
+    ],
+    answer: 'A',
+    explanation: 'Document analysis esamina materiali disponibili che descrivono l\'ambiente di business o gli asset organizzativi esistenti. {C} descrive gli experiments, un tipo diverso di elicitation: la document analysis non può rivelare ciò che non è ancora stato scritto da nessuna parte.'
+  },
+  {
+    id: 'D9-20', domain: 9, activity: '9.2', type: 'situational',
+    source: 'BABOK Guide, 6.1 Analyze Current State',
+    stem: 'Why does understanding the current state matter before defining constraints on a change?',
+    options: [
+      { id: 'A', text: 'Because the current state description is required for governance approval.' },
+      { id: 'B', text: 'Because it reveals what would be directly or indirectly affected by the change, including policies, technology, and external influencers.' },
+      { id: 'C', text: 'Because constraints can only be identified by the regulator.' },
+      { id: 'D', text: 'Because the current state determines the delivery methodology.' }
+    ],
+    answer: 'B',
+    explanation: 'Analyze Current State serve a capire perché l\'impresa deve cambiare e cosa ne sarebbe toccato, direttamente o indirettamente. Policy, tecnologia, cultura, struttura e influencer esterni emergono qui, ed è da questa comprensione che si riconoscono i vincoli reali entro cui adattare i piani.'
+  },
+  {
+    id: 'D9-21', domain: 9, activity: '9.3', type: 'standard',
+    source: 'BABOK Guide, 9.6.3 Communication Tools and Technology',
+    stem: 'What are communication tools used for?',
+    options: [
+      { id: 'A', text: 'To plan and complete tasks related to conversational and collaborative interactions, allowing work with virtual and co-located teams.' },
+      { id: 'B', text: 'To model and diagram requirements.' },
+      { id: 'C', text: 'To track defects found during testing.' },
+      { id: 'D', text: 'To calculate the financial return of design options.' }
+    ],
+    answer: 'A',
+    explanation: 'I communication tools servono a pianificare e completare i compiti legati alle interazioni conversazionali e collaborative e consentono di lavorare con team virtuali e co-locati; conoscerne le opzioni e saperli usare è parte della competenza. Modellare e diagrammare ({B}) rientra nei business analysis tools.'
+  },
+  {
+    id: 'D9-22', domain: 9, activity: '9.4', type: 'situational',
+    source: 'BABOK Guide, 9.3.1 Business Acumen',
+    stem: 'A business analysis professional moving to a new employer recognizes that the legal, finance, and supply chain practices resemble those of their previous organization, and applies that experience. Which competency is at work?',
+    options: [
+      { id: 'A', text: 'Business Acumen' },
+      { id: 'B', text: 'Organization Knowledge' },
+      { id: 'C', text: 'Methodology Knowledge' },
+      { id: 'D', text: 'Solution Knowledge' }
+    ],
+    answer: 'A',
+    explanation: 'Business acumen è la capacità di comprendere i business need usando esperienza e conoscenza acquisite in altre situazioni: le organizzazioni condividono spesso pratiche simili — requisiti legali e regolatori, finanza, logistica, vendite, marketing, supply chain, risorse umane, tecnologia — e la competenza sta nell\'applicare quella conoscenza comune.'
+  },
+  {
+    id: 'D9-23', domain: 9, activity: '9.1', type: 'standard',
+    source: 'BABOK Guide, 7.2 Verify Requirements',
+    stem: 'Who ultimately determines the quality of a requirement?',
+    options: [
+      { id: 'A', text: 'The business analyst who wrote it.' },
+      { id: 'B', text: 'The needs of the stakeholders who will use the requirement or design.' },
+      { id: 'C', text: 'The governance body that approves it.' },
+      { id: 'D', text: 'The testing team that verifies it.' }
+    ],
+    answer: 'B',
+    explanation: 'Il BABOK apre l\'elenco delle caratteristiche di qualità precisando che la qualità è in ultima analisi determinata dai bisogni degli stakeholder che useranno i requisiti o i design. Le caratteristiche sono una guida, non un criterio assoluto slegato dall\'uso.'
+  },
+  {
+    id: 'D9-24', domain: 9, activity: '9.2', type: 'standard',
+    source: 'BABOK Guide, 5.3 Prioritize Requirements',
+    stem: 'Which prioritization factor refers to the likelihood that a requirement will still change?',
+    options: [
+      { id: 'A', text: 'Stability' },
+      { id: 'B', text: 'Risk' },
+      { id: 'C', text: 'Time sensitivity' },
+      { id: 'D', text: 'Cost' }
+    ],
+    answer: 'A',
+    explanation: 'La stability riguarda quanto è probabile che il requisito cambi ancora: lavorare su un requisito instabile rischia di produrre rilavorazione. Il risk è invece la possibilità che il requisito non porti il valore atteso o non sia realizzabile affatto — due incertezze diverse, che l\'esame accosta volentieri.'
+  }
 ];

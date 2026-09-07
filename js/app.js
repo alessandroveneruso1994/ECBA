@@ -160,35 +160,64 @@
     showQuiz();
   }
 
+  /** Avvia una sessione di esercizio sui domini indicati. */
+  function startPractice(domainIds) {
+    var count = parseInt(view.querySelector('#practice-count').value, 10);
+    var questions = Engine.buildPractice(POOL, domainIds, count);
+    if (!questions.length) return alert('Nessuna domanda disponibile per i domini scelti.');
+    session = Engine.createSession('practice', questions);
+    Storage.saveSession(session);
+    showQuiz();
+  }
+
   function showPracticeSetup() {
     var node = tpl('practice-setup');
-    var picker = node.getElementById('domain-picker');
+    var cards = node.getElementById('domain-cards');
+    var stats = Storage.stats();
 
     BP.domains.forEach(function (d) {
-      var count = poolCountByDomain(d.id);
-      var label = document.createElement('label');
-      if (!count) label.className = 'disabled';
-      label.innerHTML = '<input type="checkbox" value="' + d.id + '"' +
-        (count ? ' checked' : ' disabled') + '>' +
-        '<span></span><span class="pk-weight"></span>';
-      label.querySelector('span').textContent = d.id + '. ' + d.name;
-      label.querySelector('.pk-weight').textContent = count + ' dom.';
-      picker.appendChild(label);
+      var available = poolCountByDomain(d.id);
+      var s = stats[d.id];
+      var ratio = s && s.seen ? s.correct / s.seen : null;
+
+      var card = document.createElement('button');
+      card.className = 'domain-card';
+      card.disabled = !available;
+      card.innerHTML =
+        '<span class="dc-num"></span>' +
+        '<span class="dc-body">' +
+          '<strong class="dc-name"></strong>' +
+          '<span class="muted small dc-meta"></span>' +
+          '<span class="bar"><i></i></span>' +
+        '</span>' +
+        '<span class="dc-score"></span>';
+
+      card.querySelector('.dc-num').textContent = d.id;
+      card.querySelector('.dc-name').textContent = d.name;
+      card.querySelector('.dc-meta').textContent =
+        pct(d.weight) + ' dell\'esame · ' + available + ' domande disponibili';
+
+      var fill = card.querySelector('.bar > i');
+      if (ratio === null) {
+        fill.style.width = '0';
+        card.querySelector('.dc-score').textContent = '—';
+        card.querySelector('.dc-score').title = 'Mai esercitato';
+      } else {
+        fill.style.width = Math.round(ratio * 100) + '%';
+        fill.className = ratio >= 0.8 ? 'ok' : ratio >= 0.6 ? 'warn' : 'bad';
+        card.querySelector('.dc-score').textContent = pct(ratio);
+        card.querySelector('.dc-score').title = s.correct + ' corrette su ' + s.seen + ' viste';
+      }
+
+      card.addEventListener('click', function () { startPractice([d.id]); });
+      cards.appendChild(card);
     });
 
-    node.getElementById('btn-start-practice').addEventListener('click', function () {
-      var ids = [].slice.call(view.querySelectorAll('#domain-picker input:checked'))
-        .map(function (i) { return parseInt(i.value, 10); });
-      if (!ids.length) return alert('Seleziona almeno un dominio.');
-      var count = parseInt(view.querySelector('#practice-count').value, 10);
-      var questions = Engine.buildPractice(POOL, ids, count);
-      if (!questions.length) return alert('Nessuna domanda disponibile per i domini scelti.');
-      session = Engine.createSession('practice', questions);
-      Storage.saveSession(session);
-      showQuiz();
+    node.getElementById('btn-practice-all').addEventListener('click', function () {
+      startPractice(BP.domains.map(function (d) { return d.id; }));
     });
 
-    render(node, 'Allenamento', true);
+    render(node, 'Esercizio per dominio', true);
   }
 
   function startReview() {
