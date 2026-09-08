@@ -15,7 +15,7 @@ Funziona offline e si installa sulla home screen come un'app.
 | **Le 20 tecniche** | Il capitolo 10 del BABOK. Test da 10 domande su tutto il capitolo, oppure drill su una singola tecnica (cinque domande ciascuna). |
 | **Le 29 competenze** | Il capitolo 9 del BABOK. Test da 10 domande, per gruppo di competenze o per singola competenza. |
 | **Ripasso errori** | Ripropone solo le domande sbagliate o segnalate, le più sbagliate per prime. Attinge da tutte le sezioni. |
-| **Blueprint & progressi** | Domini e pesi, le 20 tecniche e le 29 competenze valutate, storico e statistiche per dominio. |
+| **Blueprint & progressi** | Domini e pesi, le 20 tecniche e le 29 competenze valutate, storico e statistiche per dominio. Contiene anche il pulsante per **azzerare tutti i risultati** e ripartire da zero. |
 
 Al termine di ogni sessione il report mostra il risultato per dominio e per **activity
 statement**: non solo "sei debole su Need", ma "sei debole su 5.3 — confrontare i bisogni
