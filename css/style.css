@@ -435,6 +435,17 @@ main { max-width: 780px; margin: 0 auto; padding: 1.2rem 1rem 4rem; }
 .hist-row { display: flex; justify-content: space-between; gap: 1rem; padding: .45rem 0; border-bottom: 1px solid var(--border); font-size: .9rem; }
 .hist-row:last-child { border-bottom: 0; }
 
+/* ---------- Azzeramento risultati ---------- */
+.danger-zone { border-left: 3px solid var(--bad); }
+.btn.danger {
+  background: var(--bad-soft);
+  border-color: var(--bad);
+  color: var(--bad);
+}
+.btn.danger:hover:not(:disabled) { background: var(--bad); color: #fff; }
+.reset-summary { margin: .8rem 0; display: flex; flex-direction: column; gap: .25rem; }
+.reset-line strong { font-size: 1rem; min-width: 2ch; display: inline-block; }
+
 .empty-state { text-align: center; padding: 2rem 1rem; color: var(--muted); }
 
 @media (max-width: 520px) {

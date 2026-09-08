@@ -748,7 +748,7 @@
       div.className = 'comp-group';
       div.innerHTML = '<strong></strong><p></p>';
       div.querySelector('strong').textContent = g.group;
-      div.querySelector('p').textContent = g.items.join(' · ');
+      div.querySelector('p').textContent = g.items.map(function (c) { return c.name; }).join(' · ');
       comp.appendChild(div);
     });
 
@@ -760,9 +760,8 @@
       entries.slice(0, 10).forEach(function (h) {
         var row = document.createElement('div');
         row.className = 'hist-row';
-        var label = h.mode === 'exam' ? 'Simulazione' : h.mode === 'practice' ? 'Allenamento' : 'Ripasso';
         row.innerHTML = '<span></span><span class="mono"></span>';
-        row.children[0].textContent = label + ' · ' + new Date(h.date).toLocaleDateString('it-IT', {
+        row.children[0].textContent = modeLabel(h.mode) + ' · ' + new Date(h.date).toLocaleDateString('it-IT', {
           day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit'
         });
         row.children[1].textContent = h.correct + '/' + h.total +
@@ -771,8 +770,41 @@
       });
     }
 
-    node.getElementById('btn-reset-stats').addEventListener('click', function () {
-      if (confirm('Azzerare storico, statistiche e registro degli errori?')) {
+    // Riepilogo di ciò che l'azzeramento cancellerebbe, così la scelta è informata.
+    var topicStats = Storage.topicStats();
+    var seenTotal = 0;
+    Object.keys(stats).forEach(function (k) { seenTotal += stats[k].seen; });
+    Object.keys(topicStats).forEach(function (k) { seenTotal += topicStats[k].seen; });
+    var missedCount = Object.keys(Storage.weakQuestionIds()).length;
+    var nothingToReset = !entries.length && !seenTotal && !missedCount;
+
+    var summary = node.getElementById('reset-summary');
+    if (nothingToReset) {
+      summary.innerHTML = '<p class="muted">Non c\'è ancora nulla da azzerare.</p>';
+    } else {
+      [
+        [entries.length, 'sessioni nello storico'],
+        [seenTotal, 'risposte registrate nelle statistiche'],
+        [missedCount, 'domande nel ripasso errori']
+      ].forEach(function (row) {
+        var line = document.createElement('div');
+        line.className = 'reset-line';
+        line.innerHTML = '<strong class="mono"></strong> <span class="muted small"></span>';
+        line.querySelector('strong').textContent = row[0];
+        line.querySelector('span').textContent = row[1];
+        summary.appendChild(line);
+      });
+    }
+
+    var resetBtn = node.getElementById('btn-reset-stats');
+    resetBtn.disabled = nothingToReset;
+    resetBtn.addEventListener('click', function () {
+      var msg = 'Azzerare tutti i risultati?\n\n' +
+        '• ' + entries.length + ' sessioni nello storico\n' +
+        '• ' + seenTotal + ' risposte registrate\n' +
+        '• ' + missedCount + ' domande nel ripasso errori\n\n' +
+        'Le domande e il tema restano invariati. L\'operazione non è reversibile.';
+      if (confirm(msg)) {
         Storage.resetStats();
         showBlueprint();
       }

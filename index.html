@@ -81,7 +81,7 @@
       <button class="mode-card" data-mode="blueprint">
         <span class="mode-icon">▤</span>
         <strong>Blueprint &amp; progressi</strong>
-        <span class="muted small">Domini, pesi, tecniche e competenze. Le tue statistiche per dominio.</span>
+        <span class="muted small">Domini, pesi, tecniche e competenze. Le tue statistiche, e il pulsante per azzerarle.</span>
       </button>
     </div>
 
@@ -229,7 +229,14 @@
     <div class="card">
       <h3>Storico sessioni</h3>
       <div id="bp-history"></div>
-      <button class="btn ghost small-btn" id="btn-reset-stats">Azzera statistiche</button>
+    </div>
+
+    <div class="card danger-zone">
+      <h3>Azzera i risultati</h3>
+      <p class="muted small">Riparti da zero quando vuoi: cancella storico, percentuali per
+        dominio, tecnica e competenza, e il registro delle domande sbagliate.</p>
+      <div id="reset-summary" class="reset-summary"></div>
+      <button class="btn danger" id="btn-reset-stats">Azzera tutti i risultati</button>
     </div>
   </section>
 </template>
