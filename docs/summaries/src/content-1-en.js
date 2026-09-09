@@ -10,7 +10,7 @@ module.exports = [
   blocks: [
     { t: 'p', v: 'The heaviest domain on the exam: one question in five. It revolves almost entirely around the BACCM, which must be known word for word.' },
 
-    { t: 'h3', v: '1.1 Define Business Analysis' },
+    { t: 'h3', v: 'Activity statement 1.1 — Define Business Analysis' },
     { t: 'ref', v: 'BA Standard 2 · BABOK 1' },
     { t: 'p', v: 'Business analysis enables change in an enterprise by defining needs and recommending solutions that deliver value to stakeholders. It is not project management, not testing, not writing technical specifications: on the exam the wrong options are almost always activities belonging to adjacent disciplines.' },
     { t: 'ul', v: [
@@ -19,7 +19,7 @@ module.exports = [
       'It is critical at all three organizational levels: strategic, tactical and operational.'
     ]},
 
-    { t: 'h3', v: '1.2 Business Analysis Core Concept Model (BACCM)' },
+    { t: 'h3', v: 'Activity statement 1.2 — Business Analysis Core Concept Model (BACCM)' },
     { t: 'ref', v: 'BA Standard 2 · BABOK 2 · BABOK 7.6' },
     { t: 'p', v: 'Business Analysis Core Concept Model. The definitions must be known verbatim: the exam presents them crossed over, attributing to one concept the definition of another.' },
     { t: 'table', head: ['Concept', 'Official definition'], widths: [2200, 6800], rows: [
@@ -35,7 +35,7 @@ module.exports = [
     { t: 'p', v: 'The relationships matter as much as the definitions:' },
     { t: 'ul', v: [
       'Need → Change: needs cause changes by motivating stakeholders to act.',
-      'Change → Need: changes also cause needs, by reducing or increasing the value delivered by existing solutions. This is the less intuitive direction, and for that reason the most tested.',
+      'Change → Need: changes also cause needs, by reducing or increasing the value delivered by existing solutions. This is the less intuitive of the two directions, and the one that is easier to forget.',
       'Solution: satisfies a need by resolving a problem OR by enabling stakeholders to take advantage of an opportunity.',
       'Stakeholder: internal or external, often defined by interest, impact and influence; grouped by their relationship to needs, changes and solutions.'
     ]},
@@ -48,13 +48,14 @@ module.exports = [
       'Describe effective and efficient business analysis',
       'Communicate about business analysis with a common language',
       'Identify professional development opportunities for individuals',
-      'Evaluate the relationships among the six concepts and their impact',
+      'Perform better business analysis by evaluating the relationships among the six concepts',
+      'Evaluate the impact of these concepts and relationships',
       'Establish both a foundation and a path forward',
       'Consider the quality and completeness of the work being done'
     ]},
     { t: 'p', v: 'It is not for estimating budgets, assigning responsibilities or selecting methodologies: it is not a prescriptive process.' },
 
-    { t: 'h3', v: '1.3 Importance of Business Analysis' },
+    { t: 'h3', v: 'Activity statement 1.3 — Importance of Business Analysis' },
     { t: 'ref', v: 'BA Standard 2 · BABOK 3.5 · BABOK 4.5 · BABOK 6.3 · BABOK 7.5 · BABOK 7.6 · BABOK 8.5' },
     { t: 'p', v: 'These should be recognized from their description rather than recited.' },
     { t: 'table', head: ['Function', 'How to recognize it'], widths: [2800, 6200], rows: [
@@ -70,7 +71,7 @@ module.exports = [
     ]},
     { t: 'key', v: 'On value delivery the Standard is explicit: it may not always be possible to deliver value for all stakeholders. The goal is to maximize value for the majority while addressing and managing the concerns of others.' },
 
-    { t: 'h3', v: '1.4 Outcomes and Value Creation' },
+    { t: 'h3', v: 'Activity statement 1.4 — Outcomes and Value Creation' },
     { t: 'ref', v: 'BA Standard 2 · BABOK 7.3 · BABOK 7.4 · BABOK 7.6' },
     { t: 'p', v: 'Three distinctions, all examinable:' },
     { t: 'table', head: ['Distinction', 'Meaning', 'Example'], widths: [2200, 3600, 3200], rows: [
@@ -93,19 +94,19 @@ module.exports = [
   blocks: [
     { t: 'p', v: 'A domain made of three lists to memorize — values, principles, competencies — plus the concept of mindset itself. Situation-based questions ask you to match a described behaviour to the right item on a list.' },
 
-    { t: 'h3', v: '2.1 Importance of Mindset' },
+    { t: 'h3', v: 'Activity statement 2.1 — Importance of Mindset' },
     { t: 'ref', v: 'BA Standard 3' },
     { t: 'p', v: 'The mental framework that guides decision-making, behaviour and team dynamics. It exists to navigate, with confidence, the situations where knowing exactly what needs to be done is impossible: every situation is unique and there is no single analysis approach.' },
     { t: 'p', v: 'It is developed through deliberate practice on six fronts: achieving organizational outcomes, discovering value for stakeholders, adopting appropriate principles, deciding how to approach the work, actively developing foundational competencies, being able to use foundational techniques.' },
 
-    { t: 'h3', v: '2.2 Ways to Think About Business Analysis' },
+    { t: 'h3', v: 'Activity statement 2.2 — Ways to Think About Business Analysis' },
     { t: 'ref', v: 'BA Standard 3' },
     { t: 'p', v: 'Respect · Courage · Collaboration · Ethics · Curiosity · Continuous learning · Improvement · Customer focus · Value maximization' },
     { t: 'trap', v: 'Plausible words that are ABSENT from the list, used as distractors: predictability, standardization, specialization, efficiency, compliance, hierarchy, formality, speed, autonomy, competition.' },
 
-    { t: 'h3', v: '2.3 Business Analysis Principles' },
+    { t: 'h3', v: 'Activity statement 2.3 — Business Analysis Principles' },
     { t: 'ref', v: 'BA Standard 3 · BABOK 8.4 · Agile Extension 2.6-2.7' },
-    { t: 'p', v: 'They come from the Agile Extension. There are few of them: worth learning verbatim, because the exam tests them often.' },
+    { t: 'p', v: 'They come from the Agile Extension. There are seven, with short names: worth learning verbatim, because plausible distractors are easy to build by changing a single word.' },
     { t: 'table', head: ['Principle', 'What it requires'], widths: [3000, 6000], rows: [
       ['See the whole', 'Analyze needs in the big picture context and identify why a change is necessary.'],
       ['Think as a customer', 'Start from the customer experience, from a high-level view broken down into detail.'],
@@ -116,7 +117,7 @@ module.exports = [
       ['Avoid waste', 'Identify the activities that do not add value and remove them.']
     ]},
 
-    { t: 'h3', v: '2.4 Foundational Competencies' },
+    { t: 'h3', v: 'Activity statement 2.4 — Foundational Competencies' },
     { t: 'ref', v: 'BA Standard 3' },
     { t: 'p', v: 'Two levels, not to be confused:' },
     { t: 'ul', v: [
@@ -145,11 +146,11 @@ module.exports = [
   blocks: [
     { t: 'p', v: 'It carries little weight (3 questions) but contains a lot of material, in particular the requirements/designs distinction that returns throughout the BABOK domains. Worth studying properly regardless.' },
 
-    { t: 'h3', v: '3.1 Who Performs Business Analysis' },
+    { t: 'h3', v: 'Activity statement 3.1 — Who Performs Business Analysis' },
     { t: 'ref', v: 'BA Standard 4 · BABOK 1' },
     { t: 'p', v: 'Anyone developing strategy and objectives, creating value propositions, enabling change, analysing needs and designing solutions, facilitating collaboration, creating innovative products, designing or improving processes, streamlining operational activities. The reference for developing competencies is the Business Analysis Competency Model.' },
 
-    { t: 'h3', v: '3.2 Approaches to Business Analysis Work and Techniques' },
+    { t: 'h3', v: 'Activity statement 3.2 — Approaches to Business Analysis Work and Techniques' },
     { t: 'ref', v: 'BA Standard 4 · BABOK 3.1' },
     { t: 'table', head: ['Approach', 'How it works', 'When to choose it'], widths: [1800, 4000, 3200], rows: [
       ['Predictive', 'Plans all the work up front, produces documents and models (scope statement, requirements, designs, schedule and cost baselines, test plans), tracks progress against the plan.', 'Work that is well-defined, heavily regulated, relatively straightforward, or can be completed sequentially.'],
@@ -162,9 +163,9 @@ module.exports = [
     { t: 'p', v: 'Backlog Management · Customer Journey Mapping · Data Storytelling · Process Analysis · Workshops/Interviews' },
     { t: 'trap', v: 'NOT to be confused with the 20 techniques assessed on the ECBA: only Backlog Management, Process Analysis, Workshops and Interviews belong to both lists. Customer Journey Mapping and Data Storytelling come from other IIBA documents (POA Guide and BDA Guide).' },
 
-    { t: 'h3', v: '3.4 Understand Requirements and Designs' },
+    { t: 'h3', v: 'Activity statement 3.4 — Understand Requirements and Designs' },
     { t: 'ref', v: 'BA Standard 4 · BABOK 2' },
-    { t: 'p', v: 'The most tested distinction on the whole exam.' },
+    { t: 'p', v: 'The foundational distinction of this domain, and the one the official documents define most contrastively.' },
     { t: 'table', head: ['', 'Requirement', 'Design'], widths: [1600, 3700, 3700], rows: [
       ['What it is', 'A usable representation of a NEED', 'A usable representation of a SOLUTION'],
       ['Question', 'What value could be delivered', 'How value might be realized'],
@@ -183,7 +184,7 @@ module.exports = [
     { t: 'h3', v: 'Traceability' },
     { t: 'p', v: 'Tracks the relationships between requirements and designs, from the original stakeholder need to the implemented solution. Backward traceability leads back to the business need; forward traceability leads down to solution components. It supports change control and helps detect missing requirements or solution components supported by no requirement.' },
 
-    { t: 'h3', v: '3.3 Understand Organizational Considerations' },
+    { t: 'h3', v: 'Activity statement 3.3 — Understand Organizational Considerations' },
     { t: 'ref', v: 'BA Standard 4' },
     { t: 'table', head: ['Topic', 'The practitioner\'s role'], widths: [2400, 6600], rows: [
       ['Security integration', 'Need not be a security SME, but with a solid understanding of security principles helps stakeholders from different backgrounds work together and identify risks.'],

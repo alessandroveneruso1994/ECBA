@@ -142,7 +142,7 @@ window.ECBA_QUESTIONS = [
       { id: 'D', text: 'Agility, because the professional is switching from a predictive to an adaptive approach.' }
     ],
     answer: 'A',
-    explanation: 'Performance enhancement: la business analysis non è confinata al ciclo di vita di un progetto o prodotto e non si ferma all\'implementazione — monitora e valuta gli outcome in modo iterativo per migliorare in continuo. È un punto che l\'esame ama testare, perché smentisce l\'idea che il lavoro finisca al rilascio.'
+    explanation: 'Performance enhancement: la business analysis non è confinata al ciclo di vita di un progetto o prodotto e non si ferma all\'implementazione — monitora e valuta gli outcome in modo iterativo per migliorare in continuo. È un punto facile da dare per scontato al contrario, perché smentisce l\'idea che il lavoro finisca al rilascio.'
   },
   {
     id: 'D1-10', style: 'applied', domain: 1, activity: '1.3', type: 'situational',
@@ -599,7 +599,7 @@ window.ECBA_QUESTIONS = [
   {
     id: 'D3-06', style: 'knowledge', domain: 3, activity: '3.4', type: 'standard',
     source: 'The Business Analysis Standard, 4.4.2',
-    stem: 'Which requirement classification describes "the capabilities and conditions needed to facilitate a transition from the current state to the future state"?',
+    stem: 'Which requirement classification describes "the capabilities and the conditions needed to facilitate a transition from the current to the future state"?',
     options: [
       { id: 'A', text: 'Business requirements' },
       { id: 'B', text: 'Stakeholder requirements' },
@@ -776,7 +776,7 @@ window.ECBA_QUESTIONS = [
       { id: 'D', text: 'Escalate to the sponsor to have the mandate reversed before any analysis starts.' }
     ],
     answer: 'B',
-    explanation: 'Lo Standard riconosce che a volte l\'approccio è imposto al team; quando invece il professionista può scegliere, applica i criteri di selezione. In ogni caso l\'aspettativa è saper creare valore con qualunque approccio — un\'idea che l\'esame testa spesso in forma di scenario.'
+    explanation: 'Lo Standard riconosce che a volte l\'approccio è imposto al team; quando invece il professionista può scegliere, applica i criteri di selezione. In ogni caso l\'aspettativa è saper creare valore con qualunque approccio — un\'idea che si presta bene a essere formulata come scenario.'
   },
   {
     id: 'D3-20', style: 'knowledge', domain: 3, activity: '3.1', type: 'standard',
@@ -1020,7 +1020,7 @@ window.ECBA_QUESTIONS = [
       { id: 'D', text: 'Approve Requirements, because agreement has not been obtained.' }
     ],
     answer: 'B',
-    explanation: 'La distinzione verify/validate è una delle più testate. Verify (7.2) chiede "il requisito è scritto bene?" — qualità, usabilità della specifica. Validate (7.3) chiede "il requisito serve a qualcosa?" — allineamento ai business requirement e al valore atteso. Qui il requisito supera la verifica ma fallisce la validazione.'
+    explanation: 'La distinzione verify/validate è fra le più facili da confondere. Verify (7.2) chiede "il requisito è scritto bene?" — qualità, usabilità della specifica. Validate (7.3) chiede "il requisito serve a qualcosa?" — allineamento ai business requirement e al valore atteso. Qui il requisito supera la verifica ma fallisce la validazione.'
   },
   {
     id: 'D5-06', style: 'knowledge', domain: 5, activity: '5.2', type: 'standard',
@@ -1034,19 +1034,6 @@ window.ECBA_QUESTIONS = [
     ],
     answer: 'B',
     explanation: 'Confirm Elicitation Results (4.3) controlla accuratezza e coerenza con altre informazioni: la revisione può scoprire errori, omissioni, conflitti e ambiguità. Impegnare risorse su risultati non confermati rischia di disattendere le aspettative degli stakeholder. È una revisione molto meno rigorosa e formale di quella che avviene durante l\'analisi.'
-  },
-  {
-    id: 'D5-07', style: 'applied', domain: 5, activity: '5.3', type: 'situational',
-    source: 'BABOK Guide, 7.3 Validate Requirements',
-    stem: 'Two stakeholder groups have stated needs that cannot both be satisfied by the same solution. What is the appropriate action for a practitioner at the foundational level?',
-    options: [
-      { id: 'A', text: 'Choose the need of the group with the higher organizational rank and proceed.' },
-      { id: 'B', text: 'Implement both and let the delivery team resolve the contradiction.' },
-      { id: 'C', text: 'Flag the conflict so that it can be reviewed and resolved with the relevant stakeholders.' },
-      { id: 'D', text: 'Remove both needs from scope, since conflicting requirements cannot be validated.' }
-    ],
-    answer: 'C',
-    explanation: 'L\'activity statement 5.3 dell\'ECBA è esplicita sul livello di responsabilità atteso: confrontare i bisogni degli stakeholder con gli outcome e segnalare i conflitti per la revisione. A questo livello si rileva e si segnala, non si decide unilateralmente ({A}) né si rimuove ({D}).'
   },
   {
     id: 'D5-08', style: 'knowledge', domain: 5, activity: '5.4', type: 'standard',
@@ -1373,7 +1360,7 @@ window.ECBA_QUESTIONS = [
       { id: 'D', text: 'Goals are measurable and objectives are aspirational.' }
     ],
     answer: 'B',
-    explanation: 'I goal sono di lungo termine, continuativi e qualitativi; man mano che vengono analizzati sono convertiti in obiettivi più descrittivi, granulari e specifici. Attenzione a {D}: è l\'inverso della definizione corretta, un tipo di distrattore che l\'esame usa spesso.'
+    explanation: 'I goal sono di lungo termine, continuativi e qualitativi; man mano che vengono analizzati sono convertiti in obiettivi più descrittivi, granulari e specifici. Attenzione a {D}: è l\'inverso della definizione corretta, un tipo di distrattore costruito rovesciando la definizione.'
   },
   {
     id: 'D8-02', style: 'applied', domain: 8, activity: '8.1', type: 'situational',
@@ -1400,19 +1387,6 @@ window.ECBA_QUESTIONS = [
     ],
     answer: 'A',
     explanation: 'Assess Solution Limitations (8.3) determina i fattori interni alla soluzione che ne limitano la piena realizzazione del valore; Assess Enterprise Limitations (8.4) determina come i fattori esterni alla soluzione — cultura aziendale, struttura, policy — ne limitano la realizzazione. La linea di separazione è dentro/fuori la soluzione, non il momento o il tipo di requisito.'
-  },
-  {
-    id: 'D8-04', style: 'applied', domain: 8, activity: '8.2', type: 'situational',
-    source: 'BABOK Guide, 8.4 Assess Enterprise Limitations',
-    stem: 'A new system works exactly as specified, but staff continue to use the old spreadsheets because they do not understand why the system was introduced. How is this barrier best classified?',
-    options: [
-      { id: 'A', text: 'A solution limitation, since the system has failed to replace the previous way of working.' },
-      { id: 'B', text: 'An enterprise limitation, identified through an enterprise culture assessment.' },
-      { id: 'C', text: 'A defect to be logged against the solution requirements.' },
-      { id: 'D', text: 'A traceability gap between requirements and solution components.' }
-    ],
-    answer: 'B',
-    explanation: 'La cultura aziendale — credenze, valori e norme condivise, spesso non direttamente visibili ma capaci di guidare le azioni — è valutata in Assess Enterprise Limitations, e uno degli scopi dichiarati dell\'assessment culturale è capire se gli stakeholder comprendono le ragioni per cui la soluzione esiste. La soluzione funziona come specificato, quindi il limite non è interno ad essa.'
   },
   {
     id: 'D8-05', style: 'knowledge', domain: 8, activity: '8.3', type: 'standard',
@@ -1633,7 +1607,7 @@ window.ECBA_QUESTIONS = [
   {
     id: 'D1-23', style: 'knowledge', domain: 1, activity: '1.1', type: 'standard',
     source: 'The Business Analysis Standard, 2.4',
-    stem: 'Which critical function of business analysis is described as "breaking down silos, fostering collaboration and alignment across diverse perspectives and interests"?',
+    stem: 'Which critical function of business analysis is described as one that "breaks down silos, fostering collaboration and alignment across diverse perspectives and interests"?',
     options: [
       { id: 'A', text: 'Leadership support' },
       { id: 'B', text: 'Stakeholder collaboration' },
@@ -1680,7 +1654,7 @@ window.ECBA_QUESTIONS = [
       { id: 'D', text: 'A stakeholder causing a value, by expressing a preference.' }
     ],
     answer: 'A',
-    explanation: 'Il cambiamento (il nuovo CRM) ha ridotto il valore erogato dalle soluzioni esistenti e ha così generato un nuovo need. È la direzione meno intuitiva della relazione Need↔Change e per questo la più testata: non solo i need causano cambiamenti, ma anche i cambiamenti causano need.'
+    explanation: 'Il cambiamento (il nuovo CRM) ha ridotto il valore erogato dalle soluzioni esistenti e ha così generato un nuovo need. È la direzione meno intuitiva della relazione Need↔Change: non solo i need causano cambiamenti, ma anche i cambiamenti causano need.'
   },
   {
     id: 'D1-27', style: 'knowledge', domain: 1, activity: '1.2', type: 'standard',
@@ -1758,7 +1732,7 @@ window.ECBA_QUESTIONS = [
       { id: 'D', text: 'At the project level only, for the duration of an initiative.' }
     ],
     answer: 'C',
-    explanation: 'La business analysis è critica per tutto il lavoro organizzativo, ai livelli strategico, tattico e operativo. {A} livello strategico il valore è guidato da decisioni solide; l\'esecuzione tattica e l\'eccellenza operativa creano valore lungo il percorso verso gli outcome desiderati.'
+    explanation: 'La business analysis è critica per tutto il lavoro organizzativo, ai livelli strategico, tattico e operativo. A livello strategico il valore è guidato da decisioni solide; l\'esecuzione tattica e l\'eccellenza operativa creano valore lungo il percorso verso gli outcome desiderati.'
   },
   {
     id: 'D1-33', style: 'applied', domain: 1, activity: '1.4', type: 'situational',
@@ -2211,19 +2185,6 @@ window.ECBA_QUESTIONS = [
     explanation: 'La Business Analysis Performance Assessment prodotta dal task 3.5 alimenta fra l\'altro Plan Stakeholder Engagement (3.2) e Prepare for Elicitation (4.1): quanto appreso su come sta andando il lavoro di analisi torna a migliorare il modo in cui lo si pianifica.'
   },
   {
-    id: 'D4-19', style: 'applied', domain: 4, activity: '4.4', type: 'situational',
-    source: 'BABOK Guide, 8.5 Recommend Actions to Increase Solution Value',
-    stem: 'Measurements show that a solution is delivering less value than expected. What is the appropriate next step for a practitioner at the foundational level?',
-    options: [
-      { id: 'A', text: 'Decommission the solution and restart the initiative.' },
-      { id: 'B', text: 'Understand the factors creating the difference between potential and actual value, and contribute recommendations to align them.' },
-      { id: 'C', text: 'Increase the target metrics so the solution meets them.' },
-      { id: 'D', text: 'Attribute the shortfall to the implementation team and close the assessment.' }
-    ],
-    answer: 'B',
-    explanation: 'Recommend Actions to Increase Solution Value (8.5) parte proprio dalla comprensione dei fattori che creano la differenza fra valore potenziale e valore effettivo, per poi raccomandare un corso d\'azione che li allinei. Ritoccare le metriche perché il risultato torni ({C}) è l\'opposto di una valutazione onesta.'
-  },
-  {
     id: 'D4-20', style: 'knowledge', domain: 4, activity: '4.4', type: 'standard',
     source: 'BABOK Guide, 10.35 Process Modelling',
     stem: 'What is a process model?',
@@ -2632,19 +2593,6 @@ window.ECBA_QUESTIONS = [
     explanation: 'La business rules analysis identifica, esprime, valida, raffina e organizza le regole che modellano il comportamento quotidiano del business e guidano le decisioni operative. La regola citata è esattamente questo: un vincolo che governa una decisione operativa.'
   },
   {
-    id: 'D6-23', style: 'applied', domain: 6, activity: '6.1', type: 'situational',
-    source: 'BABOK Guide, 8.3 Assess Solution Limitations',
-    stem: 'A reporting solution is fast in every component except one database query, which slows the entire report. What principle does this illustrate?',
-    options: [
-      { id: 'A', text: 'Solutions often have internal dependencies that limit the performance of the entire solution to that of the least effective component.' },
-      { id: 'B', text: 'Enterprise culture determines whether a solution delivers value.' },
-      { id: 'C', text: 'Non-functional requirements cannot be verified before implementation.' },
-      { id: 'D', text: 'Qualitative measures are more reliable than quantitative ones.' }
-    ],
-    answer: 'A',
-    explanation: 'È il principio alla base di Assess Solution Limitations: le soluzioni hanno spesso dipendenze interne che limitano la prestazione dell\'insieme a quella del componente meno efficace. Individuare quel componente è il primo passo dell\'assessment.'
-  },
-  {
     id: 'D6-24', style: 'knowledge', domain: 6, activity: '6.2', type: 'standard',
     source: 'BABOK Guide, 6.4 Define Change Strategy',
     stem: 'What must be in place before a gap analysis can be performed?',
@@ -2860,7 +2808,7 @@ window.ECBA_QUESTIONS = [
   {
     id: 'D8-12', style: 'applied', domain: 8, activity: '8.1', type: 'situational',
     source: 'BABOK Guide, 6.2 Define Future State',
-    stem: 'A goal reads "increase number of high-revenue customers". The business analysis professional refines it to "increase the number of high-revenue customers in the 30–45 age bracket by 30% within 6 months". What has been done?',
+    stem: 'A goal reads "increase number of high-revenue customers". The business analysis professional refines it to "increase number of high revenue customers in the 30-45 age bracket by 30% within 6 months". What has been done?',
     options: [
       { id: 'A', text: 'The goal has been converted into a more descriptive, granular, and specific objective.' },
       { id: 'B', text: 'The goal has been converted into a business requirement.' },
@@ -2868,7 +2816,7 @@ window.ECBA_QUESTIONS = [
       { id: 'D', text: 'The goal has been replaced by a key performance indicator.' }
     ],
     answer: 'A',
-    explanation: 'È l\'esempio riportato dal BABOK: man mano che i goal vengono analizzati sono convertiti in obiettivi più descrittivi, granulari e specifici. Il goal resta qualitativo e di lungo periodo; l\'obiettivo aggiunge misura e orizzonte temporale.'
+    explanation: 'Il BABOK riporta proprio questo raffinamento come esempio e, subito dopo, spiega che man mano che i goal vengono analizzati sono convertiti in obiettivi più descrittivi, granulari e specifici, legati a misure che permettono di valutarne oggettivamente il raggiungimento. Il goal resta qualitativo e di lungo periodo; l\'obiettivo aggiunge misura e orizzonte temporale.'
   },
   {
     id: 'D8-13', style: 'knowledge', domain: 8, activity: '8.2', type: 'standard',
@@ -3480,7 +3428,7 @@ window.ECBA_QUESTIONS = [
       { id: 'C', text: 'Remove both needs until the groups agree between themselves.' },
       { id: 'D', text: 'Pass both needs to delivery and let the design resolve the tension.' }
     ], answer: 'B',
-    explanation: 'L\'activity statement 5.3 chiede di confrontare i bisogni con gli outcome e segnalare i conflitti per la revisione. {A} questo livello si rileva e si segnala: decidere unilateralmente ({A}) o scaricare a valle ({D}) non è il ruolo atteso.' },
+    explanation: 'L\'activity statement 5.3 chiede di confrontare i bisogni con gli outcome e segnalare i conflitti per la revisione. A questo livello si rileva e si segnala: decidere unilateralmente ({A}) o scaricare a valle ({D}) non è il ruolo atteso.' },
 
   { id: 'A5-04', style: 'applied', domain: 5, activity: '5.4', type: 'situational',
     source: 'BABOK Guide, 5.3; Syllabus Map 5.4',

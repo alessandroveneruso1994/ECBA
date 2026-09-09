@@ -451,7 +451,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
       { id: 'C', text: 'Specific, measurable, achievable, relevant, time-bound, agreed' },
       { id: 'D', text: 'Accurate, timely, confidential, automated, comparable, auditable' }
     ], answer: 'A',
-    explanation: '{B} elenca caratteristiche di qualità dei requisiti (Verify Requirements, 7.2) e {C} è l\'acronimo SMART: due liste vere ma di altro argomento. È un accostamento che l\'esame usa spesso.' },
+    explanation: '{B} elenca caratteristiche di qualità dei requisiti (Verify Requirements, 7.2) e {C} è l\'acronimo SMART: due liste vere ma di altro argomento. È un accostamento facile da confondere.' },
   { id: 'T-10.28-3', ref: '10.28', type: 'standard', source: 'BABOK Guide, 10.28.3',
     stem: 'When is a proxy used as an indicator?',
     options: [
@@ -1749,7 +1749,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
       { id: 'C', text: 'Written Communication, Visual Thinking, Business Analysis Tools and Technology' },
       { id: 'D', text: 'Methodology Knowledge, Solution Knowledge, Business Analysis Tools and Technology' }
     ], answer: 'A',
-    explanation: 'Il gruppo Tools and Technology ne conta tre, il più piccolo dei sei. {B} elenca tecniche del capitolo 10, non competenze del capitolo 9: è una confusione che l\'esame sfrutta volentieri.' },
+    explanation: 'Il gruppo Tools and Technology ne conta tre, il più piccolo dei sei. {B} elenca tecniche del capitolo 10, non competenze del capitolo 9: è una confusione facile da fare.' },
 { id: 'C-9.6.1-3', ref: '9.6.1', type: 'situational', source: 'BABOK Guide, 9.6.1',
     stem: 'A business analysis professional who knows one spreadsheet application well is given a different one. What does the BABOK Guide observe about this situation?',
     options: [
