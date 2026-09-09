@@ -48,7 +48,8 @@ module.exports = {
         { t: 'p', v: 'I primi tre domini sono fondazionali e vengono da The Business Analysis Standard; i sei successivi dal BABOK Guide e riguardano l\'applicazione pratica del BACCM. L\'esame valuta inoltre 20 tecniche del capitolo 10 e le 29 underlying competencies del capitolo 9, ma non come domini separati: le domande arrivano dentro i nove. Per questo trovi le due liste in appendice.' },
         { t: 'key', v: 'IIBA non pubblica il punteggio minimo per superare l\'esame: il risultato è scalato. Il 70% è solo una soglia ragionevole di autovalutazione.' },
         { t: 'h3', v: 'Come usare questi riassunti' },
-        { t: 'p', v: 'Ogni sezione segue le activity statement ufficiali del dominio. I riquadri azzurri segnalano ciò che va saputo alla lettera; quelli rossi le confusioni che l\'esame sfrutta più spesso per costruire i distrattori. Le tabelle sono pensate per il ripasso veloce nei giorni prima della prova.' },
+        { t: 'p', v: 'Ogni sezione segue le activity statement ufficiali del dominio. I riquadri azzurri segnalano ciò che va saputo alla lettera; quelli rossi le distinzioni più facili da confondere. Le tabelle sono pensate per il ripasso veloce nei giorni prima della prova.' },
+        { t: 'key', v: 'I riquadri rossi non derivano da domande d\'esame reali: IIBA non pubblica il proprio question bank. Segnalano i punti in cui i documenti ufficiali definiscono due concetti in modo ravvicinato e contrastivo — internal contro external, verify contro validate, goal contro objective — e che quindi si prestano a essere confusi. Sono aree in cui vale la pena verificare la propria comprensione, non previsioni su come l\'esame formulerà le domande.' },
         { t: 'p', v: 'I termini tecnici restano in inglese, perché in inglese li troverai all\'esame. Di questo documento esiste anche una versione interamente in inglese.' }
       ]
     }
@@ -79,7 +80,8 @@ module.exports = {
         { t: 'p', v: 'The first three domains are foundational and come from The Business Analysis Standard; the next six come from the BABOK Guide and cover the practical application of the BACCM. The exam also assesses 20 techniques from chapter 10 and the 29 underlying competencies from chapter 9 — but not as separate domains: those questions arrive inside the nine. That is why both lists appear as appendices.' },
         { t: 'key', v: 'IIBA does not publish the passing score: the result is scaled. The 70% used here is only a reasonable self-assessment threshold.' },
         { t: 'h3', v: 'How to use these summaries' },
-        { t: 'p', v: 'Each section follows the official activity statements of its domain. Blue boxes flag what must be known word for word; red boxes flag the confusions the exam most often exploits to build its distractors. The tables are meant for fast revision in the days before the exam.' },
+        { t: 'p', v: 'Each section follows the official activity statements of its domain. Blue boxes flag what must be known word for word; red boxes flag the distinctions that are easiest to confuse. The tables are meant for fast revision in the days before the exam.' },
+        { t: 'key', v: 'The red boxes are not derived from real exam questions: IIBA does not publish its question bank. They flag the points where the official documents define two concepts closely and contrastively — internal versus external, verify versus validate, goal versus objective — and which therefore lend themselves to confusion. They are areas worth testing your own understanding against, not predictions of how the exam will word its questions.' },
         { t: 'p', v: 'An Italian version of this document is also available.' }
       ]
     }
