@@ -1,6 +1,12 @@
 /**
  * ECBA Exam Blueprint V1.1 — struttura ufficiale IIBA.
- * Fonte: ECBA Exam Blueprint (IIBA) e ECBA Handbook, ottobre 2025.
+ * Fonti: ECBA Exam Blueprint, ECBA Certification Handbook, ECBA Syllabus Map,
+ * ECBA Learning Outcomes e ECBA Sample Exam Questions (IIBA).
+ *
+ * I titoli delle activity statement sono quelli del Syllabus Map, che sono
+ * anche quelli mostrati a schermo durante l'esame; `detail` conserva la
+ * formulazione estesa del Blueprint V1.1 e `study` i rimandi di studio che il
+ * Syllabus Map associa a ciascuna activity.
  *
  * L'esame reale: 75 minuti, 50 domande a scelta multipla
  * (situation-based + standard), online remote proctored.
@@ -11,7 +17,12 @@ window.ECBA_BLUEPRINT = {
     questionCount: 50,
     // IIBA non pubblica la soglia di superamento: il punteggio è scalato.
     // Il 70% è la soglia di riferimento che usiamo per l'autovalutazione.
-    referencePassMark: 0.7
+    referencePassMark: 0.7,
+    // Quota di domande di stile applicativo nella simulazione. Le dieci sample
+    // question pubblicate da IIBA sono tutte situazionali e chiedono un
+    // giudizio professionale; il blueprint parla però di domande
+    // "situation-based AND standard", quindi la miscela non è 100%.
+    appliedShare: 0.7
   },
 
   /**
@@ -29,10 +40,18 @@ window.ECBA_BLUEPRINT = {
       questions: 10,
       source: 'The Business Analysis Standard',
       activities: {
-        '1.1': 'Define business analysis, describe its role in enabling change, and outline key activities across contexts.',
-        '1.2': 'Describe the six BACCM concepts, explain how they relate, and use them to support structured thinking.',
-        '1.3': 'Explain how business analysis supports value creation and benefits organizations in various industries.',
-        '1.4': 'Define value in business analysis and explain how outcomes are assessed to support value realization.'
+        '1.1': { title: 'Define Business Analysis',
+               detail: 'Define business analysis, describe its role in enabling change, and outline key activities across contexts.',
+               study: ['BA Standard 2', 'BABOK 1'] },
+        '1.2': { title: 'Business Analysis Core Concept Model (BACCM)',
+               detail: 'Describe the six BACCM concepts, explain how they relate, and use them to support structured thinking.',
+               study: ['BA Standard 2', 'BABOK 2', 'BABOK 7.6'] },
+        '1.3': { title: 'Importance of Business Analysis',
+               detail: 'Explain how business analysis supports value creation and benefits organizations in various industries.',
+               study: ['BA Standard 2', 'BABOK 3.5', 'BABOK 4.5', 'BABOK 6.3', 'BABOK 7.5', 'BABOK 7.6', 'BABOK 8.5'] },
+        '1.4': { title: 'Outcomes and Value Creation',
+               detail: 'Define value in business analysis and explain how outcomes are assessed to support value realization.',
+               study: ['BA Standard 2', 'BABOK 7.3', 'BABOK 7.4', 'BABOK 7.6'] }
       }
     },
     {
@@ -43,10 +62,18 @@ window.ECBA_BLUEPRINT = {
       questions: 7,
       source: 'The Business Analysis Standard',
       activities: {
-        '2.1': 'Explain how mindset influences your effectiveness and identify ways to adopt an empowering mindset.',
-        '2.2': 'Recognize the shared values that drive work and explain how those values support the work to be done.',
-        '2.3': 'Identify core business analysis principles and apply them to guide your work and improve outcomes.',
-        '2.4': 'Recognize foundational competencies and assess when to apply them in your work.'
+        '2.1': { title: 'Importance of Mindset',
+               detail: 'Explain how mindset influences your effectiveness and identify ways to adopt an empowering mindset.',
+               study: ['BA Standard 3'] },
+        '2.2': { title: 'Ways to Think About Business Analysis',
+               detail: 'Recognize the shared values that drive work and explain how those values support the work to be done.',
+               study: ['BA Standard 3'] },
+        '2.3': { title: 'Business Analysis Principles',
+               detail: 'Identify core business analysis principles and apply them to guide your work and improve outcomes.',
+               study: ['BA Standard 3', 'BABOK 8.4', 'Agile Extension 2.6-2.7'] },
+        '2.4': { title: 'Foundational Competencies',
+               detail: 'Recognize foundational competencies and assess when to apply them in your work.',
+               study: ['BA Standard 3'] }
       }
     },
     {
@@ -57,10 +84,18 @@ window.ECBA_BLUEPRINT = {
       questions: 3,
       source: 'The Business Analysis Standard',
       activities: {
-        '3.1': 'Identify roles that perform business analysis and describe how responsibilities vary across contexts.',
-        '3.2': 'Compare business analysis approaches and explain how to choose an approach based on the situation.',
-        '3.3': 'Identify organizational considerations that influence your work and explain their potential impact.',
-        '3.4': 'Describe the difference between requirements and designs and explain how they evolve throughout the initiative.'
+        '3.1': { title: 'Who Performs Business Analysis',
+               detail: 'Identify roles that perform business analysis and describe how responsibilities vary across contexts.',
+               study: ['BA Standard 4', 'BABOK 1'] },
+        '3.2': { title: 'Approaches to Business Analysis Work and Techniques',
+               detail: 'Compare business analysis approaches and explain how to choose an approach based on the situation.',
+               study: ['BA Standard 4', 'BABOK 3.1'] },
+        '3.3': { title: 'Understand Organizational Considerations',
+               detail: 'Identify organizational considerations that influence your work and explain their potential impact.',
+               study: ['BA Standard 4'] },
+        '3.4': { title: 'Understand Requirements and Designs',
+               detail: 'Describe the difference between requirements and designs and explain how they evolve throughout the initiative.',
+               study: ['BA Standard 4', 'BABOK 2'] }
       }
     },
     {
@@ -71,10 +106,18 @@ window.ECBA_BLUEPRINT = {
       questions: 5,
       source: 'BABOK Guide',
       activities: {
-        '4.1': 'Recognize how key organizational, environmental, and stakeholder factors can influence your work.',
-        '4.2': 'Describe processes and systems to identify areas impacted by changes, and evaluate the impacts.',
-        '4.3': 'Track progress toward goals and support teams in adapting to changes, under direction.',
-        '4.4': 'Suggest and help implement simple improvements, working within clear guidelines.'
+        '4.1': { title: 'Understand the factors that impact the work that you are doing',
+               detail: 'Recognize how key organizational, environmental, and stakeholder factors can influence your work.',
+               study: ['BABOK 6.1', 'BABOK 8.4'] },
+        '4.2': { title: 'Analyze the impact of proposed changes',
+               detail: 'Describe processes and systems to identify areas impacted by changes, and evaluate the impacts.',
+               study: ['BABOK 3.3', 'BABOK 3.4', 'BABOK 5.4'] },
+        '4.3': { title: 'Support the implementation of changes',
+               detail: 'Track progress toward goals and support teams in adapting to changes, under direction.',
+               study: ['BABOK 3.3', 'BABOK 4.1', 'BABOK 5.1', 'BABOK 6.2'] },
+        '4.4': { title: 'Enable change through straightforward initiatives',
+               detail: 'Suggest and help implement simple improvements, working within clear guidelines.',
+               study: ['BABOK 5.1'] }
       }
     },
     {
@@ -85,10 +128,18 @@ window.ECBA_BLUEPRINT = {
       questions: 5,
       source: 'BABOK Guide',
       activities: {
-        '5.1': 'Use basic elicitation methods and build positive rapport with stakeholders to elicit information.',
-        '5.2': 'Document requirements clearly and collaborate with stakeholders to validate needs, under guidance.',
-        '5.3': 'Compare stakeholder needs with outcomes to check alignment and flag conflicts for review.',
-        '5.4': 'Support stakeholders in prioritizing needs, considering business value and urgency.'
+        '5.1': { title: 'Elicit needs from stakeholders',
+               detail: 'Use basic elicitation methods and build positive rapport with stakeholders to elicit information.',
+               study: ['BABOK 4.3', 'BABOK 6.1'] },
+        '5.2': { title: 'Capture and refine the needs elicited from stakeholders',
+               detail: 'Document requirements clearly and collaborate with stakeholders to validate needs, under guidance.',
+               study: ['BABOK 7.1'] },
+        '5.3': { title: 'Analyze needs to ensure they are feasible and align with business outcomes',
+               detail: 'Compare stakeholder needs with outcomes to check alignment and flag conflicts for review.',
+               study: ['BABOK 4.3', 'BABOK 5.1', 'BABOK 6.1'] },
+        '5.4': { title: 'Prioritize needs based on their business value and urgency',
+               detail: 'Support stakeholders in prioritizing needs, considering business value and urgency.',
+               study: ['BABOK 6.1', 'BABOK 5.3'] }
       }
     },
     {
@@ -99,10 +150,18 @@ window.ECBA_BLUEPRINT = {
       questions: 5,
       source: 'BABOK Guide',
       activities: {
-        '6.1': 'Explain basic solution validation concepts and record findings.',
-        '6.2': 'Assist in evaluating solution options, considering feasibility and risks, and contribute to preparing recommendations.',
-        '6.3': 'Support defining scope and collaborate on planning and monitoring implementation activities.',
-        '6.4': 'Support preparation and updating of design artifacts to maintain clarity.'
+        '6.1': { title: 'Participate in validating solutions to ensure they meet the need',
+               detail: 'Explain basic solution validation concepts and record findings.',
+               study: ['BABOK 7.2', 'BABOK 7.3'] },
+        '6.2': { title: 'Develop recommendations for potential solutions to business problems',
+               detail: 'Assist in evaluating solution options, considering feasibility and risks, and contribute to preparing recommendations.',
+               study: ['BABOK 4.2', 'BABOK 6.3', 'BABOK 8.5'] },
+        '6.3': { title: 'Implement the scope of solutions to business problems',
+               detail: 'Support defining scope and collaborate on planning and monitoring implementation activities.',
+               study: ['BABOK 6.3', 'BABOK 7.4', 'BABOK 8.1'] },
+        '6.4': { title: 'Support the design of business solutions',
+               detail: 'Support preparation and updating of design artifacts to maintain clarity.',
+               study: ['BABOK 3.1', 'BABOK 5.1', 'BABOK 8.3'] }
       }
     },
     {
@@ -113,10 +172,18 @@ window.ECBA_BLUEPRINT = {
       questions: 5,
       source: 'BABOK Guide',
       activities: {
-        '7.1': 'Communicate with stakeholders using tailored messages to maintain engagement.',
-        '7.2': 'Identify stakeholder roles and interests, and support analysis of their impact.',
-        '7.3': 'Facilitate stakeholder collaboration and feedback throughout the initiative.',
-        '7.4': 'Identify key stakeholder motivations, drivers, and concerns to understand their decisions.'
+        '7.1': { title: 'Communicate with stakeholders throughout the initiative',
+               detail: 'Communicate with stakeholders using tailored messages to maintain engagement.',
+               study: ['BABOK 3.3', 'BABOK 3.4'] },
+        '7.2': { title: 'Identify stakeholders for your initiatives',
+               detail: 'Identify stakeholder roles and interests, and support analysis of their impact.',
+               study: ['BABOK 3.2', 'BABOK 3.3'] },
+        '7.3': { title: 'Manage collaboration and relationships with stakeholders',
+               detail: 'Facilitate stakeholder collaboration and feedback throughout the initiative.',
+               study: ['BABOK 4.1', 'BABOK 4.2', 'BABOK 4.5'] },
+        '7.4': { title: 'Analyze the motivations and expectations of stakeholders',
+               detail: 'Identify key stakeholder motivations, drivers, and concerns to understand their decisions.',
+               study: ['BABOK 3.3', 'BABOK 4.5'] }
       }
     },
     {
@@ -127,10 +194,18 @@ window.ECBA_BLUEPRINT = {
       questions: 5,
       source: 'BABOK Guide',
       activities: {
-        '8.1': 'Confirm understanding of desired outcomes aligned with business objectives.',
-        '8.2': 'Support identification of value opportunities and help address barriers to delivery.',
-        '8.3': 'Describe how solutions meet business goals and relay information effectively for stakeholders.',
-        '8.4': 'Support defining key performance indicators (KPIs) aligned with value to measure success.'
+        '8.1': { title: 'Understand the outcome that needs to be produced',
+               detail: 'Confirm understanding of desired outcomes aligned with business objectives.',
+               study: ['BABOK 6.2', 'BABOK 8.4'] },
+        '8.2': { title: 'Help support the team in creating value',
+               detail: 'Support identification of value opportunities and help address barriers to delivery.',
+               study: ['BABOK 6.3', 'BABOK 6.4', 'BABOK 8.2', 'BABOK 8.3'] },
+        '8.3': { title: 'Communicate the value of initiatives or solutions to stakeholders',
+               detail: 'Describe how solutions meet business goals and relay information effectively for stakeholders.',
+               study: ['BABOK 3.4', 'BABOK 5.5'] },
+        '8.4': { title: 'Measure the value delivered by your initiatives or solutions',
+               detail: 'Support defining key performance indicators (KPIs) aligned with value to measure success.',
+               study: ['BABOK 3.5', 'BABOK 8.3', 'BABOK 8.4'] }
       }
     },
     {
@@ -141,10 +216,18 @@ window.ECBA_BLUEPRINT = {
       questions: 5,
       source: 'BABOK Guide',
       activities: {
-        '9.1': 'Assist in validating information quality and alignment to your situation, and document those validation outcomes.',
-        '9.2': 'Support recognizing constraints and adapt plans to maintain alignment.',
-        '9.3': 'Assist in analyzing technology trends and support technology integration.',
-        '9.4': 'Apply relevant industry standards and frameworks to guide the work to be done.'
+        '9.1': { title: 'Ensure that information within your initiative is validated for the intended purpose',
+               detail: 'Assist in validating information quality and alignment to your situation, and document those validation outcomes.',
+               study: ['BABOK 3.4', 'BABOK 5.1', 'BABOK 5.2'] },
+        '9.2': { title: 'Understand the environmental constraints in which your organization operates',
+               detail: 'Support recognizing constraints and adapt plans to maintain alignment.',
+               study: ['BA Standard 4', 'BABOK 3.1'] },
+        '9.3': { title: 'Understand the impact of technology trends on your initiative',
+               detail: 'Assist in analyzing technology trends and support technology integration.',
+               study: ['BABOK 3.4', 'BABOK 5.1'] },
+        '9.4': { title: 'Understand industry benchmarks and reference standards of practice',
+               detail: 'Apply relevant industry standards and frameworks to guide the work to be done.',
+               study: ['BABOK 4.4', 'BABOK 7.3', 'BABOK 7.6'] }
       }
     }
   ],

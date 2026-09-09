@@ -10,7 +10,7 @@
  * Le icone restano cache-first: non cambiano mai e non vale la pena
  * rifetcharle a ogni avvio.
  */
-var CACHE = 'ecba-trainer-v3';
+var CACHE = 'ecba-trainer-v4';
 
 var ASSETS = [
   './',
