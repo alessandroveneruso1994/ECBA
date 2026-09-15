@@ -152,8 +152,10 @@
 
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    document.querySelector('meta[name="theme-color"]')
-      .setAttribute('content', theme === 'dark' ? '#0f1115' : '#f6f7f9');
+    // La meta theme-color colora la barra di stato del browser: c'è nella
+    // pagina dell'app, ma non ovunque la pagina possa essere incorporata.
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0f1115' : '#f6f7f9');
   }
 
   var savedTheme = Storage.theme();
@@ -448,7 +450,8 @@
     if (q.domain !== undefined) {
       var d = domain(q.domain);
       tag.textContent = d.id + '. ' + d.name + ' · ' + q.activity;
-      tag.title = d.activities[q.activity] || '';
+      var act = d.activities[q.activity];
+      tag.title = act ? act.title + ' — ' + act.detail : '';
     } else {
       // Domande di tecniche o competenze: l'etichetta è il riferimento BABOK.
       tag.textContent = refLabel(q.ref);
@@ -694,10 +697,17 @@
       weak.forEach(function (key) {
         var a = result.activities[key];
         var dom = domain(parseInt(key.split('.')[0], 10));
+        var act = dom.activities[key];
         var row = document.createElement('div');
-        row.innerHTML = '<strong></strong> <span class="muted small"></span>';
-        row.querySelector('strong').textContent = key + ' — ' + a.wrong + ' error' + (a.wrong === 1 ? 'e' : 'i') + ' su ' + a.seen;
-        row.querySelector('span').textContent = dom.activities[key] || '';
+        row.className = 'weak-row';
+        row.innerHTML = '<strong></strong> <span class="muted small act-title"></span>' +
+          '<span class="study"></span>';
+        row.querySelector('strong').textContent =
+          key + ' — ' + a.wrong + ' error' + (a.wrong === 1 ? 'e' : 'i') + ' su ' + a.seen;
+        row.querySelector('.act-title').textContent = act ? act.title : '';
+        // L'ECBA Syllabus Map indica su quali sezioni studiare per ogni activity.
+        row.querySelector('.study').textContent =
+          act && act.study ? 'Da studiare: ' + act.study.join(' · ') : '';
         ab.appendChild(row);
       });
     }

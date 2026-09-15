@@ -426,6 +426,19 @@ main { max-width: 780px; margin: 0 auto; padding: 1.2rem 1rem 4rem; }
 .score-value { font-size: 1.7rem; font-weight: 700; display: block; }
 .score-label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
 
+/* Nel report, sotto ogni activity debole, le sezioni da ripassare. */
+.weak-row { display: flex; flex-direction: column; gap: .1rem; }
+.weak-row .study {
+  font-size: .8rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 6px;
+  padding: .2rem .5rem;
+  margin-top: .2rem;
+  align-self: flex-start;
+}
+.weak-row .study:empty { display: none; }
+
 /* ---------- Blueprint ---------- */
 .cols { columns: 2 200px; gap: 1.2rem; margin: 0; padding-left: 1.1rem; font-size: .9rem; }
 .cols li { break-inside: avoid; margin-bottom: .25rem; }

@@ -162,6 +162,21 @@ function box(text, kind) {
   });
 }
 
+/**
+ * Riga di rimando allo studio sotto un'activity statement: le sezioni del
+ * Business Analysis Standard e del BABOK Guide che l'ECBA Syllabus Map
+ * associa a quella activity.
+ */
+function refline(text) {
+  return new Paragraph({
+    spacing: { after: 140, line: 264 },
+    children: [
+      new TextRun({ text: UI.refLabel + ' ', size: 17, bold: true, color: ACCENT, font: 'Calibri' }),
+      new TextRun({ text: text, size: 17, italics: true, color: MUTED, font: 'Calibri' })
+    ]
+  });
+}
+
 function spacer(h) { return new Paragraph({ spacing: { after: h || 160 }, children: [] }); }
 
 // ------------------------------------------------------------- contenuto
@@ -213,6 +228,8 @@ children.push(h1(UI.intro.title));
 UI.intro.blocks.forEach(function (b) {
   if (b.t === 'p') children.push(p(b.v));
   else if (b.t === 'h3') children.push(h3(b.v));
+  else if (b.t === 'ref') children.push(refline(b.v));
+  else if (b.t === 'ul') b.v.forEach(function (item) { children.push(bullet(item)); });
   else if (b.t === 'table') {
     children.push(spacer(120));
     children.push(table(b.head, b.rows, b.widths));
@@ -248,6 +265,7 @@ SECTIONS.forEach(function (sec, idx) {
   sec.blocks.forEach(function (b) {
     if (b.t === 'p') children.push(p(b.v));
     else if (b.t === 'h3') children.push(h3(b.v));
+    else if (b.t === 'ref') children.push(refline(b.v));
     else if (b.t === 'ul') b.v.forEach(function (item) { children.push(bullet(item)); });
     else if (b.t === 'table') {
       children.push(spacer(60));

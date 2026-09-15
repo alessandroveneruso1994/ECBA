@@ -24,6 +24,14 @@ window.Engine = (function () {
 
   /**
    * Compone un esame di 50 domande rispettando i pesi del blueprint.
+   *
+   * Dentro ogni dominio la selezione rispetta anche la miscela di stili: le
+   * sample question pubblicate da IIBA sono tutte situazionali e chiedono un
+   * giudizio professionale ("what should you do FIRST?"), non il richiamo di
+   * una definizione. `appliedShare` fissa quindi la quota di domande di stile
+   * applicativo, lasciando il resto alle domande di richiamo — che il blueprint
+   * continua a prevedere, parlando di "situation-based AND standard".
+   *
    * Se un dominio non ha abbastanza domande nel pool, il deficit viene
    * ridistribuito sui domini che ne hanno in eccesso, così il totale resta 50.
    */
@@ -33,10 +41,24 @@ window.Engine = (function () {
     var deficit = 0;
 
     BP.domains.forEach(function (d) {
-      var available = shuffle(groups[d.id] || []);
-      var take = Math.min(d.questions, available.length);
-      deficit += d.questions - take;
-      picked = picked.concat(available.slice(0, take));
+      var available = groups[d.id] || [];
+      var wantApplied = Math.round(d.questions * BP.exam.appliedShare);
+
+      var applied = shuffle(available.filter(function (q) { return q.style === 'applied'; }));
+      var knowledge = shuffle(available.filter(function (q) { return q.style !== 'applied'; }));
+
+      var takeApplied = applied.slice(0, wantApplied);
+      // Ciò che manca da una parte lo compensa l'altra: il dominio conserva
+      // comunque il numero di domande che il blueprint gli assegna.
+      var takeKnowledge = knowledge.slice(0, d.questions - takeApplied.length);
+      var chosen = takeApplied.concat(takeKnowledge);
+      if (chosen.length < d.questions) {
+        chosen = chosen.concat(applied.slice(takeApplied.length,
+          takeApplied.length + d.questions - chosen.length));
+      }
+
+      deficit += d.questions - chosen.length;
+      picked = picked.concat(chosen);
     });
 
     if (deficit > 0) {
