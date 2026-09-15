@@ -152,8 +152,10 @@
 
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    document.querySelector('meta[name="theme-color"]')
-      .setAttribute('content', theme === 'dark' ? '#0f1115' : '#f6f7f9');
+    // La meta theme-color colora la barra di stato del browser: c'è nella
+    // pagina dell'app, ma non ovunque la pagina possa essere incorporata.
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0f1115' : '#f6f7f9');
   }
 
   var savedTheme = Storage.theme();
