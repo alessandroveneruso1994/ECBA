@@ -8,7 +8,7 @@ Esistono in **due versioni con lo stesso contenuto**:
 | File | Lingua | Pagine |
 |---|---|---|
 | `ECBA - Riassunti di studio.docx` | italiano | 33 |
-| `ECBA - Study Summaries.docx` | inglese | 32 |
+| `ECBA - Study Summaries.docx` | inglese | 33 |
 
 Nessuna sezione supera le 3 pagine: il limite di 5 per dominio è ampiamente
 rispettato, e dove il materiale non lo giustificava il riassunto è più corto.
@@ -20,6 +20,12 @@ cd src
 npm install docx           # solo la prima volta
 node build-docx.js "../ECBA - Riassunti di studio.docx" it
 node build-docx.js "../ECBA - Study Summaries.docx" en
+```
+
+Per contare le pagine di ogni sezione, dove LibreOffice è disponibile:
+
+```bash
+soffice --headless --convert-to pdf --outdir /tmp "../ECBA - Riassunti di studio.docx"
 ```
 
 ## Come è organizzato il sorgente

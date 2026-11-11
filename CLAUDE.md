@@ -29,8 +29,18 @@ delle domande e la terminologia IIBA restano in inglese, come all'esame.
 L'app si prova con un web server locale (il service worker non funziona da
 `file://`) e i test end-to-end girano su Chromium via Playwright. Il calcolo del
 punteggio va verificato completando esami interi, non rispondendo a poche
-domande.
+domande. I due controlli da lanciare dopo ogni modifica:
 
-In questo ambiente LibreOffice non riesce ad aprire i file `.docx` e pandoc non è
-installato: per ispezionare un documento Word conviene leggerlo direttamente
-(`word/document.xml`) anziché convertirlo.
+```bash
+node tests/validate-data.js   # dati e motore, nessuna dipendenza
+node tests/e2e.js             # l'app nel browser, serve da sé la cartella via HTTP
+```
+
+Le spiegazioni non devono dire che cosa l'esame chieda "spesso": IIBA non pubblica
+il question bank, e le uniche evidenze sono le dieci sample question. Nei distrattori
+nuovi va curata anche la lunghezza: la risposta giusta non deve riconoscersi perché
+è la più lunga (il validatore lo controlla).
+
+Gli strumenti disponibili cambiano da un ambiente all'altro. Dove LibreOffice
+funziona, `soffice --headless --convert-to pdf` permette di contare le pagine dei
+riassunti; dove non apre i `.docx`, conviene leggere direttamente `word/document.xml`.
