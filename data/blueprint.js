@@ -3,8 +3,8 @@
  * Fonti: ECBA Exam Blueprint, ECBA Certification Handbook, ECBA Syllabus Map,
  * ECBA Learning Outcomes e ECBA Sample Exam Questions (IIBA).
  *
- * I titoli delle activity statement sono quelli del Syllabus Map, che sono
- * anche quelli mostrati a schermo durante l'esame; `detail` conserva la
+ * I titoli delle activity statement sono quelli usati dal Syllabus Map, dai
+ * Learning Outcomes e dalle Sample Exam Questions; `detail` conserva la
  * formulazione estesa del Blueprint V1.1 e `study` i rimandi di studio che il
  * Syllabus Map associa a ciascuna activity.
  *

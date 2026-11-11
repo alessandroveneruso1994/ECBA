@@ -1,5 +1,5 @@
 /**
- * Persistenza locale: sessione in corso, storico e statistiche per dominio.
+ * Persistenza locale: sessione in corso, storico, statistiche e registro del ripasso.
  * Tutto vive nel localStorage del browser: nessun dato lascia il dispositivo.
  */
 window.Storage = (function () {
@@ -7,6 +7,7 @@ window.Storage = (function () {
   var KEY_HISTORY = 'ecba.history';
   var KEY_STATS = 'ecba.stats';
   var KEY_TOPIC_STATS = 'ecba.topicStats';
+  var KEY_MISSED = 'ecba.missed';
   var KEY_THEME = 'ecba.theme';
 
   function read(key, fallback) {
@@ -76,33 +77,47 @@ window.Storage = (function () {
     /** Statistiche per tecnica e competenza: { "10.25": {seen, correct}, ... } */
     topicStats: function () { return read(KEY_TOPIC_STATS, {}); },
 
-    /** Domande sbagliate o segnalate, per la modalità ripasso. */
-    weakQuestionIds: function () {
-      var ids = {};
-      read(KEY_HISTORY, []); // storico non contiene i dettagli: li leggiamo dal pool errori
-      var missed = read('ecba.missed', {});
-      Object.keys(missed).forEach(function (id) { ids[id] = missed[id]; });
-      return ids;
-    },
+    /**
+     * Registro del ripasso: { idDomanda: numeroDiErrori }.
+     * Una domanda segnalata ma mai sbagliata vi compare con zero.
+     */
+    weakQuestionIds: function () { return read(KEY_MISSED, {}); },
 
-    /** Aggiorna il registro degli errori: incrementa gli sbagli, azzera i successi. */
+    /**
+     * Aggiorna il registro del ripasso con l'esito di una sessione: una risposta
+     * sbagliata incrementa il conteggio, una segnalata resta in elenco anche se
+     * corretta, una corretta e non segnalata esce dall'elenco.
+     */
     updateMissed: function (answers) {
-      var missed = read('ecba.missed', {});
+      var missed = read(KEY_MISSED, {});
       answers.forEach(function (a) {
         if (a.isCorrect && !a.flagged) {
           delete missed[a.id];
-        } else if (!a.isCorrect || a.flagged) {
+        } else {
           missed[a.id] = (missed[a.id] || 0) + (a.isCorrect ? 0 : 1);
         }
       });
-      write('ecba.missed', missed);
+      write(KEY_MISSED, missed);
+    },
+
+    /**
+     * Toglie dal registro del ripasso le domande che non esistono più nel pool,
+     * così i conteggi mostrati corrispondono a ciò che il ripasso propone.
+     */
+    pruneMissed: function (isKnown) {
+      var missed = read(KEY_MISSED, {});
+      var changed = false;
+      Object.keys(missed).forEach(function (id) {
+        if (!isKnown(id)) { delete missed[id]; changed = true; }
+      });
+      if (changed) write(KEY_MISSED, missed);
     },
 
     resetStats: function () {
       remove(KEY_HISTORY);
       remove(KEY_STATS);
       remove(KEY_TOPIC_STATS);
-      remove('ecba.missed');
+      remove(KEY_MISSED);
     },
 
     theme: function () { return read(KEY_THEME, null); },

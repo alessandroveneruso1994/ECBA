@@ -88,6 +88,28 @@
     return session.mode === 'review' ? allQuestions() : POOL;
   }
 
+  /**
+   * La sessione lasciata a metà, se ce n'è una che si può riprendere.
+   * Un aggiornamento dell'app può aver tolto dal pool domande che la sessione
+   * conteneva: prima di proporla la si riallinea, e la si scarta se non ne
+   * resta nulla.
+   */
+  function loadResumableSession() {
+    var saved = Storage.loadSession();
+    if (!saved || saved.finished || !saved.questionIds) return null;
+
+    var removed = Engine.reconcile(saved, allQuestions());
+    if (removed < 0) {
+      Storage.clearSession();
+      return null;
+    }
+    if (removed > 0) {
+      saved.withdrawn = (saved.withdrawn || 0) + removed;
+      Storage.saveSession(saved);
+    }
+    return saved;
+  }
+
   function tpl(name) {
     return document.getElementById('tpl-' + name).content.cloneNode(true);
   }
@@ -176,8 +198,8 @@
 
     var node = tpl('home');
 
-    var saved = Storage.loadSession();
-    if (saved && !saved.finished) {
+    var saved = loadResumableSession();
+    if (saved) {
       var card = node.getElementById('resume-card');
       card.hidden = false;
       var answered = Object.keys(saved.answers).length;
@@ -186,6 +208,11 @@
       if (saved.deadline) {
         var left = Math.max(0, saved.deadline - Date.now());
         extra = left > 0 ? ' · ' + formatClock(left) + ' rimanenti' : ' · tempo scaduto';
+      }
+      if (saved.withdrawn) {
+        extra += ' · ' + saved.withdrawn + (saved.withdrawn === 1
+          ? ' domanda ritirata dal pool con un aggiornamento'
+          : ' domande ritirate dal pool con un aggiornamento');
       }
       node.getElementById('resume-detail').textContent =
         label + ' · ' + answered + '/' + saved.questionIds.length + ' risposte' + extra;
@@ -564,10 +591,11 @@
     var answered = Object.keys(session.answers).length;
     var flagged = Object.keys(session.flagged).length;
 
-    node.getElementById('grid-summary').textContent =
-      answered + ' risposte su ' + total +
-      (flagged ? ' · ' + flagged + ' segnalate per revisione' : '') +
-      (answered < total ? ' · ' + (total - answered) + ' ancora senza risposta' : '');
+    node.getElementById('grid-summary').textContent = reviewMode && lastResult
+      ? lastResult.correct + ' corrette su ' + total + '. Tocca un numero per rileggere la domanda.'
+      : answered + ' risposte su ' + total +
+        (flagged ? ' · ' + flagged + ' segnalate per revisione' : '') +
+        (answered < total ? ' · ' + (total - answered) + ' ancora senza risposta' : '');
 
     var grid = node.getElementById('qgrid');
     session.questionIds.forEach(function (id, i) {
@@ -588,6 +616,12 @@
       });
       grid.appendChild(cell);
     });
+
+    if (reviewMode) {
+      node.getElementById('grid-legend').innerHTML =
+        '<span><i class="dot ok"></i> Corretta</span>' +
+        '<span><i class="dot bad"></i> Sbagliata o senza risposta</span>';
+    }
 
     node.getElementById('btn-grid-close').addEventListener('click', showQuiz);
 
@@ -785,7 +819,7 @@
     var seenTotal = 0;
     Object.keys(stats).forEach(function (k) { seenTotal += stats[k].seen; });
     Object.keys(topicStats).forEach(function (k) { seenTotal += topicStats[k].seen; });
-    var missedCount = Object.keys(Storage.weakQuestionIds()).length;
+    var missedCount = Engine.buildReview(allQuestions(), Storage.weakQuestionIds()).length;
     var nothingToReset = !entries.length && !seenTotal && !missedCount;
 
     var summary = node.getElementById('reset-summary');
@@ -833,22 +867,35 @@
     showHome();
   });
 
-  // Scorciatoie da tastiera: 1-6 sceglie l'opzione, frecce per navigare.
+  // Scorciatoie da tastiera: 1-4 oppure A-D scelgono l'opzione, le frecce
+  // navigano, F segnala. Numero e lettera sono quelli mostrati a schermo: le
+  // opzioni sono rimescolate a ogni sessione, quindi la prima visibile non è
+  // la prima del pool.
   document.addEventListener('keydown', function (e) {
     if (!session || !view.querySelector('.quiz')) return;
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
     if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
-    var q = currentQuestion();
-    var n = parseInt(e.key, 10);
-    if (n >= 1 && n <= q.options.length) {
-      choose(q.options[n - 1].id);
-    } else if (e.key === 'ArrowRight') {
+
+    var key = (e.key || '').toLowerCase();
+    var shown = Engine.displayOptions(session, currentQuestion());
+    var position = '1234'.indexOf(key);
+    if (position === -1) position = 'abcd'.indexOf(key);
+    if (key.length !== 1) position = -1;
+
+    if (position !== -1 && position < shown.length) {
+      choose(shown[position].optionId);
+    } else if (key === 'arrowright') {
       move(1);
-    } else if (e.key === 'ArrowLeft') {
+    } else if (key === 'arrowleft') {
       move(-1);
-    } else if (e.key.toLowerCase() === 'f' && !reviewMode) {
+    } else if (key === 'f' && !reviewMode) {
       toggleFlag();
     }
   });
+
+  // ---------------------------------------------------------------- avvio
+
+  Storage.pruneMissed(function (id) { return !!questionById(id); });
 
   // --------------------------------------------------------- service worker
 

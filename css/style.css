@@ -392,6 +392,8 @@ main { max-width: 780px; margin: 0 auto; padding: 1.2rem 1rem 4rem; }
 .legend .dot.answered { background: var(--accent); border-color: var(--accent); }
 .legend .dot.flagged { background: var(--warn); border-color: var(--warn); }
 .legend .dot.empty { background: var(--surface); }
+.legend .dot.ok { background: var(--ok); border-color: var(--ok); }
+.legend .dot.bad { background: var(--bad); border-color: var(--bad); }
 
 /* ---------- Risultati ---------- */
 .score-card {

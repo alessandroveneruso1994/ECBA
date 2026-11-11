@@ -25,12 +25,19 @@ window.Engine = (function () {
   /**
    * Compone un esame di 50 domande rispettando i pesi del blueprint.
    *
-   * Dentro ogni dominio la selezione rispetta anche la miscela di stili: le
-   * sample question pubblicate da IIBA sono tutte situazionali e chiedono un
-   * giudizio professionale ("what should you do FIRST?"), non il richiamo di
-   * una definizione. `appliedShare` fissa quindi la quota di domande di stile
-   * applicativo, lasciando il resto alle domande di richiamo — che il blueprint
-   * continua a prevedere, parlando di "situation-based AND standard".
+   * Dentro ogni dominio la selezione rispetta altre due cose.
+   *
+   * La miscela di stili: le sample question pubblicate da IIBA chiedono un
+   * giudizio professionale ("what should you do FIRST?"), non il richiamo di una
+   * definizione. `appliedShare` fissa la quota attesa di domande di stile
+   * applicativo, lasciando il resto alle domande di richiamo, che il blueprint
+   * continua a prevedere parlando di "situation-based AND standard".
+   *
+   * I cluster: due domande con lo stesso `cluster` mettono alla prova lo stesso
+   * punto, magari con uno scenario diverso, e l'una suggerirebbe la risposta
+   * dell'altra. Nella stessa sessione ne entra una sola, finché il pool lo
+   * consente. I cluster possono attraversare i domini, per cui i domini vengono
+   * percorsi in ordine casuale: nessuno è favorito perché viene prima.
    *
    * Se un dominio non ha abbastanza domande nel pool, il deficit viene
    * ridistribuito sui domini che ne hanno in eccesso, così il totale resta 50.
@@ -38,24 +45,42 @@ window.Engine = (function () {
   function buildExam(pool) {
     var groups = byDomain(pool);
     var picked = [];
+    var usedClusters = {};
     var deficit = 0;
 
-    BP.domains.forEach(function (d) {
-      var available = groups[d.id] || [];
-      var wantApplied = Math.round(d.questions * BP.exam.appliedShare);
+    shuffle(BP.domains).forEach(function (d) {
+      var order = shuffle(groups[d.id] || []);
+      var quota = { applied: stochasticRound(d.questions * BP.exam.appliedShare) };
+      quota.knowledge = d.questions - quota.applied;
 
-      var applied = shuffle(available.filter(function (q) { return q.style === 'applied'; }));
-      var knowledge = shuffle(available.filter(function (q) { return q.style !== 'applied'; }));
-
-      var takeApplied = applied.slice(0, wantApplied);
-      // Ciò che manca da una parte lo compensa l'altra: il dominio conserva
-      // comunque il numero di domande che il blueprint gli assegna.
-      var takeKnowledge = knowledge.slice(0, d.questions - takeApplied.length);
-      var chosen = takeApplied.concat(takeKnowledge);
-      if (chosen.length < d.questions) {
-        chosen = chosen.concat(applied.slice(takeApplied.length,
-          takeApplied.length + d.questions - chosen.length));
+      var chosen = [];
+      var taken = {};
+      function take(q) {
+        chosen.push(q);
+        taken[q.id] = true;
+        if (q.cluster) usedClusters[q.cluster] = true;
       }
+      function clusterFree(q) { return !q.cluster || !usedClusters[q.cluster]; }
+
+      // 1. Rispetta sia i cluster sia la miscela di stili.
+      order.forEach(function (q) {
+        if (chosen.length >= d.questions || !clusterFree(q)) return;
+        var style = q.style === 'applied' ? 'applied' : 'knowledge';
+        if (quota[style] <= 0) return;
+        quota[style] -= 1;
+        take(q);
+      });
+      // 2. Se non basta, rinuncia alla miscela ma non ai cluster.
+      order.forEach(function (q) {
+        if (chosen.length >= d.questions || taken[q.id] || !clusterFree(q)) return;
+        take(q);
+      });
+      // 3. In ultima istanza accetta anche due domande dello stesso cluster:
+      //    il dominio conserva comunque il numero di domande del blueprint.
+      order.forEach(function (q) {
+        if (chosen.length >= d.questions || taken[q.id]) return;
+        take(q);
+      });
 
       deficit += d.questions - chosen.length;
       picked = picked.concat(chosen);
@@ -71,11 +96,41 @@ window.Engine = (function () {
     return shuffle(picked);
   }
 
+  /**
+   * Arrotonda a caso verso l'alto o verso il basso in proporzione alla parte
+   * decimale: 3,5 diventa 3 una volta su due e 4 l'altra. Con l'arrotondamento
+   * classico i sei domini da 5 domande prenderebbero sempre 4 domande
+   * applicative su 5, e la simulazione ne avrebbe il 76% anziché il 70% atteso.
+   */
+  function stochasticRound(x) {
+    var base = Math.floor(x);
+    return base + (Math.random() < x - base ? 1 : 0);
+  }
+
+  /**
+   * Riordina le domande mettendo in fondo quelle il cui cluster è già
+   * rappresentato da una domanda precedente: tagliando la lista ai primi N
+   * elementi, i doppioni di cluster entrano solo se non c'è altro.
+   */
+  function spreadClusters(questions) {
+    var seen = {};
+    var first = [];
+    var repeats = [];
+    questions.forEach(function (q) {
+      if (q.cluster && seen[q.cluster]) return repeats.push(q);
+      if (q.cluster) seen[q.cluster] = true;
+      first.push(q);
+    });
+    return first.concat(repeats);
+  }
+
   /** Set di allenamento: domini scelti dall'utente, ordine casuale. */
   function buildPractice(pool, domainIds, count) {
     var filtered = pool.filter(function (q) { return domainIds.indexOf(q.domain) !== -1; });
     var shuffled = shuffle(filtered);
-    return count > 0 ? shuffled.slice(0, count) : shuffled;
+    if (!(count > 0) || count >= shuffled.length) return shuffled;
+    // Una sessione parziale evita, finché può, due domande sullo stesso punto.
+    return shuffle(spreadClusters(shuffled).slice(0, count));
   }
 
   /**
@@ -91,15 +146,68 @@ window.Engine = (function () {
         })
       : pool;
     var shuffled = shuffle(filtered);
-    return count > 0 ? shuffled.slice(0, count) : shuffled;
+    if (!(count > 0) || count >= shuffled.length) return shuffled;
+    return shuffle(spreadClusters(shuffled).slice(0, count));
   }
 
-  /** Set di ripasso: solo le domande sbagliate o segnalate in passato. */
+  /**
+   * Set di ripasso: le domande sbagliate o segnalate in passato.
+   * `missedIds` associa a ogni id il numero di errori; una domanda segnalata
+   * ma mai sbagliata vi compare con zero, e va riproposta comunque: conta la
+   * presenza nel registro, non il valore.
+   */
   function buildReview(pool, missedIds) {
-    var wanted = pool.filter(function (q) { return missedIds[q.id]; });
+    var wanted = pool.filter(function (q) {
+      return Object.prototype.hasOwnProperty.call(missedIds, q.id);
+    });
     // Le più sbagliate per prime.
     wanted.sort(function (a, b) { return missedIds[b.id] - missedIds[a.id]; });
     return wanted;
+  }
+
+  /**
+   * Riallinea una sessione salvata al pool corrente.
+   *
+   * Tra il salvataggio e la ripresa l'app può essersi aggiornata, e il pool può
+   * aver perso domande: la sessione farebbe allora riferimento a id che non
+   * esistono più. Qui le domande sparite vengono tolte insieme alle loro
+   * risposte, e l'ordine delle opzioni viene rigenerato dove non corrisponde
+   * più alla domanda. Restituisce quante domande sono state tolte, oppure -1 se
+   * non ne resta nessuna e la sessione va scartata.
+   */
+  function reconcile(session, pool) {
+    var known = {};
+    pool.forEach(function (q) { known[q.id] = q; });
+
+    var before = session.questionIds.length;
+    var current = session.questionIds[session.index];
+    var ids = session.questionIds.filter(function (id) { return known[id]; });
+    if (!ids.length) return -1;
+
+    ['answers', 'flagged', 'revealed', 'optionOrder'].forEach(function (field) {
+      var source = session[field] || {};
+      var kept = {};
+      ids.forEach(function (id) {
+        if (source[id] !== undefined) kept[id] = source[id];
+      });
+      session[field] = kept;
+    });
+
+    ids.forEach(function (id) {
+      var valid = known[id].options.map(function (o) { return o.id; });
+      var order = session.optionOrder[id];
+      var orderOk = order && order.length === valid.length &&
+        order.every(function (optionId) { return valid.indexOf(optionId) !== -1; });
+      if (!orderOk) session.optionOrder[id] = shuffle(valid);
+      if (session.answers[id] && valid.indexOf(session.answers[id]) === -1) {
+        delete session.answers[id];
+      }
+    });
+
+    session.questionIds = ids;
+    var at = ids.indexOf(current);
+    session.index = at !== -1 ? at : Math.max(0, Math.min(session.index || 0, ids.length - 1));
+    return before - ids.length;
   }
 
   /**
@@ -226,6 +334,7 @@ window.Engine = (function () {
     buildPractice: buildPractice,
     buildTopicTest: buildTopicTest,
     buildReview: buildReview,
+    reconcile: reconcile,
     createSession: createSession,
     displayOptions: displayOptions,
     letterFor: letterFor,
