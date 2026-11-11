@@ -8,7 +8,7 @@ module.exports = [
   questions: 'assessed within the nine domains',
   source: 'BABOK Guide, ch. 10',
   blocks: [
-    { t: 'p', v: 'The blueprint asks you to study the purpose, description and usage considerations of these twenty techniques. They are not a domain of their own: the questions arrive inside the nine domains. The one-line purpose answers most of them.' },
+    { t: 'p', v: 'The blueprint asks you to study the purpose, description and usage considerations of these twenty techniques. They are not a domain of their own: the questions arrive inside the nine domains. Start from each one\'s purpose, summarized here in one line, then go deeper into the description and usage considerations in the BABOK.' },
 
     { t: 'h3', v: 'Eliciting information' },
     { t: 'table', head: ['Technique', 'Purpose'], widths: [2800, 6200], rows: [
@@ -55,7 +55,7 @@ module.exports = [
   questions: 'assessed within the nine domains',
   source: 'BABOK Guide, ch. 9',
   blocks: [
-    { t: 'p', v: 'The blueprint asks for purpose, definition and effectiveness measures. Six groups: knowing which group a competency belongs to is already an exam question.' },
+    { t: 'p', v: 'The blueprint asks for purpose, definition and effectiveness measures. They fall into six groups: it pays to know which group each belongs to, because some names mislead (Facilitation, Teaching and Teamwork are not Communication Skills).' },
 
     { t: 'h3', v: '9.1 Analytical Thinking and Problem Solving — 7 competencies' },
     { t: 'table', head: ['Competency', 'In one line'], widths: [2600, 6400], rows: [

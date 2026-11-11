@@ -8,20 +8,20 @@ module.exports = [
   questions: '10 of 50 questions',
   source: 'The Business Analysis Standard, ch. 2',
   blocks: [
-    { t: 'p', v: 'The heaviest domain on the exam: one question in five. It revolves almost entirely around the BACCM, which must be known word for word.' },
+    { t: 'p', v: 'The heaviest domain on the exam: one question in five. Its four activities cover what business analysis is, the BACCM, why business analysis matters and how it creates value. The BACCM must be known word for word: IIBA\'s Candidate Q&A lists "a stronger focus on the BACCM concepts" among the changes in the new exam.' },
 
     { t: 'h3', v: 'Activity statement 1.1 — Define Business Analysis' },
     { t: 'ref', v: 'BA Standard 2 · BABOK 1' },
-    { t: 'p', v: 'Business analysis enables change in an enterprise by defining needs and recommending solutions that deliver value to stakeholders. It is not project management, not testing, not writing technical specifications: on the exam the wrong options are almost always activities belonging to adjacent disciplines.' },
+    { t: 'p', v: 'Business analysis enables change in an enterprise by defining needs and recommending solutions that deliver value to stakeholders. It is not project management, not testing, not writing technical specifications: those are adjacent disciplines it works with, but they do not define it.' },
     { t: 'ul', v: [
-      'It is not confined to a job title: it is a skill set applicable to any role. Anyone who analyses needs, facilitates collaboration, designs processes or creates value propositions is doing business analysis.',
+      'It is not confined to a job title: it is a skill set applicable to any role. According to the Standard, anyone who, for example, analyses needs and designs solutions, facilitates stakeholder collaboration or creates new or improved value propositions stands to benefit from it.',
       'It is not confined to a project life cycle and does not stop at implementation: it keeps monitoring and evaluating outcomes.',
       'It is critical at all three organizational levels: strategic, tactical and operational.'
     ]},
 
     { t: 'h3', v: 'Activity statement 1.2 — Business Analysis Core Concept Model (BACCM)' },
     { t: 'ref', v: 'BA Standard 2 · BABOK 2 · BABOK 7.6' },
-    { t: 'p', v: 'Business Analysis Core Concept Model. The definitions must be known verbatim: the exam presents them crossed over, attributing to one concept the definition of another.' },
+    { t: 'p', v: 'Business Analysis Core Concept Model. The definitions must be known verbatim, because they resemble one another: it is easy to attribute to one concept the definition of another.' },
     { t: 'table', head: ['Concept', 'Official definition'], widths: [2200, 6800], rows: [
       ['Change', 'The act of transformation in response to a need.'],
       ['Need', 'A problem or opportunity to be addressed.'],
@@ -30,7 +30,7 @@ module.exports = [
       ['Value', 'The worth, importance, or usefulness of something to a stakeholder within a context.'],
       ['Context', 'The dynamic circumstances that influence, are influenced by, and provide an understanding of the change.']
     ]},
-    { t: 'key', v: 'Requirement is NOT a core concept. It is a usable representation of a need — a different concept, and a recurring distractor.' },
+    { t: 'key', v: 'Requirement is NOT a core concept: it is a usable representation of a need, and therefore a different concept. Precisely because it sits so close to the six, it is easy to mistake for a seventh.' },
 
     { t: 'p', v: 'The relationships matter as much as the definitions:' },
     { t: 'ul', v: [
@@ -40,7 +40,7 @@ module.exports = [
       'Stakeholder: internal or external, often defined by interest, impact and influence; grouped by their relationship to needs, changes and solutions.'
     ]},
     { t: 'p', v: 'A solution can combine technology-based initiatives, manual procedures, process changes, business model updates and improved organizational capabilities. It is never only software.' },
-    { t: 'p', v: 'Context is everything in the environment relevant to the change: attitudes, behaviours, beliefs, competitors, culture, demographics, geopolitics, goals, history, industry, infrastructure, market trends, processes, products, projects, regulations, sales, seasons, structure, technology — even weather. If a question lists an assorted set of environmental circumstances, the answer is Context.' },
+    { t: 'p', v: 'Context is everything in the environment relevant to the change: attitudes, behaviours, beliefs, competitors, culture, demographics, geopolitics, goals, history, industry, infrastructure, market trends, processes, products, projects, regulations, sales, seasons, structure, technology — even weather. When a description brings together assorted environmental circumstances that influence the change, are influenced by it and help explain it, it is describing Context.' },
 
     { t: 'h3', v: 'What the BACCM is for' },
     { t: 'p', v: 'It is both a "thinking model" and an "organizing model". Its official uses:' },
@@ -53,11 +53,11 @@ module.exports = [
       'Establish both a foundation and a path forward',
       'Consider the quality and completeness of the work being done'
     ]},
-    { t: 'p', v: 'It is not for estimating budgets, assigning responsibilities or selecting methodologies: it is not a prescriptive process.' },
+    { t: 'p', v: 'Estimating budgets, assigning responsibilities and selecting methodologies are not among these uses: the BACCM is a conceptual model, not a process to follow.' },
 
     { t: 'h3', v: 'Activity statement 1.3 — Importance of Business Analysis' },
     { t: 'ref', v: 'BA Standard 2 · BABOK 3.5 · BABOK 4.5 · BABOK 6.3 · BABOK 7.5 · BABOK 7.6 · BABOK 8.5' },
-    { t: 'p', v: 'These should be recognized from their description rather than recited.' },
+    { t: 'p', v: 'The Standard lists nine critical functions of business analysis. They should be recognized from their description rather than recited.' },
     { t: 'table', head: ['Function', 'How to recognize it'], widths: [2800, 6200], rows: [
       ['Problem understanding', 'Goes beyond symptoms, digs into the underlying causes.'],
       ['Needs prioritization', '"The compass": allocates resources by relative importance.'],
@@ -73,7 +73,7 @@ module.exports = [
 
     { t: 'h3', v: 'Activity statement 1.4 — Outcomes and Value Creation' },
     { t: 'ref', v: 'BA Standard 2 · BABOK 7.3 · BABOK 7.4 · BABOK 7.6' },
-    { t: 'p', v: 'Three distinctions, all examinable:' },
+    { t: 'p', v: 'Three distinctions to be able to recognize:' },
     { t: 'table', head: ['Distinction', 'Meaning', 'Example'], widths: [2200, 3600, 3200], rows: [
       ['Realized / Preserved', 'Realized through returns, gains and improvements; preserved by mitigating losses, risks and costs.', 'A new channel raising revenue / a compliance upgrade avoiding fines'],
       ['Tangible / Intangible', 'Tangible = directly measurable, often monetary. Intangible = measured indirectly, often motivational.', '€80,000 saved / employee morale, company reputation'],
@@ -92,21 +92,21 @@ module.exports = [
   questions: '7 of 50 questions',
   source: 'The Business Analysis Standard, ch. 3',
   blocks: [
-    { t: 'p', v: 'A domain made of three lists to memorize — values, principles, competencies — plus the concept of mindset itself. Situation-based questions ask you to match a described behaviour to the right item on a list.' },
+    { t: 'p', v: 'A domain made of three lists — shared values, principles, foundational competencies — plus the concept of mindset itself. Reciting them is not enough: it pays to be able to match a described behaviour to the right item.' },
 
     { t: 'h3', v: 'Activity statement 2.1 — Importance of Mindset' },
     { t: 'ref', v: 'BA Standard 3' },
-    { t: 'p', v: 'The mental framework that guides decision-making, behaviour and team dynamics. It exists to navigate, with confidence, the situations where knowing exactly what needs to be done is impossible: every situation is unique and there is no single analysis approach.' },
+    { t: 'p', v: 'Mindset is the mental framework that guides decision-making, behaviour and team dynamics. It exists to navigate, with confidence, the situations where knowing exactly what needs to be done is impossible: every situation is unique and there is no single analysis approach.' },
     { t: 'p', v: 'It is developed through deliberate practice on six fronts: achieving organizational outcomes, discovering value for stakeholders, adopting appropriate principles, deciding how to approach the work, actively developing foundational competencies, being able to use foundational techniques.' },
 
     { t: 'h3', v: 'Activity statement 2.2 — Ways to Think About Business Analysis' },
     { t: 'ref', v: 'BA Standard 3' },
-    { t: 'p', v: 'Respect · Courage · Collaboration · Ethics · Curiosity · Continuous learning · Improvement · Customer focus · Value maximization' },
-    { t: 'trap', v: 'Plausible words that are ABSENT from the list, used as distractors: predictability, standardization, specialization, efficiency, compliance, hierarchy, formality, speed, autonomy, competition.' },
+    { t: 'p', v: 'Applying the BACCM helps develop and share information about the outcome to be created, and shared values help drive this work: Respect · Courage · Collaboration · Ethics · Curiosity · Continuous learning · Improvement · Customer focus · Value maximization.' },
+    { t: 'trap', v: 'Plausible words that are ABSENT from the list and easy to mistake for values: predictability, standardization, specialization, efficiency, compliance, hierarchy, formality, speed, autonomy, competition.' },
 
     { t: 'h3', v: 'Activity statement 2.3 — Business Analysis Principles' },
     { t: 'ref', v: 'BA Standard 3 · BABOK 8.4 · Agile Extension 2.6-2.7' },
-    { t: 'p', v: 'They come from the Agile Extension. There are seven, with short names: worth learning verbatim, because plausible distractors are easy to build by changing a single word.' },
+    { t: 'p', v: 'The Standard takes them from the Agile Extension as critical ingredients for an effective mindset. There are seven, with short names: worth learning verbatim, because changing a single word is enough to produce a plausible but non-existent principle.' },
     { t: 'table', head: ['Principle', 'What it requires'], widths: [3000, 6000], rows: [
       ['See the whole', 'Analyze needs in the big picture context and identify why a change is necessary.'],
       ['Think as a customer', 'Start from the customer experience, from a high-level view broken down into detail.'],
@@ -148,41 +148,20 @@ module.exports = [
 
     { t: 'h3', v: 'Activity statement 3.1 — Who Performs Business Analysis' },
     { t: 'ref', v: 'BA Standard 4 · BABOK 1' },
-    { t: 'p', v: 'Anyone developing strategy and objectives, creating value propositions, enabling change, analysing needs and designing solutions, facilitating collaboration, creating innovative products, designing or improving processes, streamlining operational activities. The reference for developing competencies is the Business Analysis Competency Model.' },
+    { t: 'p', v: 'According to the Standard, anyone engaged in the following stands to benefit from applying business analysis: developing strategy and objectives, creating value propositions, enabling change, analysing needs and designing solutions, facilitating collaboration, creating innovative products, designing or improving processes, streamlining operational activities. The reference for developing competencies is the Business Analysis Competency Model.' },
 
     { t: 'h3', v: 'Activity statement 3.2 — Approaches to Business Analysis Work and Techniques' },
     { t: 'ref', v: 'BA Standard 4 · BABOK 3.1' },
     { t: 'table', head: ['Approach', 'How it works', 'When to choose it'], widths: [1800, 4000, 3200], rows: [
       ['Predictive', 'Plans all the work up front, produces documents and models (scope statement, requirements, designs, schedule and cost baselines, test plans), tracks progress against the plan.', 'Work that is well-defined, heavily regulated, relatively straightforward, or can be completed sequentially.'],
       ['Adaptive', 'Delivers value in small prioritized increments, just-enough and just-in-time documentation, continuous feedback.', 'Complex needs, poorly defined challenges, uncertainty, needs emerging as the solution is built.'],
-      ['Hybrid', 'Some initiatives predictive and others adaptive, or parts of the same initiative using different approaches.', 'When both are needed — the norm, not an exception.']
+      ['Hybrid', 'Some initiatives predictive and others adaptive, or parts of the same initiative using different approaches.', 'When both are needed.']
     ]},
     { t: 'key', v: 'Sometimes an approach is imposed on the team. In that case the expectation is not to protest: it is to know how to create value using any of the approaches.' },
 
     { t: 'h3', v: 'The five foundational techniques' },
     { t: 'p', v: 'Backlog Management · Customer Journey Mapping · Data Storytelling · Process Analysis · Workshops/Interviews' },
     { t: 'trap', v: 'NOT to be confused with the 20 techniques assessed on the ECBA: only Backlog Management, Process Analysis, Workshops and Interviews belong to both lists. Customer Journey Mapping and Data Storytelling come from other IIBA documents (POA Guide and BDA Guide).' },
-
-    { t: 'h3', v: 'Activity statement 3.4 — Understand Requirements and Designs' },
-    { t: 'ref', v: 'BA Standard 4 · BABOK 2' },
-    { t: 'p', v: 'The foundational distinction of this domain, and the one the official documents define most contrastively.' },
-    { t: 'table', head: ['', 'Requirement', 'Design'], widths: [1600, 3700, 3700], rows: [
-      ['What it is', 'A usable representation of a NEED', 'A usable representation of a SOLUTION'],
-      ['Question', 'What value could be delivered', 'How value might be realized'],
-      ['Example', '"Provide information in English and French"', 'Prototype with text in both languages']
-    ]},
-    { t: 'p', v: 'The difference lies in PURPOSE, not in author, format or approval status: the same tasks and techniques can create both. They are interdependent and cyclical — designs reveal insights that enhance requirements, and changing requirements lead to design updates.' },
-
-    { t: 'h3', v: 'The four requirement classifications' },
-    { t: 'table', head: ['Class', 'Definition', 'Question'], widths: [2200, 5400, 1400], rows: [
-      ['Business', 'Statements of goals, objectives and outcomes for why a change has been initiated. May apply to the enterprise, a business area or an initiative.', 'WHY'],
-      ['Stakeholder', 'The needs of stakeholders that must be met to achieve the business requirements. A bridge between business and solution requirements.', 'WHAT'],
-      ['Solution', 'The capabilities and qualities of a solution. Split into functional (behaviour and information) and non-functional or quality of service (conditions and qualities: performance, security, availability).', 'WHAT'],
-      ['Transition', 'Capabilities and conditions needed to move from the current to the future state. Temporary: data conversion, training, business continuity.', 'CHANGE']
-    ]},
-
-    { t: 'h3', v: 'Traceability' },
-    { t: 'p', v: 'Tracks the relationships between requirements and designs, from the original stakeholder need to the implemented solution. Backward traceability leads back to the business need; forward traceability leads down to solution components. It supports change control and helps detect missing requirements or solution components supported by no requirement.' },
 
     { t: 'h3', v: 'Activity statement 3.3 — Understand Organizational Considerations' },
     { t: 'ref', v: 'BA Standard 4' },
@@ -195,6 +174,28 @@ module.exports = [
 
     { t: 'h3', v: 'How business analysis is delivered' },
     { t: 'p', v: 'Centre of Excellence (a specialized unit) · Community of Practice (a collaborative space for sharing) · Business Analysis as a Service (outsourcing to specialized providers) · Dispersed across business units. Many organizations combine them.' },
+
+    { t: 'h3', v: 'Activity statement 3.4 — Understand Requirements and Designs' },
+    { t: 'ref', v: 'BA Standard 4 · BABOK 2' },
+    { t: 'p', v: 'The central distinction of this domain: requirements and designs are best understood side by side.' },
+    { t: 'table', head: ['', 'Requirement', 'Design'], widths: [1600, 3700, 3700], rows: [
+      ['What it is', 'A usable representation of a NEED', 'A usable representation of a SOLUTION'],
+      ['Question', 'What value could be delivered', 'How value might be realized'],
+      ['Example', '"Provide information in English and French"', 'Prototype with text in both languages']
+    ]},
+    { t: 'p', v: 'The difference lies in PURPOSE, not in author, format or approval status: the same tasks and techniques can create both. They are interdependent and cyclical — designs reveal insights that enhance requirements, and changing requirements lead to design updates.' },
+
+    { t: 'h3', v: 'The four requirement classifications' },
+    { t: 'table', head: ['Class', 'Definition'], widths: [2200, 6800], rows: [
+      ['Business', 'Statements of goals, objectives and outcomes for why a change has been initiated. May apply to the enterprise, a business area or an initiative.'],
+      ['Stakeholder', 'The needs of stakeholders that must be met to achieve the business requirements. A bridge between business and solution requirements.'],
+      ['Solution', 'The capabilities and qualities of a solution. Split into functional (behaviour and information) and non-functional or quality of service (conditions and qualities: performance, security, availability).'],
+      ['Transition', 'Capabilities and conditions needed to move from the current to the future state. Temporary: data conversion, training, business continuity.']
+    ]},
+    { t: 'p', v: 'In the requirements and design cycle, business requirements answer WHY, stakeholder and solution requirements answer WHAT, and designs answer HOW. Transition requirements stand apart because they are temporary.' },
+
+    { t: 'h3', v: 'Traceability' },
+    { t: 'p', v: 'Tracks the relationships between requirements and designs, from the original stakeholder need to the implemented solution. Backward traceability leads back to the business need; forward traceability leads down to solution components. It supports change control and helps detect missing requirements or solution components supported by no requirement.' },
 
     { t: 'trap', v: 'Typical traps · Requirement and design distinguished by author ("the business writes requirements, IT writes designs") or by format ("a requirement is text, a design is a diagram"): both false · Response time classified as functional rather than non-functional · The five foundational techniques confused with the 20 assessed on the exam.' }
   ]

@@ -8,7 +8,7 @@ module.exports = [
   questions: 'valutate dentro i nove domini',
   source: 'BABOK Guide, cap. 10',
   blocks: [
-    { t: 'p', v: 'Il blueprint chiede di studiare purpose, description e usage considerations di queste venti tecniche. Non sono un dominio a sé: le domande arrivano dentro i nove domini. Lo scopo in una riga basta a rispondere alla maggior parte delle domande.' },
+    { t: 'p', v: 'Il blueprint chiede di studiare purpose, description e usage considerations di queste venti tecniche. Non sono un dominio a sé: le domande arrivano dentro i nove domini. Conviene partire dallo scopo di ciascuna, riassunto qui in una riga, e approfondire nel BABOK descrizione e usage considerations.' },
 
     { t: 'h3', v: 'Elicitare informazioni' },
     { t: 'table', head: ['Tecnica', 'Scopo'], widths: [2800, 6200], rows: [
@@ -55,7 +55,7 @@ module.exports = [
   questions: 'valutate dentro i nove domini',
   source: 'BABOK Guide, cap. 9',
   blocks: [
-    { t: 'p', v: 'Il blueprint chiede purpose, definition ed effectiveness measures. Sei gruppi: sapere a quale gruppo appartiene una competenza è già una domanda d\'esame.' },
+    { t: 'p', v: 'Il blueprint chiede purpose, definition ed effectiveness measures. Sono raccolte in sei gruppi: conviene sapere a quale gruppo appartiene ciascuna, perché alcuni nomi ingannano (Facilitation, Teaching e Teamwork non stanno fra le Communication Skills).' },
 
     { t: 'h3', v: '9.1 Analytical Thinking and Problem Solving — 7 competenze' },
     { t: 'table', head: ['Competenza', 'In una riga'], widths: [2600, 6400], rows: [

@@ -13,9 +13,9 @@ module.exports = [
     { t: 'h3', v: 'Activity statement 4.1 — Understand the factors that impact the work that you are doing' },
     { t: 'ref', v: 'BABOK 6.1 · BABOK 8.4' },
     { t: 'p', v: 'The key task is Analyze Current State (6.1): understanding why the enterprise needs to change some aspect of how it operates, and what would be directly or indirectly affected.' },
-    { t: 'p', v: 'The current state includes organizational structure and culture, capabilities, technology and infrastructure, policies, business architecture, internal and external influencers. Business needs are the problems and opportunities of strategic importance: a complaint, a loss of revenue, a new market opportunity usually trigger their evaluation.' },
+    { t: 'p', v: 'Analysing the current state looks at organizational structure and culture, capabilities and processes, technology and infrastructure, policies, business architecture, internal assets and external influencers. Business needs are the problems and opportunities of strategic importance: a complaint, a loss of revenue, a new market opportunity usually trigger their evaluation.' },
     { t: 'key', v: '"The need is a new app" is a wrong answer in disguise: the app is a solution, not a need. Starting from the solution skips the analysis of why.' },
-    { t: 'p', v: 'Assess Risks (6.3) evaluates the undesirable consequences of internal and external forces during the transition to, and once in, the future state. In the BABOK, risk is always tied to VALUE, not generically to time and cost.' },
+    { t: 'p', v: 'Assess Risks (6.3) evaluates the undesirable consequences of internal and external forces during the transition to, and once in, the future state. For the BABOK, a risk is an area of uncertainty that could negatively affect VALUE (10.38), not a generic overrun of time and cost.' },
     { t: 'key', v: 'In the official sample question for this activity, the first factor to consider when working out why a process underperforms is its alignment with organizational strategy and business objectives: that is the benchmark performance is judged against. Tools, market conditions and stakeholder attitudes matter, but come later.' },
 
     { t: 'h3', v: 'Activity statement 4.2 — Analyze the impact of proposed changes' },
@@ -30,6 +30,7 @@ module.exports = [
     ]},
     { t: 'p', v: 'Gap analysis (within Define Change Strategy, 6.4) identifies the difference between current state and future state capabilities. It requires both states to be defined; using the same techniques to describe them simplifies the comparison.' },
     { t: 'p', v: 'Define Future State (6.2) determines the set of necessary conditions to meet the business need. Define Change Strategy (6.4) develops and assesses alternative approaches and selects the recommended one. The first says WHERE you want to arrive, the second HOW.' },
+    { t: 'key', v: 'In the official sample question for this activity, the primary objective of analysing the current state before recommending changes is to understand stakeholder workflows, processes and systems in order to identify the impacted areas: that is what makes it possible to assess the impact of the change. A prototype of the future system, a risk plan and a list of the managers who will use the system are not the purpose of this analysis.' },
 
     { t: 'h3', v: 'Activity statement 4.3 — Support the implementation of changes' },
     { t: 'ref', v: 'BABOK 3.3 · BABOK 4.1 · BABOK 5.1 · BABOK 6.2' },
@@ -39,7 +40,7 @@ module.exports = [
 
     { t: 'h3', v: 'Activity statement 4.4 — Enable change through straightforward initiatives' },
     { t: 'ref', v: 'BABOK 5.1' },
-    { t: 'p', v: 'Straightforward initiatives are the small, well-bounded changes a foundational practitioner can carry through alone: a process step to simplify, a report to rework, a rule to clarify. Traceability applies there too (Trace Requirements, 5.1): the link between the need and what you deliver is what separates an improvement from an improvised fix.' },
+    { t: 'p', v: 'Straightforward initiatives are small, well-bounded changes: a process step to simplify, a report to rework, a rule to clarify. The blueprint asks the foundational practitioner to suggest simple improvements and help implement them, "working within clear guidelines", not to carry them through alone. Traceability applies there too (Trace Requirements, 5.1): the link between the need and what you deliver is what separates an improvement from an improvised fix.' },
     { t: 'p', v: 'Recommend Actions to Increase Solution Value (8.5) starts from understanding the factors creating the difference between potential and actual value, and recommends how to align them.' },
     { t: 'p', v: 'Process Analysis (10.34) assesses a process for efficiency and effectiveness and identifies opportunities for change. Process Modelling (10.35) is the graphical representation that founds the analysis: modelling describes, analysis evaluates.' },
 
@@ -54,7 +55,7 @@ module.exports = [
   questions: '5 of 50 questions',
   source: 'BABOK Guide — Elicitation and Collaboration (ch. 4), RADD (ch. 7), RLCM (ch. 5)',
   blocks: [
-    { t: 'p', v: 'Eliciting, documenting, validating and prioritizing needs. The domain with the most techniques involved.' },
+    { t: 'p', v: 'Eliciting needs, documenting and refining them, checking their feasibility and alignment with outcomes, prioritizing them.' },
 
     { t: 'h3', v: 'Activity statement 5.1 — Elicit needs from stakeholders' },
     { t: 'ref', v: 'BABOK 4.3 · BABOK 6.1' },
@@ -66,18 +67,20 @@ module.exports = [
     { t: 'key', v: 'Take care to tell TYPES from TECHNIQUES: interviews, workshops and surveys are techniques, not types of elicitation.' },
     { t: 'p', v: 'Prepare for Elicitation (4.1) defines the desired outcomes, selects techniques, establishes logistics and materials. Conduct Elicitation (4.2) draws out and explores the information. Stakeholders collaborate in two ways: by participating in the activity, and by researching and providing feedback on documents, systems, models and interfaces.' },
     { t: 'p', v: 'Interviews (10.25) also serve to establish relationships and build trust — the "rapport" that activity statement 5.1 explicitly requires.' },
+    { t: 'key', v: 'In the official sample question for this activity, a stakeholder struggles to articulate their needs during a workshop: the correct answer is a follow-up interview with targeted and clarifying questions, which helps uncover needs that are hard to put into words. Suggesting best-practice solutions, settling for what the stakeholder can already express, or asking others to speak for them does not resolve the difficulty.' },
 
     { t: 'h3', v: 'Activity statement 5.2 — Capture and refine the needs elicited from stakeholders' },
     { t: 'ref', v: 'BABOK 7.1' },
-    { t: 'p', v: 'Three distinct checks, in increasing order of rigour:' },
+    { t: 'p', v: 'Three distinct checks, not to be confused:' },
     { t: 'table', head: ['Task', 'Question it answers', 'Rigour'], widths: [2800, 4400, 1800], rows: [
       ['4.3 Confirm Elicitation Results', 'Did I understand correctly what I was told? Checks accuracy and consistency against the source and other results.', 'Much less rigorous and formal than the review during analysis'],
-      ['7.2 Verify Requirements', 'Is the requirement well written? Checks the quality characteristics.', 'Formal'],
-      ['7.3 Validate Requirements', 'Is the requirement worth anything? Checks alignment with business requirements and the value expected.', 'Formal']
+      ['7.2 Verify Requirements', 'Is the requirement well written? Checks the quality characteristics.', 'Analysis review'],
+      ['7.3 Validate Requirements', 'Is the requirement worth anything? Checks alignment with business requirements and the value expected.', 'Analysis review']
     ]},
     { t: 'key', v: 'Verify versus Validate is a pair the documents define closely and contrastively, and so an easy one to confuse. A beautifully written requirement contributing to no objective passes verification and fails validation — and is a strong candidate for elimination.' },
     { t: 'p', v: 'The nine quality characteristics (Verify Requirements): atomic, complete, consistent, concise, feasible, unambiguous, testable, prioritized, understandable. Quality is ultimately determined by the needs of the stakeholders who will use the requirements and designs.' },
     { t: 'p', v: 'Specify and Model Requirements (7.1) analyzes, synthesizes and refines elicitation results into requirements and designs.' },
+    { t: 'key', v: 'In the official sample question for this activity, a requirement for a new feature is still unclear after documentation: the next step is to collaborate with the stakeholder to refine and confirm it, so that it is well understood and meets their expectations. Passing it to the approval team, asking developers about technical feasibility, or deleting it does not resolve the ambiguity.' },
 
     { t: 'h3', v: 'Activity statement 5.3 — Analyze needs to ensure they are feasible and align with business outcomes' },
     { t: 'ref', v: 'BABOK 4.3 · BABOK 5.1 · BABOK 6.1' },
@@ -90,8 +93,8 @@ module.exports = [
     { t: 'table', head: ['Factor', 'Meaning'], widths: [2400, 6600], rows: [
       ['Benefit', 'The advantage accruing to stakeholders, measured against the goals of the change.'],
       ['Penalty', 'The consequences of NOT implementing. Includes regulatory demands, which may take precedence over other stakeholder interests.'],
-      ['Cost', 'Effort and resources. The information comes from the implementation team or the vendor; customers often change priority once they learn it.'],
-      ['Risk', 'The chance the requirement cannot deliver the potential value, or cannot be met at all. If technical feasibility is in doubt, it is moved to the top to limit resources spent before finding out.'],
+      ['Cost', 'Effort and resources. The information comes from the implementation team or the vendor; customers may change a requirement\'s priority once they learn its cost.'],
+      ['Risk', 'The chance the requirement cannot deliver the potential value, or cannot be met at all. If there is a risk that the solution is not technically feasible, the most difficult requirement may be moved to the top, to limit the resources spent before finding out.'],
       ['Dependencies', 'A requirement that cannot be fulfilled unless another is. They may also be external: other teams\' decisions, funding commitments, resource availability.'],
       ['Time sensitivity', 'The "best before" date of the requirement: past a certain point its value diminishes.'],
       ['Stability', 'How likely the requirement is to change again. Working on an unstable requirement produces rework.'],
@@ -121,6 +124,7 @@ module.exports = [
       ['Qualitative', 'Subjective: attitudes, perceptions, responses of customers and users about how well the solution meets the need.']
     ]},
     { t: 'p', v: 'Measures must be validated with stakeholders, so the assessment is useful, and aligned with any higher-level measures that already exist.' },
+    { t: 'key', v: 'In the official sample question for this activity, a key feature does not work as expected during user acceptance testing: the first step is to document the issue and discuss next steps with the implementation team, for transparency and to inform what follows. This matches the blueprint, which asks practitioners in this activity to "record findings". Halting all testing, escalating to senior management, or carrying on with the feature merely added to the risk register are not the first step.' },
 
     { t: 'h3', v: 'Activity statement 6.2 — Develop recommendations for potential solutions to business problems' },
     { t: 'ref', v: 'BABOK 4.2 · BABOK 6.3 · BABOK 8.5' },

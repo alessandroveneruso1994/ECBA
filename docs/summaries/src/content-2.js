@@ -13,9 +13,9 @@ module.exports = [
     { t: 'h3', v: 'Activity statement 4.1 — Understand the factors that impact the work that you are doing' },
     { t: 'ref', v: 'BABOK 6.1 · BABOK 8.4' },
     { t: 'p', v: 'Il task chiave è Analyze Current State (6.1): capire perché l\'impresa deve cambiare qualcosa e cosa ne sarebbe toccato, direttamente o indirettamente.' },
-    { t: 'p', v: 'Il current state comprende struttura e cultura organizzativa, capability, tecnologia e infrastruttura, policy, architettura di business, influencer interni ed esterni. I business need sono i problemi e le opportunità di importanza strategica: un reclamo, una perdita di ricavi, una nuova opportunità di mercato ne innescano la valutazione.' },
+    { t: 'p', v: 'Nell\'analisi del current state si esaminano struttura e cultura organizzativa, capability e processi, tecnologia e infrastruttura, policy, architettura di business, asset interni e influencer esterni. I business need sono i problemi e le opportunità di importanza strategica: un reclamo, una perdita di ricavi, una nuova opportunità di mercato ne innescano la valutazione.' },
     { t: 'key', v: '"Il bisogno è una nuova app" è una risposta sbagliata mascherata: l\'app è una soluzione, non un bisogno. Partire dalla soluzione salta l\'analisi del perché.' },
-    { t: 'p', v: 'Assess Risks (6.3) valuta le conseguenze indesiderate di forze interne ed esterne durante la transizione allo stato futuro e una volta raggiunto. Nel BABOK il rischio è sempre legato al VALORE, non genericamente a tempi e costi.' },
+    { t: 'p', v: 'Assess Risks (6.3) valuta le conseguenze indesiderate di forze interne ed esterne durante la transizione allo stato futuro e una volta raggiunto. Per il BABOK il rischio è un\'area di incertezza che potrebbe incidere negativamente sul VALORE (10.38), non un generico sforamento di tempi e costi.' },
     { t: 'key', v: 'Nella sample question ufficiale su questa activity, il primo fattore da considerare per capire perché un processo rende poco è l\'allineamento con la strategia e gli obiettivi di business: è il metro rispetto a cui la prestazione si giudica. Strumenti, condizioni di mercato e atteggiamenti degli stakeholder contano, ma vengono dopo.' },
 
     { t: 'h3', v: 'Activity statement 4.2 — Analyze the impact of proposed changes' },
@@ -30,6 +30,7 @@ module.exports = [
     ]},
     { t: 'p', v: 'La gap analysis (in Define Change Strategy, 6.4) identifica la differenza fra le capability dello stato attuale e quelle dello stato futuro. Richiede che entrambi gli stati siano definiti; usare le stesse tecniche per descriverli semplifica il confronto.' },
     { t: 'p', v: 'Define Future State (6.2) determina l\'insieme di condizioni necessarie a soddisfare il bisogno. Define Change Strategy (6.4) sviluppa e valuta approcci alternativi al cambiamento e sceglie quello raccomandato. Il primo dice DOVE si vuole arrivare, il secondo COME.' },
+    { t: 'key', v: 'Nella sample question ufficiale su questa activity, lo scopo primario dell\'analisi del current state prima di raccomandare modifiche è capire workflow, processi e sistemi degli stakeholder per individuare le aree impattate: è ciò che permette di valutare l\'impatto del cambiamento. Prototipo del sistema futuro, piano dei rischi ed elenco dei manager che useranno il sistema non sono lo scopo di questa analisi.' },
 
     { t: 'h3', v: 'Activity statement 4.3 — Support the implementation of changes' },
     { t: 'ref', v: 'BABOK 3.3 · BABOK 4.1 · BABOK 5.1 · BABOK 6.2' },
@@ -39,7 +40,7 @@ module.exports = [
 
     { t: 'h3', v: 'Activity statement 4.4 — Enable change through straightforward initiatives' },
     { t: 'ref', v: 'BABOK 5.1' },
-    { t: 'p', v: 'Le iniziative "straightforward" sono i cambiamenti piccoli e ben delimitati che un professionista foundational può portare avanti da solo: un passaggio di processo da semplificare, un report da rivedere, una regola da chiarire. Anche lì vale la tracciabilità (Trace Requirements, 5.1): il collegamento fra il bisogno e ciò che si consegna è quello che distingue un miglioramento da un intervento improvvisato.' },
+    { t: 'p', v: 'Le iniziative "straightforward" sono cambiamenti piccoli e ben delimitati: un passaggio di processo da semplificare, un report da rivedere, una regola da chiarire. Il blueprint chiede al professionista foundational di suggerire miglioramenti semplici e di aiutare a implementarli, lavorando entro linee guida chiare ("working within clear guidelines"), non di condurli da solo. Anche lì vale la tracciabilità (Trace Requirements, 5.1): il collegamento fra il bisogno e ciò che si consegna è quello che distingue un miglioramento da un intervento improvvisato.' },
     { t: 'p', v: 'Recommend Actions to Increase Solution Value (8.5) parte dalla comprensione dei fattori che creano la differenza fra valore potenziale e valore effettivo, e raccomanda come allinearli.' },
     { t: 'p', v: 'Process Analysis (10.34) valuta un processo per efficienza ed efficacia e individua opportunità di cambiamento. Process Modelling (10.35) è la rappresentazione grafica che fa da fondamento all\'analisi: modellare descrive, analizzare valuta.' },
 
@@ -54,7 +55,7 @@ module.exports = [
   questions: '5 domande su 50',
   source: 'BABOK Guide — Elicitation and Collaboration (cap. 4), RADD (cap. 7), RLCM (cap. 5)',
   blocks: [
-    { t: 'p', v: 'Elicitare, documentare, validare e prioritizzare i bisogni. È il dominio con più tecniche coinvolte.' },
+    { t: 'p', v: 'Elicitare i bisogni, documentarli e raffinarli, verificarne fattibilità e allineamento agli outcome, prioritizzarli.' },
 
     { t: 'h3', v: 'Activity statement 5.1 — Elicit needs from stakeholders' },
     { t: 'ref', v: 'BABOK 4.3 · BABOK 6.1' },
@@ -66,18 +67,20 @@ module.exports = [
     { t: 'key', v: 'Attenzione a distinguere i TIPI dalle TECNICHE: interviste, workshop e survey sono tecniche, non tipi di elicitation.' },
     { t: 'p', v: 'Prepare for Elicitation (4.1) definisce gli outcome desiderati, sceglie le tecniche, stabilisce logistica e materiali. Conduct Elicitation (4.2) estrae ed esplora le informazioni. Gli stakeholder collaborano in due modi: partecipando all\'attività, e ricercando e fornendo feedback su documenti, sistemi, modelli e interfacce.' },
     { t: 'p', v: 'L\'intervista (10.25) serve anche a stabilire relazioni e costruire fiducia — il "rapport" che l\'activity statement 5.1 chiede esplicitamente.' },
+    { t: 'key', v: 'Nella sample question ufficiale su questa activity, uno stakeholder fatica ad articolare i propri bisogni durante un workshop: la risposta corretta è un\'intervista di follow-up con domande mirate e di chiarimento, che aiuta a far emergere bisogni difficili da esprimere. Proporre soluzioni prese dalle best practice, limitarsi a ciò che lo stakeholder riesce a dire o chiedere ad altri di parlare al suo posto non risolve la difficoltà.' },
 
     { t: 'h3', v: 'Activity statement 5.2 — Capture and refine the needs elicited from stakeholders' },
     { t: 'ref', v: 'BABOK 7.1' },
-    { t: 'p', v: 'Tre controlli distinti, in ordine crescente di rigore:' },
+    { t: 'p', v: 'Tre controlli distinti, da non confondere:' },
     { t: 'table', head: ['Task', 'Domanda a cui risponde', 'Rigore'], widths: [2800, 4400, 1800], rows: [
       ['4.3 Confirm Elicitation Results', 'Ho capito bene quello che mi hanno detto? Controlla accuratezza e coerenza con la fonte e con altri risultati.', 'Molto meno rigoroso e formale della revisione in analisi'],
-      ['7.2 Verify Requirements', 'Il requisito è scritto bene? Controlla le caratteristiche di qualità.', 'Formale'],
-      ['7.3 Validate Requirements', 'Il requisito serve a qualcosa? Verifica l\'allineamento ai business requirement e al valore atteso.', 'Formale']
+      ['7.2 Verify Requirements', 'Il requisito è scritto bene? Controlla le caratteristiche di qualità.', 'Revisione di analisi'],
+      ['7.3 Validate Requirements', 'Il requisito serve a qualcosa? Verifica l\'allineamento ai business requirement e al valore atteso.', 'Revisione di analisi']
     ]},
     { t: 'key', v: 'Verify contro Validate è una coppia che i documenti definiscono in modo ravvicinato e contrastivo, quindi facile da confondere. Un requisito scritto benissimo che non contribuisce a nessun obiettivo supera la verifica e fallisce la validazione — ed è un forte candidato all\'eliminazione.' },
     { t: 'p', v: 'Le nove caratteristiche di qualità (Verify Requirements): atomic, complete, consistent, concise, feasible, unambiguous, testable, prioritized, understandable. La qualità è determinata in ultima analisi dai bisogni degli stakeholder che useranno requisiti e design.' },
     { t: 'p', v: 'Specify and Model Requirements (7.1) analizza, sintetizza e raffina i risultati dell\'elicitation in requisiti e design.' },
+    { t: 'key', v: 'Nella sample question ufficiale su questa activity, dopo la documentazione un requisito per una nuova funzionalità resta poco chiaro: il passo successivo è collaborare con lo stakeholder per raffinarlo e confermarlo, così da assicurarsi che sia compreso e risponda alle sue aspettative. Passarlo al team di approvazione, chiedere la fattibilità tecnica agli sviluppatori o eliminarlo non scioglie l\'ambiguità.' },
 
     { t: 'h3', v: 'Activity statement 5.3 — Analyze needs to ensure they are feasible and align with business outcomes' },
     { t: 'ref', v: 'BABOK 4.3 · BABOK 5.1 · BABOK 6.1' },
@@ -90,8 +93,8 @@ module.exports = [
     { t: 'table', head: ['Fattore', 'Significato'], widths: [2400, 6600], rows: [
       ['Benefit', 'Il vantaggio che deriva agli stakeholder, misurato sugli obiettivi del cambiamento.'],
       ['Penalty', 'Le conseguenze del NON implementare. Include gli obblighi normativi, che possono prevalere sugli altri interessi.'],
-      ['Cost', 'Sforzo e risorse. L\'informazione viene dal team di implementazione o dal fornitore; i clienti spesso cambiano priorità dopo averlo saputo.'],
-      ['Risk', 'La possibilità che il requisito non porti il valore atteso o non sia realizzabile. Se c\'è dubbio sulla fattibilità tecnica, si porta in cima per limitare le risorse spese prima di scoprirlo.'],
+      ['Cost', 'Sforzo e risorse. L\'informazione viene dal team di implementazione o dal fornitore; i clienti possono cambiare la priorità di un requisito dopo averne saputo il costo.'],
+      ['Risk', 'La possibilità che il requisito non porti il valore atteso o non sia realizzabile. Se c\'è il rischio che la soluzione non sia tecnicamente fattibile, il requisito più difficile da implementare può essere portato in cima, per limitare le risorse spese prima di scoprirlo.'],
       ['Dependencies', 'Un requisito non soddisfacibile finché non lo è un altro. Possono essere anche esterne: decisioni di altri team, finanziamenti, disponibilità di risorse.'],
       ['Time sensitivity', 'La "data di scadenza" del requisito: oltre un certo momento il valore si riduce.'],
       ['Stability', 'Quanto è probabile che il requisito cambi ancora. Lavorare su un requisito instabile produce rilavorazione.'],
@@ -121,6 +124,7 @@ module.exports = [
       ['Qualitative', 'Soggettive: atteggiamenti, percezioni, risposte di clienti e utenti su quanto la soluzione soddisfa il bisogno.']
     ]},
     { t: 'p', v: 'Le misure vanno validate con gli stakeholder, perché la valutazione sia utile, e allineate con eventuali misure di livello superiore già esistenti.' },
+    { t: 'key', v: 'Nella sample question ufficiale su questa activity, durante lo user acceptance testing una funzionalità chiave non si comporta come previsto: il primo passo è documentare il problema e discutere i passi successivi con il team di implementazione, per trasparenza e per orientare le azioni seguenti. È coerente con il blueprint, che per questa activity chiede di registrare i risultati ("record findings"). Fermare tutti i test, escalare al senior management o proseguire annotando la funzionalità nel risk register non sono il primo passo.' },
 
     { t: 'h3', v: 'Activity statement 6.2 — Develop recommendations for potential solutions to business problems' },
     { t: 'ref', v: 'BABOK 4.2 · BABOK 6.3 · BABOK 8.5' },

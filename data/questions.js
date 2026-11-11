@@ -3282,7 +3282,7 @@ window.ECBA_QUESTIONS = [
       { id: 'D', text: 'Migrate the customer database without data loss.' }
     ],
     answer: 'B',
-    explanation: 'Fra gli esempi di business goal il BABOK cita: creare una nuova capability, affrontare uno svantaggio competitivo o crearne uno nuovo, migliorare i ricavi, aumentare la soddisfazione di clienti e dipendenti, conformarsi a nuove regolamentazioni, migliorare la sicurezza, ridurre il time to market. Le altre opzioni sono obiettivi o attività, misurabili e datate.'
+    explanation: 'Fra gli esempi di business goal il BABOK cita: creare una nuova capability, come un nuovo prodotto o servizio; affrontare uno svantaggio competitivo o creare un nuovo vantaggio competitivo; migliorare i ricavi aumentando le vendite o riducendo i costi; aumentare la soddisfazione di clienti e dipendenti; conformarsi a nuove regolamentazioni; migliorare la sicurezza; ridurre il tempo necessario a consegnare un prodotto o un servizio. Le altre opzioni sono un obiettivo misurabile e datato ({A}) e due attività di progetto ({C}, {D}), non goal.'
   },
 
   {

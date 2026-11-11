@@ -13,20 +13,20 @@ module.exports = [
   questions: '10 domande su 50',
   source: 'The Business Analysis Standard, cap. 2',
   blocks: [
-    { t: 'p', v: 'È il dominio più pesante dell\'esame: una domanda su cinque. Ruota quasi interamente attorno al BACCM, che va saputo alla lettera.' },
+    { t: 'p', v: 'È il dominio più pesante dell\'esame: una domanda su cinque. Le sue quattro activity riguardano che cos\'è la business analysis, il BACCM, perché la business analysis è importante e come crea valore. Il BACCM va saputo alla lettera: la Candidate Q&A di IIBA cita "a stronger focus on the BACCM concepts" fra le novità del nuovo esame.' },
 
     { t: 'h3', v: 'Activity statement 1.1 — Define Business Analysis' },
     { t: 'ref', v: 'BA Standard 2 · BABOK 1' },
-    { t: 'p', v: 'La business analysis abilita il cambiamento in un\'impresa definendo i bisogni e raccomandando soluzioni che portano valore agli stakeholder. Non è project management, non è testing, non è scrivere specifiche tecniche: all\'esame le opzioni sbagliate sono quasi sempre attività di discipline adiacenti.' },
+    { t: 'p', v: 'La business analysis abilita il cambiamento in un\'impresa definendo i bisogni e raccomandando soluzioni che portano valore agli stakeholder. Non è project management, non è testing, non è scrivere specifiche tecniche: sono discipline adiacenti, con cui collabora ma che non la definiscono.' },
     { t: 'ul', v: [
-      'Non è confinata a un job title: è uno skill set applicabile a qualunque ruolo. Chiunque analizzi bisogni, faciliti collaborazione, progetti processi o crei value proposition sta facendo business analysis.',
+      'Non è confinata a un job title: è uno skill set applicabile a qualunque ruolo. Secondo lo Standard ne trae beneficio chiunque, per esempio, analizzi bisogni e progetti soluzioni, faciliti la collaborazione fra stakeholder o crei value proposition nuove o migliori.',
       'Non è confinata al ciclo di vita di un progetto e non si ferma all\'implementazione: continua a monitorare e valutare gli outcome.',
       'È critica a tutti e tre i livelli organizzativi: strategico, tattico e operativo.'
     ]},
 
     { t: 'h3', v: 'Activity statement 1.2 — Business Analysis Core Concept Model (BACCM)' },
     { t: 'ref', v: 'BA Standard 2 · BABOK 2 · BABOK 7.6' },
-    { t: 'p', v: 'Business Analysis Core Concept Model. Le definizioni vanno sapute testualmente: l\'esame le presenta incrociate, attribuendo a un concetto la definizione di un altro.' },
+    { t: 'p', v: 'Business Analysis Core Concept Model. Le definizioni vanno sapute testualmente, perché si somigliano: è facile attribuire a un concetto la definizione di un altro.' },
     { t: 'table', head: ['Concetto', 'Definizione ufficiale'], widths: [2200, 6800], rows: [
       ['Change', 'The act of transformation in response to a need — l\'atto di trasformazione in risposta a un bisogno.'],
       ['Need', 'A problem or opportunity to be addressed — un problema o un\'opportunità da affrontare.'],
@@ -35,7 +35,7 @@ module.exports = [
       ['Value', 'The worth, importance, or usefulness of something to a stakeholder within a context.'],
       ['Context', 'The dynamic circumstances that influence, are influenced by, and provide an understanding of the change.']
     ]},
-    { t: 'key', v: 'Requirement NON è un core concept. È una rappresentazione utilizzabile di un need — concetto diverso, e distrattore ricorrente.' },
+    { t: 'key', v: 'Requirement NON è un core concept: è una rappresentazione utilizzabile di un need, quindi un concetto diverso. Proprio perché è così vicino ai sei, è facile scambiarlo per il settimo.' },
 
     { t: 'p', v: 'Le relazioni contano quanto le definizioni:' },
     { t: 'ul', v: [
@@ -45,7 +45,7 @@ module.exports = [
       'Stakeholder: interni o esterni, spesso definiti da interest, impact e influence; raggruppati per relazione con need, change e solution.'
     ]},
     { t: 'p', v: 'Una soluzione può combinare iniziative tecnologiche, procedure manuali, cambi di processo, aggiornamenti del modello di business e miglioramento delle capability organizzative. Non è mai solo software.' },
-    { t: 'p', v: 'Il Context comprende tutto ciò che nell\'ambiente è rilevante: atteggiamenti, comportamenti, credenze, concorrenti, cultura, demografia, geopolitica, obiettivi, storia, industria, infrastruttura, trend di mercato, processi, prodotti, progetti, regolamenti, vendite, stagioni, struttura, tecnologia, perfino il meteo. Se una domanda elenca circostanze ambientali eterogenee, la risposta è Context.' },
+    { t: 'p', v: 'Il Context comprende tutto ciò che nell\'ambiente è rilevante: atteggiamenti, comportamenti, credenze, concorrenti, cultura, demografia, geopolitica, obiettivi, storia, industria, infrastruttura, trend di mercato, processi, prodotti, progetti, regolamenti, vendite, stagioni, struttura, tecnologia, perfino il meteo. Quando una descrizione mette insieme circostanze ambientali eterogenee che influenzano il cambiamento, ne sono influenzate e aiutano a capirlo, si sta parlando di Context.' },
 
     { t: 'h3', v: 'A cosa serve il BACCM' },
     { t: 'p', v: 'È un "thinking model" e un "organizing model". Usi ufficiali:' },
@@ -58,11 +58,11 @@ module.exports = [
       'Stabilire un fondamento e un percorso in avanti',
       'Considerare qualità e completezza del lavoro svolto'
     ]},
-    { t: 'p', v: 'Non serve a stimare budget, assegnare responsabilità o scegliere metodologie: non è un processo prescrittivo.' },
+    { t: 'p', v: 'Fra questi usi non compaiono stimare budget, assegnare responsabilità o scegliere metodologie: il BACCM è un modello concettuale, non un processo da seguire.' },
 
     { t: 'h3', v: 'Activity statement 1.3 — Importance of Business Analysis' },
     { t: 'ref', v: 'BA Standard 2 · BABOK 3.5 · BABOK 4.5 · BABOK 6.3 · BABOK 7.5 · BABOK 7.6 · BABOK 8.5' },
-    { t: 'p', v: 'Vanno riconosciute dalla descrizione, non recitate a memoria.' },
+    { t: 'p', v: 'Lo Standard elenca nove funzioni critiche della business analysis. Vanno riconosciute dalla descrizione più che recitate a memoria.' },
     { t: 'table', head: ['Funzione', 'Come la riconosci'], widths: [2800, 6200], rows: [
       ['Problem understanding', 'Va oltre i sintomi, scava nelle cause sottostanti.'],
       ['Needs prioritization', '"La bussola": alloca risorse in base all\'importanza relativa.'],
@@ -78,7 +78,7 @@ module.exports = [
 
     { t: 'h3', v: 'Activity statement 1.4 — Outcomes and Value Creation' },
     { t: 'ref', v: 'BA Standard 2 · BABOK 7.3 · BABOK 7.4 · BABOK 7.6' },
-    { t: 'p', v: 'Tre distinzioni, tutte materia d\'esame:' },
+    { t: 'p', v: 'Tre distinzioni da saper riconoscere:' },
     { t: 'table', head: ['Distinzione', 'Significato', 'Esempio'], widths: [2200, 3600, 3200], rows: [
       ['Realized / Preserved', 'Realizzato con ritorni, guadagni, miglioramenti; preservato mitigando perdite, rischi e costi.', 'Nuovo canale che aumenta i ricavi / upgrade di compliance che evita sanzioni'],
       ['Tangible / Intangible', 'Tangibile = direttamente misurabile, spesso monetario. Intangibile = misurabile solo indirettamente, spesso motivazionale.', 'Risparmio di €80.000 / morale dei dipendenti, reputazione aziendale'],
@@ -97,21 +97,21 @@ module.exports = [
   questions: '7 domande su 50',
   source: 'The Business Analysis Standard, cap. 3',
   blocks: [
-    { t: 'p', v: 'Dominio fatto di tre elenchi da memorizzare — valori, principi, competenze — più il concetto di mindset. Le domande situation-based chiedono di riconoscere quale voce dell\'elenco corrisponde a un comportamento descritto.' },
+    { t: 'p', v: 'Dominio fatto di tre elenchi — valori condivisi, principi, competenze fondazionali — più il concetto di mindset. Non basta recitarli: conviene saper riconoscere a quale voce corrisponde un comportamento descritto.' },
 
     { t: 'h3', v: 'Activity statement 2.1 — Importance of Mindset' },
     { t: 'ref', v: 'BA Standard 3' },
-    { t: 'p', v: 'Il quadro mentale che guida decisioni, comportamenti e dinamiche di team. Serve a navigare con sicurezza le situazioni in cui sapere esattamente cosa fare è impossibile: ogni situazione è unica e non esiste un unico approccio di analisi.' },
+    { t: 'p', v: 'Il mindset è il quadro mentale che guida decisioni, comportamenti e dinamiche di team. Serve a navigare con sicurezza le situazioni in cui sapere esattamente cosa fare è impossibile: ogni situazione è unica e non esiste un unico approccio di analisi.' },
     { t: 'p', v: 'Si sviluppa con pratica deliberata su sei fronti: raggiungere gli outcome organizzativi, scoprire valore per gli stakeholder, adottare i principi appropriati, decidere come approcciare il lavoro, sviluppare le competenze fondazionali, saper usare le tecniche fondazionali.' },
 
     { t: 'h3', v: 'Activity statement 2.2 — Ways to Think About Business Analysis' },
     { t: 'ref', v: 'BA Standard 3' },
-    { t: 'p', v: 'Respect · Courage · Collaboration · Ethics · Curiosity · Continuous learning · Improvement · Customer focus · Value maximization' },
-    { t: 'trap', v: 'Parole plausibili ma ASSENTI dall\'elenco, usate come distrattori: predictability, standardization, specialization, efficiency, compliance, hierarchy, formality, speed, autonomy, competition.' },
+    { t: 'p', v: 'Applicare il BACCM aiuta a sviluppare e condividere informazioni sull\'outcome da creare, e questo lavoro è guidato da valori condivisi: Respect · Courage · Collaboration · Ethics · Curiosity · Continuous learning · Improvement · Customer focus · Value maximization.' },
+    { t: 'trap', v: 'Parole plausibili ma ASSENTI dall\'elenco, facili da scambiare per valori: predictability, standardization, specialization, efficiency, compliance, hierarchy, formality, speed, autonomy, competition.' },
 
     { t: 'h3', v: 'Activity statement 2.3 — Business Analysis Principles' },
     { t: 'ref', v: 'BA Standard 3 · BABOK 8.4 · Agile Extension 2.6-2.7' },
-    { t: 'p', v: 'Provengono dall\'Agile Extension. Sono sette e hanno nomi brevi: vale la pena impararli alla lettera, perché i distrattori plausibili si costruiscono facilmente cambiando una parola.' },
+    { t: 'p', v: 'Lo Standard li riprende dall\'Agile Extension come ingredienti critici di un mindset efficace. Sono sette e hanno nomi brevi: vale la pena impararli alla lettera, perché basta cambiare una parola per ottenere un principio plausibile ma inesistente.' },
     { t: 'table', head: ['Principio', 'Che cosa richiede'], widths: [3000, 6000], rows: [
       ['See the whole', 'Analizzare i bisogni nel contesto complessivo e capire perché il cambiamento è necessario.'],
       ['Think as a customer', 'Partire dall\'esperienza del cliente, da una visione alta scomposta in dettaglio.'],
@@ -153,41 +153,20 @@ module.exports = [
 
     { t: 'h3', v: 'Activity statement 3.1 — Who Performs Business Analysis' },
     { t: 'ref', v: 'BA Standard 4 · BABOK 1' },
-    { t: 'p', v: 'Chiunque sviluppi strategia e obiettivi, crei value proposition, abiliti il cambiamento, analizzi bisogni e progetti soluzioni, faciliti la collaborazione, crei prodotti innovativi, progetti o migliori processi, ottimizzi le attività operative. Il riferimento per sviluppare le competenze è il Business Analysis Competency Model.' },
+    { t: 'p', v: 'Secondo lo Standard trae beneficio dall\'applicare la business analysis chiunque sviluppi strategia e obiettivi, crei value proposition, abiliti il cambiamento, analizzi bisogni e progetti soluzioni, faciliti la collaborazione, crei prodotti innovativi, progetti o migliori processi, ottimizzi le attività operative. Il riferimento per sviluppare le competenze è il Business Analysis Competency Model.' },
 
     { t: 'h3', v: 'Activity statement 3.2 — Approaches to Business Analysis Work and Techniques' },
     { t: 'ref', v: 'BA Standard 4 · BABOK 3.1' },
     { t: 'table', head: ['Approccio', 'Come funziona', 'Quando sceglierlo'], widths: [1800, 4000, 3200], rows: [
       ['Predittivo', 'Pianifica tutto in anticipo, produce documenti e modelli (scope statement, requisiti, design, baseline di schedule e costi, test plan), traccia l\'avanzamento sul piano.', 'Lavoro ben definito, fortemente regolamentato, relativamente lineare o completabile in sequenza.'],
       ['Adattivo', 'Consegna valore in piccoli incrementi prioritizzati, documentazione just-enough e just-in-time, feedback continuo.', 'Bisogni complessi, sfide mal definite, incertezza, bisogni emergenti durante la costruzione.'],
-      ['Ibrido', 'Alcune iniziative predittive e altre adattive, oppure parti della stessa iniziativa con approcci diversi.', 'Quando serve combinare i due — è la norma, non un\'eccezione.']
+      ['Ibrido', 'Alcune iniziative predittive e altre adattive, oppure parti della stessa iniziativa con approcci diversi.', 'Quando serve combinare i due.']
     ]},
     { t: 'key', v: 'A volte l\'approccio è imposto al team. In quel caso l\'aspettativa non è protestare: è saper creare valore con qualunque approccio.' },
 
     { t: 'h3', v: 'Le cinque tecniche fondazionali' },
     { t: 'p', v: 'Backlog Management · Customer Journey Mapping · Data Storytelling · Process Analysis · Workshops/Interviews' },
     { t: 'trap', v: 'Da NON confondere con le 20 tecniche valutate all\'ECBA: solo Backlog Management, Process Analysis, Workshops e Interviews appartengono a entrambe le liste. Customer Journey Mapping e Data Storytelling vengono da altri documenti IIBA (POA Guide e BDA Guide).' },
-
-    { t: 'h3', v: 'Activity statement 3.4 — Understand Requirements and Designs' },
-    { t: 'ref', v: 'BA Standard 4 · BABOK 2' },
-    { t: 'p', v: 'La distinzione fondazionale del dominio, e quella che i documenti ufficiali definiscono in modo più contrastivo.' },
-    { t: 'table', head: ['', 'Requisito', 'Design'], widths: [1600, 3700, 3700], rows: [
-      ['Che cos\'è', 'Una rappresentazione utilizzabile di un NEED', 'Una rappresentazione utilizzabile di una SOLUZIONE'],
-      ['Domanda', 'Quale valore potrebbe essere prodotto', 'Come il valore potrebbe essere realizzato'],
-      ['Esempio', '"Fornire informazioni in inglese e francese"', 'Prototipo con testo nelle due lingue']
-    ]},
-    { t: 'p', v: 'La differenza sta nello SCOPO, non nell\'autore, nel formato o nello stato di approvazione: le stesse task e tecniche possono creare entrambi. Sono interdipendenti e ciclici — i design rivelano intuizioni che migliorano i requisiti, e i requisiti che cambiano portano ad aggiornare i design.' },
-
-    { t: 'h3', v: 'Le quattro classi di requisiti' },
-    { t: 'table', head: ['Classe', 'Definizione', 'Domanda'], widths: [2200, 5400, 1400], rows: [
-      ['Business', 'Goal, obiettivi e outcome del perché è stato avviato un cambiamento. Riguardano impresa, area o iniziativa.', 'WHY'],
-      ['Stakeholder', 'I bisogni degli stakeholder che devono essere soddisfatti per raggiungere i business requirement. Ponte fra business e solution.', 'WHAT'],
-      ['Solution', 'Capacità e qualità della soluzione. Si dividono in functional (comportamento e informazioni) e non-functional o quality of service (condizioni e qualità: prestazioni, sicurezza, disponibilità).', 'WHAT'],
-      ['Transition', 'Capacità e condizioni per passare dallo stato attuale al futuro. Temporanei: conversione dati, formazione, continuità operativa.', 'CHANGE']
-    ]},
-
-    { t: 'h3', v: 'Tracciabilità' },
-    { t: 'p', v: 'Segue le relazioni fra requisiti e design, dal bisogno originale alla soluzione implementata. Backward traceability risale al business need; forward traceability scende ai componenti della soluzione. Supporta il change control e aiuta a scoprire requisiti mancanti o componenti non supportati da alcun requisito.' },
 
     { t: 'h3', v: 'Activity statement 3.3 — Understand Organizational Considerations' },
     { t: 'ref', v: 'BA Standard 4' },
@@ -200,6 +179,28 @@ module.exports = [
 
     { t: 'h3', v: 'Come si eroga la business analysis' },
     { t: 'p', v: 'Centre of Excellence (unità specializzata) · Community of Practice (spazio collaborativo di condivisione) · Business Analysis as a Service (outsourcing a fornitori specializzati) · Dispersed across business units (integrata nei reparti). Molte organizzazioni le combinano.' },
+
+    { t: 'h3', v: 'Activity statement 3.4 — Understand Requirements and Designs' },
+    { t: 'ref', v: 'BA Standard 4 · BABOK 2' },
+    { t: 'p', v: 'È la distinzione centrale del dominio: requisiti e design si capiscono meglio messi a confronto.' },
+    { t: 'table', head: ['', 'Requisito', 'Design'], widths: [1600, 3700, 3700], rows: [
+      ['Che cos\'è', 'Una rappresentazione utilizzabile di un NEED', 'Una rappresentazione utilizzabile di una SOLUZIONE'],
+      ['Domanda', 'Quale valore potrebbe essere prodotto', 'Come il valore potrebbe essere realizzato'],
+      ['Esempio', '"Fornire informazioni in inglese e francese"', 'Prototipo con testo nelle due lingue']
+    ]},
+    { t: 'p', v: 'La differenza sta nello SCOPO, non nell\'autore, nel formato o nello stato di approvazione: le stesse task e tecniche possono creare entrambi. Sono interdipendenti e ciclici — i design rivelano intuizioni che migliorano i requisiti, e i requisiti che cambiano portano ad aggiornare i design.' },
+
+    { t: 'h3', v: 'Le quattro classi di requisiti' },
+    { t: 'table', head: ['Classe', 'Definizione'], widths: [2200, 6800], rows: [
+      ['Business', 'Goal, obiettivi e outcome del perché è stato avviato un cambiamento. Riguardano impresa, area o iniziativa.'],
+      ['Stakeholder', 'I bisogni degli stakeholder che devono essere soddisfatti per raggiungere i business requirement. Ponte fra business e solution.'],
+      ['Solution', 'Capacità e qualità della soluzione. Si dividono in functional (comportamento e informazioni) e non-functional o quality of service (condizioni e qualità: prestazioni, sicurezza, disponibilità).'],
+      ['Transition', 'Capacità e condizioni per passare dallo stato attuale al futuro. Temporanei: conversione dati, formazione, continuità operativa.']
+    ]},
+    { t: 'p', v: 'Nello schema del ciclo fra requisiti e design i business requirement rispondono a WHY, gli stakeholder e solution requirement a WHAT, i design a HOW. I transition requirement si distinguono perché sono temporanei.' },
+
+    { t: 'h3', v: 'Tracciabilità' },
+    { t: 'p', v: 'Segue le relazioni fra requisiti e design, dal bisogno originale alla soluzione implementata. Backward traceability risale al business need; forward traceability scende ai componenti della soluzione. Supporta il change control e aiuta a scoprire requisiti mancanti o componenti non supportati da alcun requisito.' },
 
     { t: 'trap', v: 'Trappole tipiche · Requisito e design distinti per autore ("il business scrive i requisiti, l\'IT i design") o per formato ("il requisito è testo, il design è un diagramma"): entrambe false · Tempo di risposta classificato come functional invece che non-functional · Le cinque tecniche fondazionali confuse con le 20 dell\'esame.' }
   ]

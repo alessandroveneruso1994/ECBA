@@ -10,6 +10,12 @@ module.exports = [
   blocks: [
     { t: 'p', v: 'Chi sono, cosa vogliono, come comunicarci e come tenerli coinvolti.' },
 
+    { t: 'h3', v: 'Activity statement 7.1 — Communicate with stakeholders throughout the initiative' },
+    { t: 'ref', v: 'BABOK 3.3 · BABOK 3.4' },
+    { t: 'p', v: 'Communicate Business Analysis Information (4.4) esiste per assicurare una COMPRENSIONE CONDIVISA. È bidirezionale e iterativa: si determinano destinatari, contenuto, scopo, contesto e outcome attesi.' },
+    { t: 'p', v: 'Comunicare non significa spingere fuori informazione dando per scontato che sia stata ricevuta e capita. Il professionista coinvolge gli stakeholder per verificare la comprensione, agisce sui disaccordi, e CAMBIA IL METODO di consegna se non stanno ricevendo o capendo. Più forme di comunicazione possono servire per la stessa informazione.' },
+    { t: 'p', v: 'Linguaggio, tono e stile vanno adattati al pubblico: lo stesso documento inviato a dirigenti, sviluppatori e utenti finali non funziona.' },
+
     { t: 'h3', v: 'Activity statement 7.2 — Identify stakeholders for your initiatives' },
     { t: 'ref', v: 'BABOK 3.2 · BABOK 3.3' },
     { t: 'p', v: 'Undici ruoli definiti nel capitolo 2. Vanno riconosciuti dalla descrizione della responsabilità.' },
@@ -24,7 +30,7 @@ module.exports = [
       ['Regulator', 'Definisce e fa rispettare standard, imposti tramite legislazione, corporate governance o audit.'],
       ['Sponsor', 'Avvia lo sforzo, autorizza il lavoro, controlla budget e scope.'],
       ['Supplier', 'Fornitore esterno di prodotti o servizi all\'organizzazione.'],
-      ['Tester', 'Verifica che la soluzione soddisfi gli standard di qualità.']
+      ['Tester', 'Stabilisce come verificare che la soluzione soddisfi i requisiti e conduce la verifica; cerca anche di assicurare gli standard di qualità applicabili.']
     ]},
 
     { t: 'h3', v: 'Analizzare gli stakeholder' },
@@ -37,18 +43,13 @@ module.exports = [
     { t: 'key', v: 'Perché conta: se gli stakeholder non vengono identificati si rischia di non scoprire bisogni critici. Quelli scoperti tardi costringono a rivedere attività in corso o già concluse, con aumento dei costi e calo della soddisfazione.' },
     { t: 'p', v: 'Stakeholder List, Map, or Personas (10.43) supporta questa analisi. Da non confondere con Organizational Modelling (10.32), che descrive la struttura stabile dell\'organizzazione anziché i partecipanti a una specifica iniziativa.' },
 
-    { t: 'h3', v: 'Activity statement 7.1 — Communicate with stakeholders throughout the initiative' },
-    { t: 'ref', v: 'BABOK 3.3 · BABOK 3.4' },
-    { t: 'p', v: 'Communicate Business Analysis Information (4.4) esiste per assicurare una COMPRENSIONE CONDIVISA. È bidirezionale e iterativa: si determinano destinatari, contenuto, scopo, contesto e outcome attesi.' },
-    { t: 'p', v: 'Comunicare non significa spingere fuori informazione dando per scontato che sia stata ricevuta e capita. Il professionista coinvolge gli stakeholder per verificare la comprensione, agisce sui disaccordi, e CAMBIA IL METODO di consegna se non stanno ricevendo o capendo. Più forme di comunicazione possono servire per la stessa informazione.' },
-    { t: 'p', v: 'Linguaggio, tono e stile vanno adattati al pubblico: lo stesso documento inviato a dirigenti, sviluppatori e utenti finali non funziona.' },
-
     { t: 'h3', v: 'Activity statement 7.3 — Manage collaboration and relationships with stakeholders' },
     { t: 'ref', v: 'BABOK 4.1 · BABOK 4.2 · BABOK 4.5' },
     { t: 'p', v: 'Manage Stakeholder Collaboration (4.5) incoraggia gli stakeholder a lavorare verso un obiettivo comune. È un\'attività CONTINUA: nuovi stakeholder possono emergere in qualsiasi momento, e ruolo, responsabilità, influenza, atteggiamento e autorità di ciascuno possono cambiare nel tempo.' },
     { t: 'p', v: 'Più il cambiamento è impattante o visibile, più attenzione richiede. L\'obiettivo è capitalizzare le reazioni positive e mitigare o evitare quelle negative — non escludere chi dissente.' },
     { t: 'key', v: 'Gli stakeholder detengono autorità sull\'approvazione, ma sono anche una fonte primaria di need, vincoli e assunzioni. Per questo relazioni deboli danneggiano il lavoro: il primo effetto elencato è la mancata fornitura di informazioni di qualità.' },
     { t: 'p', v: 'Workshops (10.50) riuniscono gli stakeholder per collaborare a un obiettivo predefinito. Collaborative Games (10.10) li fanno costruire insieme una comprensione condivisa attraverso attività strutturate.' },
+    { t: 'key', v: 'Nella sample question ufficiale su questa activity, uno stakeholder chiede una funzionalità che supera i vincoli di budget e tempi dell\'iniziativa: la risposta più appropriata è valutarne la fattibilità e raccomandare un\'alternativa praticabile, bilanciando le aspettative con i vincoli. Approvarla chiedendo nuovi fondi, rifiutarla perché fuori scope o abbassarne la priorità rinviandola a progetti futuri non sono la risposta migliore.' },
 
     { t: 'h3', v: 'Activity statement 7.4 — Analyze the motivations and expectations of stakeholders' },
     { t: 'ref', v: 'BABOK 3.3 · BABOK 4.5' },
@@ -56,6 +57,12 @@ module.exports = [
     { t: 'ul', v: [
       'Facilitation (9.5.1): moderare le discussioni perché tutti esprimano il proprio punto di vista e riconoscano quelli altrui. Il facilitatore è un terzo, non un decisore: resta neutrale ma interviene quando serve.',
       'Leadership and Influencing (9.5.2): motivare le persone a lavorare insieme verso obiettivi condivisi, comprendendo motivazioni, bisogni e capacità individuali. Fra le misure: influenzare gli stakeholder a considerare obiettivi più ampi rispetto alle motivazioni personali.'
+    ]},
+    { t: 'p', v: 'Per capire motivazioni e decisioni torna utile anche la stakeholder analysis di Plan Stakeholder Engagement (3.2), che oltre ai ruoli considera:' },
+    { t: 'ul', v: [
+      'Atteggiamenti: che cosa può incidere sulle azioni e sui comportamenti di uno stakeholder, così da pianificare collaborazione ed engagement in modo mirato.',
+      'Autorità decisionale: il livello di autorità di ciascuno su attività, deliverable e modifiche del lavoro di business analysis.',
+      'Livello di potere o influenza: la natura dell\'influenza e le strutture e i canali attraverso cui passa nell\'organizzazione.'
     ]},
 
     { t: 'trap', v: 'Trappole tipiche · End user confuso con operational support (chi usa la soluzione contro chi la mantiene) · Domain SME confuso con implementation SME (conosce il business contro conosce la realizzazione) · Sponsor confuso con project manager (autorizza e finanzia contro gestisce l\'esecuzione) · L\'idea che la stakeholder analysis si faccia una volta sola all\'inizio.' }
@@ -78,7 +85,7 @@ module.exports = [
       ['Esempio', '"Aumentare il numero di clienti ad alto fatturato"', '"Aumentare del 30% i clienti ad alto fatturato nella fascia 30-45 anni entro 6 mesi"']
     ]},
     { t: 'p', v: 'Goal e obiettivi descrivono i FINI che l\'organizzazione cerca di raggiungere, e possono riguardare sia cambiamenti da realizzare sia condizioni da mantenere. Man mano che i goal vengono analizzati si convertono in obiettivi.' },
-    { t: 'p', v: 'Esempi di business goal citati dal BABOK: creare una nuova capability, affrontare o creare un vantaggio competitivo, migliorare i ricavi, aumentare la soddisfazione di clienti e dipendenti, conformarsi a nuove regolamentazioni, migliorare la sicurezza, ridurre il time to market.' },
+    { t: 'p', v: 'Esempi di business goal citati dal BABOK: creare una nuova capability, come un nuovo prodotto o servizio; affrontare uno svantaggio competitivo o creare un nuovo vantaggio competitivo; migliorare i ricavi aumentando le vendite o riducendo i costi; aumentare la soddisfazione di clienti e dipendenti; conformarsi a nuove regolamentazioni; migliorare la sicurezza; ridurre il tempo necessario a consegnare un prodotto o un servizio.' },
 
     { t: 'h3', v: 'Activity statement 8.2 — Help support the team in creating value' },
     { t: 'ref', v: 'BABOK 6.3 · BABOK 6.4 · BABOK 8.2 · BABOK 8.3' },
@@ -99,8 +106,8 @@ module.exports = [
 
     { t: 'h3', v: 'Activity statement 8.4 — Measure the value delivered by your initiatives or solutions' },
     { t: 'ref', v: 'BABOK 3.5 · BABOK 8.3 · BABOK 8.4' },
-    { t: 'p', v: 'Due piani distinti, spesso confusi: Identify Business Analysis Performance Improvements (3.5) valuta il LAVORO DI ANALISI e pianifica come migliorarlo, e il suo output alimenta Plan Stakeholder Engagement e Prepare for Elicitation; Measure Solution Performance (8.1) e Analyze Performance Measures (8.2) valutano invece la SOLUZIONE.' },
-    { t: 'p', v: 'Metriche e KPI misurano la prestazione di soluzioni, componenti e altre questioni di interesse per gli stakeholder. Non valutano le persone né controllano il budget.' },
+    { t: 'p', v: 'Due piani distinti, facili da confondere: Identify Business Analysis Performance Improvements (3.5) valuta il LAVORO DI ANALISI e pianifica come migliorarlo; Measure Solution Performance (8.1) e Analyze Performance Measures (8.2) valutano invece la SOLUZIONE.' },
+    { t: 'p', v: 'Metriche e KPI misurano la prestazione di soluzioni, componenti di soluzione e altre questioni di interesse per gli stakeholder. Un key performance indicator (KPI) è un indicatore che misura il progresso verso un goal o un obiettivo strategico.' },
     { t: 'p', v: 'Un INDICATORE mostra il risultato dell\'analisi di una o più misure rispetto a una preoccupazione. Ogni preoccupazione richiede almeno un indicatore, alcune ne richiedono diversi.' },
     { t: 'table', head: ['Le sei caratteristiche di un buon indicatore', ''], widths: [2600, 6400], rows: [
       ['Clear', 'Preciso e non ambiguo.'],
@@ -140,7 +147,7 @@ module.exports = [
       ['Feasible', 'Ragionevole entro rischio, tempi e budget concordati, o abbastanza fattibile da indagare con esperimenti.', 'Tecnicamente impossibile'],
       ['Unambiguous', 'Formulato in modo da rendere chiaro se una soluzione lo soddisfa o no.', '"Il report deve caricarsi rapidamente"'],
       ['Testable', 'È possibile verificare che sia stato soddisfatto.', 'Nessun criterio verificabile'],
-      ['Prioritized', 'Ordinato o negoziato per importanza rispetto agli altri.', 'Nessuna priorità assegnata'],
+      ['Prioritized', 'Classificato, raggruppato o negoziato per importanza e valore rispetto a tutti gli altri.', 'Nessuna priorità assegnata'],
       ['Understandable', 'Espresso con terminologia comune a chi lo userà.', 'Gergo di un solo reparto']
     ]},
 
@@ -152,7 +159,7 @@ module.exports = [
 
     { t: 'h3', v: 'Activity statement 9.3 — Understand the impact of technology trends on your initiative' },
     { t: 'ref', v: 'BABOK 3.4 · BABOK 5.1' },
-    { t: 'p', v: 'Tecnologia e infrastruttura fanno parte del current state. Quando una domanda non può essere risolta né dalle persone né dai documenti, la risposta è l\'elicitation di tipo EXPERIMENTS: studi osservazionali, proof of concept, prototipi.' },
+    { t: 'p', v: 'Tecnologia e infrastruttura fanno parte del current state. Quando un\'informazione non si può ricavare né dalle persone né dai documenti serve l\'elicitation di tipo EXPERIMENTS: studi osservazionali, proof of concept, prototipi.' },
     { t: 'key', v: 'Nella sample question ufficiale su questa activity, il primo passo davanti a una tecnologia emergente è la risk-benefit analysis: prima si valuta se la tecnologia sia rilevante per gli obiettivi dell\'iniziativa e quali implicazioni porti, poi si costruiscono prototipi, si allestiscono sandbox o si cerca il sostegno della leadership.' },
     { t: 'p', v: 'Le tre competenze del gruppo Tools and Technology (9.6), che si distinguono per lo scopo degli strumenti:' },
     { t: 'table', head: ['Competenza', 'A cosa servono gli strumenti'], widths: [3000, 6000], rows: [
