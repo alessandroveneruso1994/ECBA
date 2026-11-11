@@ -254,6 +254,27 @@ section('4. Lingua e regole di scrittura');
   rule('ogni spiegazione finisce con il punto',
     ALL.filter(function (q) { return !/[.")]$/.test(q.explanation); }).map(function (q) { return q.id; }));
 
+  // La lunghezza non deve tradire la risposta: chi sceglie sempre l'opzione più
+  // lunga non deve fare molto meglio del caso (25%), e la risposta corretta non
+  // deve essere visibilmente più lunga delle alternative.
+  [['simulazione', EXAM], ['tecniche', TECH], ['competenze', COMP]].forEach(function (pair) {
+    let longest = 0;
+    const visible = [];
+    pair[1].forEach(function (q) {
+      const c = q.options.filter(function (o) { return o.id === q.answer; })[0].text.length;
+      const other = Math.max.apply(null, q.options.filter(function (o) { return o.id !== q.answer; })
+        .map(function (o) { return o.text.length; }));
+      if (c > other) longest += 1;
+      if (c > other * 1.15 && c - other > 8) visible.push(q.id);
+    });
+    const share = longest / pair[1].length;
+    check('la risposta corretta non è l\'opzione più lunga più spesso del 40% (' + pair[0] + ')',
+      share <= 0.40, (100 * share).toFixed(0) + '%');
+    // Le poche eccezioni ammesse sono domande sui nomi (un principio, un gruppo di competenze).
+    check('la risposta corretta è visibilmente più lunga in non più del 3% delle domande (' + pair[0] + ')',
+      visible.length <= pair[1].length * 0.03, visible.length + (visible.length ? ': ' + visible.join(' ') : ''));
+  });
+
   // Le parole chiave delle sample question sono in maiuscolo: se compaiono, lo sono anche qui.
   const keyword = /\b(What|Which|How)\b[^?]*\b(first|next)\b[^?]*\?$|\b(most|best)\b (appropriate|accurate|useful|likely|directly)/;
   rule('FIRST, NEXT, MOST e BEST in maiuscolo nelle domande di stile sample',

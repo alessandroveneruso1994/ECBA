@@ -42,9 +42,9 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.1',
     stem: 'Which statement best describes the purpose of business analysis?',
     options: [
-      { id: 'A', text: 'To document the technical specifications that developers need in order to build a system.' },
+      { id: 'A', text: 'To document the technical specifications that developers need in order to build and test a system correctly.' },
       { id: 'B', text: 'To enable change in an enterprise by defining needs and recommending solutions that deliver value to stakeholders.' },
-      { id: 'C', text: 'To manage the project schedule, budget, and resources so that deliverables are completed on time.' },
+      { id: 'C', text: 'To manage the project schedule, budget, and resources so that all deliverables are completed on time and within budget.' },
       { id: 'D', text: 'To test the delivered solution against the acceptance criteria agreed with the customer.' }
     ],
     answer: 'B',
@@ -98,10 +98,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.1',
     stem: 'A director describes business analysis as "the people who write requirements documents for IT". Which response BEST reflects what business analysis is?',
     options: [
-      { id: 'A', text: 'Agree, since requirements documents are the main output of the discipline.' },
-      { id: 'B', text: 'Explain that it is the practice of enabling change by defining needs and recommending solutions that deliver value to stakeholders, and that documents are only one possible output.' },
-      { id: 'C', text: 'Explain that it is mainly concerned with keeping delivery on schedule and within budget.' },
-      { id: 'D', text: 'Explain that it applies only once a project has been formally approved.' }
+      { id: 'A', text: 'Agree, since requirements documents for the IT department are the main output that business analysis is expected to produce.' },
+      { id: 'B', text: 'Explain that it enables change by defining needs and recommending solutions that deliver value, with documents as only one possible output.' },
+      { id: 'C', text: 'Explain that it is mainly concerned with keeping delivery on schedule and within budget, while IT writes the requirements itself.' },
+      { id: 'D', text: 'Explain that it applies only once a project has been formally approved, and that before that point all of the work belongs to the sponsor alone.' }
     ],
     answer: 'B',
     explanation: 'La business analysis è la pratica che abilita il cambiamento definendo i need e raccomandando soluzioni che portano valore agli stakeholder. I documenti di requisiti sono uno dei possibili prodotti, non la definizione della disciplina; {C} descrive il project management e {D} la confina a un progetto, mentre lo Standard dice espressamente che non è ristretta al ciclo di vita di un progetto.'
@@ -142,10 +142,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.2',
     stem: 'Which statement correctly describes the relationship between Need and Change in the BACCM?',
     options: [
-      { id: 'A', text: 'Needs cause changes, but changes can never create new needs.' },
-      { id: 'B', text: 'Needs and changes are independent concepts that are analysed separately.' },
-      { id: 'C', text: 'Needs can cause changes by motivating stakeholders to act, and changes can also cause needs by altering the value delivered by existing solutions.' },
-      { id: 'D', text: 'A change must always be approved before any need can be identified.' }
+      { id: 'A', text: 'Needs cause changes by motivating stakeholders to act, but changes can never create new needs of their own.' },
+      { id: 'B', text: 'Needs and changes are independent concepts that are analysed separately, each with its own set of stakeholders and solutions.' },
+      { id: 'C', text: 'Needs can cause changes by motivating stakeholders to act, and changes can also cause needs by altering the value of existing solutions.' },
+      { id: 'D', text: 'A change must always be formally approved before any need can be identified, since needs can only exist within a change that has been approved.' }
     ],
     answer: 'C',
     explanation: 'La relazione è bidirezionale: i need motivano gli stakeholder ad agire e quindi generano change; a loro volta i change possono generare nuovi need riducendo o aumentando il valore erogato dalle soluzioni esistenti. Il BACCM è un modello di relazioni, non un elenco: conviene conoscere i legami fra i concetti, non solo le definizioni.'
@@ -170,7 +170,7 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.3',
     stem: 'The BACCM is described as both a "thinking model" and an "organizing model". Which of the following is a use of the BACCM?',
     options: [
-      { id: 'A', text: 'Replacing the need for business analysis techniques by providing a standard process to follow.' },
+      { id: 'A', text: 'Replacing the need for business analysis techniques by providing a standard, step-by-step process that every analyst follows.' },
       { id: 'B', text: 'Communicating about business analysis with a common language and evaluating the relationships among the six concepts.' },
       { id: 'C', text: 'Assigning responsibility for delivery decisions to the project sponsor.' },
       { id: 'D', text: 'Prescribing the sequence in which business analysis tasks must be executed.' }
@@ -185,9 +185,9 @@ window.ECBA_QUESTIONS = [
     stem: 'A solution, as defined in the BACCM, satisfies a need by doing which of the following?',
     options: [
       { id: 'A', text: 'Resolving a problem faced by stakeholders, or enabling stakeholders to take advantage of an opportunity.' },
-      { id: 'B', text: 'Delivering a software system that automates a manual process.' },
-      { id: 'C', text: 'Documenting the current state of the organization in sufficient detail.' },
-      { id: 'D', text: 'Eliminating all risks associated with the proposed change.' }
+      { id: 'B', text: 'Delivering a software system that automates a manual process and removes the need for human intervention.' },
+      { id: 'C', text: 'Documenting the current state of the organization in enough detail for the stakeholders to agree on it.' },
+      { id: 'D', text: 'Eliminating all the risks associated with the proposed change before it is implemented.' }
     ],
     answer: 'A',
     explanation: 'Una soluzione soddisfa un need risolvendo un problema oppure abilitando lo sfruttamento di un\'opportunità — la doppia natura problema/opportunità è centrale. {B} è solo una delle possibili forme di soluzione: una soluzione può combinare tecnologia, procedure manuali, cambi di processo, aggiornamenti del business model o miglioramento delle capability organizzative.'
@@ -212,10 +212,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.2',
     stem: 'How are stakeholders characterized in the BACCM?',
     options: [
-      { id: 'A', text: 'Only as the individuals who fund the initiative and approve its deliverables.' },
-      { id: 'B', text: 'As internal or external groups or individuals with a relationship to the change, the need, or the solution, often defined by their interest, impact, and influence.' },
-      { id: 'C', text: 'As the end users who will operate the solution after go-live.' },
-      { id: 'D', text: 'As the members of the delivery team assigned to the initiative.' }
+      { id: 'A', text: 'Only as the individuals who fund the initiative and approve its deliverables, since they are the only ones who hold real authority over the change.' },
+      { id: 'B', text: 'As internal or external groups or individuals related to the change, the need, or the solution, often defined by interest, impact, and influence.' },
+      { id: 'C', text: 'As the end users who will operate the solution after go-live, since they are the people directly affected by the change.' },
+      { id: 'D', text: 'As the members of the delivery team assigned to the initiative, together with the managers who supervise their work.' }
     ],
     answer: 'B',
     explanation: 'Uno stakeholder è un gruppo o individuo con una relazione con il change, il need o la solution, interno o esterno, spesso caratterizzato da interest, impact e influence. {A}, {C} e {D} descrivono sottoinsiemi specifici (sponsor, utenti finali, team): le opzioni che restringono indebitamente una definizione sono distrattori tipici.'
@@ -254,10 +254,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.3',
     stem: 'A business analysis professional wants to check whether the analysis performed so far is complete before moving to design. Which use of the BACCM supports this?',
     options: [
-      { id: 'A', text: 'Using it to assign responsibilities across the delivery team.' },
+      { id: 'A', text: 'Using it to assign responsibilities across the delivery team and the stakeholders.' },
       { id: 'B', text: 'Using it to consider the quality and completeness of the work being done.' },
-      { id: 'C', text: 'Using it to estimate the effort remaining in the initiative.' },
-      { id: 'D', text: 'Using it to select the delivery methodology.' }
+      { id: 'C', text: 'Using it to estimate the effort remaining in the initiative before design begins.' },
+      { id: 'D', text: 'Using it to select the delivery methodology best suited to the next phase.' }
     ],
     answer: 'B',
     explanation: 'Tra gli usi dichiarati del BACCM c\'è considerare la qualità e la completezza del lavoro svolto: se uno dei sei concetti è rimasto inesplorato, l\'analisi ha un buco. Il modello non serve invece a stimare, assegnare responsabilità o scegliere metodologie.'
@@ -311,9 +311,9 @@ window.ECBA_QUESTIONS = [
     stem: 'Six months after a successful system rollout, a department reports that a report they depended on no longer exists. What should you conclude FIRST?',
     options: [
       { id: 'A', text: 'The change has created a new need by altering the value delivered by existing solutions.' },
-      { id: 'B', text: 'The original requirements were incomplete and should be re-approved.' },
-      { id: 'C', text: 'The department failed to participate in the elicitation activities.' },
-      { id: 'D', text: 'The solution should be rolled back until the report is restored.' }
+      { id: 'B', text: 'The original requirements were incomplete and must be re-elicited and approved again.' },
+      { id: 'C', text: 'The department failed to take part in the elicitation activities when it had the chance.' },
+      { id: 'D', text: 'The solution should be rolled back until the report the department depended on is restored.' }
     ],
     answer: 'A',
     explanation: 'Nel BACCM anche i change generano need, riducendo o aumentando il valore erogato dalle soluzioni esistenti. Riconoscerlo apre l\'analisi; incolpare l\'elicitation ({C}) o tornare indietro ({D}) la chiude.'
@@ -341,9 +341,9 @@ window.ECBA_QUESTIONS = [
     stem: 'A solution has been live for eight months. The business analysis professional continues to monitor outcomes and suggests refinements to the process based on what the data shows. Which critical function of business analysis is being demonstrated?',
     options: [
       { id: 'A', text: 'Performance enhancement, because business analysis does not stop at implementation and continuously evaluates outcomes.' },
-      { id: 'B', text: 'Needs prioritization, because the professional is ranking which changes matter most.' },
-      { id: 'C', text: 'Leadership support, because the professional is articulating purpose and setting goals.' },
-      { id: 'D', text: 'Agility, because the professional is switching from a predictive to an adaptive approach.' }
+      { id: 'B', text: 'Needs prioritization, because the professional is ranking which of the possible refinements matter most to stakeholders.' },
+      { id: 'C', text: 'Leadership support, because the professional is helping leaders articulate purpose and set goals for the next period.' },
+      { id: 'D', text: 'Agility, because the professional is switching from a predictive to an adaptive approach now that the solution is live.' }
     ],
     answer: 'A',
     explanation: 'Performance enhancement: la business analysis non è confinata al ciclo di vita di un progetto o prodotto e non si ferma all\'implementazione — monitora e valuta gli outcome in modo iterativo per migliorare in continuo. È un punto facile da dare per scontato al contrario, perché smentisce l\'idea che il lavoro finisca al rilascio.'
@@ -354,10 +354,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.4',
     stem: 'A proposed change will deliver clear benefits to the operations team but will make the reporting work of the finance team more laborious. The business analysis professional cannot find an option that satisfies both groups. What does the Standard indicate about this situation?',
     options: [
-      { id: 'A', text: 'The change should be cancelled, because business analysis must deliver value to every stakeholder.' },
-      { id: 'B', text: 'The finance team should be removed from the stakeholder list to avoid conflict.' },
-      { id: 'C', text: 'It may not always be possible to deliver value for all stakeholders; the goal is to maximize value for the majority while addressing and managing the concerns of others.' },
-      { id: 'D', text: 'The decision should be escalated to the sponsor without further analysis, since it is a conflict of interest.' }
+      { id: 'A', text: 'The change should be cancelled, because business analysis must always deliver value to every stakeholder affected by a change.' },
+      { id: 'B', text: 'The finance team should be removed from the stakeholder list, since its objections would otherwise block a change that benefits operations.' },
+      { id: 'C', text: 'It may not always be possible to deliver value for all stakeholders; the goal is to maximize value for the majority while managing the concerns of others.' },
+      { id: 'D', text: 'The decision should be escalated to the sponsor without further analysis, since a conflict between two departments is by definition a conflict of interest.' }
     ],
     answer: 'C',
     explanation: 'Lo Standard riconosce esplicitamente che non sempre si può creare valore per tutti: l\'obiettivo è massimizzare il valore per la maggioranza gestendo al contempo le preoccupazioni degli altri. Non si cancella il cambiamento ({A}) né si nascondono gli stakeholder scomodi ({B}), e l\'escalation senza analisi ({D}) è l\'opposto del comportamento atteso.'
@@ -368,10 +368,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.4',
     stem: 'The Standard lists "agility" among the critical functions of business analysis. What does this mean in practice?',
     options: [
-      { id: 'A', text: 'Business analysis requires organizations to adopt an Agile framework such as Scrum.' },
+      { id: 'A', text: 'Business analysis requires organizations to adopt an Agile framework such as Scrum for every initiative they undertake.' },
       { id: 'B', text: 'Business analysis supports predictive, adaptive, and hybrid approaches so that organizations can respond to changing conditions.' },
-      { id: 'C', text: 'Business analysis shortens the duration of every initiative by reducing documentation.' },
-      { id: 'D', text: 'Business analysis replaces long-term planning with continuous delivery.' }
+      { id: 'C', text: 'Business analysis shortens the duration of every initiative by reducing documentation to the minimum that delivery needs.' },
+      { id: 'D', text: 'Business analysis replaces long-term planning with continuous delivery, so that plans are never made more than one iteration ahead.' }
     ],
     answer: 'B',
     explanation: 'Agility qui significa che la business analysis supporta approcci predittivi, adattivi e ibridi, combinando previsione e adattabilità in tempo reale per restare rilevanti. Non implica l\'adozione di un framework Agile specifico ({A}) né l\'abolizione della pianificazione ({D}).'
@@ -396,10 +396,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.4',
     stem: 'A service desk is about to buy a chatbot because call volumes keep rising. The business analysis professional insists on first finding out why customers are calling. Which critical function is being exercised, and why does it matter?',
     options: [
-      { id: 'A', text: 'Risk management, because introducing new technology always carries risk.' },
-      { id: 'B', text: 'Problem understanding, because addressing the underlying causes rather than the symptoms produces targeted solutions and long-term improvement.' },
-      { id: 'C', text: 'Agility, because the team must respond quickly to customer demand.' },
-      { id: 'D', text: 'Performance enhancement, because call volume is a performance measure.' }
+      { id: 'A', text: 'Risk management, because introducing a new technology such as a chatbot always carries risks that must be identified and assessed first.' },
+      { id: 'B', text: 'Problem understanding, because addressing underlying causes rather than symptoms produces targeted solutions and lasting improvement.' },
+      { id: 'C', text: 'Agility, because the team must respond quickly to rising customer demand before service levels drop any further.' },
+      { id: 'D', text: 'Performance enhancement, because call volume is a performance measure that the professional wants to monitor and improve.' }
     ],
     answer: 'B',
     explanation: 'Problem understanding significa andare oltre i sintomi per districare le complessità e identificare le fonti dell\'attrito, così da costruire soluzioni mirate ed efficaci che assicurino un miglioramento duraturo. Un chatbot smaltisce le chiamate, ma non rimuove ciò che le genera. Le altre funzioni sono reali ma non descrivono ciò che sta accadendo qui.'
@@ -438,10 +438,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.4',
     stem: 'How does business analysis contribute to risk management, according to the Standard?',
     options: [
-      { id: 'A', text: 'By eliminating the risks associated with a change before it begins.' },
+      { id: 'A', text: 'By eliminating the risks associated with a change before it begins, so that implementation can proceed without uncertainty.' },
       { id: 'B', text: 'By proactively identifying and assessing risks and taking appropriate action, integrating risk management into decision-making.' },
-      { id: 'C', text: 'By transferring risk ownership to the project management office.' },
-      { id: 'D', text: 'By avoiding changes whose risk cannot be quantified.' }
+      { id: 'C', text: 'By transferring the ownership of risks to the project management office, which then tracks them for the rest of the initiative.' },
+      { id: 'D', text: 'By avoiding any change whose risk cannot be quantified in advance, so that the organization is never exposed to unknown risks.' }
     ],
     answer: 'B',
     explanation: 'Il cambiamento porta intrinsecamente rischi: la business analysis li identifica, valuta e affronta in modo proattivo, integrando la gestione del rischio nei processi decisionali e promuovendo resilienza e sostenibilità nel lungo periodo. Nessuno elimina i rischi ({A}) né si evitano i cambiamenti rischiosi per principio ({D}).'
@@ -452,10 +452,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.4',
     stem: 'Which statement about business analysis and the project lifecycle is correct?',
     options: [
-      { id: 'A', text: 'Business analysis is restricted to the project lifecycle and ends at implementation.' },
+      { id: 'A', text: 'Business analysis is restricted to the project lifecycle and ends once the solution has been implemented.' },
       { id: 'B', text: 'Business analysis is not restricted to a project or product lifecycle and does not stop at implementation.' },
-      { id: 'C', text: 'Business analysis begins only once a project has been formally approved.' },
-      { id: 'D', text: 'Business analysis ends when the requirements are approved.' }
+      { id: 'C', text: 'Business analysis begins only once a project has been formally approved and funded by the sponsor.' },
+      { id: 'D', text: 'Business analysis ends when the requirements are approved and handed over to the delivery team.' }
     ],
     answer: 'B',
     explanation: 'Sotto la funzione "performance enhancement" lo Standard afferma esplicitamente che la business analysis non è ristretta al ciclo di vita di un progetto o prodotto e non si ferma all\'implementazione: continua a monitorare e valutare gli outcome, alimentando il miglioramento continuo.'
@@ -466,10 +466,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.4',
     stem: 'An organization operating in a fast-moving market needs to combine long-range planning with the ability to respond to shifting customer needs. How does business analysis support this?',
     options: [
-      { id: 'A', text: 'By mandating an adaptive approach for all initiatives.' },
-      { id: 'B', text: 'By supporting predictive, adaptive, and hybrid approaches, combining forward-looking predictions with real-time adaptability.' },
-      { id: 'C', text: 'By reducing the planning horizon to a single quarter.' },
-      { id: 'D', text: 'By delegating strategy to the executive team and focusing on delivery.' }
+      { id: 'A', text: 'By mandating an adaptive approach for all initiatives, so that long-range plans are no longer needed.' },
+      { id: 'B', text: 'By supporting predictive, adaptive, and hybrid approaches, combining forward-looking prediction with real-time adaptability.' },
+      { id: 'C', text: 'By reducing the planning horizon to a single quarter, so that the plans never fall behind the changes in customer needs and market conditions.' },
+      { id: 'D', text: 'By delegating strategy to the executive team and focusing only on delivering what the current plan prescribes.' }
     ],
     answer: 'B',
     explanation: 'È la funzione "agility": la business analysis supporta approcci predittivi, adattivi e ibridi perché le organizzazioni diventino agili di fronte a condizioni di mercato, bisogni dei clienti e progressi tecnologici che cambiano, combinando previsione e adattabilità in tempo reale.'
@@ -511,7 +511,7 @@ window.ECBA_QUESTIONS = [
     stem: 'Value can be either realized or preserved. Which example describes value being PRESERVED?',
     options: [
       { id: 'A', text: 'A new online channel increases annual sales revenue by 12%.' },
-      { id: 'B', text: 'An automated workflow reduces the average order handling time by two days.' },
+      { id: 'B', text: 'An automated workflow reduces the average order handling time by two days for each customer order.' },
       { id: 'C', text: 'A compliance upgrade prevents regulatory fines that the organization would otherwise incur.' },
       { id: 'D', text: 'A redesigned onboarding process increases the number of new customers.' }
     ],
@@ -524,10 +524,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.2',
     stem: 'Which of the following is the best example of INTANGIBLE value?',
     options: [
-      { id: 'A', text: 'A reduction of €80,000 in annual licensing costs.' },
+      { id: 'A', text: 'A reduction of €80,000 in the annual licensing costs of the main platform.' },
       { id: 'B', text: 'An improvement in employee morale following a change to shift planning.' },
-      { id: 'C', text: 'A 15% increase in units shipped per week.' },
-      { id: 'D', text: 'A decrease in the average cost per support ticket.' }
+      { id: 'C', text: 'A 15% increase in the number of units shipped to customers each week.' },
+      { id: 'D', text: 'A decrease in the average cost of handling each customer support ticket.' }
     ],
     answer: 'B',
     explanation: 'Il valore intangibile si misura indirettamente e ha spesso una forte componente motivazionale — reputazione aziendale, morale dei dipendenti. Il valore tangibile è direttamente misurabile e ha spesso una componente monetaria significativa ({A}, {C}, {D}). Nota che intangibile non significa "non misurabile": significa misurabile solo in modo indiretto.'
@@ -539,9 +539,9 @@ window.ECBA_QUESTIONS = [
     stem: 'A steering committee is comparing two solution options and concludes that "option B delivers more value than option A for our customer service group". Which characteristic of value does this illustrate?',
     options: [
       { id: 'A', text: 'Value assessed in relative terms, from the perspective of a group of stakeholders.' },
-      { id: 'B', text: 'Value preserved by mitigating losses and risks.' },
-      { id: 'C', text: 'Tangible value, because a comparison implies a monetary measure.' },
-      { id: 'D', text: 'Value realized, because a decision has been taken.' }
+      { id: 'B', text: 'Value preserved by mitigating losses, risks, and costs for the customer service group.' },
+      { id: 'C', text: 'Tangible value, because comparing two options always implies a monetary measure.' },
+      { id: 'D', text: 'Value realized, because the committee has already taken a decision on the options.' }
     ],
     answer: 'A',
     explanation: 'Il valore può essere valutato in termini assoluti o relativi: dire che un\'opzione vale più di un\'altra per un certo gruppo di stakeholder è esattamente la valutazione relativa descritta dallo Standard. Il confronto non implica di per sé una misura monetaria ({C}) né la realizzazione del valore ({D}).'
@@ -555,7 +555,7 @@ window.ECBA_QUESTIONS = [
       { id: 'A', text: 'Only at the end, once the solution has been deployed and benefits can be counted.' },
       { id: 'B', text: 'Only at the start, when the business case is approved.' },
       { id: 'C', text: 'Throughout the initiative, as benefits are delivered as efficiently and effectively as possible.' },
-      { id: 'D', text: 'Only during the annual financial review conducted by the finance function.' }
+      { id: 'D', text: 'Only during the annual financial review, when the finance function compares the results with the budget.' }
     ],
     answer: 'C',
     explanation: 'Il valore si scopre lungo tutta l\'iniziativa, man mano che i benefici vengono erogati nel modo più efficiente ed efficace possibile. È un principio che ritorna anche nei domini BABOK: il valore non è un evento finale ma un flusso continuo.'
@@ -580,10 +580,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.5',
     stem: 'An executive asks the business analysis professional how the current portfolio of initiatives relates to the organization\'s long-term ambitions. Which statement best reflects the Standard\'s view of outcomes and value creation?',
     options: [
-      { id: 'A', text: 'Each initiative should be evaluated in isolation, since combining them obscures accountability.' },
-      { id: 'B', text: 'Value is often created through managing initiatives that work together to address organizational challenges and capitalize on opportunities, evolving the organization toward its desired outcomes.' },
-      { id: 'C', text: 'Long-term ambitions are the responsibility of the strategy function and are outside the scope of business analysis.' },
-      { id: 'D', text: 'Desired outcomes can only be defined once all initiatives have been delivered.' }
+      { id: 'A', text: 'Each initiative should be evaluated in isolation, since combining initiatives obscures accountability for the results each one delivers.' },
+      { id: 'B', text: 'Value is often created by managing initiatives that work together to address challenges and opportunities, evolving the organization toward its desired outcomes.' },
+      { id: 'C', text: 'Long-term ambitions are the responsibility of the strategy function and fall outside the scope of business analysis, which focuses on single initiatives and their requirements.' },
+      { id: 'D', text: 'Desired outcomes can only be defined once all the initiatives in the portfolio have been delivered and their results measured.' }
     ],
     answer: 'B',
     explanation: 'Lo Standard descrive il valore come spesso creato gestendo iniziative che lavorano insieme, facendo evolvere l\'organizzazione verso gli outcome desiderati, rappresentati da una combinazione di future state. Comprendere la strategia organizzativa rientra pienamente nella business analysis, quindi {C} è errata.'
@@ -611,7 +611,7 @@ window.ECBA_QUESTIONS = [
       { id: 'A', text: 'Both are tangible, because both were quantified in the business case.' },
       { id: 'B', text: 'The saving is tangible; the reputation improvement is intangible, measured indirectly.' },
       { id: 'C', text: 'Both are intangible, because future outcomes cannot be measured.' },
-      { id: 'D', text: 'The saving is value realized; the reputation improvement is not value at all.' }
+      { id: 'D', text: 'The saving is value realized; the reputation improvement is not value at all, since it cannot be counted.' }
     ],
     answer: 'B',
     explanation: 'Il valore tangibile è direttamente misurabile e ha spesso una componente monetaria significativa; quello intangibile si misura indirettamente e ha spesso una forte componente motivazionale, e la reputazione aziendale è proprio l\'esempio citato dallo Standard. Entrambi sono valore a pieno titolo, quindi {D} è errata.'
@@ -623,9 +623,9 @@ window.ECBA_QUESTIONS = [
     stem: 'Which activity is listed as part of effective business analysis in creating value?',
     options: [
       { id: 'A', text: 'Helping teams assess trade-offs and prioritize value creation.' },
-      { id: 'B', text: 'Approving the change requests raised during delivery.' },
-      { id: 'C', text: 'Assigning developers to the highest-value components.' },
-      { id: 'D', text: 'Negotiating contracts with the selected suppliers.' }
+      { id: 'B', text: 'Approving the change requests raised by stakeholders during delivery.' },
+      { id: 'C', text: 'Assigning developers to the components with the highest value.' },
+      { id: 'D', text: 'Negotiating contracts with the suppliers selected for the solution.' }
     ],
     answer: 'A',
     explanation: 'Aiutare i team a valutare i trade-off e a prioritizzare la creazione di valore è tra le attività elencate, insieme a comprendere la strategia, chiarire problemi e opportunità, comunicare gli outcome desiderati, identificare il valore potenziale e supportare lo sviluppo di soluzioni ad alto valore.'
@@ -650,10 +650,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.5',
     stem: 'How does the Standard describe the way desired outcomes are typically reached?',
     options: [
-      { id: 'A', text: 'Through a single transformation project with a defined end date.' },
+      { id: 'A', text: 'Through a single transformation project with a fixed scope and a defined end date.' },
       { id: 'B', text: 'Through a combination of described future states delivered by individual components of work.' },
-      { id: 'C', text: 'Through annual budget cycles managed by the finance function.' },
-      { id: 'D', text: 'Through the accumulation of approved requirements over time.' }
+      { id: 'C', text: 'Through annual budget cycles managed by the finance function for each business unit.' },
+      { id: 'D', text: 'Through the gradual accumulation of approved requirements across successive projects over many years.' }
     ],
     answer: 'B',
     explanation: 'Il valore è spesso creato gestendo iniziative che lavorano insieme; l\'organizzazione evolve verso gli outcome desiderati, che sono spesso rappresentati da una combinazione di future state descritti attraverso singole componenti di lavoro.'
@@ -664,10 +664,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 2.2',
     stem: 'A sponsor dismisses a proposed initiative because "it produces no measurable return". The initiative would reduce the risk of a costly compliance breach. What is the BEST response?',
     options: [
-      { id: 'A', text: 'Accept the decision, since value must be demonstrable to justify investment.' },
+      { id: 'A', text: 'Accept the decision, since value must be demonstrable as a measurable return to justify any investment.' },
       { id: 'B', text: 'Explain that value can also be preserved by mitigating losses, risks and costs, and quantify the exposure avoided.' },
-      { id: 'C', text: 'Reframe the initiative as a revenue-generating opportunity to secure approval.' },
-      { id: 'D', text: 'Escalate the decision to the compliance function for enforcement.' }
+      { id: 'C', text: 'Reframe the initiative as a revenue-generating opportunity, since that is the argument most likely to secure approval.' },
+      { id: 'D', text: 'Escalate the decision to the compliance function so that it can enforce the initiative over the sponsor\'s objection.' }
     ],
     answer: 'B',
     explanation: 'Il valore può essere realized attraverso guadagni oppure preserved mitigando perdite, rischi e costi. Riformulare artificiosamente l\'iniziativa ({C}) sarebbe disonesto e comunque fragile.'
@@ -698,7 +698,7 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 3.1',
     stem: 'How does the Standard define a mindset?',
     options: [
-      { id: 'A', text: 'The documented methodology an organization requires its teams to follow.' },
+      { id: 'A', text: 'The documented methodology that an organization requires all of its teams to follow.' },
       { id: 'B', text: 'The mental framework that guides decision-making, behaviour, and team dynamics.' },
       { id: 'C', text: 'The level of seniority a practitioner has reached in their career.' },
       { id: 'D', text: 'The set of tools and templates used to capture requirements.' }
@@ -727,9 +727,9 @@ window.ECBA_QUESTIONS = [
     stem: 'A practitioner insists on using the same elicitation technique on every initiative because it worked well in the past. Which aspect of an effective business analysis mindset is being neglected?',
     options: [
       { id: 'A', text: 'Maintaining a flexible, adaptable view, since every situation is unique and there is no single analysis approach.' },
-      { id: 'B', text: 'Ensuring that all requirements are approved before elicitation begins.' },
-      { id: 'C', text: 'Documenting the technique in the organization\'s methodology repository.' },
-      { id: 'D', text: 'Escalating the choice of technique to the sponsor for approval.' }
+      { id: 'B', text: 'Ensuring that all requirements are formally approved before any elicitation activity begins.' },
+      { id: 'C', text: 'Documenting the chosen technique in the organization\'s methodology repository so that other practitioners can reuse it.' },
+      { id: 'D', text: 'Escalating the choice of technique to the sponsor, who must approve it before each initiative starts.' }
     ],
     answer: 'A',
     explanation: 'Lo Standard insiste sul mantenere una visione flessibile e adattabile: ogni situazione è unica e non esiste un unico approccio di analisi; tecniche, processi e strumenti si combinano diversamente a seconda del contesto. È il filo conduttore del capitolo dello Standard sul mindset.'
@@ -740,10 +740,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 3.1',
     stem: 'What ability do the deliberate practices of an empowering mindset collectively provide?',
     options: [
-      { id: 'A', text: 'The ability to eliminate uncertainty from initiatives before they start.' },
+      { id: 'A', text: 'The ability to eliminate uncertainty from initiatives before they start, so that plans never need to change.' },
       { id: 'B', text: 'The ability to create high-quality outcomes, prioritize focus, empathize with stakeholders, and adapt to realities and feedback.' },
-      { id: 'C', text: 'The ability to work without stakeholder involvement when time is short.' },
-      { id: 'D', text: 'The ability to apply one proven approach consistently across initiatives.' }
+      { id: 'C', text: 'The ability to work without stakeholder involvement when time is short, relying instead on the business analyst\'s own experience and judgement.' },
+      { id: 'D', text: 'The ability to apply one proven approach consistently across initiatives, whatever their context or constraints.' }
     ],
     answer: 'B',
     explanation: 'Le pratiche deliberate danno la capacità di creare outcome di alta qualità, scoprire valore, prioritizzare il focus, empatizzare e imparare costantemente dagli stakeholder impattati, collaborare per costruire alleati del cambiamento, valutare il contesto e adattarsi, e semplificare la costruzione e condivisione della conoscenza.'
@@ -754,10 +754,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 3.1',
     stem: 'According to the Standard, why does effective business analysis call for particular habits, attitudes, behaviours, and practices?',
     options: [
-      { id: 'A', text: 'Because they remove the uncertainty from an initiative before it starts.' },
+      { id: 'A', text: 'Because they remove the uncertainty from an initiative before it starts, so that every step can be planned in advance.' },
       { id: 'B', text: 'Because they make it possible to navigate with confidence situations where knowing exactly what needs to be done is impossible.' },
-      { id: 'C', text: 'Because they replace the need to choose techniques for each situation.' },
-      { id: 'D', text: 'Because they allow the same approach to be reused on every initiative.' }
+      { id: 'C', text: 'Because they replace the need to choose techniques for each situation with a fixed set of habits that always work.' },
+      { id: 'D', text: 'Because they allow the same approach to be reused on every initiative, whatever the context and the stakeholders involved.' }
     ],
     answer: 'B',
     explanation: 'Lo Standard riconosce esplicitamente le situazioni in cui sapere esattamente cosa fare è impossibile, e indica che abitudini, atteggiamenti, comportamenti e pratiche consentono di navigarle con sicurezza. È il senso stesso del mindset: non attendere la certezza, ma muoversi bene senza di essa. {D} contraddice il punto che ogni situazione è unica.'
@@ -769,7 +769,7 @@ window.ECBA_QUESTIONS = [
     stem: 'You join an initiative where nobody can say precisely what needs to be done. What is the MOST appropriate way to proceed?',
     options: [
       { id: 'A', text: 'Request that requirements be defined before analysis work begins.' },
-      { id: 'B', text: 'Impose a predictive approach to force clarity onto the initiative.' },
+      { id: 'B', text: 'Impose a predictive approach to force clarity onto the initiative from the start.' },
       { id: 'C', text: 'Start work, adapting techniques and approach to what the situation reveals.' },
       { id: 'D', text: 'Escalate to the sponsor that the initiative is not ready to start.' }
     ],
@@ -912,10 +912,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 3.3',
     stem: 'What does the principle "Understand what is doable" require the practitioner to consider?',
     options: [
-      { id: 'A', text: 'Only the technical capabilities of the development team.' },
-      { id: 'B', text: 'How to deliver a solution within constraints, including constraints in the operational environment, so that the solution delivers the value intended.' },
-      { id: 'C', text: 'The minimum documentation required by the organization\'s governance body.' },
-      { id: 'D', text: 'Whether the sponsor has approved the budget for the next phase.' }
+      { id: 'A', text: 'Only the technical capabilities of the development team, since a solution is doable if the team can build it.' },
+      { id: 'B', text: 'How to deliver a solution within constraints, including those of the operational environment, so that it delivers the value intended.' },
+      { id: 'C', text: 'The minimum documentation required by the organization\'s governance body before any solution option can be formally approved.' },
+      { id: 'D', text: 'Whether the sponsor has approved the budget for the next phase, since without funding no solution is doable.' }
     ],
     answer: 'B',
     explanation: 'Il principio riguarda il capire come consegnare una soluzione entro i vincoli, analizzando di continuo need e soluzioni possibili, e considerando anche i vincoli dell\'ambiente operativo perché la soluzione produca davvero il valore atteso. Non è solo una questione di capacità tecnica del team ({A}).'
@@ -956,7 +956,7 @@ window.ECBA_QUESTIONS = [
     options: [
       { id: 'A', text: 'Documenting every requirement before analysis can be considered complete.' },
       { id: 'B', text: 'Analysing needs in the big picture context and identifying why a change is necessary.' },
-      { id: 'C', text: 'Involving every stakeholder in every decision.' },
+      { id: 'C', text: 'Involving every stakeholder in every decision, so that the whole organization is represented.' },
       { id: 'D', text: 'Reviewing the entire solution before each release.' }
     ],
     answer: 'B',
@@ -982,7 +982,7 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 3.3',
     stem: 'The principle "Analyze to determine what is valuable" requires the practitioner to do what?',
     options: [
-      { id: 'A', text: 'Calculate the return on investment before any work begins.' },
+      { id: 'A', text: 'Calculate the return on investment of each option before any work on the change begins.' },
       { id: 'B', text: 'Continuously assess and prioritize work to maximize the value being delivered.' },
       { id: 'C', text: 'Deliver the requirements in the order in which they were elicited.' },
       { id: 'D', text: 'Allocate value equally across all stakeholder groups.' }
@@ -996,10 +996,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 3.3',
     stem: 'Your team produces a detailed weekly status document that, you discover, nobody reads. Which action BEST reflects the business analysis principles?',
     options: [
-      { id: 'A', text: 'Keep producing it, since governance may require it later.' },
-      { id: 'B', text: 'Shorten the document to reduce the effort it takes.' },
+      { id: 'A', text: 'Keep producing it, since governance may require it later and stopping could look careless.' },
+      { id: 'B', text: 'Shorten the document so that it takes less effort to produce each week.' },
       { id: 'C', text: 'Stop producing it and confirm with stakeholders what they actually need.' },
-      { id: 'D', text: 'Move it to a shared folder so those interested can find it.' }
+      { id: 'D', text: 'Move it to a shared folder so that anyone interested can find it when needed.' }
     ],
     answer: 'C',
     explanation: 'Avoid waste: identificare le attività che non contribuiscono a soddisfare il need e rimuoverle. Abbreviare ({B}) o riposizionare ({D}) riduce lo spreco ma non lo elimina.'
@@ -1011,7 +1011,7 @@ window.ECBA_QUESTIONS = [
     stem: 'Two departments disagree about how a refund rule should behave, and the discussion keeps going in circles. Which approach is MOST likely to resolve it?',
     options: [
       { id: 'A', text: 'Bring three concrete refund cases and walk through what should happen in each.' },
-      { id: 'B', text: 'Ask each department to submit its position in writing for comparison.' },
+      { id: 'B', text: 'Ask each department to submit its position in writing so that they can be compared side by side.' },
       { id: 'C', text: 'Escalate to a manager empowered to decide between the two positions.' },
       { id: 'D', text: 'Implement both behaviours behind a configuration option.' }
     ],
@@ -1082,10 +1082,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 3.4',
     stem: 'What is the relationship between foundational competencies and underlying competencies?',
     options: [
-      { id: 'A', text: 'They are two names for the same list of 29 competencies.' },
-      { id: 'B', text: 'Foundational competencies are the basic skills necessary to perform effective business analysis; practitioners then leverage the underlying competencies to build on that foundation.' },
-      { id: 'C', text: 'Underlying competencies apply to predictive approaches and foundational competencies to adaptive approaches.' },
-      { id: 'D', text: 'Foundational competencies replace underlying competencies for entry-level practitioners.' }
+      { id: 'A', text: 'They are two names for the same list of 29 competencies, described once in the Standard and once in the BABOK Guide.' },
+      { id: 'B', text: 'Foundational competencies are the basic skills needed for effective business analysis; practitioners then leverage the underlying competencies to build on them.' },
+      { id: 'C', text: 'Underlying competencies apply to predictive approaches, while foundational competencies apply only to adaptive approaches.' },
+      { id: 'D', text: 'Foundational competencies replace the underlying competencies for entry-level practitioners, who therefore do not need to develop any of the 29 underlying ones.' }
     ],
     answer: 'B',
     explanation: 'Le foundational competencies sono le abilità, capacità e caratteristiche di base necessarie per fare business analysis efficace; su quella base i professionisti sviluppano le underlying competencies per evolvere e adattarsi a qualsiasi iniziativa. Non sono liste alternative né legate a un tipo di approccio.'
@@ -1096,10 +1096,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 9.1.5 Systems Thinking',
     stem: 'What does systems thinking suggest about a system?',
     options: [
-      { id: 'A', text: 'A system can be fully understood by analysing each of its components separately.' },
-      { id: 'B', text: 'A system as a whole has properties, behaviours, and characteristics that emerge from the interaction of its components and are not predictable from the components alone.' },
-      { id: 'C', text: 'A system should be decomposed until each part can be assigned to a single owner.' },
-      { id: 'D', text: 'A system\'s performance equals the sum of the performance of its parts.' }
+      { id: 'A', text: 'A system can be fully understood by analysing each of its components separately and then adding up the results.' },
+      { id: 'B', text: 'A system as a whole has properties and behaviours that emerge from the interaction of its components and cannot be predicted from them alone.' },
+      { id: 'C', text: 'A system should be decomposed until each part can be assigned to a single owner who is accountable for its behaviour and for any problem in it.' },
+      { id: 'D', text: 'A system\'s performance always equals the sum of the performance of its parts, measured one at a time.' }
     ],
     answer: 'B',
     explanation: 'La teoria dei sistemi afferma che il tutto ha proprietà, comportamenti e caratteristiche emergenti dall\'interazione dei componenti, non prevedibili dalla comprensione dei soli componenti. È l\'esatto contrario di {A} e {D}, che descrivono un approccio puramente riduzionista.'
@@ -1138,10 +1138,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 9.5.4 Negotiation and Conflict Resolution',
     stem: 'What does the Negotiation and Conflict Resolution competency involve?',
     options: [
-      { id: 'A', text: 'Deciding on behalf of the group when consensus cannot be reached.' },
-      { id: 'B', text: 'Mediating discussions so participants recognize differing views, resolve differences, and reach conclusions agreed by all participants.' },
-      { id: 'C', text: 'Escalating disagreements to the sponsor for a binding decision.' },
-      { id: 'D', text: 'Documenting each party\'s position for the record.' }
+      { id: 'A', text: 'Deciding on behalf of the group when consensus cannot be reached, so that the initiative is not delayed any further by the disagreement.' },
+      { id: 'B', text: 'Mediating so that participants recognize differing views, resolve differences, and reach conclusions all of them agree with.' },
+      { id: 'C', text: 'Escalating disagreements to the sponsor, whose binding decision then closes the matter for all participants.' },
+      { id: 'D', text: 'Documenting each party\'s position for the record, so that the decision maker can later choose between them.' }
     ],
     answer: 'B',
     explanation: 'La competenza consiste nel mediare le discussioni per far riconoscere le divergenze di vedute, risolverle e arrivare a conclusioni che raccolgano l\'accordo di tutti i partecipanti. Il professionista media, non decide al posto del gruppo ({A}) né si limita a verbalizzare ({D}).'
@@ -1166,10 +1166,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 9.3.3 Organization Knowledge',
     stem: 'What does the Organization Knowledge competency include?',
     options: [
-      { id: 'A', text: 'Understanding current trends and market forces within an industry.' },
-      { id: 'B', text: 'Understanding how the enterprise generates profits, accomplishes its goals, its structure, the relationships between business units, and who occupies key stakeholder positions.' },
-      { id: 'C', text: 'Understanding the methodologies that determine how a change is approached and managed.' },
-      { id: 'D', text: 'Understanding the range of commercially available solutions and suppliers.' }
+      { id: 'A', text: 'Understanding current trends, market forces, and regulations within an industry, and how competitors respond to them.' },
+      { id: 'B', text: 'Understanding how the enterprise makes profits and meets its goals, its structure, how its business units relate, and who holds key positions.' },
+      { id: 'C', text: 'Understanding the methodologies that determine how a change is approached and managed, including its timing and the level of risk accepted.' },
+      { id: 'D', text: 'Understanding the range of commercially available solutions and suppliers that could replace or extend existing solutions.' }
     ],
     answer: 'B',
     explanation: 'Organization knowledge riguarda la conoscenza interna dell\'impresa. {A} è Industry Knowledge, {C} Methodology Knowledge, {D} Solution Knowledge: le cinque competenze del gruppo Business Knowledge si distinguono per l\'oggetto della conoscenza — business in generale, settore, impresa, soluzione, metodologia.'
@@ -1180,10 +1180,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 3.4',
     stem: 'A workshop has stalled: two groups are talking past each other and time is running out. Which competency should you draw on FIRST?',
     options: [
-      { id: 'A', text: 'Systems Thinking, to show how the two positions affect the whole' },
+      { id: 'A', text: 'Systems Thinking, to show how the two positions affect the organization as a whole' },
       { id: 'B', text: 'Facilitation, to help both groups articulate and recognize each other\'s views' },
-      { id: 'C', text: 'Problem Solving, to identify the root cause of the disagreement' },
-      { id: 'D', text: 'Adaptability, to change the format of the session' }
+      { id: 'C', text: 'Problem Solving, to identify the root cause of the disagreement between the groups' },
+      { id: 'D', text: 'Adaptability, to change the format of the session and try a different technique' }
     ],
     answer: 'B',
     explanation: 'La facilitation è moderare le discussioni perché tutti esprimano efficacemente il proprio punto di vista e riconoscano quelli altrui: è la risposta immediata a una sessione bloccata. Le altre competenze aiuterebbero dopo.'
@@ -1228,10 +1228,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 4.1',
     stem: 'An organization wants to identify who could benefit from applying business analysis. Which of the following activities suggests that a person would benefit?',
     options: [
-      { id: 'A', text: 'Only writing and maintaining formal requirements documents.' },
+      { id: 'A', text: 'Only writing and maintaining formal requirements documents for the delivery team to implement.' },
       { id: 'B', text: 'Designing and implementing new processes or improving existing ones, and facilitating stakeholder collaboration.' },
-      { id: 'C', text: 'Only managing the delivery schedule and reporting status to the sponsor.' },
-      { id: 'D', text: 'Only operating the solution after it has been implemented.' }
+      { id: 'C', text: 'Only managing the delivery schedule and reporting the status of the work to the sponsor every week.' },
+      { id: 'D', text: 'Only operating the solution after it has been implemented and handling the problems and requests that its users report.' }
     ],
     answer: 'B',
     explanation: 'L\'elenco dello Standard include: comprendere e sviluppare strategia e obiettivi, creare value proposition, abilitare e guidare il cambiamento, analizzare need e progettare soluzioni, facilitare la collaborazione fra stakeholder, creare prodotti e servizi innovativi, progettare o migliorare processi, ottimizzare le attività operative. Le opzioni che iniziano con "only" restringono indebitamente il campo.'
@@ -1242,10 +1242,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 4.1',
     stem: 'Which of the following people would benefit from applying business analysis, according to the Standard?',
     options: [
-      { id: 'A', text: 'Only those with a formal business analysis qualification.' },
+      { id: 'A', text: 'Only those who hold a formal business analysis qualification or a certification recognized by IIBA, such as the ECBA.' },
       { id: 'B', text: 'Anyone creating new or improved value propositions, enabling change, or streamlining operational activities.' },
-      { id: 'C', text: 'Only those working on technology solution implementations.' },
-      { id: 'D', text: 'Only those reporting into a business analysis Centre of Excellence.' }
+      { id: 'C', text: 'Only those working on technology solution implementations, such as software or system upgrades.' },
+      { id: 'D', text: 'Only those reporting into a business analysis Centre of Excellence or a similar specialized unit.' }
     ],
     answer: 'B',
     explanation: 'La business analysis è uno skill set versatile applicabile a qualunque ruolo: chiunque sviluppi strategia e obiettivi, crei value proposition, abiliti il cambiamento, analizzi need, faciliti la collaborazione, crei prodotti innovativi, progetti processi o ottimizzi le attività operative ne trae beneficio.'
@@ -1258,10 +1258,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 4.2.1',
     stem: 'Which characteristic best describes a predictive approach?',
     options: [
-      { id: 'A', text: 'Value is delivered in small, prioritized increments with just-in-time documentation.' },
+      { id: 'A', text: 'Value is delivered in small, prioritized increments, with just-enough and just-in-time documentation and continuous feedback.' },
       { id: 'B', text: 'All the work is planned up front, everything that needs to be done is considered, and progress is tracked against the plan.' },
-      { id: 'C', text: 'Some parts of the initiative are planned up front while others are delivered iteratively.' },
-      { id: 'D', text: 'Documentation is avoided in favour of face-to-face communication.' }
+      { id: 'C', text: 'Some parts of the initiative are planned up front while others are delivered iteratively, depending on their characteristics.' },
+      { id: 'D', text: 'Documentation is avoided in favour of face-to-face communication, so that plans can change whenever the situation requires.' }
     ],
     answer: 'B',
     explanation: 'L\'approccio predittivo pianifica tutto il lavoro in anticipo, cerca di identificare tutte le informazioni necessarie a creare il valore desiderato, produce documenti e modelli (scope statement, requirements, design, schedule e cost baseline, test plan) e traccia l\'avanzamento rispetto al piano. {A} descrive l\'adattivo, {C} l\'ibrido.'
@@ -1273,9 +1273,9 @@ window.ECBA_QUESTIONS = [
     stem: 'A heavily regulated organization runs its compliance workstream with full up-front planning, while the customer-facing app in the same programme is delivered in iterations with frequent feedback. How is this best described?',
     options: [
       { id: 'A', text: 'A hybrid approach, because parts of the same initiative use a predictive approach and parts use an adaptive one.' },
-      { id: 'B', text: 'A predictive approach, because the regulated workstream sets the standard for the programme.' },
-      { id: 'C', text: 'An adaptive approach, because iterations are present.' },
-      { id: 'D', text: 'A governance failure, because a single initiative must use one approach only.' }
+      { id: 'B', text: 'A predictive approach, because the regulated workstream sets the standard that the whole programme has to follow.' },
+      { id: 'C', text: 'An adaptive approach, because iterations with frequent feedback are present in at least one of the workstreams.' },
+      { id: 'D', text: 'A governance failure, because a single initiative must use one approach only, whatever its workstreams require.' }
     ],
     answer: 'A',
     explanation: 'Un approccio ibrido descrive sia il caso in cui alcune iniziative dell\'organizzazione sono predittive e altre adattive, sia il caso in cui parti della stessa iniziativa usano l\'uno e parti l\'altro. Non c\'è nessuna regola che imponga un solo approccio per iniziativa ({D}).'
@@ -1344,10 +1344,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 4.5.1',
     stem: 'What is the role of the business analysis professional regarding security integration?',
     options: [
-      { id: 'A', text: 'To act as the security subject matter expert and approve the security architecture.' },
-      { id: 'B', text: 'To help stakeholders identify security risks and collaborate across technical and non-technical groups, having a solid understanding of security principles.' },
-      { id: 'C', text: 'To delegate all security considerations to the IT department.' },
-      { id: 'D', text: 'To defer security analysis until the solution has been implemented.' }
+      { id: 'A', text: 'To act as the security subject matter expert, designing the security architecture and approving it before implementation.' },
+      { id: 'B', text: 'To help diverse stakeholders collaborate and identify security risks, drawing on a solid understanding of security principles.' },
+      { id: 'C', text: 'To delegate all security considerations to the IT department, since security is a technical matter outside business analysis.' },
+      { id: 'D', text: 'To defer security analysis until the solution has been implemented, when the real risks become visible in operation.' }
     ],
     answer: 'B',
     explanation: 'Lo Standard è esplicito: i professionisti di business analysis non devono necessariamente essere SME di sicurezza, ma con una solida comprensione dei principi di sicurezza aiutano gli stakeholder di background diversi a collaborare, identificano rischi, valutano misure e allineano le iniziative di sicurezza agli obiettivi organizzativi.'
@@ -1358,10 +1358,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 4.5.2',
     stem: 'During analysis it becomes clear that the option with the strongest financial return would require using customer data in a way that stakeholders would not expect. What does the Standard indicate the business analysis professional should do?',
     options: [
-      { id: 'A', text: 'Recommend the option with the strongest return, since maximizing value is the objective.' },
-      { id: 'B', text: 'Consider ethics as part of the analysis, conducting careful analysis that eliminates personal biases and following IIBA\'s Code of Ethical Conduct and Professional Standards.' },
-      { id: 'C', text: 'Remove the option from the analysis without informing stakeholders.' },
-      { id: 'D', text: 'Leave the ethical judgement entirely to the legal department.' }
+      { id: 'A', text: 'Recommend the option with the strongest return, since maximizing value for the organization is the main objective of the analysis being performed.' },
+      { id: 'B', text: 'Consider ethics as part of the analysis, eliminating personal bias and following IIBA\'s Code of Ethical Conduct and Professional Standards.' },
+      { id: 'C', text: 'Remove the option from the analysis quietly, without informing the stakeholders of the reason it was discarded.' },
+      { id: 'D', text: 'Leave the ethical judgement entirely to the legal department, which is responsible for deciding what the organization may do.' }
     ],
     answer: 'B',
     explanation: 'L\'etica va considerata, con un\'analisi attenta che elimini i bias personali; quando la scelta "migliore" e quella "etica" non coincidono, il Code of Ethical Conduct and Professional Standards di IIBA fa da riferimento. È responsabilità del professionista assicurare che il lavoro sia allineato al codice mentre genera valore.'
@@ -1372,10 +1372,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 4.5.4',
     stem: 'How does the Standard describe sustainability in the context of business analysis?',
     options: [
-      { id: 'A', text: 'Exclusively as the reduction of an organization\'s carbon emissions.' },
-      { id: 'B', text: 'As meeting current needs while preserving resources for future generations, including advancing social equity, health, and economic viability.' },
-      { id: 'C', text: 'As a reporting obligation handled by the finance function.' },
-      { id: 'D', text: 'As a constraint that limits the solution options available to a team.' }
+      { id: 'A', text: 'Exclusively as the reduction of an organization\'s carbon emissions, measured and reported once a year to the regulator.' },
+      { id: 'B', text: 'As meeting current needs while preserving resources for future generations, including social equity, health, and economic viability.' },
+      { id: 'C', text: 'As a reporting obligation handled by the finance function, which publishes the figures in the annual report.' },
+      { id: 'D', text: 'As a constraint that limits the solution options available to a team, to be considered only once the design of the solution is complete.' }
     ],
     answer: 'B',
     explanation: 'La sostenibilità riguarda l\'esecuzione del modello di business per soddisfare i bisogni attuali preservando le risorse naturali per le generazioni future, e include l\'avanzamento di equità sociale, salute e viabilità economica. Il professionista allinea strategie, processi e sistemi agli outcome di sostenibilità.'
@@ -1400,10 +1400,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 4.5.3',
     stem: 'Why does the Standard describe inclusion as more than an ethical consideration?',
     options: [
-      { id: 'A', text: 'Because regulators require diversity reporting in most industries.' },
+      { id: 'A', text: 'Because regulators require diversity reporting in most industries, and inclusion is needed in order to comply with those requirements.' },
       { id: 'B', text: 'Because it is a key driver of innovation and sustainable growth: diverse perspectives drive creative problem-solving.' },
-      { id: 'C', text: 'Because it reduces the cost of recruitment.' },
-      { id: 'D', text: 'Because it shortens the time needed to reach consensus in workshops.' }
+      { id: 'C', text: 'Because it reduces the cost of recruitment by widening the pool of candidates available to the organization.' },
+      { id: 'D', text: 'Because it shortens the time needed to reach consensus in workshops, since diverse groups agree more quickly.' }
     ],
     answer: 'B',
     explanation: 'L\'inclusione è presentata come motore di innovazione e crescita sostenibile: i professionisti vanno oltre la mera rappresentanza, cercando attivamente e amplificando voci diverse, perché la diversità alimenta la soluzione creativa dei problemi.'
@@ -1415,7 +1415,7 @@ window.ECBA_QUESTIONS = [
     stem: 'Why does an organization establish standards such as processes, procedures, templates, and guidelines for business analysis?',
     options: [
       { id: 'A', text: 'To ensure consistency and quality and adherence to appropriate practices, whichever delivery form is chosen.' },
-      { id: 'B', text: 'To make the business analysis approach identical across all organizations in the industry.' },
+      { id: 'B', text: 'To make the business analysis approach identical across all the organizations operating in the same industry.' },
       { id: 'C', text: 'To remove the need for practitioners to exercise judgement about context.' },
       { id: 'D', text: 'To satisfy an ISO certification requirement for business analysis functions.' }
     ],
@@ -1444,10 +1444,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 4.4.1',
     stem: 'What is the essential difference between a requirement and a design?',
     options: [
-      { id: 'A', text: 'A requirement is written by the business and a design is written by IT.' },
+      { id: 'A', text: 'A requirement is always written by the business, while a design is always written by the IT department.' },
       { id: 'B', text: 'A requirement is a usable representation of a need, while a design is a usable representation of a solution.' },
-      { id: 'C', text: 'A requirement is textual and a design is always a diagram.' },
-      { id: 'D', text: 'A requirement is approved and a design is still a draft.' }
+      { id: 'C', text: 'A requirement is always expressed as text, while a design is always expressed as a diagram or model.' },
+      { id: 'D', text: 'A requirement has already been approved by stakeholders, while a design is still a working draft.' }
     ],
     answer: 'B',
     explanation: 'Requirement = rappresentazione utilizzabile di un need (che valore potrebbe essere prodotto); design = rappresentazione utilizzabile di una soluzione (come il valore potrebbe essere realizzato). La differenza sta nello scopo, non nell\'autore, nel formato o nello stato di approvazione: tre criteri plausibili, ma sbagliati.'
@@ -1486,10 +1486,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 4.4.2',
     stem: 'A statement reads: "The system must respond to a search query within two seconds under normal load." How is this best classified?',
     options: [
-      { id: 'A', text: 'A functional requirement, because it describes system behaviour.' },
+      { id: 'A', text: 'A functional requirement, because it describes how the system behaves when a user searches.' },
       { id: 'B', text: 'A non-functional requirement, because it describes a condition or quality the solution must have.' },
-      { id: 'C', text: 'A business requirement, because it supports the organization\'s objectives.' },
-      { id: 'D', text: 'A transition requirement, because it applies only after go-live.' }
+      { id: 'C', text: 'A business requirement, because fast searches support the organization\'s objectives for service.' },
+      { id: 'D', text: 'A transition requirement, because it only applies once the solution has gone live in production.' }
     ],
     answer: 'B',
     explanation: 'I non-functional requirement (o quality of service requirement) sono le condizioni o qualità che una soluzione deve avere: prestazioni, sicurezza, disponibilità. I functional requirement descrivono invece le capability della soluzione in termini di comportamento e informazioni gestite. Il tempo di risposta è la qualità più classicamente non-funzionale.'
@@ -1500,10 +1500,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 4.4.3',
     stem: 'What does traceability of requirements and designs provide?',
     options: [
-      { id: 'A', text: 'A guarantee that the solution will be delivered on schedule.' },
-      { id: 'B', text: 'The ability to track relationships from the original stakeholder need to the implemented solution, supporting change control and impact analysis.' },
-      { id: 'C', text: 'An automated way to generate test cases from requirements.' },
-      { id: 'D', text: 'A method for prioritizing requirements by business value.' }
+      { id: 'A', text: 'A guarantee that the solution will be delivered on schedule, since every requirement is linked to a task that has been planned and estimated.' },
+      { id: 'B', text: 'The ability to follow relationships from the original need to the implemented solution, supporting change control and impact analysis.' },
+      { id: 'C', text: 'An automated way to generate the test cases for each requirement directly from the traceability matrix.' },
+      { id: 'D', text: 'A method for ranking requirements by business value, based on how many other elements each one is linked to.' }
     ],
     answer: 'B',
     explanation: 'La tracciabilità permette di seguire le relazioni tra requisiti e design, dal need originale alla soluzione implementata. Supporta il change control assicurando che la fonte di un requisito sia identificabile e che si conoscano gli altri elementi potenzialmente impattati da una modifica, e aiuta la gestione di scope, impatto, cambiamento, rischio, tempi, costi e comunicazione.'
@@ -1528,10 +1528,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 4.4.1',
     stem: 'How do requirements and designs relate to each other during an initiative?',
     options: [
-      { id: 'A', text: 'Requirements are completed and frozen before any design work can begin.' },
-      { id: 'B', text: 'They are interdependent and cyclical: designs can reveal insights that enhance requirements, and changing requirements can lead to design updates.' },
-      { id: 'C', text: 'Designs replace requirements once the solution approach has been chosen.' },
-      { id: 'D', text: 'They are produced by different tasks and techniques that never overlap.' }
+      { id: 'A', text: 'Requirements are completed and frozen before any design work can begin, so that designs always rest on stable requirements.' },
+      { id: 'B', text: 'They are interdependent and cyclical: designs can reveal insights that improve requirements, and changing requirements lead to design updates.' },
+      { id: 'C', text: 'Designs replace requirements once the solution approach has been chosen, and the requirements are no longer maintained or updated after that point.' },
+      { id: 'D', text: 'They are produced by different tasks and techniques that never overlap, so each has its own separate set of artifacts.' }
     ],
     answer: 'B',
     explanation: 'Requisiti e design sono interdipendenti e ciclici, in un feedback loop continuo che li mantiene allineati e li raffina lungo l\'iniziativa. Le stesse task e tecniche possono servire a creare entrambi (quindi {D} è falsa): a differire è lo scopo.'
@@ -1556,10 +1556,10 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 4.4.2',
     stem: 'A statement reads: "Call centre staff need to see a customer\'s last five interactions when answering a call." How is this best classified?',
     options: [
-      { id: 'A', text: 'A business requirement, because it supports the goal of improving service.' },
-      { id: 'B', text: 'A stakeholder requirement, because it expresses the need of a stakeholder group that must be met to achieve the business requirements.' },
-      { id: 'C', text: 'A transition requirement, because it applies during the move to the future state.' },
-      { id: 'D', text: 'A design, because it specifies what appears on screen.' }
+      { id: 'A', text: 'A business requirement, because it supports the organization\'s goal of improving the service it gives customers.' },
+      { id: 'B', text: 'A stakeholder requirement, because it states a stakeholder group\'s need that must be met to achieve the business requirements.' },
+      { id: 'C', text: 'A transition requirement, because it applies only while the call centre moves from the current state to the desired future state.' },
+      { id: 'D', text: 'A design, because it specifies exactly what information appears on the screen used by call centre staff.' }
     ],
     answer: 'B',
     explanation: 'Gli stakeholder requirement sono i bisogni degli stakeholder che devono essere soddisfatti per raggiungere i business requirement, e fanno da ponte tra questi ultimi e i solution requirement. Il requisito non dice ancora come mostrare le interazioni, quindi non è un design ({D}).'
@@ -1570,7 +1570,7 @@ window.ECBA_QUESTIONS = [
     source: 'The Business Analysis Standard, 4.4',
     stem: 'A stakeholder sends you a screen mock-up and asks you to "add it to the requirements". What is the MOST appropriate action?',
     options: [
-      { id: 'A', text: 'Add it as written, since it expresses what the stakeholder wants.' },
+      { id: 'A', text: 'Add it to the requirements as written, since it expresses exactly what the stakeholder wants.' },
       { id: 'B', text: 'Reject it, because a mock-up is a design and not a requirement.' },
       { id: 'C', text: 'Record it as a design and work back to the need it is meant to satisfy.' },
       { id: 'D', text: 'Forward it to the delivery team as an implementation instruction.' }
@@ -1590,10 +1590,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 6.1 Analyze Current State',
     stem: 'What is the purpose of the Analyze Current State task?',
     options: [
-      { id: 'A', text: 'To determine the set of necessary conditions to meet the business need.' },
-      { id: 'B', text: 'To understand why an enterprise needs to change some aspect of how it operates, and what would be directly or indirectly affected by the change.' },
-      { id: 'C', text: 'To develop and assess alternative approaches to the change and select the recommended one.' },
-      { id: 'D', text: 'To rank requirements in order of relative importance.' }
+      { id: 'A', text: 'To determine the set of necessary conditions to meet the business need, describing the desired future state.' },
+      { id: 'B', text: 'To understand why the enterprise needs to change how it operates, and what would be directly or indirectly affected by the change.' },
+      { id: 'C', text: 'To develop and assess the alternative approaches to the change, and then select the approach recommended for the enterprise to adopt and follow.' },
+      { id: 'D', text: 'To rank requirements in order of relative importance, so that the most valuable ones are delivered first.' }
     ],
     answer: 'B',
     explanation: 'Analyze Current State risponde al perché serve un cambiamento e a cosa ne sarebbe toccato, direttamente o indirettamente. {A} è Define Future State (6.2), {C} è Define Change Strategy (6.4), {D} è Prioritize Requirements (5.3). I purpose dei task sono formulazioni brevi e distinte: impararli riconoscendone le parole chiave rende molte domande immediate.'
@@ -1605,9 +1605,9 @@ window.ECBA_QUESTIONS = [
     stem: 'According to the Assess Risks task, what is being assessed?',
     options: [
       { id: 'A', text: 'The undesirable consequences of internal and external forces on the enterprise during the transition to, or once in, the future state.' },
-      { id: 'B', text: 'The probability that the project will exceed its approved budget.' },
-      { id: 'C', text: 'The technical defects found during solution testing.' },
-      { id: 'D', text: 'The performance of the solution after implementation.' }
+      { id: 'B', text: 'The probability that the project will exceed its approved budget or schedule before the change has been fully delivered to users.' },
+      { id: 'C', text: 'The technical defects found during solution testing and the effort needed to correct them before go-live.' },
+      { id: 'D', text: 'The performance of the solution after implementation, compared with the targets set in the business case.' }
     ],
     answer: 'A',
     explanation: 'Assess Risks (6.3) guarda alle conseguenze indesiderate di forze interne ed esterne durante la transizione allo stato futuro e una volta raggiunto, e all\'impatto potenziale di quelle forze. Il rischio nel BABOK è legato al valore, non solo al budget di progetto ({B}) o ai difetti tecnici ({C}).'
@@ -1618,10 +1618,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 6.1 Analyze Current State',
     stem: 'How does the BABOK Guide describe business needs?',
     options: [
-      { id: 'A', text: 'The features that stakeholders have requested for the solution.' },
+      { id: 'A', text: 'The features and functions that stakeholders have requested for the new solution.' },
       { id: 'B', text: 'The problems and opportunities of strategic importance faced by the enterprise.' },
-      { id: 'C', text: 'The constraints imposed on the initiative by regulators.' },
-      { id: 'D', text: 'The gaps identified between requirements and designs.' }
+      { id: 'C', text: 'The constraints imposed on the initiative by regulators and other external bodies.' },
+      { id: 'D', text: 'The gaps identified between the approved requirements and the resulting designs.' }
     ],
     answer: 'B',
     explanation: 'I business need sono i problemi e le opportunità di importanza strategica affrontati dall\'impresa; un reclamo di un cliente, una perdita di ricavi o una nuova opportunità di mercato ne innescano tipicamente la valutazione. Nota ancora la coppia problema/opportunità: il need non è mai solo un problema.'
@@ -1632,10 +1632,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 6.1 Analyze Current State',
     stem: 'A business analysis professional is told that "the need is a new mobile app". What is the concern with this statement?',
     options: [
-      { id: 'A', text: 'None: a mobile app is a valid business need.' },
+      { id: 'A', text: 'None: a mobile app is a valid business need, as long as stakeholders agree on it.' },
       { id: 'B', text: 'It states a solution rather than the problem or opportunity of strategic importance to be addressed.' },
-      { id: 'C', text: 'It should have been expressed as a transition requirement.' },
-      { id: 'D', text: 'It cannot be traced unless a sponsor has approved it.' }
+      { id: 'C', text: 'It should have been expressed as a transition requirement, since the mobile app does not exist yet in the current state.' },
+      { id: 'D', text: 'It cannot be traced to the solution unless the sponsor has formally approved it first.' }
     ],
     answer: 'B',
     explanation: 'Un need è un problema o un\'opportunità da affrontare; una app è una soluzione, cioè un modo specifico di soddisfare un need in un contesto. Partire dalla soluzione salta l\'analisi del perché e rischia di risolvere il problema sbagliato: è un errore classico.'
@@ -1646,10 +1646,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 6.3 Assess Risks',
     stem: 'Which of the following would be assessed as a risk during a transition to a future state?',
     options: [
-      { id: 'A', text: 'A defect found by testers in the current release.' },
+      { id: 'A', text: 'A defect found by testers in the current release, which the team has already logged and is fixing.' },
       { id: 'B', text: 'The possibility that key staff leave during the migration, delaying adoption and reducing the value delivered.' },
-      { id: 'C', text: 'The number of requirements approved to date.' },
-      { id: 'D', text: 'The cost already spent on the initiative.' }
+      { id: 'C', text: 'The number of requirements approved to date compared with the number planned for this stage.' },
+      { id: 'D', text: 'The cost already spent on the initiative, as recorded in the latest financial report to the sponsor.' }
     ],
     answer: 'B',
     explanation: 'Assess Risks guarda alle conseguenze indesiderate di forze interne ed esterne durante la transizione allo stato futuro o una volta raggiuntolo, e al loro impatto potenziale sul valore. Un difetto già trovato è un fatto, non un\'incertezza; costi già spesi e requisiti approvati sono misure di avanzamento.'
@@ -1675,9 +1675,9 @@ window.ECBA_QUESTIONS = [
     stem: 'A migration depends on two specialists, and there is a real chance that neither will be available on the planned date. How should you treat this?',
     options: [
       { id: 'A', text: 'As a risk to assess, because it could reduce the value the change delivers.' },
-      { id: 'B', text: 'As a constraint that fixes the migration date.' },
-      { id: 'C', text: 'As a resourcing matter for the project manager alone.' },
-      { id: 'D', text: 'As an assumption to record and revisit later.' }
+      { id: 'B', text: 'As a constraint that fixes the migration date and cannot be changed.' },
+      { id: 'C', text: 'As a resourcing matter for the project manager alone to resolve.' },
+      { id: 'D', text: 'As an assumption to record now and revisit closer to the date.' }
     ],
     answer: 'A',
     explanation: 'Assess Risks guarda alle conseguenze indesiderate di forze interne ed esterne durante la transizione allo stato futuro, e nel BABOK il rischio è legato al valore. La possibile indisponibilità è un\'incertezza che può incidere sull\'esito, quindi si valuta come rischio; registrarla come assunzione da rivedere più avanti ({D}) rinvia proprio la valutazione che serve ora.'
@@ -1718,10 +1718,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 5.1 Trace Requirements',
     stem: 'What is the purpose of Trace Requirements?',
     options: [
-      { id: 'A', text: 'To ensure requirements and designs at different levels are aligned to one another, and to manage the effects of change on related requirements.' },
-      { id: 'B', text: 'To confirm that elicitation results are accurate and consistent.' },
-      { id: 'C', text: 'To rank requirements in order of relative importance.' },
-      { id: 'D', text: 'To ensure requirements meet quality standards.' }
+      { id: 'A', text: 'To ensure requirements and designs at different levels are aligned, and to manage the effects of a change on related requirements.' },
+      { id: 'B', text: 'To confirm that the elicitation results are accurate and consistent with their source and with the results of other activities.' },
+      { id: 'C', text: 'To rank requirements in order of relative importance so that delivery can be sequenced by value.' },
+      { id: 'D', text: 'To ensure that requirements meet quality standards such as being atomic, complete, and testable.' }
     ],
     answer: 'A',
     explanation: 'Trace Requirements (5.1) allinea requisiti e design a livelli diversi e gestisce gli effetti di un cambiamento su un livello sui requisiti correlati. È la base tecnica su cui poggia l\'impact analysis di Assess Requirements Changes.'
@@ -1746,10 +1746,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 5.4 Assess Requirements Changes',
     stem: 'A proposed change would deliver a benefit to one department but would require reworking three components already built. What should the assessment of this change consider?',
     options: [
-      { id: 'A', text: 'Only the benefit to the requesting department, since they are the customer.' },
+      { id: 'A', text: 'Only the benefit to the requesting department, since that department is the customer who asked for the change.' },
       { id: 'B', text: 'The implications of the change, weighing benefit against cost and impact on related requirements and designs.' },
-      { id: 'C', text: 'Only whether the change fits within the remaining schedule.' },
-      { id: 'D', text: 'Only whether the sponsor has authorized additional budget.' }
+      { id: 'C', text: 'Only whether the change fits within the remaining schedule, since rework late in delivery always threatens the deadline.' },
+      { id: 'D', text: 'Only whether the sponsor has authorized the additional budget that reworking the three components would require.' }
     ],
     answer: 'B',
     explanation: 'Assess Requirements Changes valuta le implicazioni delle modifiche proposte: significa considerarne benefici, costo e impatto sugli elementi correlati, non guardare a una sola dimensione. La tracciabilità rende visibile quali requisiti e componenti sono coinvolti.'
@@ -1760,10 +1760,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 5.5 Approve Requirements',
     stem: 'What is the purpose of Approve Requirements?',
     options: [
-      { id: 'A', text: 'To rank requirements by importance so that work can be sequenced.' },
-      { id: 'B', text: 'To obtain agreement on and approval of requirements and designs so that business analysis work can continue or construction can proceed.' },
-      { id: 'C', text: 'To check requirements against quality characteristics.' },
-      { id: 'D', text: 'To evaluate the implications of proposed changes.' }
+      { id: 'A', text: 'To rank requirements by importance so that the delivery team can sequence the remaining work in the right order.' },
+      { id: 'B', text: 'To obtain agreement on and approval of requirements and designs, so that business analysis work or construction can proceed.' },
+      { id: 'C', text: 'To check requirements against quality characteristics such as being complete, consistent, and testable.' },
+      { id: 'D', text: 'To evaluate the implications of proposed changes to requirements and designs before they are accepted.' }
     ],
     answer: 'B',
     explanation: 'Approve Requirements (5.5) ottiene accordo e approvazione affinché il lavoro di analisi prosegua o la costruzione della soluzione possa iniziare. Approvare non è verificare ({C}) né prioritizzare ({A}): riguarda il consenso, non la qualità o l\'ordine.'
@@ -1789,9 +1789,9 @@ window.ECBA_QUESTIONS = [
     stem: 'A stakeholder proposes a change late in delivery. You need to establish quickly what else it would affect. What should you use FIRST?',
     options: [
       { id: 'A', text: 'The traceability between requirements, designs and solution components' },
-      { id: 'B', text: 'The prioritization ranking agreed with stakeholders' },
-      { id: 'C', text: 'The risk register maintained for the initiative' },
-      { id: 'D', text: 'The change control log of previously approved changes' }
+      { id: 'B', text: 'The prioritization ranking agreed with stakeholders for the remaining work' },
+      { id: 'C', text: 'The risk register maintained for the initiative since its start' },
+      { id: 'D', text: 'The change control log listing all previously approved changes' }
     ],
     answer: 'A',
     explanation: 'La tracciabilità esiste proprio per gestire gli effetti di una modifica su un livello sugli elementi correlati: senza di essa l\'impact analysis diventa una ricerca manuale. Gli altri strumenti dicono altro.'
@@ -1832,10 +1832,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 6.2 Define Future State',
     stem: 'What is the purpose of Define Future State?',
     options: [
-      { id: 'A', text: 'To describe how the enterprise currently operates.' },
+      { id: 'A', text: 'To describe in detail how the enterprise currently operates and why.' },
       { id: 'B', text: 'To determine the set of necessary conditions to meet the business need.' },
-      { id: 'C', text: 'To select the recommended approach to the change.' },
-      { id: 'D', text: 'To measure whether the change has succeeded.' }
+      { id: 'C', text: 'To select the recommended approach to the change among the alternatives.' },
+      { id: 'D', text: 'To measure whether the change has succeeded once it is in operation.' }
     ],
     answer: 'B',
     explanation: 'Define Future State (6.2) determina l\'insieme di condizioni necessarie a soddisfare il business need. Non descrive il come arrivarci — quella è la change strategy (6.4) — ma il dove si vuole arrivare.'
@@ -1860,10 +1860,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 3.5 Identify Business Analysis Performance Improvements',
     stem: 'Once it has been produced, how is the business analysis performance assessment used?',
     options: [
-      { id: 'A', text: 'Results of previous assessments are reviewed and incorporated when planning business analysis work, such as the stakeholder engagement approach.' },
-      { id: 'B', text: 'It is used to approve the solution design.' },
-      { id: 'C', text: 'It is used to calculate the return on investment of the initiative.' },
-      { id: 'D', text: 'It is used to select the vendors for implementation.' }
+      { id: 'A', text: 'Results of previous assessments are reviewed and incorporated when planning business analysis work, such as stakeholder engagement.' },
+      { id: 'B', text: 'It is used by the stakeholders with approval authority as evidence when they approve the solution design.' },
+      { id: 'C', text: 'It is used to calculate the return on investment of the initiative, comparing the analysis effort with the benefits delivered.' },
+      { id: 'D', text: 'It is used to select the vendors for implementation, by comparing how well each one has worked with the analysts.' }
     ],
     answer: 'A',
     explanation: 'La Business Analysis Performance Assessment prodotta dal task 3.5 figura fra le guidelines dei task di pianificazione del capitolo 3 (da 3.1 a 3.4), dove i risultati delle valutazioni precedenti vanno riesaminati e incorporati, ed è un input di Manage Stakeholder Collaboration (4.5). Quanto appreso su come sta andando il lavoro di analisi torna a migliorare il modo in cui lo si pianifica.'
@@ -1875,9 +1875,9 @@ window.ECBA_QUESTIONS = [
     stem: 'Stakeholders complain that requirements documents arrive too late to be useful. What should the business analysis professional do with this feedback?',
     options: [
       { id: 'A', text: 'Treat it as input to assessing business analysis work and planning improvements to the process.' },
-      { id: 'B', text: 'Treat it as a solution limitation to be assessed after implementation.' },
-      { id: 'C', text: 'Treat it as a change request to the approved requirements.' },
-      { id: 'D', text: 'Treat it as an enterprise limitation outside the practitioner\'s control.' }
+      { id: 'B', text: 'Treat it as a solution limitation, to be assessed once the solution has been implemented.' },
+      { id: 'C', text: 'Treat it as a change request to the approved requirements and route it through change control.' },
+      { id: 'D', text: 'Treat it as an enterprise limitation that lies outside the business analysis practitioner\'s control.' }
     ],
     answer: 'A',
     explanation: 'Il feedback riguarda il processo di business analysis, non la soluzione: rientra in Identify Business Analysis Performance Improvements (3.5), che valuta il lavoro di analisi e pianifica il miglioramento dei processi dove serve.'
@@ -1904,10 +1904,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 8.5 Recommend Actions to Increase Solution Value',
     stem: 'What is the purpose of Recommend Actions to Increase Solution Value?',
     options: [
-      { id: 'A', text: 'To determine the factors internal to the solution that restrict value realization.' },
-      { id: 'B', text: 'To understand the factors creating differences between potential value and actual value, and recommend a course of action to align them.' },
-      { id: 'C', text: 'To define performance measures for the solution.' },
-      { id: 'D', text: 'To determine how factors external to the solution restrict value realization.' }
+      { id: 'A', text: 'To determine the factors internal to the solution, such as weak components or dependencies, that restrict the realization of value.' },
+      { id: 'B', text: 'To understand the factors that create differences between potential and actual value, and recommend a course of action to align them.' },
+      { id: 'C', text: 'To define the performance measures for the solution and the methods used to collect them.' },
+      { id: 'D', text: 'To determine how factors external to the solution, such as culture and structure, restrict value realization.' }
     ],
     answer: 'B',
     explanation: 'Il task chiude il ciclo di Solution Evaluation: capire perché il valore effettivo diverge da quello potenziale e raccomandare come allinearli. {A} è Assess Solution Limitations (8.3), {D} è Assess Enterprise Limitations (8.4), {C} è Measure Solution Performance (8.1).'
@@ -1918,10 +1918,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 10.34 Process Analysis',
     stem: 'A business analysis professional is asked to look at an invoicing process that stakeholders consider slow, in order to find opportunities for improvement. Which technique fits this assignment?',
     options: [
-      { id: 'A', text: 'Process Modelling, because it produces a standardized graphical model of the work.' },
+      { id: 'A', text: 'Process Modelling, because it produces a standardized graphical model showing how the invoicing work is carried out.' },
       { id: 'B', text: 'Process Analysis, because it assesses a process for efficiency and effectiveness and identifies opportunities for change.' },
-      { id: 'C', text: 'Scope Modelling, because it defines the boundaries of the solution.' },
-      { id: 'D', text: 'Organizational Modelling, because it describes roles and reporting structures.' }
+      { id: 'C', text: 'Scope Modelling, because it defines the boundaries of the invoicing process and what lies inside or outside them.' },
+      { id: 'D', text: 'Organizational Modelling, because it describes the roles and reporting structures of the people who handle invoices.' }
     ],
     answer: 'B',
     explanation: 'Process Analysis valuta efficienza ed efficacia e individua opportunità di cambiamento. Process Modelling (10.35) è la rappresentazione grafica che fa da fondamento all\'analisi: modellare è descrivere, analizzare è valutare. Le due tecniche hanno nomi simili ed è facile scambiarle.'
@@ -1933,9 +1933,9 @@ window.ECBA_QUESTIONS = [
     stem: 'What is a process model?',
     options: [
       { id: 'A', text: 'A standardized graphical model used to show how work is carried out, and a foundation for process analysis.' },
-      { id: 'B', text: 'A description of the entities and relationships in a data domain.' },
-      { id: 'C', text: 'A list of the roles and reporting lines within an organization.' },
-      { id: 'D', text: 'A ranked list of the work remaining on an initiative.' }
+      { id: 'B', text: 'A description of the entities, attributes, and relationships that make up a data domain.' },
+      { id: 'C', text: 'A list of the roles, responsibilities, and reporting lines that exist within an organization and its units.' },
+      { id: 'D', text: 'A ranked list of the work items remaining on an initiative, ordered by their value.' }
     ],
     answer: 'A',
     explanation: 'Il process model è un modello grafico standardizzato che mostra come il lavoro viene svolto e costituisce il fondamento della process analysis. Il rapporto fra le due tecniche è quello fra descrivere (10.35) e valutare (10.34).'
@@ -1974,10 +1974,10 @@ window.ECBA_QUESTIONS = [
     source: 'ECBA Exam Blueprint, activity statement 4.4',
     stem: 'While documenting an invoicing process you notice a manual re-keying step that a small change could remove. What is the MOST appropriate action at foundational level?',
     options: [
-      { id: 'A', text: 'Make the change yourself, since the benefit is obvious.' },
+      { id: 'A', text: 'Make the change yourself straight away, since the benefit is obvious to everyone.' },
       { id: 'B', text: 'Suggest the improvement with the supporting evidence and, if it is agreed, help to implement it.' },
-      { id: 'C', text: 'Leave it out, since improving the process is not part of the current task.' },
-      { id: 'D', text: 'Report it to senior management as a failure of the process owner.' }
+      { id: 'C', text: 'Leave it out, since improving the process is not part of the documentation task you were given.' },
+      { id: 'D', text: 'Report it to senior management as evidence that the process owner has failed to manage the process.' }
     ],
     answer: 'B',
     explanation: 'L\'activity statement 4.4 descrive proprio questo comportamento: proporre e aiutare a realizzare miglioramenti semplici, lavorando entro linee guida chiare. Proporre non è agire per conto proprio ({A}), e tacere ({C}) rinuncia a un miglioramento alla portata.'
@@ -2024,7 +2024,7 @@ window.ECBA_QUESTIONS = [
     options: [
       { id: 'A', text: 'It produces a graphical model of how work is carried out.' },
       { id: 'B', text: 'It establishes relationships and builds trust between business analysts and stakeholders.' },
-      { id: 'C', text: 'It guarantees that the information obtained is accurate and complete.' },
+      { id: 'C', text: 'It guarantees that the information obtained is accurate and complete, without further checks.' },
       { id: 'D', text: 'It removes the need to confirm the elicitation results afterwards.' }
     ],
     answer: 'B',
@@ -2036,10 +2036,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 4.1 Prepare for Elicitation',
     stem: 'What does preparing for elicitation include?',
     options: [
-      { id: 'A', text: 'Analysing the elicited information into requirements and designs.' },
-      { id: 'B', text: 'Defining the desired outcomes of the activity, deciding which techniques suit those outcomes, and establishing the logistics and supporting materials.' },
-      { id: 'C', text: 'Obtaining approval of the requirements from the sponsor.' },
-      { id: 'D', text: 'Checking the elicited information for accuracy and consistency.' }
+      { id: 'A', text: 'Analysing the elicited information and turning it into requirements and designs that stakeholders can then review and approve.' },
+      { id: 'B', text: 'Defining the desired outcomes, choosing the techniques that suit them, and establishing the logistics and supporting materials.' },
+      { id: 'C', text: 'Obtaining approval of the requirements from the sponsor before any elicitation session takes place.' },
+      { id: 'D', text: 'Checking the elicited information for accuracy and consistency against its source and other results.' }
     ],
     answer: 'B',
     explanation: 'Prepare for Elicitation (4.1) definisce gli outcome desiderati considerando stakeholder e obiettivi, determina i work product da produrre, sceglie le tecniche più adatte, stabilisce la logistica e i materiali di supporto e comprende le circostanze che favoriscono la collaborazione. {D} è Confirm Elicitation Results (4.3).'
@@ -2050,10 +2050,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 10.50 Workshops e 10.25 Interviews',
     stem: 'A business analysis professional must gather requirements from twelve people across four departments who each hold part of the picture, and needs them to reach a shared view in a single session. Which technique is most appropriate?',
     options: [
-      { id: 'A', text: 'Interviews, conducted one by one.' },
-      { id: 'B', text: 'Workshops, which bring stakeholders together to collaborate on achieving a predefined goal.' },
-      { id: 'C', text: 'Document Analysis of the departments\' procedures.' },
-      { id: 'D', text: 'Observation of each department at work.' }
+      { id: 'A', text: 'Interviews, conducted one by one with each of the twelve people involved in the process.' },
+      { id: 'B', text: 'Workshops, which bring stakeholders together to collaborate on a predefined goal.' },
+      { id: 'C', text: 'Document Analysis of the procedures used in each of the four departments.' },
+      { id: 'D', text: 'Observation of each department at work during a normal business day.' }
     ],
     answer: 'B',
     explanation: 'I workshop riuniscono gli stakeholder per collaborare al raggiungimento di un obiettivo predefinito: sono la scelta naturale quando serve una visione condivisa fra molte persone in un\'unica sessione. Le interviste individuali sono efficaci ma non producono, da sole, la condivisione fra i partecipanti.'
@@ -2078,10 +2078,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 4.2 Conduct Elicitation',
     stem: 'How may stakeholders collaborate in elicitation, according to the BABOK Guide?',
     options: [
-      { id: 'A', text: 'Only by attending facilitated sessions in person.' },
-      { id: 'B', text: 'By participating and interacting during the activity, and by researching, studying, and providing feedback on documents, systems, models, and interfaces.' },
-      { id: 'C', text: 'Only by approving the elicitation results afterwards.' },
-      { id: 'D', text: 'Only by nominating a representative to speak on their behalf.' }
+      { id: 'A', text: 'Only by attending facilitated sessions in person, since remote or written contributions are not part of elicitation.' },
+      { id: 'B', text: 'By taking part in the activity, and by researching and giving feedback on documents, systems, models, and interfaces.' },
+      { id: 'C', text: 'Only by approving the elicitation results afterwards, once the business analyst has collected the information alone.' },
+      { id: 'D', text: 'Only by nominating a representative to speak on their behalf, so that each group is heard through a single voice.' }
     ],
     answer: 'B',
     explanation: 'La collaborazione degli stakeholder ha due forme: partecipare e interagire durante l\'attività, e ricercare, studiare e fornire feedback su documenti, sistemi, modelli e interfacce. Anche nell\'elicitation di tipo research gli stakeholder possono partecipare.'
@@ -2123,8 +2123,8 @@ window.ECBA_QUESTIONS = [
     stem: 'Which set of characteristics describes requirements of acceptable quality?',
     options: [
       { id: 'A', text: 'Atomic, complete, consistent, concise, feasible, unambiguous, testable, prioritized, understandable' },
-      { id: 'B', text: 'Approved, budgeted, scheduled, assigned, tracked' },
-      { id: 'C', text: 'Functional, non-functional, transition, business, stakeholder' },
+      { id: 'B', text: 'Approved, budgeted, scheduled, assigned, tracked, estimated, documented, signed off, baselined' },
+      { id: 'C', text: 'Functional, non-functional, transition, business, stakeholder, solution, quality of service' },
       { id: 'D', text: 'Specific, measurable, achievable, relevant, time-bound' }
     ],
     answer: 'A',
@@ -2136,10 +2136,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 7.2 Verify Requirements e 7.3 Validate Requirements',
     stem: 'A reviewer notes that a requirement is well written and testable, but that it does not contribute to any business objective of the initiative. Which task addresses this specific concern?',
     options: [
-      { id: 'A', text: 'Verify Requirements, because the requirement must meet quality standards.' },
-      { id: 'B', text: 'Validate Requirements, because all requirements must align to the business requirements and support the delivery of needed value.' },
-      { id: 'C', text: 'Trace Requirements, because the requirement has no identified source.' },
-      { id: 'D', text: 'Approve Requirements, because agreement has not been obtained.' }
+      { id: 'A', text: 'Verify Requirements, because the requirement must meet quality standards before it can be used by the delivery team.' },
+      { id: 'B', text: 'Validate Requirements, because requirements must align to the business requirements and deliver needed value.' },
+      { id: 'C', text: 'Trace Requirements, because a requirement with no link to an objective has no identified source.' },
+      { id: 'D', text: 'Approve Requirements, because the stakeholders have not yet agreed that the requirement is needed.' }
     ],
     answer: 'B',
     explanation: 'La distinzione verify/validate è fra le più facili da confondere. Verify (7.2) chiede "il requisito è scritto bene?" — qualità, usabilità della specifica. Validate (7.3) chiede "il requisito serve a qualcosa?" — allineamento ai business requirement e al valore atteso. Qui il requisito supera la verifica ma fallisce la validazione.'
@@ -2164,7 +2164,7 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 10.48 User Stories',
     stem: 'How does the BABOK Guide describe a user story?',
     options: [
-      { id: 'A', text: 'A detailed specification of all functional and non-functional requirements of a feature.' },
+      { id: 'A', text: 'A detailed specification of all the functional and non-functional requirements of a feature, with its acceptance criteria.' },
       { id: 'B', text: 'A small, concise statement of functionality or quality needed to deliver value to a specific stakeholder.' },
       { id: 'C', text: 'A graphical model showing how work is carried out across roles.' },
       { id: 'D', text: 'A prioritized record of all remaining work items on an initiative.' }
@@ -2179,9 +2179,9 @@ window.ECBA_QUESTIONS = [
     stem: 'A requirement reads: "The system must allow users to export data and must send a confirmation email to the supervisor." Which quality characteristic is compromised?',
     options: [
       { id: 'A', text: 'Atomic, because the statement is not self-contained and combines two separate requirements.' },
-      { id: 'B', text: 'Feasible, because both parts cannot be delivered in the same release.' },
-      { id: 'C', text: 'Understandable, because the terminology is technical.' },
-      { id: 'D', text: 'Prioritized, because no ranking has been assigned.' }
+      { id: 'B', text: 'Feasible, because both parts cannot be delivered within the same release of the solution.' },
+      { id: 'C', text: 'Understandable, because the terminology used is too technical for the supervisor.' },
+      { id: 'D', text: 'Prioritized, because no ranking has been assigned to either part of the statement.' }
     ],
     answer: 'A',
     explanation: 'Atomic significa autosufficiente e comprensibile indipendentemente dagli altri requisiti. Qui ci sono due requisiti distinti in una frase sola: se uno viene implementato e l\'altro no, lo stato del requisito diventa ambiguo, e anche la testabilità ne risente.'
@@ -2192,10 +2192,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 7.2 Verify Requirements',
     stem: 'What does the quality characteristic "testable" require?',
     options: [
-      { id: 'A', text: 'That a test script has already been written for the requirement.' },
+      { id: 'A', text: 'That a test script has already been written and approved for the requirement.' },
       { id: 'B', text: 'That it is possible to verify that the requirement or design has been fulfilled.' },
-      { id: 'C', text: 'That the requirement has been approved by the testing team.' },
-      { id: 'D', text: 'That the requirement can be automated.' }
+      { id: 'C', text: 'That the requirement has been reviewed and approved by the testing team.' },
+      { id: 'D', text: 'That the requirement can be tested automatically by a testing tool.' }
     ],
     answer: 'B',
     explanation: 'Testable significa che è possibile verificare che il requisito o il design sia stato soddisfatto; i livelli accettabili di verifica dipendono dal livello di astrazione del requisito. Non richiede che esistano già script di test né che il requisito sia automatizzabile.'
@@ -2264,10 +2264,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 7.3 Validate Requirements',
     stem: 'A team has assumed that customers will adopt a new self-service channel, but the product is unprecedented and there is no comparable experience to rely on. What does the BABOK Guide advise?',
     options: [
-      { id: 'A', text: 'Proceed, since assumptions are unavoidable in innovation.' },
+      { id: 'A', text: 'Proceed as planned, since assumptions are unavoidable when innovating.' },
       { id: 'B', text: 'Identify and define the assumption so that the associated risks can be managed.' },
-      { id: 'C', text: 'Replace the assumption with a requirement.' },
-      { id: 'D', text: 'Cancel the initiative until customer behaviour can be proven.' }
+      { id: 'C', text: 'Replace the assumption with a requirement that customers must adopt the channel.' },
+      { id: 'D', text: 'Cancel the initiative until customer behaviour can be proven in advance.' }
     ],
     answer: 'B',
     explanation: 'Quando un\'organizzazione lancia un prodotto senza precedenti può essere necessario fare assunzioni sulla risposta di clienti e stakeholder: queste vanno identificate e definite proprio perché i rischi associati possano essere gestiti. Un\'assunzione esplicita è gestibile, una implicita no.'
@@ -2292,10 +2292,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 7.3; Syllabus Map 5.3',
     stem: 'Two stakeholder groups have stated needs that cannot both be satisfied. What is the MOST appropriate action at foundational level?',
     options: [
-      { id: 'A', text: 'Choose the need of the group with the greater organizational weight.' },
+      { id: 'A', text: 'Choose the need of the group with the greater organizational weight, since it carries more value.' },
       { id: 'B', text: 'Flag the conflict so it can be reviewed and resolved with the relevant stakeholders.' },
-      { id: 'C', text: 'Remove both needs until the groups agree between themselves.' },
-      { id: 'D', text: 'Pass both needs to delivery and let the design resolve the tension.' }
+      { id: 'C', text: 'Remove both needs until the two groups agree between themselves on a single version.' },
+      { id: 'D', text: 'Pass both needs to delivery and let the design resolve the tension between them.' }
     ],
     answer: 'B',
     explanation: 'L\'activity statement 5.3 chiede di confrontare i bisogni con gli outcome e segnalare i conflitti per la revisione. A questo livello si rileva e si segnala: decidere unilateralmente ({A}) o scaricare a valle ({D}) non è il ruolo atteso.'
@@ -2306,10 +2306,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 7.3 Validate Requirements · Syllabus Map 5.3',
     stem: 'A stakeholder need would clearly benefit one team, but it does not fit the solution scope agreed for the initiative. What is the MOST appropriate action?',
     options: [
-      { id: 'A', text: 'Add it to the requirements anyway, since it benefits a stakeholder.' },
-      { id: 'B', text: 'Leave it out quietly, since it is outside the agreed scope.' },
+      { id: 'A', text: 'Add it to the requirements anyway, since anything that benefits a stakeholder adds value to the solution.' },
+      { id: 'B', text: 'Leave it out quietly, since it falls outside the scope that the stakeholders have already agreed.' },
       { id: 'C', text: 'Flag the misalignment so that either the scope is reconsidered or the need is left out of the solution.' },
-      { id: 'D', text: 'Reword the need until it appears to fit the scope.' }
+      { id: 'D', text: 'Reword the need until it appears to fit within the agreed solution scope.' }
     ],
     answer: 'C',
     explanation: 'Un requisito può portare beneficio a uno stakeholder e non essere comunque una parte desiderabile della soluzione: quando non c\'è allineamento, o si rivedono future state e solution scope, o il requisito esce dallo scope. A livello foundational il compito è far emergere il disallineamento perché venga deciso, non risolverlo da soli aggiungendo ({A}) o togliendo in silenzio ({B}).'
@@ -2320,10 +2320,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 7.2 Verify Requirements · Syllabus Map 5.3',
     stem: 'A stakeholder need looks valuable, but nobody can yet say whether it can be met within the agreed risk, schedule, and budget. What should you do NEXT?',
     options: [
-      { id: 'A', text: 'Treat it as agreed, since its value is not in doubt.' },
+      { id: 'A', text: 'Treat it as agreed, since its value to the stakeholder is not in doubt.' },
       { id: 'B', text: 'Investigate its feasibility further, for example through an experiment or a prototype.' },
-      { id: 'C', text: 'Discard it, since feasibility has not been demonstrated.' },
-      { id: 'D', text: 'Put it at the bottom of the list so that the question can wait.' }
+      { id: 'C', text: 'Discard it, since its feasibility has not yet been demonstrated by anyone.' },
+      { id: 'D', text: 'Put it at the bottom of the list, so that the question of feasibility can wait.' }
     ],
     answer: 'B',
     explanation: 'Feasible significa ragionevole e possibile entro rischio, tempi e budget concordati, oppure abbastanza fattibile da meritare un\'indagine ulteriore tramite esperimenti o prototipi. Né l\'accettazione ({A}) né lo scarto ({C}) sono giustificati finché la fattibilità non è stata indagata; rinviare la questione ({D}) fa solo spendere risorse prima di sapere.'
@@ -2338,8 +2338,8 @@ window.ECBA_QUESTIONS = [
     options: [
       { id: 'A', text: 'Penalty: the consequences that result from not implementing a given requirement.' },
       { id: 'B', text: 'Authorship: who within the organization first raised the requirement.' },
-      { id: 'C', text: 'Length: how much documentation the requirement needs.' },
-      { id: 'D', text: 'Sequence: the order in which requirements were elicited.' }
+      { id: 'C', text: 'Length: how much documentation the requirement needs before it can be built.' },
+      { id: 'D', text: 'Sequence: the order in which the requirements were originally elicited.' }
     ],
     answer: 'A',
     explanation: 'I fattori tipici sono benefit, penalty, cost, risk, dependencies, time sensitivity, stability e regulatory or policy compliance. Il "penalty" include il dover soddisfare obblighi normativi, che possono prevalere sugli altri interessi degli stakeholder. Chi ha proposto il requisito o quanto è lungo non sono criteri del BABOK.'
@@ -2365,9 +2365,9 @@ window.ECBA_QUESTIONS = [
     stem: 'Stakeholders assign top priority to a requirement, but after learning the implementation cost from the delivery team they lower it. Which prioritization factor caused the change?',
     options: [
       { id: 'A', text: 'Cost, information about which typically comes from the implementation team or the vendor.' },
-      { id: 'B', text: 'Penalty, because not implementing it now has consequences.' },
-      { id: 'C', text: 'Regulatory compliance, because budgets are governed by policy.' },
-      { id: 'D', text: 'Stability, because the requirement has changed.' }
+      { id: 'B', text: 'Penalty, because not implementing the requirement now would have consequences.' },
+      { id: 'C', text: 'Regulatory compliance, because spending on requirements is governed by policy.' },
+      { id: 'D', text: 'Stability, because the requirement itself has changed after further analysis.' }
     ],
     answer: 'A',
     explanation: 'Il cost è lo sforzo e le risorse necessarie a implementare il requisito, e l\'informazione arriva tipicamente dal team di implementazione o dal fornitore; il BABOK nota esplicitamente che i clienti possono cambiare la priorità di un requisito dopo averne appreso il costo. Il costo è spesso usato insieme ad altri criteri, come nella cost-benefit analysis.'
@@ -2378,10 +2378,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 5.3 Prioritize Requirements',
     stem: 'Who agrees the basis on which requirements are prioritized?',
     options: [
-      { id: 'A', text: 'The business analyst alone, to remain objective.' },
-      { id: 'B', text: 'The relevant stakeholders, as defined in the Business Analysis Planning and Monitoring knowledge area.' },
-      { id: 'C', text: 'The implementation team, since they know the cost.' },
-      { id: 'D', text: 'The regulator, where the initiative is subject to compliance.' }
+      { id: 'A', text: 'The business analyst alone, so that the basis for prioritization remains objective.' },
+      { id: 'B', text: 'The relevant stakeholders, as defined in Business Analysis Planning and Monitoring.' },
+      { id: 'C', text: 'The implementation team, since they know the cost and difficulty of each requirement.' },
+      { id: 'D', text: 'The regulator, wherever the initiative is subject to compliance obligations.' }
     ],
     answer: 'B',
     explanation: 'La base della prioritizzazione è concordata con gli stakeholder rilevanti secondo quanto definito in Business Analysis Planning and Monitoring. Prioritizzare non è una decisione tecnica del professionista: è una decisione di business che va concordata prima di applicarla.'
@@ -2393,9 +2393,9 @@ window.ECBA_QUESTIONS = [
     stem: 'A requirement is technically difficult and there is genuine doubt it can be delivered at all. Where should it sit in the priority order?',
     options: [
       { id: 'A', text: 'Near the top, to limit the resources spent before discovering it is not viable.' },
-      { id: 'B', text: 'Near the bottom, so that achievable work is delivered first.' },
-      { id: 'C', text: 'In the middle, balancing its risk against its benefit.' },
-      { id: 'D', text: 'Outside the backlog until feasibility has been proven separately.' }
+      { id: 'B', text: 'Near the bottom, so that the achievable work is delivered first and value arrives sooner.' },
+      { id: 'C', text: 'In the middle of the list, balancing its risk against the benefit it would deliver.' },
+      { id: 'D', text: 'Outside the backlog until its feasibility has been proven separately by the team.' }
     ],
     answer: 'A',
     explanation: 'È il criterio "risk": quando la fattibilità tecnica è in dubbio, il requisito più difficile può essere portato in cima proprio per minimizzare le risorse spese prima di scoprire che la soluzione non è realizzabile. Un proof of concept serve allo stesso scopo.'
@@ -2406,10 +2406,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 5.3 Prioritize Requirements',
     stem: 'Two stakeholders each insist that their own requirement must come first. What is the MOST appropriate way to proceed?',
     options: [
-      { id: 'A', text: 'Rank the two requirements yourself, to keep the work moving.' },
-      { id: 'B', text: 'Return to the basis for prioritization agreed with the relevant stakeholders and assess both requirements against it.' },
-      { id: 'C', text: 'Give priority to the requirement that was raised first.' },
-      { id: 'D', text: 'Schedule both at once, so that neither stakeholder is disappointed.' }
+      { id: 'A', text: 'Rank the two requirements yourself, so that the work can keep moving without further delay.' },
+      { id: 'B', text: 'Return to the basis for prioritization agreed with the relevant stakeholders and assess both against it.' },
+      { id: 'C', text: 'Give priority to the requirement that was raised first, since it has been waiting longest.' },
+      { id: 'D', text: 'Schedule both requirements at once, so that neither stakeholder is disappointed by the outcome.' }
     ],
     answer: 'B',
     explanation: 'La base su cui si prioritizza è concordata con gli stakeholder rilevanti: quando due priorità confliggono si torna a quel criterio condiviso invece di decidere al loro posto ({A}) o con un criterio estraneo come l\'ordine di arrivo ({C}). Il BABOK ricorda che la prioritizzazione è una valutazione di valore relativo, e che stakeholder diversi possono dare valore a cose diverse.'
@@ -2454,10 +2454,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 8.3 Assess Solution Limitations',
     stem: 'When a solution consistently produces ineffective outputs, what does Assess Solution Limitations involve?',
     options: [
-      { id: 'A', text: 'Replacing the solution with an alternative design option.' },
+      { id: 'A', text: 'Replacing the solution with one of the alternative design options considered earlier.' },
       { id: 'B', text: 'Identifying internal component dependencies and investigating solution problems to find the source.' },
-      { id: 'C', text: 'Assessing the enterprise culture that surrounds the solution.' },
-      { id: 'D', text: 'Re-running the elicitation activities that produced the requirements.' }
+      { id: 'C', text: 'Assessing the enterprise culture that surrounds the solution and the attitudes of its users.' },
+      { id: 'D', text: 'Re-running the elicitation activities that produced the requirements for the solution in the first place.' }
     ],
     answer: 'B',
     explanation: 'Le soluzioni hanno spesso dipendenze interne che limitano la prestazione dell\'insieme a quella del componente meno efficace; quando gli output sono ripetutamente inefficaci si conduce problem analysis per identificare la fonte del problema. La valutazione della cultura aziendale ({C}) appartiene ad Assess Enterprise Limitations (8.4), che guarda ai fattori esterni alla soluzione.'
@@ -2468,10 +2468,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 8.1 Measure Solution Performance',
     stem: 'From where do performance measures for a solution commonly come?',
     options: [
-      { id: 'A', text: 'Exclusively from the delivery team\'s tooling.' },
-      { id: 'B', text: 'From business goals, objectives, and business processes, and they may also be influenced or imposed by third parties such as vendors or regulators.' },
-      { id: 'C', text: 'Exclusively from the requirements documentation.' },
-      { id: 'D', text: 'From the project schedule and cost baseline.' }
+      { id: 'A', text: 'Exclusively from the delivery team\'s tooling, which records how each component of the solution behaves.' },
+      { id: 'B', text: 'From business goals, objectives, and processes, and they may also be imposed by third parties such as vendors or regulators.' },
+      { id: 'C', text: 'Exclusively from the requirements documentation, since every measure must trace back to an approved requirement.' },
+      { id: 'D', text: 'From the project schedule and cost baseline, which show whether the solution was delivered as planned.' }
     ],
     answer: 'B',
     explanation: 'Goal, obiettivi e processi di business sono fonti comuni di misure, e le misure possono essere influenzate o imposte da terzi come fornitori, enti governativi o organizzazioni regolatrici. Il tipo e la natura delle misure incidono poi sulla scelta del metodo di elicitation.'
@@ -2482,10 +2482,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 8.1 Measure Solution Performance',
     stem: 'A business analysis professional proposes a performance measure that no stakeholder considers meaningful. What does the BABOK Guide prescribe?',
     options: [
-      { id: 'A', text: 'Adopt it anyway, since objectivity requires independence from opinion.' },
-      { id: 'B', text: 'Validate the performance measures and any influencing criteria with stakeholders, so the assessment of performance is useful.' },
-      { id: 'C', text: 'Replace it with a qualitative measure.' },
-      { id: 'D', text: 'Defer the measurement until after the next release.' }
+      { id: 'A', text: 'Adopt it anyway, since objective measurement requires independence from the stakeholders\' opinions.' },
+      { id: 'B', text: 'Validate the performance measures and any influencing criteria with stakeholders, so the assessment is useful.' },
+      { id: 'C', text: 'Replace it with a qualitative measure, such as a survey of how satisfied stakeholders feel.' },
+      { id: 'D', text: 'Defer the measurement until after the next release, when more data about the solution will exist.' }
     ],
     answer: 'B',
     explanation: 'Validare le misure di prestazione con gli stakeholder serve ad assicurare che la valutazione sia utile; le misure specifiche devono inoltre allinearsi con eventuali misure di livello superiore esistenti nel contesto. Una misura che nessuno ritiene significativa non produrrà decisioni.'
@@ -2496,10 +2496,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 7.3 Validate Requirements',
     stem: 'What are baseline metrics, as used when defining measurable evaluation criteria?',
     options: [
-      { id: 'A', text: 'Target values that reflect achievement of the business objectives.' },
+      { id: 'A', text: 'Target values that reflect achievement of the business objectives once the change is complete.' },
       { id: 'B', text: 'Metrics established from the current state, against which change can later be assessed.' },
-      { id: 'C', text: 'The minimum acceptable performance defined by the vendor.' },
-      { id: 'D', text: 'The measures collected during solution testing.' }
+      { id: 'C', text: 'The minimum acceptable level of performance defined by the vendor in the contract.' },
+      { id: 'D', text: 'The measures collected during solution testing, before the solution goes live.' }
     ],
     answer: 'B',
     explanation: 'Le baseline metric sono stabilite a partire dal current state; le target metric sono invece sviluppate per riflettere il raggiungimento degli obiettivi di business ({A}). Senza baseline non è possibile dire quanto il cambiamento abbia migliorato la situazione.'
@@ -2541,9 +2541,9 @@ window.ECBA_QUESTIONS = [
     stem: 'What is the purpose of Analyze Potential Value and Recommend Solution?',
     options: [
       { id: 'A', text: 'To estimate the potential value for each design option and establish which is most appropriate to meet the enterprise\'s requirements.' },
-      { id: 'B', text: 'To define the solution approach and allocate requirements across solution components.' },
-      { id: 'C', text: 'To measure the value actually delivered after implementation.' },
-      { id: 'D', text: 'To obtain approval of the recommended solution from the sponsor.' }
+      { id: 'B', text: 'To define the solution approach, identify opportunities to improve the business, and allocate requirements across components.' },
+      { id: 'C', text: 'To measure the value actually delivered by the solution after implementation, against the targets set for it.' },
+      { id: 'D', text: 'To obtain formal approval of the recommended solution from the sponsor before construction begins.' }
     ],
     answer: 'A',
     explanation: 'Il task 7.6 stima il valore potenziale di ciascuna opzione di design e stabilisce quale sia la più appropriata. {B} è Define Design Options (7.5), che viene prima: prima si definiscono le opzioni, poi se ne analizza il valore. {C} appartiene a Solution Evaluation (cap. 8).'
@@ -2568,10 +2568,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 7.5 Define Design Options',
     stem: 'What does the Define Design Options task include?',
     options: [
-      { id: 'A', text: 'Defining the solution approach, identifying opportunities to improve the business, and allocating requirements across solution components.' },
-      { id: 'B', text: 'Ranking requirements in order of relative importance.' },
-      { id: 'C', text: 'Determining the factors internal to the solution that restrict value realization.' },
-      { id: 'D', text: 'Compiling successes and opportunities for improvement at the end of a phase.' }
+      { id: 'A', text: 'Defining the solution approach, identifying opportunities to improve the business, and allocating requirements to solution components.' },
+      { id: 'B', text: 'Ranking requirements in order of relative importance, so that the most valuable ones are designed first.' },
+      { id: 'C', text: 'Determining the factors internal to the solution, such as component dependencies, that restrict value realization.' },
+      { id: 'D', text: 'Compiling successes, failures, and opportunities for improvement at the end of a phase, so that future phases perform better.' }
     ],
     answer: 'A',
     explanation: 'Define Design Options (7.5) definisce l\'approccio alla soluzione, individua opportunità di miglioramento del business, alloca i requisiti sui componenti della soluzione e rappresenta le opzioni di design che realizzano il future state desiderato.'
@@ -2583,9 +2583,9 @@ window.ECBA_QUESTIONS = [
     stem: 'Business capability analysis provides a scope and prioritization filter. What else does it generate?',
     options: [
       { id: 'A', text: 'A shared understanding of outcomes and an identification of alignment with strategy.' },
-      { id: 'B', text: 'A ranked backlog of the work remaining.' },
-      { id: 'C', text: 'A set of acceptance criteria for testing.' },
-      { id: 'D', text: 'A model of the roles and reporting structures.' }
+      { id: 'B', text: 'A ranked backlog of the work remaining, ordered by the value of each item.' },
+      { id: 'C', text: 'A set of acceptance criteria that the solution must meet during testing.' },
+      { id: 'D', text: 'A model of the roles, responsibilities, and reporting structures of the organization.' }
     ],
     answer: 'A',
     explanation: 'La business capability analysis fornisce un framework per scoping e pianificazione generando comprensione condivisa degli outcome, identificando l\'allineamento con la strategia e fungendo da filtro di scope e prioritizzazione. Le capability rispondono a "cosa sa fare l\'organizzazione", non a "chi riporta a chi" ({D}).'
@@ -2596,10 +2596,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 6.4 Define Change Strategy',
     stem: 'What must be in place before a gap analysis can be performed?',
     options: [
-      { id: 'A', text: 'The solution must already be implemented.' },
+      { id: 'A', text: 'The solution must already be implemented and in operation.' },
       { id: 'B', text: 'Both the current state and the future state must be defined.' },
-      { id: 'C', text: 'The requirements must have been approved.' },
-      { id: 'D', text: 'The delivery approach must have been selected.' }
+      { id: 'C', text: 'The requirements must have been formally approved by stakeholders.' },
+      { id: 'D', text: 'The delivery approach for the change must already have been selected.' }
     ],
     answer: 'B',
     explanation: 'Per eseguire una gap analysis devono essere definiti sia il current state sia il future state; usare le stesse tecniche per descriverli semplifica il confronto. Senza uno dei due termini non esiste alcun divario da misurare.'
@@ -2640,10 +2640,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 6.4 Define Change Strategy',
     stem: 'What does the solution scope define?',
     options: [
-      { id: 'A', text: 'The list of stakeholders who must approve the solution.' },
-      { id: 'B', text: 'The boundaries of the solution, described in enough detail for stakeholders to understand which new capabilities the change will deliver.' },
-      { id: 'C', text: 'The schedule and budget within which the solution must be delivered.' },
-      { id: 'D', text: 'The set of test cases that the solution must pass before go-live.' }
+      { id: 'A', text: 'The list of stakeholders who must approve the solution before it can be implemented, and the order in which they approve it.' },
+      { id: 'B', text: 'The boundaries of the solution, detailed enough for stakeholders to understand which new capabilities the change will deliver.' },
+      { id: 'C', text: 'The schedule and budget within which the solution must be delivered, agreed with the sponsor at the start of the initiative.' },
+      { id: 'D', text: 'The set of test cases that the solution must pass before go-live, with the acceptance criteria attached to each of them.' }
     ],
     answer: 'B',
     explanation: 'Il solution scope definisce i confini della soluzione e descrive come essa abilita i goal del future state. Può includere anche la descrizione dei componenti fuori scope, per chiarezza, e può evolvere durante l\'iniziativa man mano che emergono informazioni.'
@@ -2655,9 +2655,9 @@ window.ECBA_QUESTIONS = [
     stem: 'What is the purpose of Scope Modelling?',
     options: [
       { id: 'A', text: 'To define the nature of one or more limits or boundaries and place elements inside or outside those boundaries.' },
-      { id: 'B', text: 'To record, track, and prioritize remaining work items.' },
+      { id: 'B', text: 'To record, track, and prioritize the remaining work items, so that the team knows what to deliver next.' },
       { id: 'C', text: 'To describe the roles, responsibilities, and reporting structures within an organization.' },
-      { id: 'D', text: 'To identify and evaluate the underlying causes of a problem.' }
+      { id: 'D', text: 'To identify and evaluate the underlying causes of a problem, rather than its visible symptoms.' }
     ],
     answer: 'A',
     explanation: 'Gli scope model definiscono limiti o confini e collocano gli elementi dentro o fuori. {B} è Backlog Management (10.2), {C} Organizational Modelling (10.32), {D} Root Cause Analysis (10.40). Per ciascuna delle 20 tecniche valutate all\'ECBA conviene conoscere scopo, descrizione, punti di forza e limiti.'
@@ -2669,9 +2669,9 @@ window.ECBA_QUESTIONS = [
     stem: 'What is the purpose of Define Requirements Architecture?',
     options: [
       { id: 'A', text: 'To ensure that the requirements collectively support one another to fully achieve the objectives.' },
-      { id: 'B', text: 'To define the technical architecture of the solution components.' },
-      { id: 'C', text: 'To store requirements so that they can be retrieved later.' },
-      { id: 'D', text: 'To estimate the effort required to implement each requirement.' }
+      { id: 'B', text: 'To define the technical architecture of the solution components and the platforms they run on.' },
+      { id: 'C', text: 'To store requirements in a repository so that they can be retrieved and reused later.' },
+      { id: 'D', text: 'To estimate the effort required to implement each requirement in the solution.' }
     ],
     answer: 'A',
     explanation: 'Il task 7.4 riguarda l\'insieme: i requisiti presi collettivamente devono sostenersi a vicenda e raggiungere pienamente gli obiettivi. Non è l\'architettura tecnica della soluzione ({B}), che appartiene al design, né la gestione documentale ({C}).'
@@ -2711,9 +2711,9 @@ window.ECBA_QUESTIONS = [
     stem: 'At the start of an initiative, two departments disagree about whether invoicing is part of the change. Which technique most directly helps settle what is inside and what is outside?',
     options: [
       { id: 'A', text: 'Scope Modelling, which defines limits or boundaries and places elements inside or outside them.' },
-      { id: 'B', text: 'Backlog Management, which records and prioritizes remaining work.' },
-      { id: 'C', text: 'Lessons Learned, which captures improvement opportunities.' },
-      { id: 'D', text: 'Brainstorming, which generates ideas about the problem.' }
+      { id: 'B', text: 'Backlog Management, which records, tracks, and prioritizes the remaining work items.' },
+      { id: 'C', text: 'Lessons Learned, which captures successes and improvement opportunities from past work.' },
+      { id: 'D', text: 'Brainstorming, which generates numerous ideas about the problem and themes for analysis.' }
     ],
     answer: 'A',
     explanation: 'Gli scope model definiscono la natura di uno o più limiti o confini e collocano gli elementi dentro o fuori: sono lo strumento diretto per rendere esplicito cosa appartiene all\'iniziativa e cosa no. Il backlog ordina il lavoro accettato, ma non stabilisce i confini.'
@@ -2768,10 +2768,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 2.5 Requirements and Designs',
     stem: 'Can the same task and technique be used to produce both a requirement and a design?',
     options: [
-      { id: 'A', text: 'No: requirements and designs are produced by mutually exclusive tasks.' },
+      { id: 'A', text: 'No: requirements and designs are always produced by separate tasks and techniques that never overlap.' },
       { id: 'B', text: 'Yes: the same tasks and techniques can be used for both, since what differs is the purpose they serve.' },
-      { id: 'C', text: 'Yes, but only in adaptive approaches.' },
-      { id: 'D', text: 'No: designs may only be produced after all requirements are approved.' }
+      { id: 'C', text: 'Yes, but only in adaptive approaches, where requirements and designs evolve together.' },
+      { id: 'D', text: 'No: designs may only be produced after all the requirements have been formally approved.' }
     ],
     answer: 'B',
     explanation: 'Requisiti e design sono simili per natura e le stesse task e tecniche possono servire a crearli: a differire è lo scopo, perché il requisito rappresenta un need e il design rappresenta una soluzione. Sono inoltre interdipendenti e ciclici, quindi {D} è doppiamente errata.'
@@ -2831,7 +2831,7 @@ window.ECBA_QUESTIONS = [
     stem: 'What is the purpose of Communicate Business Analysis Information?',
     options: [
       { id: 'A', text: 'To ensure stakeholders have a shared understanding of business analysis information.' },
-      { id: 'B', text: 'To obtain formal approval of requirements from the sponsor.' },
+      { id: 'B', text: 'To obtain formal approval of the requirements and designs from the sponsor and other approvers.' },
       { id: 'C', text: 'To store business analysis information so that it can be retrieved later.' },
       { id: 'D', text: 'To encourage stakeholders to work towards a common goal.' }
     ],
@@ -2844,10 +2844,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 4.4 Communicate Business Analysis Information',
     stem: 'Communication of business analysis information is described as which of the following?',
     options: [
-      { id: 'A', text: 'One-directional and final, once the requirements are baselined.' },
+      { id: 'A', text: 'One-directional and final, sent out once the requirements have been baselined and approved.' },
       { id: 'B', text: 'Bi-directional and iterative, involving determining recipients, content, purpose, context, and expected outcomes.' },
-      { id: 'C', text: 'A formality performed at the end of each phase.' },
-      { id: 'D', text: 'The responsibility of the project manager rather than the business analyst.' }
+      { id: 'C', text: 'A formality performed at the end of each phase, when the deliverables are handed over to stakeholders.' },
+      { id: 'D', text: 'The responsibility of the project manager rather than the business analyst, who only supplies the content.' }
     ],
     answer: 'B',
     explanation: 'La comunicazione è bidirezionale e iterativa, e comporta determinare destinatari, contenuto, scopo, contesto e outcome attesi. Non è spingere fuori informazione dando per scontato che sia stata ricevuta e compresa: il professionista verifica la comprensione e agisce sui disaccordi.'
@@ -2858,10 +2858,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 9.4.3 Written Communication',
     stem: 'What does effective written communication require, according to the BABOK Guide?',
     options: [
-      { id: 'A', text: 'Using the maximum level of formality regardless of audience.' },
+      { id: 'A', text: 'Using the maximum level of formality in every document, regardless of who the audience is.' },
       { id: 'B', text: 'An understanding of the audience, since presenting information and ideas requires selecting the correct words.' },
-      { id: 'C', text: 'Avoiding models and sketches, which introduce ambiguity.' },
-      { id: 'D', text: 'Producing a single document that serves every stakeholder group.' }
+      { id: 'C', text: 'Avoiding models and sketches, since anything other than plain text introduces ambiguity.' },
+      { id: 'D', text: 'Producing a single document that serves every stakeholder group, so that all of them read the same words.' }
     ],
     answer: 'B',
     explanation: 'La comunicazione scritta usa testo, simboli, modelli formali o informali e schizzi per trasmettere informazione, e la comprensione del pubblico è utile per usarla efficacemente, perché presentare informazioni e idee richiede di scegliere le parole corrette. I modelli sono parte della comunicazione scritta, non un\'eccezione ({C}).'
@@ -2930,10 +2930,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 3.2 Plan Stakeholder Engagement',
     stem: 'Why is a thorough stakeholder analysis important?',
     options: [
-      { id: 'A', text: 'Because stakeholders not identified early cannot be added to the initiative later.' },
-      { id: 'B', text: 'Because stakeholder needs uncovered late often require revising business analysis tasks in progress or completed, increasing costs and decreasing satisfaction.' },
-      { id: 'C', text: 'Because the number of stakeholders determines the business analysis approach.' },
-      { id: 'D', text: 'Because only identified stakeholders may attend elicitation activities.' }
+      { id: 'A', text: 'Because stakeholders who are not identified early cannot be added to the initiative later, whatever their interest in the change.' },
+      { id: 'B', text: 'Because needs uncovered late often require revising business analysis tasks in progress or completed, increasing costs and lowering satisfaction.' },
+      { id: 'C', text: 'Because the number of stakeholders identified determines which business analysis approach must be used for the initiative.' },
+      { id: 'D', text: 'Because only the stakeholders already identified are allowed to attend elicitation activities and provide information.' }
     ],
     answer: 'B',
     explanation: 'Se gli stakeholder non sono identificati si rischia di non scoprire bisogni critici; quelli scoperti tardi costringono a rivedere attività in corso o già concluse, con aumento dei costi e calo della soddisfazione. Nuovi stakeholder possono comunque emergere in qualsiasi momento dell\'iniziativa, quindi {A} è falsa.'
@@ -2946,8 +2946,8 @@ window.ECBA_QUESTIONS = [
     options: [
       { id: 'A', text: 'Stakeholders responsible for the day-to-day management and maintenance of a system.' },
       { id: 'B', text: 'Stakeholders who directly interact with the solution, including all participants in a business process.' },
-      { id: 'C', text: 'Stakeholders with specialized knowledge of solution implementation.' },
-      { id: 'D', text: 'Stakeholders who define and enforce standards.' }
+      { id: 'C', text: 'Stakeholders with specialized knowledge of how one or more solution components are implemented.' },
+      { id: 'D', text: 'Stakeholders who define and enforce the standards that the solution must comply with.' }
     ],
     answer: 'B',
     explanation: 'Gli end user interagiscono direttamente con la soluzione e includono tutti i partecipanti a un processo di business o chi usa il prodotto. {A} è Operational Support, {C} l\'Implementation SME, {D} il Regulator.'
@@ -2958,10 +2958,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 3.2 Plan Stakeholder Engagement',
     stem: 'Where can a business analysis professional look to identify stakeholders outside the organization?',
     options: [
-      { id: 'A', text: 'Only in the organizational chart.' },
-      { id: 'B', text: 'In existing contracts, anticipated vendors, regulatory and governing bodies, shareholders, customers, and suppliers.' },
-      { id: 'C', text: 'Only in the list provided by the sponsor.' },
-      { id: 'D', text: 'External stakeholders are out of scope for business analysis.' }
+      { id: 'A', text: 'Only in the organizational chart, which lists everyone who could be affected by the change.' },
+      { id: 'B', text: 'In existing contracts, likely vendors, regulatory bodies, shareholders, customers, and suppliers.' },
+      { id: 'C', text: 'Only in the list provided by the sponsor, who knows which external parties are relevant.' },
+      { id: 'D', text: 'Nowhere: external stakeholders fall outside the scope of business analysis for an initiative.' }
     ],
     answer: 'B',
     explanation: 'L\'organigramma e i processi di business sono la fonte iniziale per gli stakeholder interni; per quelli esterni si guarda ai contratti in essere, ai fornitori attesi in base alle relazioni esistenti, agli enti regolatori, e si considerano azionisti, clienti e fornitori. Lo sponsor può indicarne alcuni, ma non è l\'unica fonte.'
@@ -2972,10 +2972,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 3.2 Plan Stakeholder Engagement',
     stem: 'How often is stakeholder analysis performed?',
     options: [
-      { id: 'A', text: 'Once, at the start of the initiative.' },
+      { id: 'A', text: 'Once, at the start of the initiative, before elicitation begins.' },
       { id: 'B', text: 'Repeatedly, as business analysis activities continue.' },
-      { id: 'C', text: 'Only when a stakeholder raises a complaint.' },
-      { id: 'D', text: 'At each formal governance gate only.' }
+      { id: 'C', text: 'Only when a stakeholder raises a complaint about the change.' },
+      { id: 'D', text: 'Only at each formal governance gate of the initiative.' }
     ],
     answer: 'B',
     explanation: 'La stakeholder analysis si esegue ripetutamente man mano che le attività di business analysis proseguono: nuovi stakeholder possono emergere in qualsiasi momento e ruolo, influenza e atteggiamento di quelli noti possono cambiare.'
@@ -2986,10 +2986,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 2.4.1 Business Analyst',
     stem: 'What does the BABOK Guide say about the business analyst as a stakeholder?',
     options: [
-      { id: 'A', text: 'The business analyst is a neutral observer and not a stakeholder.' },
-      { id: 'B', text: 'The business analyst is inherently a stakeholder in all business analysis activities, and may also perform activities falling under another stakeholder role.' },
-      { id: 'C', text: 'The business analyst becomes a stakeholder only when they hold approval authority.' },
-      { id: 'D', text: 'The business analyst is a stakeholder only in adaptive initiatives.' }
+      { id: 'A', text: 'The business analyst is a neutral observer of the change and is therefore not considered a stakeholder.' },
+      { id: 'B', text: 'The business analyst is inherently a stakeholder in all business analysis activities, and may also act in another stakeholder role.' },
+      { id: 'C', text: 'The business analyst becomes a stakeholder only when they hold approval authority over the requirements and designs produced for the initiative.' },
+      { id: 'D', text: 'The business analyst is a stakeholder only in adaptive initiatives, where they work as part of the delivery team.' }
     ],
     answer: 'B',
     explanation: 'Il business analyst è intrinsecamente uno stakeholder in tutte le attività di business analysis: il BABOK presume che sia responsabile della loro esecuzione, e in alcuni casi può anche svolgere attività che ricadono sotto un altro ruolo di stakeholder.'
@@ -3016,10 +3016,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 4.5 Manage Stakeholder Collaboration',
     stem: 'Which statement about managing stakeholder collaboration is correct?',
     options: [
-      { id: 'A', text: 'It is a one-time activity completed once stakeholders have been identified and analysed.' },
-      { id: 'B', text: 'It is an ongoing activity: each stakeholder\'s role, responsibility, influence, attitude, and authority may change over time.' },
-      { id: 'C', text: 'It applies only to stakeholders who have approval authority over work products.' },
-      { id: 'D', text: 'It is delegated to the project manager once the requirements are approved.' }
+      { id: 'A', text: 'It is a one-time activity, completed once all the stakeholders have been identified and analysed at the start.' },
+      { id: 'B', text: 'It is ongoing: each stakeholder\'s role, responsibility, influence, attitude, and authority may change over time.' },
+      { id: 'C', text: 'It applies only to the stakeholders who hold approval authority over the work products of the initiative.' },
+      { id: 'D', text: 'It is delegated to the project manager once the requirements have been approved by the sponsor.' }
     ],
     answer: 'B',
     explanation: 'Gestire la collaborazione è un\'attività continua: nuovi stakeholder possono comparire in qualsiasi momento e ruolo, responsabilità, influenza, atteggiamento e autorità di ciascuno possono cambiare nel tempo. Più il cambiamento è impattante o visibile, più attenzione richiede.'
@@ -3044,10 +3044,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 4.5 Manage Stakeholder Collaboration',
     stem: 'A key stakeholder has become disengaged and stopped attending sessions. According to the BABOK Guide, why does this matter to business analysis work?',
     options: [
-      { id: 'A', text: 'It does not matter as long as the requirements have already been documented.' },
-      { id: 'B', text: 'Poor relationships with stakeholders have detrimental effects on business analysis, including failure to provide quality information.' },
-      { id: 'C', text: 'It only matters if that stakeholder holds formal approval authority.' },
-      { id: 'D', text: 'It matters only for adaptive approaches, where feedback is continuous.' }
+      { id: 'A', text: 'It does not matter as long as the stakeholder\'s requirements have already been documented and approved.' },
+      { id: 'B', text: 'Poor stakeholder relationships harm business analysis work, for example through a failure to provide quality information.' },
+      { id: 'C', text: 'It only matters if that stakeholder holds formal approval authority over the requirements and designs.' },
+      { id: 'D', text: 'It matters only in adaptive approaches, where stakeholder feedback is expected continuously during delivery.' }
     ],
     answer: 'B',
     explanation: 'Il BABOK elenca esplicitamente gli effetti negativi di relazioni deboli con gli stakeholder, a partire dalla mancata fornitura di informazioni di qualità. Gli stakeholder sono una fonte primaria di need, vincoli e assunzioni, indipendentemente dall\'autorità formale ({C}) e dall\'approccio adottato ({D}).'
@@ -3058,10 +3058,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 4.5 Manage Stakeholder Collaboration',
     stem: 'A change is highly visible across the organization and will affect many departments. What does this imply for stakeholder collaboration?',
     options: [
-      { id: 'A', text: 'Less attention is needed, since visibility ensures awareness.' },
-      { id: 'B', text: 'More attention is directed to managing stakeholder collaboration, the more significant the impact or visibility of the change.' },
-      { id: 'C', text: 'Collaboration should be delegated to departmental representatives.' },
-      { id: 'D', text: 'Collaboration should be formalized into written approvals only.' }
+      { id: 'A', text: 'Less attention is needed, since the visibility of the change already ensures that everyone is aware of it.' },
+      { id: 'B', text: 'The more significant the impact or visibility of the change, the more attention stakeholder collaboration requires.' },
+      { id: 'C', text: 'Collaboration should be delegated to departmental representatives, who then manage it within each department.' },
+      { id: 'D', text: 'Collaboration should be formalized into written approvals only, to keep a record of each department\'s position.' }
     ],
     answer: 'B',
     explanation: 'Il BABOK afferma che quanto più è significativo l\'impatto del cambiamento o la sua visibilità nell\'organizzazione, tanta più attenzione va dedicata alla gestione della collaborazione con gli stakeholder, per capitalizzare le reazioni positive e mitigare quelle negative.'
@@ -3072,10 +3072,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 9.5.1 Facilitation',
     stem: 'How does the BABOK Guide define facilitation?',
     options: [
-      { id: 'A', text: 'The skill of moderating discussions within a group so that all participants can effectively articulate their views and recognize differing points of view.' },
-      { id: 'B', text: 'The ability to motivate people to work together towards shared goals.' },
-      { id: 'C', text: 'The process of leading others to gain knowledge.' },
-      { id: 'D', text: 'The ability to change techniques, style, methods, and approach.' }
+      { id: 'A', text: 'The skill of moderating group discussions so all participants can express their views and recognize those of others.' },
+      { id: 'B', text: 'The ability to motivate people to act in ways that enable them to work together towards shared goals.' },
+      { id: 'C', text: 'The process of leading others to gain knowledge and confirming that what was taught has been understood.' },
+      { id: 'D', text: 'The ability to change techniques, style, methods, and approach to suit different people and situations.' }
     ],
     answer: 'A',
     explanation: 'La facilitation è moderare le discussioni di gruppo perché tutti possano esprimere efficacemente il proprio punto di vista e riconoscere e apprezzare quelli altrui. {B} è Leadership and Influencing, {C} Teaching, {D} Adaptability: quattro competenze del cap. 9 facilmente confondibili.'
@@ -3086,10 +3086,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 9.5.3 Teamwork',
     stem: 'Which statement reflects the Teamwork competency?',
     options: [
-      { id: 'A', text: 'Business analysts work independently to preserve objectivity.' },
-      { id: 'B', text: 'Business analysts often work as part of a team with other analysts, project managers, stakeholders, and SMEs, and those relationships are critical to success.' },
-      { id: 'C', text: 'Teamwork applies only to co-located teams.' },
-      { id: 'D', text: 'Teamwork is the responsibility of the project manager.' }
+      { id: 'A', text: 'Business analysts work independently of the rest of the team, so that their analysis stays objective.' },
+      { id: 'B', text: 'Business analysts often work in teams with analysts, project managers, stakeholders, and SMEs, and these relationships matter.' },
+      { id: 'C', text: 'Teamwork applies only to co-located teams, since virtual teams work through formal communication instead.' },
+      { id: 'D', text: 'Teamwork is the responsibility of the project manager, while the business analyst focuses entirely on the analysis work.' }
     ],
     answer: 'B',
     explanation: 'Il teamwork riconosce che il business analyst lavora spesso in team con altri analisti, project manager, stakeholder e SME, e che le relazioni con queste figure sono parte critica del successo di qualsiasi progetto o impresa.'
@@ -3130,10 +3130,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 3.2 Plan Stakeholder Engagement',
     stem: 'Why do business analysts identify stakeholder attitudes?',
     options: [
-      { id: 'A', text: 'To decide which stakeholders can be excluded from the initiative.' },
-      { id: 'B', text: 'To understand what may impact a stakeholder\'s actions and behaviours, and to plan collaboration and engagement accordingly.' },
-      { id: 'C', text: 'To assign formal approval authority proportionally to support for the change.' },
-      { id: 'D', text: 'To report uncooperative stakeholders to the sponsor.' }
+      { id: 'A', text: 'To decide which stakeholders can be excluded from the initiative because they oppose the change.' },
+      { id: 'B', text: 'To understand what may affect a stakeholder\'s actions and behaviours, and plan collaboration and engagement accordingly.' },
+      { id: 'C', text: 'To assign formal approval authority to each stakeholder in proportion to how strongly they support the change.' },
+      { id: 'D', text: 'To report the uncooperative stakeholders to the sponsor so that their behaviour can be corrected.' }
     ],
     answer: 'B',
     explanation: 'Gli atteggiamenti possono impattare positivamente o negativamente un cambiamento: conoscere come uno stakeholder percepisce l\'iniziativa consente di pianificare in modo specifico collaborazione ed engagement con lui. Il fine è capitalizzare le reazioni positive e mitigare o evitare quelle negative, non escludere o segnalare.'
@@ -3144,10 +3144,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 10.43 Stakeholder List, Map, or Personas',
     stem: 'What is the purpose of the Stakeholder List, Map, or Personas technique?',
     options: [
-      { id: 'A', text: 'To assign tasks to stakeholders and track their completion.' },
-      { id: 'B', text: 'To analyse stakeholders and their characteristics, ensuring all possible sources of requirements are identified and the stakeholder is fully understood.' },
-      { id: 'C', text: 'To model the reporting structures that exist within an organization.' },
-      { id: 'D', text: 'To record how stakeholders voted on each prioritization decision.' }
+      { id: 'A', text: 'To assign tasks to stakeholders and track their completion, so that every commitment made during the initiative is honoured.' },
+      { id: 'B', text: 'To analyse stakeholders and their characteristics, so that all sources of requirements are identified and each stakeholder is understood.' },
+      { id: 'C', text: 'To model the roles, responsibilities, and reporting structures that exist within an organization and its units.' },
+      { id: 'D', text: 'To record how stakeholders voted on each prioritization decision, so that the basis of every ranking can be traced.' }
     ],
     answer: 'B',
     explanation: 'La tecnica supporta l\'analisi degli stakeholder e delle loro caratteristiche, così da identificare tutte le possibili fonti di requisiti e da comprendere a fondo lo stakeholder, rendendo solide le decisioni sull\'engagement. {C} descrive Organizational Modelling (10.32), che ha un focus diverso: ruoli, responsabilità e strutture di riporto.'
@@ -3158,10 +3158,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 9.5.2 Leadership and Influencing',
     stem: 'What does the Leadership and Influencing competency involve?',
     options: [
-      { id: 'A', text: 'Assigning tasks and monitoring their completion.' },
-      { id: 'B', text: 'Motivating people to act in ways that enable them to work together to achieve shared goals, understanding individual motives, needs, and capabilities.' },
-      { id: 'C', text: 'Escalating decisions to the appropriate level of authority.' },
-      { id: 'D', text: 'Ensuring tasks are completed on time and to expectations.' }
+      { id: 'A', text: 'Assigning tasks to the members of the team and monitoring their completion against the plan agreed with the sponsor.' },
+      { id: 'B', text: 'Motivating people to work together towards shared goals, by understanding individual motives, needs, and capabilities.' },
+      { id: 'C', text: 'Escalating decisions to the appropriate level of authority whenever the team cannot agree.' },
+      { id: 'D', text: 'Ensuring that tasks are completed on time and to the expectations of colleagues and stakeholders.' }
     ],
     answer: 'B',
     explanation: 'La competenza riguarda il motivare le persone ad agire in modo da lavorare insieme verso obiettivi condivisi; comprendere motivazioni, bisogni e capacità individuali di ciascuno stakeholder e come indirizzarli efficacemente è ciò che la rende possibile. {D} descrive la Personal Accountability.'
@@ -3173,9 +3173,9 @@ window.ECBA_QUESTIONS = [
     stem: 'Why are stakeholders described as an important source beyond their approval authority?',
     options: [
       { id: 'A', text: 'They are an important source of needs, constraints, and assumptions.' },
-      { id: 'B', text: 'They provide the budget for the initiative.' },
-      { id: 'C', text: 'They determine the delivery methodology.' },
-      { id: 'D', text: 'They own the traceability model.' }
+      { id: 'B', text: 'They provide the budget for the initiative and control how it is spent.' },
+      { id: 'C', text: 'They determine the delivery methodology used for the initiative.' },
+      { id: 'D', text: 'They own the traceability model and keep it up to date.' }
     ],
     answer: 'A',
     explanation: 'Gli stakeholder detengono vari gradi di influenza e autorità sull\'approvazione dei work product, ma sono anche una fonte importante di need, vincoli e assunzioni. È questa seconda natura a rendere dannose le relazioni deboli, che portano fra l\'altro alla mancata fornitura di informazioni di qualità.'
@@ -3189,7 +3189,7 @@ window.ECBA_QUESTIONS = [
       { id: 'A', text: 'Reduce their involvement so the sessions can progress.' },
       { id: 'B', text: 'Understand what drives their position and plan engagement accordingly.' },
       { id: 'C', text: 'Report the opposition in the initiative status report.' },
-      { id: 'D', text: 'Give less weight to their input in prioritization decisions.' }
+      { id: 'D', text: 'Give less weight to their input in prioritization decisions from now on.' }
     ],
     answer: 'B',
     explanation: 'Gli atteggiamenti si analizzano per capire cosa incide su azioni e comportamenti, così da pianificare collaborazione ed engagement in modo mirato: l\'obiettivo è mitigare le reazioni negative, non escludere chi dissente.'
@@ -3201,9 +3201,9 @@ window.ECBA_QUESTIONS = [
     stem: 'Before a change is proposed, you need to understand who can really make or block the decision. What should you analyse?',
     options: [
       { id: 'A', text: 'Each stakeholder\'s decision-making authority and level of influence over the change.' },
-      { id: 'B', text: 'Each stakeholder\'s position in the organizational chart only.' },
-      { id: 'C', text: 'The number of requirements each stakeholder has raised.' },
-      { id: 'D', text: 'Each stakeholder\'s availability for workshops.' }
+      { id: 'B', text: 'Each stakeholder\'s position in the organizational chart only, since it shows formal authority.' },
+      { id: 'C', text: 'The number of requirements each stakeholder has raised so far in elicitation.' },
+      { id: 'D', text: 'Each stakeholder\'s availability to take part in the planned workshops.' }
     ],
     answer: 'A',
     explanation: 'L\'analisi degli stakeholder in Plan Stakeholder Engagement (3.2) considera, oltre a ruoli e atteggiamenti, l\'autorità decisionale di ciascuno e il suo livello di potere o influenza: si confronta l\'influenza necessaria a realizzare il cambiamento con quella che gli stakeholder chiave possono mettere in campo. L\'organigramma da solo ({B}) non basta, perché non mostra i canali di influenza informali.'
@@ -3220,10 +3220,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 6.2 Define Future State',
     stem: 'How does the BABOK Guide distinguish goals from objectives?',
     options: [
-      { id: 'A', text: 'Goals are set by executives and objectives by delivery teams.' },
-      { id: 'B', text: 'Goals are longer term, ongoing, and qualitative statements of a state the organization seeks to establish and maintain; objectives are more descriptive, granular, and specific.' },
-      { id: 'C', text: 'Goals apply to predictive approaches and objectives to adaptive approaches.' },
-      { id: 'D', text: 'Goals are measurable and objectives are aspirational.' }
+      { id: 'A', text: 'Goals are set by executives for the whole enterprise, while objectives are set by delivery teams for each project.' },
+      { id: 'B', text: 'Goals are longer term, ongoing, and qualitative; as they are analysed they become more descriptive, granular, and specific objectives.' },
+      { id: 'C', text: 'Goals apply to predictive approaches, where plans are fixed, and objectives apply to adaptive approaches, where plans evolve.' },
+      { id: 'D', text: 'Goals are measurable and time-bound statements, while objectives are aspirational descriptions of the desired future.' }
     ],
     answer: 'B',
     explanation: 'I goal sono di lungo termine, continuativi e qualitativi; man mano che vengono analizzati sono convertiti in obiettivi più descrittivi, granulari e specifici. Attenzione a {D}: è l\'inverso della definizione corretta, un tipo di distrattore costruito rovesciando la definizione.'
@@ -3234,13 +3234,13 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 6.2 Define Future State',
     stem: 'Which of the following is expressed as a business objective rather than as a goal?',
     options: [
-      { id: 'A', text: 'Increase customer satisfaction.' },
-      { id: 'B', text: 'Improve safety across the organization.' },
+      { id: 'A', text: 'Increase the satisfaction of customers across all of the organization\'s markets.' },
+      { id: 'B', text: 'Improve safety for employees and visitors across all of the organization\'s sites.' },
       { id: 'C', text: 'Increase the number of high-revenue customers in the 30–45 age bracket by 30% within 6 months.' },
-      { id: 'D', text: 'Comply with new regulations.' }
+      { id: 'D', text: 'Comply with the new regulations that apply to the organization\'s products and services.' }
     ],
     answer: 'C',
-    explanation: 'Solo {C} è granulare, specifico e misurabile nel tempo: è la forma che assume un goal una volta scomposto in obiettivi. Gli altri tre sono esempi di business goal citati dal BABOK — qualitativi e continuativi.'
+    explanation: 'Solo {C} è granulare, specifico e misurabile nel tempo: è la forma che assume un goal una volta scomposto in obiettivi. Gli altri tre restano goal qualitativi e continuativi, sul modello degli esempi di business goal citati dal BABOK (aumentare la soddisfazione dei clienti, migliorare la sicurezza, conformarsi a nuove regolamentazioni).'
   },
 
   {
@@ -3263,9 +3263,9 @@ window.ECBA_QUESTIONS = [
     stem: 'A goal reads "increase number of high-revenue customers". The business analysis professional refines it to "increase number of high revenue customers in the 30-45 age bracket by 30% within 6 months". What has been done?',
     options: [
       { id: 'A', text: 'The goal has been converted into a more descriptive, granular, and specific objective.' },
-      { id: 'B', text: 'The goal has been converted into a business requirement.' },
-      { id: 'C', text: 'The goal has been converted into a design.' },
-      { id: 'D', text: 'The goal has been replaced by a key performance indicator.' }
+      { id: 'B', text: 'The goal has been converted into a business requirement that the solution must satisfy.' },
+      { id: 'C', text: 'The goal has been converted into a design describing how the solution will meet it.' },
+      { id: 'D', text: 'The goal has been replaced by a key performance indicator that measures its progress.' }
     ],
     answer: 'A',
     explanation: 'Il BABOK riporta proprio questo raffinamento come esempio e, subito dopo, spiega che man mano che i goal vengono analizzati sono convertiti in obiettivi più descrittivi, granulari e specifici, legati a misure che permettono di valutarne oggettivamente il raggiungimento. Il goal resta qualitativo e di lungo periodo; l\'obiettivo aggiunge misura e orizzonte temporale.'
@@ -3276,10 +3276,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 6.2 Define Future State',
     stem: 'Which of the following is given as an example of a business goal?',
     options: [
-      { id: 'A', text: 'Reduce the average handling time per ticket to under 4 minutes by Q3.' },
+      { id: 'A', text: 'Reduce the average handling time per support ticket to under 4 minutes by the end of Q3.' },
       { id: 'B', text: 'Create a new capability such as a new product or service, or address a competitive disadvantage.' },
-      { id: 'C', text: 'Deploy the new platform to all regions by December.' },
-      { id: 'D', text: 'Migrate the customer database without data loss.' }
+      { id: 'C', text: 'Deploy the new customer platform to all of the organization\'s regions by December.' },
+      { id: 'D', text: 'Migrate the customer database to the new platform without any loss of data.' }
     ],
     answer: 'B',
     explanation: 'Fra gli esempi di business goal il BABOK cita: creare una nuova capability, come un nuovo prodotto o servizio; affrontare uno svantaggio competitivo o creare un nuovo vantaggio competitivo; migliorare i ricavi aumentando le vendite o riducendo i costi; aumentare la soddisfazione di clienti e dipendenti; conformarsi a nuove regolamentazioni; migliorare la sicurezza; ridurre il tempo necessario a consegnare un prodotto o un servizio. Le altre opzioni sono un obiettivo misurabile e datato ({A}) e due attività di progetto ({C}, {D}), non goal.'
@@ -3307,7 +3307,7 @@ window.ECBA_QUESTIONS = [
     stem: 'What distinguishes Assess Solution Limitations from Assess Enterprise Limitations?',
     options: [
       { id: 'A', text: 'The first concerns factors internal to the solution, the second factors external to the solution.' },
-      { id: 'B', text: 'The first is performed before implementation, the second after.' },
+      { id: 'B', text: 'The first is performed before the solution is implemented, the second only once it is in operation.' },
       { id: 'C', text: 'The first concerns functional requirements, the second non-functional requirements.' },
       { id: 'D', text: 'The first is performed by the business analyst, the second by the sponsor.' }
     ],
@@ -3320,10 +3320,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 8.2 Analyze Performance Measures',
     stem: 'What is the purpose of Analyze Performance Measures?',
     options: [
-      { id: 'A', text: 'To define which performance measures will be collected.' },
+      { id: 'A', text: 'To define which performance measures will be collected and how they will be gathered.' },
       { id: 'B', text: 'To provide insights into the performance of a solution in relation to the value it brings.' },
-      { id: 'C', text: 'To recommend actions that increase the value of the solution.' },
-      { id: 'D', text: 'To assess the factors external to the solution that limit value.' }
+      { id: 'C', text: 'To recommend the actions that would increase the value delivered by the solution.' },
+      { id: 'D', text: 'To assess the factors external to the solution, such as culture, that limit its value.' }
     ],
     answer: 'B',
     explanation: 'Il task 8.2 trasforma i dati raccolti in insight sulla prestazione della soluzione rispetto al valore che porta. {A} è Measure Solution Performance (8.1): prima si definisce e si misura, poi si analizza; {C} è Recommend Actions (8.5). Conviene ricordare la sequenza dei cinque task di Solution Evaluation.'
@@ -3348,10 +3348,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 8.4 Assess Enterprise Limitations',
     stem: 'How is enterprise culture defined in the BABOK Guide?',
     options: [
-      { id: 'A', text: 'The documented policies and procedures of the organization.' },
-      { id: 'B', text: 'The deeply rooted beliefs, values, and norms shared by the members of an enterprise, which drive the actions taken even when not directly visible.' },
-      { id: 'C', text: 'The organizational chart and reporting structure.' },
-      { id: 'D', text: 'The set of tools and technologies the enterprise has adopted.' }
+      { id: 'A', text: 'The documented policies, procedures, and rules that govern how the members of the organization are expected to work.' },
+      { id: 'B', text: 'The deeply rooted beliefs, values, and norms shared by an enterprise\'s members, which drive its actions though not directly visible.' },
+      { id: 'C', text: 'The organizational chart and reporting structure, which show who holds authority over each part of the enterprise.' },
+      { id: 'D', text: 'The set of tools and technologies that the enterprise has adopted and that its members use in their daily work.' }
     ],
     answer: 'B',
     explanation: 'La cultura d\'impresa è fatta di credenze, valori e norme profondamente radicate e condivise: pur non essendo direttamente visibili, guidano le azioni dell\'impresa. Per questo l\'assessment culturale fa parte della valutazione dei limiti esterni alla soluzione.'
@@ -3377,9 +3377,9 @@ window.ECBA_QUESTIONS = [
     stem: 'When a solution consistently or repeatedly produces ineffective outputs, what is performed?',
     options: [
       { id: 'A', text: 'Problem analysis, in order to identify the source of the problem.' },
-      { id: 'B', text: 'A new elicitation cycle with all stakeholders.' },
-      { id: 'C', text: 'An enterprise culture assessment.' },
-      { id: 'D', text: 'A re-approval of the original requirements.' }
+      { id: 'B', text: 'A new elicitation cycle involving all the stakeholders of the solution.' },
+      { id: 'C', text: 'An assessment of the enterprise culture that surrounds the solution.' },
+      { id: 'D', text: 'A re-approval of the original requirements by the sponsor.' }
     ],
     answer: 'A',
     explanation: 'Quando si determina che la soluzione produce output inefficaci in modo costante o ripetuto si esegue problem analysis per identificare la fonte del problema. L\'assessment culturale ({C}) appartiene invece ai limiti esterni alla soluzione.'
@@ -3391,9 +3391,9 @@ window.ECBA_QUESTIONS = [
     stem: 'A solution underperforms because a legacy system it depends on is slow, and that legacy system is part of the solution scope. How is this classified?',
     options: [
       { id: 'A', text: 'A solution limitation, being a factor internal to the solution restricting value realization.' },
-      { id: 'B', text: 'An enterprise limitation, being external to the solution.' },
-      { id: 'C', text: 'A risk, to be assessed before the transition.' },
-      { id: 'D', text: 'A constraint imposed by a regulator.' }
+      { id: 'B', text: 'An enterprise limitation, since the legacy system was built long before the current solution.' },
+      { id: 'C', text: 'A risk to be assessed before the transition, since the system\'s slowness may get worse.' },
+      { id: 'D', text: 'A constraint imposed by a regulator on the performance of legacy systems.' }
     ],
     answer: 'A',
     explanation: 'Se il sistema legacy rientra nello scope della soluzione, il fattore che ne limita il valore è interno: è un solution limitation (8.3), tipicamente una dipendenza fra componenti. Fosse stato fuori scope — cultura, struttura o policy aziendali — sarebbe stato un enterprise limitation (8.4).'
@@ -3418,7 +3418,7 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 8.1-8.2',
     stem: 'Six months of performance data have been collected but no conclusion has been drawn. What is missing?',
     options: [
-      { id: 'A', text: 'The definition of the measures, which should precede collection.' },
+      { id: 'A', text: 'The definition of the measures, which should have preceded the collection of any data.' },
       { id: 'B', text: 'The analysis that turns the data into insight about performance against value.' },
       { id: 'C', text: 'The validation of the measures with the stakeholders concerned.' },
       { id: 'D', text: 'The baseline against which the data should be compared.' }
@@ -3434,10 +3434,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 4.4 Communicate Business Analysis Information',
     stem: 'A business analysis professional must report to executives how a solution is performing against business goals. What should guide the format of the report?',
     options: [
-      { id: 'A', text: 'The level of technical detail available, to demonstrate rigour.' },
+      { id: 'A', text: 'The level of technical detail available, to demonstrate the rigour of the analysis performed.' },
       { id: 'B', text: 'The audience: information should be expressed in language, tone, and style appropriate to them.' },
-      { id: 'C', text: 'The organization\'s document template, regardless of audience.' },
-      { id: 'D', text: 'The preferences of the delivery team who produced the data.' }
+      { id: 'C', text: 'The organization\'s standard document template, whatever the audience of the report.' },
+      { id: 'D', text: 'The preferences of the delivery team who produced the data on which the report is based.' }
     ],
     answer: 'B',
     explanation: 'L\'activity statement 8.3 dell\'ECBA parla di descrivere come le soluzioni raggiungono i goal di business e trasmettere l\'informazione in modo efficace: vale la regola di Communicate Business Analysis Information, cioè esprimere l\'informazione con linguaggio, tono e stile appropriati al pubblico.'
@@ -3476,7 +3476,7 @@ window.ECBA_QUESTIONS = [
     source: 'Syllabus Map 8.3 · ECBA Sample Exam Questions, n. 8',
     stem: 'You must explain to the finance director why a completed process change was worth doing. Which information is MOST useful to lead with?',
     options: [
-      { id: 'A', text: 'The number of requirements delivered and the defects fixed.' },
+      { id: 'A', text: 'The number of requirements delivered and the defects fixed before the change went live.' },
       { id: 'B', text: 'How the change performed against the business objectives it was meant to achieve.' },
       { id: 'C', text: 'The techniques used during analysis and the workshops that were held.' },
       { id: 'D', text: 'The detailed design of the new process.' }
@@ -3506,10 +3506,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 10.28 Metrics and Key Performance Indicators (KPIs)',
     stem: 'The organization wants to track client satisfaction but has no survey in place and cannot run one at regular intervals. It decides to track the proportion of contracts renewed instead. What is this an example of?',
     options: [
-      { id: 'A', text: 'A qualitative measure replacing a quantitative one.' },
+      { id: 'A', text: 'A qualitative measure replacing a quantitative one that the organization could not collect.' },
       { id: 'B', text: 'A proxy, used when data for direct indicators are not available or not feasible to collect regularly.' },
-      { id: 'C', text: 'A baseline metric established from the current state.' },
-      { id: 'D', text: 'A non-functional requirement expressed as a metric.' }
+      { id: 'C', text: 'A baseline metric established from the current state, against which change will be assessed.' },
+      { id: 'D', text: 'A non-functional requirement expressed as a metric that the solution must satisfy.' }
     ],
     answer: 'B',
     explanation: 'È esattamente l\'esempio di proxy riportato dal BABOK: non tutti i fattori sono misurabili direttamente, e in assenza di un\'indagine sulla soddisfazione un\'organizzazione può usare la quota di contratti rinnovati come indicatore.'
@@ -3522,7 +3522,7 @@ window.ECBA_QUESTIONS = [
     options: [
       { id: 'A', text: 'Lessons Learned' },
       { id: 'B', text: 'Root Cause Analysis' },
-      { id: 'C', text: 'Metrics and Key Performance Indicators (KPIs)' },
+      { id: 'C', text: 'Metrics and KPIs' },
       { id: 'D', text: 'Scope Modelling' }
     ],
     answer: 'C',
@@ -3535,9 +3535,9 @@ window.ECBA_QUESTIONS = [
     stem: 'Before defining new performance measures for a solution, what should a business analysis professional do first?',
     options: [
       { id: 'A', text: 'Determine whether current measures already exist or whether methods for capturing them are in place.' },
-      { id: 'B', text: 'Ask the sponsor to approve a measurement budget.' },
-      { id: 'C', text: 'Wait until the solution has been in production for a full year.' },
-      { id: 'D', text: 'Define the measures independently, to avoid bias from existing ones.' }
+      { id: 'B', text: 'Ask the sponsor to approve a dedicated budget for measuring the solution.' },
+      { id: 'C', text: 'Wait until the solution has been in production for a full year before measuring it.' },
+      { id: 'D', text: 'Define the new measures independently, to avoid any bias from the measures already in use.' }
     ],
     answer: 'A',
     explanation: 'Il BABOK indica di verificare se esistono già misure o metodi di raccolta, assicurarsi che quelle esistenti siano accurate e rilevanti, ed elicitare eventuali misure aggiuntive dagli stakeholder. Goal, obiettivi e processi di business sono fonti comuni di misure, che possono anche essere imposte da terzi come fornitori o enti regolatori.'
@@ -3548,10 +3548,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 10.28 Metrics and Key Performance Indicators (KPIs)',
     stem: 'What is an indicator?',
     options: [
-      { id: 'A', text: 'The target value an organization commits to reaching.' },
-      { id: 'B', text: 'The result of analysing one or more specific measures for addressing a concern about a need, value, output, activity, or input, displayed in a table or graphical form.' },
-      { id: 'C', text: 'A numerical measure collected automatically by a system.' },
-      { id: 'D', text: 'A qualitative judgement expressed by a stakeholder.' }
+      { id: 'A', text: 'The target value that an organization commits to reaching for a given objective within a defined period of time.' },
+      { id: 'B', text: 'The result of analysing one or more specific measures to address a concern about a need, value, output, activity, or input.' },
+      { id: 'C', text: 'A numerical measure collected automatically by a system, without any analysis or interpretation by the business analyst.' },
+      { id: 'D', text: 'A qualitative judgement expressed by a stakeholder about how well the solution is meeting their expectations.' }
     ],
     answer: 'B',
     explanation: 'L\'indicatore mostra il risultato dell\'analisi di una o più misure specifiche rispetto a una preoccupazione riguardante un need, un valore, un output, un\'attività o un input. Ogni preoccupazione richiede almeno un indicatore per essere misurata adeguatamente, e alcune ne richiedono diversi.'
@@ -3563,9 +3563,9 @@ window.ECBA_QUESTIONS = [
     stem: 'What must a business analyst consider when establishing an indicator?',
     options: [
       { id: 'A', text: 'Its source, method of collection, collector, and the cost, frequency, and difficulty of collection.' },
-      { id: 'B', text: 'Only whether the data is already available in a system.' },
-      { id: 'C', text: 'Only whether the sponsor finds the indicator convincing.' },
-      { id: 'D', text: 'Only the statistical significance of the sample.' }
+      { id: 'B', text: 'Only whether the data is already available in one of the organization\'s systems.' },
+      { id: 'C', text: 'Only whether the sponsor finds the indicator convincing enough to report upwards.' },
+      { id: 'D', text: 'Only the statistical significance of the sample from which the indicator\'s data will be drawn each period.' }
     ],
     answer: 'A',
     explanation: 'Il BABOK elenca fonte, metodo di raccolta, chi raccoglie, costo, frequenza e difficoltà della raccolta. Le fonti secondarie possono essere le più economiche, ma per soddisfare le altre caratteristiche di un buon indicatore può servire ricerca primaria come survey o interviste.'
@@ -3591,9 +3591,9 @@ window.ECBA_QUESTIONS = [
     stem: 'What are quantitative measures?',
     options: [
       { id: 'A', text: 'Numerical, countable, or finite measures, usually involving amounts, quantities, or rates.' },
-      { id: 'B', text: 'Subjective measures reflecting attitudes and perceptions.' },
-      { id: 'C', text: 'Measures that can only be collected after implementation.' },
-      { id: 'D', text: 'Measures derived from the requirements documentation.' }
+      { id: 'B', text: 'Subjective measures that reflect the attitudes and perceptions of customers and users.' },
+      { id: 'C', text: 'Measures that can only be collected after the solution has been implemented in production.' },
+      { id: 'D', text: 'Measures derived directly from the requirements documentation produced during analysis.' }
     ],
     answer: 'A',
     explanation: 'Le misure quantitative sono numeriche, contabili o finite e riguardano tipicamente importi, quantità o tassi; quelle qualitative ({B}) sono soggettive e includono atteggiamenti e percezioni. Le misure di prestazione possono essere quantitative, qualitative o entrambe, a seconda del valore che si misura.'
@@ -3638,10 +3638,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 4.3 Confirm Elicitation Results',
     stem: 'Against what are elicitation results compared when they are confirmed?',
     options: [
-      { id: 'A', text: 'Against the project schedule and budget.' },
+      { id: 'A', text: 'Against the approved project schedule and budget for the initiative.' },
       { id: 'B', text: 'Against their source and other elicitation results, to ensure consistency.' },
-      { id: 'C', text: 'Against the acceptance criteria defined for solution testing.' },
-      { id: 'D', text: 'Against the organization\'s methodology repository.' }
+      { id: 'C', text: 'Against the acceptance criteria defined for the testing of the solution.' },
+      { id: 'D', text: 'Against the templates stored in the organization\'s methodology repository.' }
     ],
     answer: 'B',
     explanation: 'I risultati si confrontano con la loro fonte e con altri risultati di elicitation per garantire coerenza; se le informazioni non sono corrette il professionista determina cosa è corretto, il che può richiedere ulteriore elicitation, e se sono incoerenti può servire altra elicitation per risolvere le discrepanze.'
@@ -3694,10 +3694,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 10.18 Document Analysis',
     stem: 'What can Document Analysis elicit?',
     options: [
-      { id: 'A', text: 'Business analysis information, including contextual understanding and requirements, by examining available materials describing the business environment or existing organizational assets.' },
-      { id: 'B', text: 'The attitudes and perceptions of stakeholders towards a change.' },
-      { id: 'C', text: 'Information that cannot be known without a controlled test.' },
-      { id: 'D', text: 'The relative priority stakeholders assign to each requirement.' }
+      { id: 'A', text: 'Contextual understanding and requirements, by examining existing materials that describe the business environment or organizational assets.' },
+      { id: 'B', text: 'The attitudes and perceptions of stakeholders towards a change, as they express them in their own words during interviews and workshops.' },
+      { id: 'C', text: 'Information that cannot be known without a controlled test, such as how users will react to a new concept.' },
+      { id: 'D', text: 'The relative priority that stakeholders assign to each requirement, based on the value they expect from it.' }
     ],
     answer: 'A',
     explanation: 'Document analysis esamina materiali disponibili che descrivono l\'ambiente di business o gli asset organizzativi esistenti. {C} descrive gli experiments, un tipo diverso di elicitation: la document analysis non può rivelare ciò che non è ancora stato scritto da nessuna parte.'
@@ -3708,10 +3708,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 7.2 Verify Requirements',
     stem: 'Who ultimately determines the quality of a requirement?',
     options: [
-      { id: 'A', text: 'The business analyst who wrote it.' },
+      { id: 'A', text: 'The business analyst who wrote the requirement in the first place.' },
       { id: 'B', text: 'The needs of the stakeholders who will use the requirement or design.' },
-      { id: 'C', text: 'The governance body that approves it.' },
-      { id: 'D', text: 'The testing team that verifies it.' }
+      { id: 'C', text: 'The governance body that formally approves the requirement.' },
+      { id: 'D', text: 'The testing team that verifies whether the requirement has been met.' }
     ],
     answer: 'B',
     explanation: 'Il BABOK apre l\'elenco delle caratteristiche di qualità precisando che la qualità è in ultima analisi determinata dai bisogni degli stakeholder che useranno i requisiti o i design. Le caratteristiche sono una guida, non un criterio assoluto slegato dall\'uso.'
@@ -3766,10 +3766,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 7.2 Verify Requirements',
     stem: 'What does the quality characteristic "feasible" mean?',
     options: [
-      { id: 'A', text: 'That the requirement has already been implemented elsewhere.' },
-      { id: 'B', text: 'That it is reasonable and possible within the agreed risk, schedule, and budget, or feasible enough to investigate further through experiments or prototypes.' },
-      { id: 'C', text: 'That the requirement carries no technical risk.' },
-      { id: 'D', text: 'That the delivery team has estimated it.' }
+      { id: 'A', text: 'That the requirement has already been implemented successfully in another organization or initiative, so it is known to work.' },
+      { id: 'B', text: 'That it is reasonable and possible within the agreed risk, schedule, and budget, or worth investigating through experiments or prototypes.' },
+      { id: 'C', text: 'That the requirement carries no technical risk at all and can be delivered with the technology already in place.' },
+      { id: 'D', text: 'That the delivery team has estimated it and confirmed that it fits within the current release.' }
     ],
     answer: 'B',
     explanation: 'Feasible non significa privo di rischio ({C}): significa ragionevole e possibile entro rischio, tempi e budget concordati, oppure abbastanza fattibile da meritare un\'indagine ulteriore tramite esperimenti o prototipi.'
@@ -3780,10 +3780,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 5.3 Prioritize Requirements',
     stem: 'A requirement must be implemented to satisfy a legal obligation. How does this affect prioritization?',
     options: [
-      { id: 'A', text: 'It is treated like any other requirement, ranked by benefit.' },
-      { id: 'B', text: 'Regulatory or policy demands imposed on the organization may take precedence over other stakeholder interests.' },
-      { id: 'C', text: 'It is removed from prioritization and handled by the legal department.' },
-      { id: 'D', text: 'It is deprioritized until the deadline approaches.' }
+      { id: 'A', text: 'It is treated like any other requirement and ranked only by the benefit it delivers.' },
+      { id: 'B', text: 'Regulatory or policy demands imposed on the organization may take precedence over other interests.' },
+      { id: 'C', text: 'It is removed from prioritization altogether and handled separately by the legal department.' },
+      { id: 'D', text: 'It is deprioritized until the legal deadline approaches, to make room for higher-value work.' }
     ],
     answer: 'B',
     explanation: 'Sotto il fattore "penalty" il BABOK include la prioritizzazione dei requisiti per soddisfare obblighi normativi o di policy imposti all\'organizzazione, che possono prevalere sugli altri interessi degli stakeholder. La compliance è un criterio di prioritizzazione, non un percorso separato.'
@@ -3794,10 +3794,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 6.1 Analyze Current State',
     stem: 'Why does understanding the current state matter before defining constraints on a change?',
     options: [
-      { id: 'A', text: 'Because the current state description is required for governance approval.' },
-      { id: 'B', text: 'Because it reveals what would be directly or indirectly affected by the change, including policies, technology, and external influencers.' },
-      { id: 'C', text: 'Because constraints can only be identified by the regulator.' },
-      { id: 'D', text: 'Because the current state determines the delivery methodology.' }
+      { id: 'A', text: 'Because a description of the current state is required before the governance body will approve any change.' },
+      { id: 'B', text: 'Because it reveals what the change would directly or indirectly affect, including policies, technology, and external influencers.' },
+      { id: 'C', text: 'Because constraints can only be identified by the regulator, who needs a description of the current state in order to do so.' },
+      { id: 'D', text: 'Because the current state determines which delivery methodology must be used for the change and for each of its phases.' }
     ],
     answer: 'B',
     explanation: 'Analyze Current State serve a capire perché l\'impresa deve cambiare e cosa ne sarebbe toccato, direttamente o indirettamente. Policy, tecnologia, cultura, struttura e influencer esterni emergono qui, ed è da questa comprensione che si riconoscono i vincoli reali entro cui adattare i piani.'
@@ -3852,10 +3852,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 6.1 Analyze Current State',
     stem: 'Which of the following is examined as part of the current state of an enterprise?',
     options: [
-      { id: 'A', text: 'Only the software systems currently in production.' },
-      { id: 'B', text: 'Technology and infrastructure, alongside organizational structure, culture, capabilities, policies, and external influencers.' },
-      { id: 'C', text: 'Only the requirements approved in previous initiatives.' },
-      { id: 'D', text: 'Only the financial performance of the last reporting period.' }
+      { id: 'A', text: 'Only the software systems currently in production, together with their licences and support contracts.' },
+      { id: 'B', text: 'Technology and infrastructure, as well as structure, culture, capabilities, policies, and external influencers.' },
+      { id: 'C', text: 'Only the requirements approved in previous initiatives, since they describe what the enterprise already does.' },
+      { id: 'D', text: 'Only the financial performance of the last reporting period, as shown in the annual accounts.' }
     ],
     answer: 'B',
     explanation: 'Il current state comprende molte componenti — struttura e cultura organizzativa, capability, tecnologia e infrastruttura, policy, architettura di business, asset interni e influencer esterni — perché il cambiamento va compreso nel suo contesto completo. Le opzioni che iniziano con "only" restringono indebitamente il campo.'
@@ -3880,10 +3880,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 9.6.2 Business Analysis Tools and Technology',
     stem: 'What capabilities do tools specific to the field of business analysis provide?',
     options: [
-      { id: 'A', text: 'Modelling, diagramming, documenting, analyzing and mapping requirements, identifying relationships between requirements, and tracking and storing requirements artifacts.' },
-      { id: 'B', text: 'Managing project schedules, budgets, and resource allocation.' },
-      { id: 'C', text: 'Automated testing and continuous integration.' },
-      { id: 'D', text: 'Payroll, procurement, and human resources administration.' }
+      { id: 'A', text: 'Modelling, documenting, and mapping requirements, identifying the relationships between them, and tracking and storing requirements artifacts.' },
+      { id: 'B', text: 'Managing project schedules, budgets, and the allocation of resources across the different teams and suppliers working on a change.' },
+      { id: 'C', text: 'Automated testing and continuous integration of the solution components built by the delivery team.' },
+      { id: 'D', text: 'Payroll, procurement, and human resources administration for the people who work on the initiative.' }
     ],
     answer: 'A',
     explanation: 'Sono le capacità elencate al punto 9.6.2. Da distinguere dagli office productivity tools (9.6.1), che servono a organizzare, analizzare e comunicare informazioni in generale, e dai communication tools (9.6.3), che supportano interazioni conversazionali e collaborative con team virtuali e co-locati.'
@@ -3924,10 +3924,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 2.4.8 Regulator',
     stem: 'What is the role of a regulator as a stakeholder?',
     options: [
-      { id: 'A', text: 'To authorize the budget and scope of the initiative.' },
-      { id: 'B', text: 'To define and enforce standards, which can be imposed on the solution through legislation, corporate governance standards, or audit standards.' },
-      { id: 'C', text: 'To manage the day-to-day operation of the solution once implemented.' },
-      { id: 'D', text: 'To provide in-depth knowledge of the business domain.' }
+      { id: 'A', text: 'To authorize the budget and scope of the initiative and to control them as the work proceeds.' },
+      { id: 'B', text: 'To define and enforce standards that may be imposed on the solution through legislation, governance, or audit.' },
+      { id: 'C', text: 'To manage the day-to-day operation and maintenance of the solution once it has been implemented.' },
+      { id: 'D', text: 'To provide in-depth knowledge of the business domain that is relevant to the need or the solution scope.' }
     ],
     answer: 'B',
     explanation: 'Il regulator definisce e fa rispettare gli standard, che possono essere imposti alla soluzione tramite legislazione, standard di corporate governance, standard di audit o standard definiti da centri di competenza organizzativi. Ruoli alternativi: governo, enti regolatori, auditor.'
@@ -3938,10 +3938,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 10.9 Business Rules Analysis',
     stem: 'What is the purpose of Business Rules Analysis?',
     options: [
-      { id: 'A', text: 'To identify, express, validate, refine, and organize the rules that shape day-to-day business behaviour and guide operational business decision making.' },
-      { id: 'B', text: 'To define the entities and relationships relevant to a domain.' },
-      { id: 'C', text: 'To evaluate an organization\'s strengths, weaknesses, opportunities, and threats.' },
-      { id: 'D', text: 'To track and prioritize the remaining work items of an initiative.' }
+      { id: 'A', text: 'To identify, express, validate, refine, and organize the rules that shape daily business behaviour and guide operational decisions.' },
+      { id: 'B', text: 'To define the entities, attributes, and relationships relevant to a domain, providing a common set of semantics.' },
+      { id: 'C', text: 'To evaluate an organization\'s strengths, weaknesses, opportunities, and threats in both internal and external conditions.' },
+      { id: 'D', text: 'To record, track, and prioritize the remaining work items of an initiative, so that the most valuable come first.' }
     ],
     answer: 'A',
     explanation: 'Business Rules Analysis (10.9) riguarda le regole che governano il comportamento operativo quotidiano e le decisioni di business. {B} è Data Modelling (10.15), {C} SWOT Analysis (10.46), {D} Backlog Management (10.2).'
@@ -3980,10 +3980,10 @@ window.ECBA_QUESTIONS = [
     source: 'BABOK Guide, 9.3.5 Methodology Knowledge',
     stem: 'What do methodologies determine, according to the BABOK Guide?',
     options: [
-      { id: 'A', text: 'The timing, the approach, the role of those involved, and the accepted risk level of how a change is approached and managed.' },
-      { id: 'B', text: 'The financial return expected from the change.' },
-      { id: 'C', text: 'The stakeholders who must approve the requirements.' },
-      { id: 'D', text: 'The technical architecture of the solution.' }
+      { id: 'A', text: 'The timing, the approach, the role of those involved, and the accepted risk level of how a change is managed.' },
+      { id: 'B', text: 'The financial return that the organization expects to obtain from the change once it is complete.' },
+      { id: 'C', text: 'The stakeholders who must approve the requirements and the order in which they approve them.' },
+      { id: 'D', text: 'The technical architecture of the solution and the platforms on which it will run.' }
     ],
     answer: 'A',
     explanation: 'Le metodologie determinano il timing (grandi passi o piccoli incrementi), l\'approccio, il ruolo dei coinvolti, il livello di rischio accettato e altri aspetti di come un cambiamento viene affrontato e gestito. Le organizzazioni le adottano o le creano per adattarle a cultura, maturità, adattabilità, rischio, incertezza e governance.'

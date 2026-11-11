@@ -29,7 +29,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
       { id: 'A', text: 'Only user stories and functional requirements, since other kinds of work are tracked outside the backlog.' },
       { id: 'B', text: 'Only items that the sponsor has formally approved, so that the team never spends effort on unauthorized work.' },
       { id: 'C', text: 'Any kind of item with work associated with it, including defects, risk items, change requests, maintenance, or completing a document.' },
-      { id: 'D', text: 'Only items small enough to be completed within the current iteration; larger pieces of work are kept in a separate plan.' }
+      { id: 'D', text: 'Only items small enough to be completed within the current iteration; any larger piece of work is kept in a separate long-term release plan.' }
     ], answer: 'C',
     explanation: 'Il backlog può contenere use case, user story, requisiti funzionali e non funzionali, design, ordini clienti, elementi di rischio, change request, difetti, rilavorazione pianificata, manutenzione, perfino tenere una presentazione o completare un documento. Il criterio di ammissione è uno solo: l\'elemento ha valore per uno stakeholder.' },
   { id: 'T-10.2-3', ref: '10.2', style: 'applied', source: 'BABOK Guide, 10.2.4',
@@ -84,14 +84,14 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     options: [
       { id: 'A', text: 'Allow it, since evaluating ideas as soon as they are raised saves time in later sessions.' },
       { id: 'B', text: 'Remind participants that ideas are shared without discussion, criticism, or evaluation during the session.' },
-      { id: 'C', text: 'Ask the two participants to settle the disagreement offline and report back to the group afterwards.' },
+      { id: 'C', text: 'Ask the two participants to settle the disagreement offline and report back to the whole group once they have agreed.' },
       { id: 'D', text: 'Record the criticism as a separate idea so that it can be voted on with all the others.' }
     ], answer: 'B',
     explanation: 'Nella sessione le idee si condividono senza discussione, critica o valutazione, si registrano tutte in modo visibile e si incoraggiano i partecipanti a essere creativi e a costruire sulle idee altrui. Il BABOK indica fra i limiti proprio la necessità che i partecipanti accettino di non dibattere le idee durante il brainstorming.' },
   { id: 'T-10.5-4', ref: '10.5', style: 'knowledge', source: 'BABOK Guide, 10.5.4',
     stem: 'Which is a strength of brainstorming?',
     options: [
-      { id: 'A', text: 'It guarantees that the best idea will be identified, because every option is debated in depth.' },
+      { id: 'A', text: 'It guarantees that the best idea will be identified, because every option raised is debated in depth by the group.' },
       { id: 'B', text: 'A non-judgmental environment enables creative thinking, and many ideas can be elicited in a short time.' },
       { id: 'C', text: 'It removes the need for a facilitator, since participants manage the session among themselves.' },
       { id: 'D', text: 'It works equally well regardless of how willing or creative the individual participants are.' }
@@ -139,7 +139,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'How do capabilities impact value?',
     options: [
       { id: 'A', text: 'By increasing or protecting revenue, reducing or preventing cost, improving service, achieving compliance, or positioning the company for the future.' },
-      { id: 'B', text: 'Only by reducing operating cost, since the value of a capability is measured solely by the savings it produces in day-to-day operations.' },
+      { id: 'B', text: 'Only by reducing operating cost, since the value of a capability is measured solely by the savings it produces in the organization\'s day-to-day operations.' },
       { id: 'C', text: 'Only by generating new revenue streams, since capabilities that do not bring in new income are considered to have no value.' },
       { id: 'D', text: 'Equally, since every capability on the map carries the same level of value and none can be ranked above the others for prioritization.' }
     ], answer: 'A',
@@ -150,7 +150,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
       { id: 'A', text: 'It cannot be used to assess new products and services.' },
       { id: 'B', text: 'It requires an organization to agree to collaborate on the model.' },
       { id: 'C', text: 'It applies only to technology initiatives.' },
-      { id: 'D', text: 'It produces results that cannot be aligned with strategy.' }
+      { id: 'D', text: 'It produces results that cannot be aligned with the organization\'s strategy.' }
     ], answer: 'B',
     explanation: 'Il limite indicato è che l\'organizzazione deve accettare di collaborare al modello. Fra i punti di forza c\'è invece proprio l\'utilità nel valutare la capacità di un\'organizzazione di offrire nuovi prodotti e servizi, che {A} nega.' },
 
@@ -159,7 +159,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'What is business rules analysis used for?',
     options: [
       { id: 'A', text: 'To identify, express, validate, refine, and organize the rules that shape day-to-day business behaviour and guide operational business decision making.' },
-      { id: 'B', text: 'To describe the entities, classes, or data objects relevant to a domain, the attributes used to describe them, and the relationships among them.' },
+      { id: 'B', text: 'To describe the entities, classes, or data objects relevant to a domain, the attributes used to describe them, and the relationships that exist among them.' },
       { id: 'C', text: 'To assess a business process for its efficiency and effectiveness and to identify the opportunities for change that would improve it.' },
       { id: 'D', text: 'To define the boundaries of a change and place the relevant elements inside or outside them, so that everyone knows what is in scope.' }
     ], answer: 'A',
@@ -179,7 +179,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
       { id: 'A', text: 'It removes the need for process models, because the rules alone fully describe how the work is carried out.' },
       { id: 'B', text: 'Clearly defining and managing business rules allows organizations to change policy without altering processes or systems.' },
       { id: 'C', text: 'It guarantees that rules will never contradict one another, even when they are combined without being validated.' },
-      { id: 'D', text: 'It automatically eliminates ambiguity from the business vocabulary, so a glossary of terms is no longer required.' }
+      { id: 'D', text: 'It automatically eliminates all ambiguity from the business vocabulary, so a glossary of business terms is no longer required.' }
     ], answer: 'B',
     explanation: 'È uno dei punti di forza: separare le regole permette di cambiare policy senza toccare processi o sistemi. Un repository centralizzato consente inoltre il riuso a livello aziendale. {C} contraddice un limite esplicito: le regole possono contraddirsi se non validate le une contro le altre.' },
   { id: 'T-10.9-4', ref: '10.9', style: 'knowledge', source: 'BABOK Guide, 10.9.4',
@@ -196,7 +196,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     options: [
       { id: 'A', text: 'Because a formal glossary must be signed off by the sponsor before any business rule or requirement can be approved.' },
       { id: 'B', text: 'Because business rules require consistent use of business terms and an understanding of the structural connections among the concepts.' },
-      { id: 'C', text: 'Because the glossary replaces the need for a data model, so the entities and relationships no longer have to be described.' },
+      { id: 'C', text: 'Because the glossary replaces the need for a data model, so the entities and the relationships between them no longer have to be described.' },
       { id: 'D', text: 'Because regulators require a glossary of business terms for auditing purposes, regardless of what the rules contain.' }
     ], answer: 'B',
     explanation: 'Le business rule richiedono uso coerente dei termini, un glossario delle definizioni dei concetti sottostanti e la comprensione delle connessioni strutturali fra i concetti; è spesso consigliato riusare terminologia esistente da associazioni di settore o glossari interni. Un vocabolario povero produce regole povere.' },
@@ -215,7 +215,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     options: [
       { id: 'A', text: 'A single unstructured discussion with no time limits, in which participants are free to raise any topic they consider relevant.' },
       { id: 'B', text: 'A process or set of rules with at least three steps, often time-limited, starting with an opening step in which participants learn the rules and begin generating ideas.' },
-      { id: 'C', text: 'A sequence of one-to-one interviews with each participant, followed by a plenary session in which the facilitator presents the combined results to the group.' },
+      { id: 'C', text: 'A sequence of one-to-one interviews with each participant, followed by a plenary session in which the facilitator presents the combined results to the whole group.' },
       { id: 'D', text: 'A vote on the options proposed by the sponsor, followed by an open debate in which participants justify their choice and agree on a final ranking.' }
     ], answer: 'B',
     explanation: 'Ogni tipo di gioco ha un processo o insieme di regole che, se seguite, lo mantengono in movimento verso l\'obiettivo; i giochi hanno tipicamente almeno tre passi e ogni passo è spesso limitato nel tempo. Il facilitatore aiuta i partecipanti a capire lo scopo e a realizzarlo.' },
@@ -234,7 +234,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
       { id: 'A', text: 'The playful nature of games may be perceived as silly and make participants with reserved personalities or cultural norms uncomfortable.' },
       { id: 'B', text: 'Games cannot elicit business needs, so they would add nothing to what the executives could say in an interview.' },
       { id: 'C', text: 'Games require specialized software licences that a formal corporate environment would be unlikely to approve.' },
-      { id: 'D', text: 'Games always take longer than interviews, so the executives\' limited time would be better spent answering questions directly.' }
+      { id: 'D', text: 'Games always take longer than interviews, so the executives\' limited time would be better spent answering the analyst\'s questions directly.' }
     ], answer: 'A',
     explanation: 'È il primo limite elencato. Gli altri: i giochi possono richiedere tempo ed essere percepiti come improduttivi, specie se obiettivi e risultati non sono chiari, e la partecipazione di gruppo può generare falsa fiducia nelle conclusioni raggiunte.' },
   { id: 'T-10.10-5', ref: '10.10', style: 'knowledge', source: 'BABOK Guide, 10.10.4',
@@ -252,7 +252,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'What does a data model describe?',
     options: [
       { id: 'A', text: 'The entities, classes or data objects relevant to a domain, the attributes describing them, and the relationships among them, providing a common set of semantics.' },
-      { id: 'B', text: 'The sequence in which work is performed across roles, showing the activities, the decisions taken along the way, and the hand-offs between participants.' },
+      { id: 'B', text: 'The sequence in which work is performed across roles, showing the activities, the decisions taken along the way, and the hand-offs between the participants involved.' },
       { id: 'C', text: 'The rules that govern operational business decisions, expressed independently of the technology that will enforce them in the solution.' },
       { id: 'D', text: 'The boundaries of the change, placing each element of the solution inside or outside them so that stakeholders agree on what is in scope.' }
     ], answer: 'A',
@@ -260,7 +260,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
   { id: 'T-10.15-2', ref: '10.15', style: 'knowledge', source: 'BABOK Guide, 10.15.3',
     stem: 'What may an entity in a data model represent?',
     options: [
-      { id: 'A', text: 'Only physical objects that the organization stores.' },
+      { id: 'A', text: 'Only physical objects that the organization stores and manages.' },
       { id: 'B', text: 'Something physical, organizational, abstract, or an event.' },
       { id: 'C', text: 'Only the tables of the underlying database.' },
       { id: 'D', text: 'Only the roles that interact with the solution.' }
@@ -299,7 +299,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'What is document analysis used for?',
     options: [
       { id: 'A', text: 'To elicit information, such as contextual understanding and requirements, by examining existing materials that describe the business environment or organizational assets.' },
-      { id: 'B', text: 'To confirm the elicitation results with the stakeholders who provided them, checking that the information is accurate and consistent with what they meant.' },
+      { id: 'B', text: 'To confirm the elicitation results with the stakeholders who provided them, checking that the information is accurate, complete, and consistent with what they meant.' },
       { id: 'C', text: 'To generate numerous new ideas about a problem in a group session and to derive from them themes for further analysis by the team.' },
       { id: 'D', text: 'To measure how a solution and its components are performing against the goals and objectives that the stakeholders defined for the change.' }
     ], answer: 'A',
@@ -309,7 +309,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     options: [
       { id: 'A', text: 'Only whether the document is the most recent version available, since older versions are never useful for analysis.' },
       { id: 'B', text: 'Whether the content is relevant, current, genuine, and credible, and whether it is understandable and can be easily conveyed to stakeholders.' },
-      { id: 'C', text: 'Only whether the original author is still available to answer questions, since a document whose author has left cannot be trusted.' },
+      { id: 'C', text: 'Only whether the original author is still available to answer questions, since a document whose author has left the organization cannot be trusted.' },
       { id: 'D', text: 'Only whether the document is publicly available, since proprietary sources cannot be used as elicitation material.' }
     ], answer: 'B',
     explanation: 'I materiali possono provenire da fonti pubbliche o proprietarie; nel valutarli si considerano rilevanza, attualità, autenticità e credibilità del contenuto, la sua comprensibilità e trasmissibilità agli stakeholder, e si definiscono i dati da estrarre e i cluster di dati raggruppati per relazioni logiche.' },
@@ -326,7 +326,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'Which is a limitation of document analysis?',
     options: [
       { id: 'A', text: 'It is primarily helpful only for evaluating the current state, via review of as-is documentation, and authors may not be available for questions.' },
-      { id: 'B', text: 'It cannot be used alongside other elicitation techniques, because its results would inevitably conflict with what the stakeholders say.' },
+      { id: 'B', text: 'It cannot be used alongside other elicitation techniques, because its results would inevitably conflict with what the stakeholders themselves say.' },
       { id: 'C', text: 'It requires the participation of all stakeholders, who must review each document together with the business analyst.' },
       { id: 'D', text: 'Its findings cannot be reused in later analysis, since documents are examined only once and then set aside.' }
     ], answer: 'A',
@@ -364,7 +364,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'Which is a strength of interviews?',
     options: [
       { id: 'A', text: 'They allow interviewees to express opinions in private that they may be reluctant to express in public, especially when results are kept confidential.' },
-      { id: 'B', text: 'They require less time than any other elicitation technique, since a single conversation is enough to collect all the information needed.' },
+      { id: 'B', text: 'They require less time than any other elicitation technique, since a single conversation with each person is enough to collect all the information needed.' },
       { id: 'C', text: 'They produce a shared understanding among all the stakeholders at once, since everyone hears the same answers at the same time.' },
       { id: 'D', text: 'They eliminate the risk of bias in the responses, because the interviewer asks the same questions to every participant.' }
     ], answer: 'A',
@@ -382,7 +382,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'A business analysis professional must elicit information from 40 stakeholders and has two weeks. What limitation of interviews is relevant?',
     options: [
       { id: 'A', text: 'Significant time is required to plan and conduct interviews.' },
-      { id: 'B', text: 'Interviews cannot be used with more than ten people.' },
+      { id: 'B', text: 'Interviews cannot be used with more than ten people in total.' },
       { id: 'C', text: 'Interviews do not allow follow-up questions.' },
       { id: 'D', text: 'Interviews cannot establish rapport at scale.' }
     ], answer: 'A',
@@ -412,7 +412,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
       { id: 'A', text: 'It assists in building team morale after a difficult period and reinforces positive experiences and successes.' },
       { id: 'B', text: 'It identifies who was responsible for each failure, so that accountability is clear for future projects.' },
       { id: 'C', text: 'It guarantees that the same problems will not recur in later projects or phases of the initiative.' },
-      { id: 'D', text: 'It replaces the need for performance measures, since the team\'s own judgement of the phase is sufficient.' }
+      { id: 'D', text: 'It replaces the need for performance measures, since the team\'s own judgement of how the phase went is sufficient.' }
     ], answer: 'A',
     explanation: 'Fra i punti di forza: identificare opportunità e aree di miglioramento, costruire il morale del team dopo un periodo difficile, rinforzare le esperienze positive, ridurre i rischi per azioni future, fornire valore o metriche tangibili e riconoscere punti di forza o carenze di struttura, metodologia e strumenti.' },
   { id: 'T-10.27-4', ref: '10.27', style: 'applied', source: 'BABOK Guide, 10.27.4',
@@ -420,7 +420,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     options: [
       { id: 'A', text: 'Honest discussion may not occur if participants try to assign blame, and they may become reluctant to document and discuss problems.' },
       { id: 'B', text: 'Blame falls outside the scope of business analysis governance, so the facilitator has no authority to discuss it.' },
-      { id: 'C', text: 'The session should only review positive outcomes, leaving problems and failures to a separate meeting with management.' },
+      { id: 'C', text: 'The session should only review positive outcomes, leaving problems and failures to a separate meeting with the management of the initiative.' },
       { id: 'D', text: 'Only the project manager may attribute responsibility for missed deadlines, and only in a private conversation.' }
     ], answer: 'A',
     explanation: 'È il primo limite elencato: la ricerca del colpevole spegne la discussione onesta. Il BABOK aggiunge che può servire una facilitazione proattiva per mantenere la discussione centrata su soluzioni e opportunità di miglioramento.' },
@@ -475,7 +475,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'What does establishing a monitoring and evaluation system allow stakeholders to understand?',
     options: [
       { id: 'A', text: 'The extent to which a solution meets an objective, and how effective the inputs and activities of developing the solution were.' },
-      { id: 'B', text: 'Which team members contributed most to the outcome, so that their individual performance can be recognized and rewarded.' },
+      { id: 'B', text: 'Which team members contributed most to the outcome, so that their individual performance can be recognized and rewarded by management.' },
       { id: 'C', text: 'Whether the requirements were correctly approved by the stakeholders with the authority to do so.' },
       { id: 'D', text: 'The market share held by competitors, compared with the share that the organization holds once the change is complete.' }
     ], answer: 'A',
@@ -486,7 +486,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'What is organizational modelling used for?',
     options: [
       { id: 'A', text: 'To describe the roles, responsibilities, and reporting structures within an organization and align those structures with the organization\'s goals.' },
-      { id: 'B', text: 'To analyse stakeholders and their characteristics for a specific initiative, so that all sources of requirements are identified.' },
+      { id: 'B', text: 'To analyse stakeholders and their characteristics for a specific initiative, so that all the possible sources of requirements are identified and understood.' },
       { id: 'C', text: 'To map the abilities of an enterprise to perform or transform something that helps achieve its goals and objectives.' },
       { id: 'D', text: 'To model the sequence of activities in a process, showing which role performs each step and how work flows between them.' }
     ], answer: 'A',
@@ -505,7 +505,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     options: [
       { id: 'A', text: 'Duplication of work across units, since each unit repeats what the others do.' },
       { id: 'B', text: 'Communication and cross-functional coordination problems, known informally as "silos".' },
-      { id: 'C', text: 'Loss of specialist expertise, because specialists are spread across many teams.' },
+      { id: 'C', text: 'Loss of specialist expertise, because specialists are spread thinly across many different teams.' },
       { id: 'D', text: 'Inability to manage costs, since budgets are scattered across many teams.' }
     ], answer: 'B',
     explanation: 'I "silos" sono il rovescio della medaglia del modello funzionale: proprio i benefici che porta — gestione dei costi e riduzione della duplicazione, che {A} e {D} negano — nascono dallo stesso raggruppamento che ostacola il coordinamento trasversale.' },
@@ -533,7 +533,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'What does process analysis assess?',
     options: [
       { id: 'A', text: 'A process for its efficiency and effectiveness, as well as its ability to identify opportunities for change.' },
-      { id: 'B', text: 'The notation and symbols used to represent a process, so that every model follows the same standard.' },
+      { id: 'B', text: 'The notation and symbols used to represent a process, so that every process model in the organization follows the same standard.' },
       { id: 'C', text: 'The stakeholders who participate in a process, together with their attitudes towards the change.' },
       { id: 'D', text: 'The data entities a process manipulates, with their attributes and the relationships between them.' }
     ], answer: 'A',
@@ -543,7 +543,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     options: [
       { id: 'A', text: 'Identify gaps between the current and desired future state, which of them are value or non-value added, and pain points and opportunities from multiple points of view.' },
       { id: 'B', text: 'Rank the process steps by execution time only, since the slowest steps are always the ones that need to be improved first.' },
-      { id: 'C', text: 'Replace the existing process with an industry-standard model, so that the organization adopts the best practice of its sector without further analysis.' },
+      { id: 'C', text: 'Replace the existing process with an industry-standard model, so that the organization adopts the best practice of its sector without any further analysis of its own.' },
       { id: 'D', text: 'Document only the steps performed by the busiest role, since that is where the pain points and opportunities are most likely to be concentrated.' }
     ], answer: 'A',
     explanation: 'Il "da punti di vista multipli" è centrale: un pain point per un ruolo può non esserlo per un altro. I modelli e i framework di processo specifici del settore possono aiutare a identificare cosa rientra nello scope dell\'analisi.' },
@@ -552,7 +552,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     options: [
       { id: 'A', text: 'It ensures solutions address the right issues, minimizing waste.' },
       { id: 'B', text: 'It is always faster than other analysis techniques.' },
-      { id: 'C', text: 'It works equally well for knowledge-intensive processes.' },
+      { id: 'C', text: 'It works equally well for knowledge-intensive and decision-intensive processes.' },
       { id: 'D', text: 'It prescribes a single methodology to follow.' }
     ], answer: 'A',
     explanation: 'I punti di forza sono garantire che le soluzioni affrontino i problemi giusti minimizzando lo spreco, e la flessibilità data dalle molte tecniche e metodologie utilizzabili. {B}, {C} e {D} contraddicono i limiti: può richiedere tempo, può risultare inefficace su processi knowledge o decision-intensive, e la scelta fra le tante metodologie è essa stessa una difficoltà.' },
@@ -597,7 +597,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'Which is a strength of process modelling?',
     options: [
       { id: 'A', text: 'It appeals to the basic human understanding of sequential activities and most stakeholders are comfortable with its concepts.' },
-      { id: 'B', text: 'It requires no notation to be agreed in advance, since each stakeholder can draw the process in their own way.' },
+      { id: 'B', text: 'It requires no notation to be agreed in advance, since each stakeholder can draw the process in whatever way they find most natural.' },
       { id: 'C', text: 'It is equally suited to representing data structures, entities, and the relationships between them.' },
       { id: 'D', text: 'It removes the need to involve stakeholders in the analysis, since the model shows everything they would say.' }
     ], answer: 'A',
@@ -617,7 +617,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
       { id: 'A', text: 'Through the use of levels, which can accommodate the different perspectives of various stakeholder groups.' },
       { id: 'B', text: 'By producing a separate model for each stakeholder group, each drawn in a different notation.' },
       { id: 'C', text: 'By omitting the parallel branches and exceptions from the version shown to executives.' },
-      { id: 'D', text: 'By replacing the model with a written narrative for executives and keeping the diagram for staff.' }
+      { id: 'D', text: 'By replacing the model with a written narrative for executives and keeping the full diagram only for operational staff.' }
     ], answer: 'A',
     explanation: 'L\'uso dei livelli è un punto di forza dichiarato: consente di accogliere le diverse prospettive dei vari gruppi di stakeholder con lo stesso modello, mostrando più o meno dettaglio anziché costruire artefatti separati.' },
 
@@ -627,7 +627,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     options: [
       { id: 'A', text: 'Identifies areas of uncertainty that could negatively affect value, analyzes and evaluates them, and develops and manages ways of dealing with the risks.' },
       { id: 'B', text: 'Identifies and evaluates the underlying causes of a problem, so that solutions address the source rather than the symptoms.' },
-      { id: 'C', text: 'Evaluates the internal strengths and weaknesses and the external opportunities and threats of the organization, to frame its strategy.' },
+      { id: 'C', text: 'Evaluates the internal strengths and weaknesses and the external opportunities and threats of the organization, in order to frame its overall strategy for the future.' },
       { id: 'D', text: 'Records, tracks, and prioritizes the remaining work items, so that the team always knows what to deliver next and in which order.' }
     ], answer: 'A',
     explanation: 'Il legame esplicito con il valore è la chiave: il rischio nel BABOK è l\'incertezza che può incidere negativamente sul valore, non genericamente su tempi o costi.' },
@@ -635,7 +635,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'How are risks identified?',
     options: [
       { id: 'A', text: 'Through a combination of expert judgment, stakeholder input, experimentation, past experiences, and historical analysis of similar initiatives.' },
-      { id: 'B', text: 'Exclusively through a single workshop held at the start of the initiative, after which the list of risks is considered complete.' },
+      { id: 'B', text: 'Exclusively through a single workshop held at the start of the initiative, after which the list of risks is considered complete and is no longer revisited.' },
       { id: 'C', text: 'Exclusively by the project manager, who is accountable for every risk that could affect the delivery of the change.' },
       { id: 'D', text: 'Exclusively from the organization\'s risk register, which already records every risk that similar initiatives have faced.' }
     ], answer: 'A',
@@ -654,7 +654,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     options: [
       { id: 'A', text: 'Because the risk level of a change or solution can vary over time, so risks and the suitability of planned responses need re-evaluating.' },
       { id: 'B', text: 'Because governance requires a monthly risk report, whether or not anything about the change has actually changed.' },
-      { id: 'C', text: 'Because risks can never be closed once they have been opened, so the risk register keeps growing until the change is complete.' },
+      { id: 'C', text: 'Because risks can never be closed once they have been opened, so the risk register keeps growing until the whole change is complete.' },
       { id: 'D', text: 'Because only new risks matter after implementation, so the risks identified earlier can be dropped from the register.' }
     ], answer: 'A',
     explanation: 'Il livello di rischio varia nel tempo: la gestione continua serve a riconoscere quella variazione e a rivalutare sia i rischi sia l\'adeguatezza delle risposte pianificate. Il BABOK nota anche che le risposte efficaci su un\'iniziativa diventano lezioni utili per le altre.' },
@@ -684,7 +684,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
       { id: 'A', text: 'To identify and organize the possible causes of a problem, focusing on the cause rather than the solution.' },
       { id: 'B', text: 'To show the sequence of activities in a process and the roles that carry out each of them.' },
       { id: 'C', text: 'To place the elements of a change inside or outside its boundaries, so that its scope is agreed.' },
-      { id: 'D', text: 'To display the results of analysing performance measures against the targets set for the solution.' }
+      { id: 'D', text: 'To display the results of analysing performance measures against the targets that were set for the solution at the start.' }
     ], answer: 'A',
     explanation: 'Il diagramma a lisca di pesce, detto anche di Ishikawa o causa-effetto, identifica e organizza le possibili cause di un problema; aiuta a concentrarsi sulla causa invece che sulla soluzione e a organizzare le idee per l\'analisi successiva, fungendo da mappa delle possibili relazioni causa-effetto.' },
   { id: 'T-10.40-3', ref: '10.40', style: 'knowledge', source: 'BABOK Guide, 10.40.4',
@@ -702,7 +702,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
       { id: 'A', text: 'It works best when the business analyst has formal training, to ensure root causes and not just symptoms are identified.' },
       { id: 'B', text: 'It cannot be applied to process problems, only to defects in technology components.' },
       { id: 'C', text: 'It requires the participation of the sponsor in every session, which makes it hard to schedule.' },
-      { id: 'D', text: 'It can only be used after a solution has been implemented, once the problem has actually occurred in production.' }
+      { id: 'D', text: 'It can only be used after a solution has been implemented, once the problem has actually occurred and been reported in production.' }
     ], answer: 'A',
     explanation: 'Il BABOK segnala che serve formazione formale per assicurarsi di individuare le cause radice e non i sintomi, e che con problemi complessi l\'analisi può essere difficile, con il rischio di falsa pista o vicolo cieco.' },
   { id: 'T-10.40-5', ref: '10.40', style: 'applied', source: 'BABOK Guide, 10.40.3',
@@ -730,7 +730,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     options: [
       { id: 'A', text: 'The span of control, the relevance of elements, and where effort will be applied.' },
       { id: 'B', text: 'The cost and duration of each activity needed to deliver the change.' },
-      { id: 'C', text: 'The reporting lines of the organization and who approves each decision.' },
+      { id: 'C', text: 'The reporting lines of the organization and who approves each decision taken during the change.' },
       { id: 'D', text: 'The performance of the implemented solution against its objectives.' }
     ], answer: 'A',
     explanation: 'Sono i tre obiettivi elencati. In base all\'azione o ai bisogni degli stakeholder che il modello deve supportare, il business analyst determina i tipi di modello e seleziona confini ed elementi.' },
@@ -738,7 +738,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'A scope model facilitates agreement as a basis for which of the following?',
     options: [
       { id: 'A', text: 'Defining contractual obligations, estimating project effort, justifying in/out-of-scope decisions, and assessing solution completeness and impact.' },
-      { id: 'B', text: 'Selecting the delivery methodology, so that the team can choose between a predictive and an adaptive approach for the whole initiative.' },
+      { id: 'B', text: 'Selecting the delivery methodology, so that the team can choose between a predictive and an adaptive approach for the whole initiative and its phases.' },
       { id: 'C', text: 'Measuring stakeholder satisfaction with the solution once it is in operation, through periodic surveys and interviews.' },
       { id: 'D', text: 'Identifying the root causes of defects found during testing, so that the team can correct them before go-live.' }
     ], answer: 'A',
@@ -802,7 +802,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'A business analysis professional has worked with the same team for three years and reuses the stakeholder list from the last initiative. Which limitation applies?',
     options: [
       { id: 'A', text: 'Analysts who keep working with the same teams may not use the technique, because they do not perceive change within their groups as significant.' },
-      { id: 'B', text: 'Stakeholder lists cannot be reused between initiatives, so a completely new list must always be built from scratch for every change.' },
+      { id: 'B', text: 'Stakeholder lists cannot be reused between initiatives, so a completely new list must always be built from scratch for every new change in the organization.' },
       { id: 'C', text: 'Personas may only be created for external customers, so internal teams cannot be represented in this way.' },
       { id: 'D', text: 'Stakeholder maps require formal approval by the sponsor before they can be reused on a new initiative.' }
     ], answer: 'A',
@@ -833,7 +833,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
       { id: 'A', text: 'Internal capabilities that the assessed group could develop further in order to improve its position in the market.' },
       { id: 'B', text: 'External factors that the assessed group may be able to take advantage of, such as new markets, new technology, or changes in competition.' },
       { id: 'C', text: 'Requirements that would deliver high value at a low cost, and should therefore be placed at the top of the backlog.' },
-      { id: 'D', text: 'Risks whose impact on the organization would be positive rather than negative, recorded in the same register as threats.' }
+      { id: 'D', text: 'Risks whose impact on the organization would be positive rather than negative, recorded in the same risk register as the threats identified for the change.' }
     ], answer: 'B',
     explanation: 'Le opportunità sono fattori esterni sfruttabili: nuovi mercati, nuove tecnologie, cambiamenti nel panorama competitivo o altre forze. Confonderle con le forze interne ({A}) è l\'errore da evitare.' },
   { id: 'T-10.46-4', ref: '10.46', style: 'knowledge', source: 'BABOK Guide, 10.46.4',
@@ -851,7 +851,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
       { id: 'A', text: 'A clearly defined context for the SWOT analysis.' },
       { id: 'B', text: 'A larger number of participants.' },
       { id: 'C', text: 'Quantitative scoring of each factor.' },
-      { id: 'D', text: 'Approval of the analysis by the sponsor.' }
+      { id: 'D', text: 'Formal approval of the analysis by the sponsor of the initiative.' }
     ], answer: 'A',
     explanation: 'Il BABOK avverte che, se non è definito un contesto chiaro per la SWOT, il risultato può essere sfocato e contenere fattori non rilevanti per la situazione corrente. Il contesto è ciò che rende selettiva l\'analisi.' },
 
@@ -878,7 +878,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'Which is a strength of user stories?',
     options: [
       { id: 'A', text: 'They are tied to small, implementable, and testable slices of functionality, which facilitates rapid delivery and frequent customer feedback.' },
-      { id: 'B', text: 'They provide long-term knowledge retention about the solution, replacing the need for any other form of solution documentation.' },
+      { id: 'B', text: 'They provide long-term knowledge retention about the solution, replacing the need for any other form of solution documentation in the future.' },
       { id: 'C', text: 'They contain a detailed analysis of each requirement, including the data, rules, and interfaces it involves.' },
       { id: 'D', text: 'They remove the need for collaboration with stakeholders, since each story already states who needs what and why.' }
     ], answer: 'A',
@@ -916,7 +916,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'What does preparing for a workshop include?',
     options: [
       { id: 'A', text: 'Defining purpose and outcomes, identifying participants, facilitator and scribe, creating the agenda, planning how outputs will be captured, and sending materials ahead.' },
-      { id: 'B', text: 'Only booking a suitable room and inviting the participants, since the facilitator can shape the purpose, agenda, and outputs as the session unfolds.' },
+      { id: 'B', text: 'Only booking a suitable room and inviting the participants, since the facilitator can shape the purpose, the agenda, and the outputs as the session unfolds on the day.' },
       { id: 'C', text: 'Only agreeing the agenda with the sponsor, who then decides which stakeholders should be invited and what the outcomes should be.' },
       { id: 'D', text: 'Only selecting the elicitation technique to be used, because the goal, participants, and materials follow from that choice.' }
     ], answer: 'A',
@@ -934,7 +934,7 @@ window.ECBA_TECHNIQUE_QUESTIONS = [
     stem: 'On what is the success of a workshop highly dependent?',
     options: [
       { id: 'A', text: 'The expertise of the facilitator and the knowledge of the participants.' },
-      { id: 'B', text: 'The number of documents distributed to participants in advance.' },
+      { id: 'B', text: 'The number of documents distributed to all the participants in advance of the session.' },
       { id: 'C', text: 'The seniority of the sponsor who attends the session.' },
       { id: 'D', text: 'The overall duration of the session and of its breaks.' }
     ], answer: 'A',
@@ -957,7 +957,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'Which is a measure of effective creative thinking?',
     options: [
       { id: 'A', text: 'Generating and productively considering new ideas, and applying new ideas to resolve existing problems.' },
-      { id: 'B', text: 'Rapidly absorbing new facts, ideas, and concepts and presenting them effectively to other stakeholders.' },
+      { id: 'B', text: 'Rapidly absorbing new facts, ideas, and concepts and presenting them effectively to the other stakeholders involved.' },
       { id: 'C', text: 'Connecting disparate information and taking action to understand the relationship between the pieces.' },
       { id: 'D', text: 'Communicating how a change to a component affects the whole system and the environment it operates in.' }
     ], answer: 'A',
@@ -1013,7 +1013,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'Which is a measure of effective learning?',
     options: [
       { id: 'A', text: 'Understanding that learning is a process for all stakeholders, and applying the concepts learned to new areas or relationships.' },
-      { id: 'B', text: 'Completing a certification in the relevant domain before working on the initiative, so that knowledge is formally recognized.' },
+      { id: 'B', text: 'Completing a certification in the relevant domain before working on the initiative, so that the analyst\'s knowledge is formally recognized.' },
       { id: 'C', text: 'Documenting all new information in a shared repository, so that every stakeholder can consult it whenever they need to.' },
       { id: 'D', text: 'Attending all the training offered by the organization and passing the related assessments within the planned time.' }
     ], answer: 'A',
@@ -1051,7 +1051,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     options: [
       { id: 'A', text: 'The process avoids decisions based on unvalidated assumptions, preconceived notions, or other traps that may lead to a sub-optimal solution.' },
       { id: 'B', text: 'The problem is solved within the planned schedule and budget, even if some of the options identified were never examined.' },
-      { id: 'C', text: 'The selected solution is approved unanimously by all the stakeholders involved, without any objections being raised during the process.' },
+      { id: 'C', text: 'The selected solution is approved unanimously by all the stakeholders involved, without any objections being raised at any point in the process.' },
       { id: 'D', text: 'The number of options considered is kept to a minimum, so that the team can reach a decision quickly and avoid analysis paralysis.' }
     ], answer: 'A',
     explanation: 'Fra le misure: la fiducia dei partecipanti nel processo, soluzioni che soddisfano gli obiettivi e risolvono la causa radice, la possibilità di valutare efficacemente nuove opzioni con il framework adottato, e l\'evitare decisioni fondate su assunzioni non validate o preconcetti.' },
@@ -1071,7 +1071,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
       { id: 'A', text: 'That a system has properties and behaviours that emerge from the interaction of its components and cannot be predicted from the components alone.' },
       { id: 'B', text: 'That systems can be fully understood by decomposing them into independent parts and studying each part separately from the others.' },
       { id: 'C', text: 'That the performance of a system is always equal to the sum of the performance of its components, measured one by one.' },
-      { id: 'D', text: 'That systems should be optimized one component at a time, since improving each part always improves the behaviour of the whole system.' }
+      { id: 'D', text: 'That systems should be optimized one component at a time, since improving each part separately always improves the behaviour of the whole system.' }
     ], answer: 'A',
     explanation: 'Le proprietà emergenti sono il cuore del systems thinking: nascono dall\'interazione fra i componenti e non sono prevedibili conoscendo i soli componenti. {B}, {C} e {D} descrivono l\'approccio riduzionista opposto.' },
   { id: 'C-9.1.5-2', ref: '9.1.5', style: 'knowledge', source: 'BABOK Guide, 9.1.5',
@@ -1080,7 +1080,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
       { id: 'A', text: 'Communicating how a change to a component affects the system as a whole, and how a change to a system affects the environment it is in.' },
       { id: 'B', text: 'Producing a complete inventory of the system\'s components, with their owners and the version currently in use.' },
       { id: 'C', text: 'Reducing the number of interfaces between components, so that each part of the system can change without affecting the others.' },
-      { id: 'D', text: 'Documenting each component independently of the others, so that it can be understood without reference to the rest of the system.' }
+      { id: 'D', text: 'Documenting each component independently of the others, so that it can be understood without any reference to the rest of the system it belongs to.' }
     ], answer: 'A',
     explanation: 'Le misure riguardano la comunicazione degli effetti: componente→sistema, sistema→ambiente, e come i sistemi si adattano a pressioni e cambiamenti interni ed esterni. Notare che la competenza si misura sulla capacità di comunicare quelle relazioni, non solo di vederle.' },
   { id: 'C-9.1.5-3', ref: '9.1.5', style: 'applied', source: 'BABOK Guide, 9.1.5',
@@ -1097,7 +1097,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'What is conceptual thinking about?',
     options: [
       { id: 'A', text: 'Understanding abstractly how contexts, solutions, needs, changes, stakeholders, and value link together, connecting information that is not obviously related.' },
-      { id: 'B', text: 'Creating graphical representations of the concepts or systems being discussed, so that stakeholders can easily understand them and provide input.' },
+      { id: 'B', text: 'Creating graphical representations of the concepts or systems being discussed, so that the stakeholders involved can easily understand them and provide their input.' },
       { id: 'C', text: 'Understanding how the components of a system interact to produce properties and behaviours that cannot be predicted from the components alone.' },
       { id: 'D', text: 'Generating and productively considering numerous new ideas about a problem, and applying them to resolve existing problems.' }
     ], answer: 'A',
@@ -1108,7 +1108,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
       { id: 'A', text: 'Formulating abstract concepts from information and uncertainty, and drawing on past experience to understand the situation.' },
       { id: 'B', text: 'Producing models that stakeholders can understand at a glance, using a standard notation for every diagram.' },
       { id: 'C', text: 'Absorbing new facts and concepts rapidly and presenting them to other stakeholders in a way they can use.' },
-      { id: 'D', text: 'Encouraging participation from all attendees, so that every point of view is expressed and recognized by the others.' }
+      { id: 'D', text: 'Encouraging participation from all attendees, so that every point of view is expressed and recognized by all the others present.' }
     ], answer: 'A',
     explanation: 'Fra le misure: connettere informazioni disparate agendo per comprenderne la relazione, confermare con gli stakeholder la fiducia e la comprensione del concetto comunicato, formulare concetti astratti combinando informazione e incertezza, e attingere alle esperienze passate.' },
   { id: 'C-9.1.6-3', ref: '9.1.6', style: 'applied', source: 'BABOK Guide, 9.1.6',
@@ -1135,7 +1135,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     options: [
       { id: 'A', text: 'Stakeholders understand critical information which may have been missed if presented in textual content alone.' },
       { id: 'B', text: 'A high number of diagrams produced per initiative, showing that every concept discussed has been modelled.' },
-      { id: 'C', text: 'The use of a single standard notation across all models, so that every diagram looks the same to stakeholders.' },
+      { id: 'C', text: 'The use of a single standard notation across all models, so that every diagram looks the same to all stakeholders.' },
       { id: 'D', text: 'Diagrams are formally approved by the sponsor before they are distributed to the other stakeholders.' }
     ], answer: 'A',
     explanation: 'Fra le misure: informazioni complesse comunicate in un modello visivo comprensibile, visuali che permettono confronti, individuazione di pattern e mappatura di idee, aumento di produttività, stakeholder coinvolti a un livello più profondo del solo testo, e comprensione di informazioni critiche che il testo da solo avrebbe fatto sfuggire.' },
@@ -1154,7 +1154,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'What do ethics require, according to the BABOK Guide?',
     options: [
       { id: 'A', text: 'An understanding of and focus on fairness, consideration, and moral behaviour in business analysis activities and relationships.' },
-      { id: 'B', text: 'Strict compliance with the organization\'s written policies, whatever their effect on the stakeholders involved in the change.' },
+      { id: 'B', text: 'Strict compliance with the organization\'s written policies, whatever their effect on the stakeholders who are involved in the change.' },
       { id: 'C', text: 'Avoiding any involvement in decisions that have a commercial impact on the organization or on its competitors.' },
       { id: 'D', text: 'Ensuring that every stakeholder group benefits from the outcome of the change, so that nobody is ever disadvantaged by it.' }
     ], answer: 'A',
@@ -1182,7 +1182,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'What does personal accountability include?',
     options: [
       { id: 'A', text: 'Effectively planning business analysis work to achieve targets and goals, and ensuring value delivered is aligned with business needs.' },
-      { id: 'B', text: 'Accepting responsibility for the decisions taken by stakeholders, even when the business analyst was not involved in making them.' },
+      { id: 'B', text: 'Accepting responsibility for the decisions taken by stakeholders, even when the business analyst was not involved in making those decisions.' },
       { id: 'C', text: 'Working independently of the delivery team, so that the analysis is not influenced by how the solution will be built.' },
       { id: 'D', text: 'Reporting progress only when milestones are reached, so that stakeholders are not distracted by partial or provisional results.' }
     ], answer: 'A',
@@ -1228,7 +1228,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'Why does earning stakeholder trust matter for elicitation?',
     options: [
       { id: 'A', text: 'It helps elicit information on sensitive issues and gives stakeholders confidence that their recommendations will be evaluated properly and fairly.' },
-      { id: 'B', text: 'It shortens the time required for each interview, since stakeholders answer every question without first asking why it is being asked.' },
+      { id: 'B', text: 'It shortens the time required for each interview, since trusting stakeholders answer every question without first asking why it is being asked of them.' },
       { id: 'C', text: 'It removes the need to confirm the elicitation results, because trusted stakeholders always provide accurate information.' },
       { id: 'D', text: 'It allows the business analyst to decide on behalf of stakeholders, who accept the recommendations without examining them.' }
     ], answer: 'A',
@@ -1240,7 +1240,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
       { id: 'A', text: 'Prioritizing tasks, performing them efficiently, and managing time effectively, while organizing and storing accumulated information for reuse.' },
       { id: 'B', text: 'Delegating low-priority tasks to other team members, so that the business analyst can concentrate on the activities that matter most.' },
       { id: 'C', text: 'Limiting the number of meetings attended each week, so that there is enough uninterrupted time left for analysis and documentation.' },
-      { id: 'D', text: 'Maintaining the project schedule on behalf of the project manager and reporting any delay in business analysis work as soon as it occurs.' }
+      { id: 'D', text: 'Maintaining the project schedule on behalf of the project manager, and reporting any delay in business analysis work to the sponsor as soon as it occurs.' }
     ], answer: 'A',
     explanation: 'La competenza include la gestione delle grandi quantità di informazioni che i business analyst accumulano di continuo: vanno organizzate e archiviate in modo efficiente per poter essere usate e riusate in seguito.' },
   { id: 'C-9.2.4-2', ref: '9.2.4', style: 'knowledge', source: 'BABOK Guide, 9.2.4',
@@ -1256,7 +1256,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'A business analysis professional arrives at a requirements workshop without having reviewed the pre-reading or prepared the agenda items. Which effectiveness measure is NOT met?',
     options: [
       { id: 'A', text: 'Complete preparation for meetings, interviews, and requirements workshops.' },
-      { id: 'B', text: 'Relevant business analysis information is captured and documented.' },
+      { id: 'B', text: 'Relevant business analysis information is captured, documented, and kept up to date.' },
       { id: 'C', text: 'The ability to produce deliverables in a timely manner.' },
       { id: 'D', text: 'Schedule of work effort is communicated to stakeholders.' }
     ], answer: 'A',
@@ -1266,7 +1266,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'How is adaptability defined?',
     options: [
       { id: 'A', text: 'The ability to change techniques, style, methods, and approach.' },
-      { id: 'B', text: 'The ability to work under pressure without loss of quality.' },
+      { id: 'B', text: 'The ability to work under pressure without any loss of quality in the analysis.' },
       { id: 'C', text: 'The willingness to accept decisions taken by others.' },
       { id: 'D', text: 'The capacity to learn new domains quickly.' }
     ], answer: 'A',
@@ -1296,7 +1296,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'How is business acumen defined?',
     options: [
       { id: 'A', text: 'The ability to understand business needs using experience and knowledge from other situations, since organizations frequently share similar practices.' },
-      { id: 'B', text: 'Detailed knowledge of the enterprise\'s own structure, its business units, the relationships between them, and the people in key positions.' },
+      { id: 'B', text: 'Detailed knowledge of the enterprise\'s own structure, its business units, the relationships between them, and the people who occupy its key positions.' },
       { id: 'C', text: 'Familiarity with the methodologies the organization uses, including the timing, approach, and roles they define for a change.' },
       { id: 'D', text: 'Knowledge of the commercially available solutions in the market, so that options can be compared with the existing solution.' }
     ], answer: 'A',
@@ -1307,7 +1307,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
       { id: 'A', text: 'Recognizing when a changed situation may require a change of direction for the initiative, and seeing opportunities to cut expenses and increase profits.' },
       { id: 'B', text: 'Knowing the major competitors and partners of the industry, and the market forces and trends that shape their behaviour.' },
       { id: 'C', text: 'Being able to identify the subject matter experts in the organization and the formal and informal lines of authority between them.' },
-      { id: 'D', text: 'Being familiar with the tools and techniques prescribed by a methodology, and able to adapt them to the organization\'s own working environment.' }
+      { id: 'D', text: 'Being familiar with the tools and techniques prescribed by a methodology, and able to adapt them to the organization\'s own working environment and culture.' }
     ], answer: 'A',
     explanation: 'Fra le misure del business acumen: riconoscere limitazioni e opportunità potenziali, riconoscere quando un cambiamento di situazione richiede un cambio di direzione, comprendere i rischi e saper decidere su come gestirli. {B} è Industry Knowledge, {C} Organization Knowledge, {D} Methodology Knowledge.' },
   { id: 'C-9.3.1-3', ref: '9.3.1', style: 'knowledge', source: 'BABOK Guide, 9.3',
@@ -1324,7 +1324,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'What does industry knowledge comprise?',
     options: [
       { id: 'A', text: 'An understanding of the trends, market forces and drivers, key processes, products, customer segments, suppliers, practices, and regulations of an industry.' },
-      { id: 'B', text: 'An understanding of how the enterprise generates profits and accomplishes its goals, how its business units relate, and who occupies its key positions.' },
+      { id: 'B', text: 'An understanding of how the enterprise generates profits and accomplishes its goals, how its business units relate, and who occupies its key stakeholder positions.' },
       { id: 'C', text: 'Knowledge of the solution components already deployed in the enterprise and of the capabilities they offer but do not yet use.' },
       { id: 'D', text: 'Knowledge of the tools used to model, document, and trace requirements, and of the strengths and weaknesses of each of them.' }
     ], answer: 'A',
@@ -1351,7 +1351,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'What does organization knowledge include?',
     options: [
       { id: 'A', text: 'An understanding of how the enterprise makes profits and meets its goals, its structure, how business units relate, and who holds key positions.' },
-      { id: 'B', text: 'An understanding of the market forces, trends, customer segments, and regulations that shape the industry in which the enterprise operates.' },
+      { id: 'B', text: 'An understanding of the market forces, trends, customer segments, and regulations that shape the wider industry in which the enterprise currently operates.' },
       { id: 'C', text: 'An understanding of the methodologies used to manage change, including their timing, roles, and the level of risk they accept.' },
       { id: 'D', text: 'An understanding of the commercially available solutions and suppliers that could replace or extend the enterprise\'s existing solution.' }
     ], answer: 'A',
@@ -1361,7 +1361,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     options: [
       { id: 'A', text: 'Acting according to formal and informal communication and authority channels, and navigating organizational relationships and politics.' },
       { id: 'B', text: 'The ability to identify the key trends shaping the industry and the way competitors are responding to them.' },
-      { id: 'C', text: 'Reduced time or cost to implement a required change, thanks to the analyst\'s previous experience with the existing solution.' },
+      { id: 'C', text: 'Reduced time or cost to implement a required change, thanks to the business analyst\'s previous experience of working with the existing solution.' },
       { id: 'D', text: 'The willingness to learn a new methodology and to adapt to changes in the way the organization manages change.' }
     ], answer: 'A',
     explanation: 'La menzione esplicita dei canali informali è significativa: come segnala anche il limite dell\'organizational modelling, l\'organigramma non cattura autorità e influenza reali. Fra le altre misure: comprendere terminologia e gergo interni, conoscere prodotti e servizi e saper identificare gli SME.' },
@@ -1379,7 +1379,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'What does solution knowledge allow business analysts to do?',
     options: [
       { id: 'A', text: 'Apply experience from previous work on a solution, and use familiarity with commercially available solutions or suppliers to identify possible alternatives.' },
-      { id: 'B', text: 'Understand the profit model of the enterprise, how it accomplishes its goals, and how its business units relate to one another and to the market.' },
+      { id: 'B', text: 'Understand the profit model of the enterprise, how it accomplishes its goals, and how its business units relate to one another and to the wider market it serves.' },
       { id: 'C', text: 'Identify the key trends shaping the industry, together with the market forces and drivers behind them.' },
       { id: 'D', text: 'Adapt to changes in the methodology being used and play multiple roles within the activities it prescribes.' }
     ], answer: 'A',
@@ -1425,7 +1425,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'What does understanding the organization\'s methodologies provide to the business analyst?',
     options: [
       { id: 'A', text: 'Information regarding context, dependencies, opportunities, and constraints used when developing a business analysis approach.' },
-      { id: 'B', text: 'The authority to change the methodology whenever the business analyst considers it inefficient for the initiative at hand.' },
+      { id: 'B', text: 'The authority to change the methodology whenever the business analyst considers it inefficient for the particular initiative at hand.' },
       { id: 'C', text: 'An exemption from the governance requirements that apply to other members of the initiative team.' },
       { id: 'D', text: 'A guarantee that the business analysis approach chosen will suit the initiative, whatever its context.' }
     ], answer: 'A',
@@ -1466,7 +1466,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     options: [
       { id: 'A', text: 'It is believed to convey far more meaning than words alone, as moods, attitudes, and feelings affect body movement and expressions.' },
       { id: 'B', text: 'It is unreliable and should not be interpreted at all, since gestures and expressions vary from person to person.' },
-      { id: 'C', text: 'It applies only to face-to-face meetings with stakeholders, and plays no role in video calls or telephone conversations.' },
+      { id: 'C', text: 'It applies only to face-to-face meetings with stakeholders, and plays no role at all in video calls, telephone conversations, or messages.' },
       { id: 'D', text: 'It is a substitute for verbal communication when stakeholders do not share a language, and can replace words entirely.' }
     ], answer: 'A',
     explanation: 'Il BABOK osserva che la comunicazione non verbale trasmette, a quanto si ritiene, molto più significato delle sole parole, perché umori, atteggiamenti e sentimenti incidono su movimenti del corpo ed espressioni facciali. Avverte però di non presumere una comprensione completa dai soli segnali non verbali: si osservano, non si interpretano come certezze.' },
@@ -1475,7 +1475,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     options: [
       { id: 'A', text: 'Being aware of others\' body language without assuming a complete understanding through it, and being intentionally aware of one\'s own.' },
       { id: 'B', text: 'Correctly identifying every stakeholder\'s emotional state from their body language, without needing to ask them how they feel.' },
-      { id: 'C', text: 'Maintaining a neutral expression at all times, so that stakeholders cannot read the business analyst\'s reaction to what they say.' },
+      { id: 'C', text: 'Maintaining a neutral expression at all times, so that stakeholders cannot read the business analyst\'s own reaction to what they are saying.' },
       { id: 'D', text: 'Relying on body language rather than asking questions, since non-verbal signals reveal what stakeholders really think.' }
     ], answer: 'A',
     explanation: 'La misura contiene una cautela esplicita: essere consapevoli del linguaggio del corpo altrui senza presumere di comprenderlo pienamente. Un\'altra misura riguarda l\'affrontare e risolvere le situazioni in cui il non verbale di uno stakeholder non concorda con il suo messaggio verbale.' },
@@ -1485,7 +1485,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
       { id: 'A', text: 'Address and resolve the situation in which the stakeholder\'s non-verbal communication does not agree with their verbal message.' },
       { id: 'B', text: 'Record the verbal agreement and move on, since what the stakeholder says is their formal position on the proposal.' },
       { id: 'C', text: 'Assume the non-verbal message is the true one and act on it, treating the proposal as rejected by the stakeholder.' },
-      { id: 'D', text: 'Raise the discrepancy with the stakeholder\'s manager, who is better placed to find out what the stakeholder really thinks.' }
+      { id: 'D', text: 'Raise the discrepancy with the stakeholder\'s line manager, who is better placed to find out what the stakeholder really thinks of it.' }
     ], answer: 'A',
     explanation: 'Fra le misure di efficacia c\'è proprio l\'affrontare e risolvere questi disallineamenti. Nessuno dei due estremi funziona: né ignorare il segnale ({B}) né darlo per vero senza verificarlo ({C}), perché il BABOK avverte di non presumere una comprensione completa dal non verbale.' },
 
@@ -1511,7 +1511,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'A business analysis professional writes the same specification for executives and for developers, using identical wording. What does the BABOK Guide suggest instead?',
     options: [
       { id: 'A', text: 'Adjusting the writing style to the audience\'s needs and choosing words whose intended meaning that audience will understand.' },
-      { id: 'B', text: 'Using the most precise technical terminology in both cases, so that the two audiences read exactly the same requirements.' },
+      { id: 'B', text: 'Using the most precise technical terminology in both cases, so that the two audiences read exactly the same requirements in the same words.' },
       { id: 'C', text: 'Producing only a verbal briefing for executives, since they rarely read written specifications in any detail.' },
       { id: 'D', text: 'Delegating the executive version to the sponsor, who knows better than the analyst what the executives expect.' }
     ], answer: 'A',
@@ -1532,7 +1532,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
       { id: 'A', text: 'Using active listening by deferring judgment and responding appropriately, and giving feedback to ensure there is understanding.' },
       { id: 'B', text: 'Taking verbatim notes of everything said, so that nothing can later be disputed by the participants in the discussion.' },
       { id: 'C', text: 'Asking questions only at the end of the discussion, so that the speaker is never interrupted while presenting their view.' },
-      { id: 'D', text: 'Limiting interruptions to a fixed number per session, agreed in advance with all the participants as part of the ground rules.' }
+      { id: 'D', text: 'Limiting interruptions to a fixed number per session, agreed in advance with all of the participants as part of the session\'s ground rules.' }
     ], answer: 'A',
     explanation: 'Fra le misure: dare all\'interlocutore attenzione indivisa, riconoscerlo con incoraggiamenti verbali o non verbali, fornire feedback alla persona o al gruppo per assicurare la comprensione, e usare l\'ascolto attivo sospendendo il giudizio e rispondendo in modo appropriato.' },
   { id: 'C-9.4.4-3', ref: '9.4.4', style: 'applied', source: 'BABOK Guide, 9.4.4',
@@ -1561,7 +1561,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
       { id: 'A', text: 'Making it clear that the facilitator is a third party to the process, not a decision maker nor the owner of the topic.' },
       { id: 'B', text: 'Ensuring the session always reaches a decision within the scheduled time, whatever the state of the discussion.' },
       { id: 'C', text: 'Taking a clear position on the topic when the group is deadlocked, so that the discussion can move forward.' },
-      { id: 'D', text: 'Limiting contributions to the most knowledgeable participants, so that the discussion remains focused and efficient.' }
+      { id: 'D', text: 'Limiting contributions to the most knowledgeable participants, so that the discussion remains focused, efficient, and on schedule.' }
     ], answer: 'A',
     explanation: 'Fra le misure: chiarire di essere un terzo rispetto al processo, incoraggiare la partecipazione di tutti, restare neutrale senza prendere parti pur intervenendo quando serve per suggerire e offrire spunti, e stabilire regole di base. {C} contraddice la neutralità e {D} l\'incoraggiamento alla partecipazione.' },
   { id: 'C-9.5.1-3', ref: '9.5.1', style: 'applied', source: 'BABOK Guide, 9.5.1',
@@ -1587,7 +1587,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'Which is a measure of effective leadership and influencing?',
     options: [
       { id: 'A', text: 'Reduced resistance to necessary changes, and influence on stakeholders to consider broader objectives over personal motivations.' },
-      { id: 'B', text: 'The number of decisions taken without escalation, showing that the business analyst can settle issues independently.' },
+      { id: 'B', text: 'The number of decisions taken without escalation, showing that the business analyst can settle issues independently of the sponsor.' },
       { id: 'C', text: 'The speed at which stakeholders comply with the requests made by the business analyst during the initiative.' },
       { id: 'D', text: 'The absence of any dissent in workshops, since a well-led group always agrees on the options presented to it.' }
     ], answer: 'A',
@@ -1598,7 +1598,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
       { id: 'A', text: 'Leadership and Influencing, by influencing stakeholders to consider broader objectives over personal motivations.' },
       { id: 'B', text: 'Teamwork, by fostering a collaborative working environment and a shared sense of ownership of goals.' },
       { id: 'C', text: 'Facilitation, by moderating the discussion so that both departments can articulate their views.' },
-      { id: 'D', text: 'Teaching, by explaining the business objective until both departments can demonstrate they understand it.' }
+      { id: 'D', text: 'Teaching, by explaining the business objective again until both departments can demonstrate that they understand it.' }
     ], answer: 'A',
     explanation: 'Influenzare gli stakeholder perché considerino obiettivi più ampi rispetto alle motivazioni personali è una misura specifica della Leadership and Influencing. Le altre competenze aiuterebbero, ma nessuna nomina questo esito preciso.' },
 
@@ -1617,7 +1617,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
       { id: 'A', text: 'Fostering a collaborative environment, developing trust among team members, and promoting a shared sense of ownership of team goals.' },
       { id: 'B', text: 'Minimizing the number of meetings the team needs, so that members can spend more of their time on individual work.' },
       { id: 'C', text: 'Ensuring that each member works on separate deliverables, so that responsibilities never overlap and are always clear.' },
-      { id: 'D', text: 'Preventing conflict from ever arising within the team, so that the working environment stays positive and productive throughout.' }
+      { id: 'D', text: 'Preventing conflict from ever arising within the team, so that the working environment stays positive and productive throughout the initiative.' }
     ], answer: 'A',
     explanation: 'Fra le misure figura anche il risolvere efficacemente i conflitti, non il prevenirli del tutto ({D}): il conflitto è normale in un team, ciò che conta è come viene affrontato. Altra misura è il sostegno reciproco su standard elevati condivisi.' },
   { id: 'C-9.5.3-3', ref: '9.5.3', style: 'knowledge', source: 'BABOK Guide, 9.5',
@@ -1634,7 +1634,7 @@ window.ECBA_COMPETENCY_QUESTIONS = [
     stem: 'What does negotiation and conflict resolution involve?',
     options: [
       { id: 'A', text: 'Mediating discussions so participants recognize differing views, resolve their differences, and reach conclusions that all of them agree with.' },
-      { id: 'B', text: 'Determining which party has the stronger business case, and then helping the other party to accept the outcome of that analysis gracefully.' },
+      { id: 'B', text: 'Determining which party has the stronger business case, and then helping the other party to accept the outcome of that analysis as gracefully as possible.' },
       { id: 'C', text: 'Escalating unresolved disagreements to the sponsor, who has the authority to decide between the positions of the parties.' },
       { id: 'D', text: 'Recording each party\'s position for the decision log, so that the reasons behind the final decision can be traced later.' }
     ], answer: 'A',
