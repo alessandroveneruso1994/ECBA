@@ -18,7 +18,8 @@
  *               'knowledge' la domanda chiede di richiamare o riconoscere un contenuto
  *               La simulazione rispetta una quota attesa di domande 'applied'.
  *   cluster     facoltativo. Le domande con lo stesso cluster mettono alla prova lo
- *               stesso punto: nella stessa sessione ne entra una sola.
+ *               stesso punto: nella stessa simulazione ne entra una sola, e
+ *               l'esercizio le evita finché il dominio scelto ne offre abbastanza.
  *   source      il riferimento al documento ufficiale, mostrato con la spiegazione
  *   stem        il testo della domanda
  *   options     quattro opzioni, A-D. A schermo vengono rimescolate a ogni sessione.
